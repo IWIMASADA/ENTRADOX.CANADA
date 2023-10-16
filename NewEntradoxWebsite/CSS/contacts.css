@@ -127,9 +127,9 @@
 }
 
 .rankingItem:hover {
-    cursor: pointer;
     transform: scale(1.1) !important; 
 }
+
 
 .rankingContainer:hover .rankingTextWrapper {
     opacity: 1;
@@ -190,7 +190,6 @@
 }
 
 .tutorialItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -256,7 +255,6 @@
 }
 
 .mailItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -321,7 +319,6 @@
 }
 
 .schoolItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -392,7 +389,6 @@
 }
 
 .instagramItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -459,7 +455,6 @@
 }
 
 .podcastItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -691,7 +686,6 @@
 }
 
 .rankingItem:hover {
-    cursor: pointer;
     transform: scale(1.1) !important; 
 }
 
@@ -755,7 +749,6 @@
 }
 
 .tutorialItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -821,7 +814,6 @@
 }
 
 .mailItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -886,7 +878,6 @@
 }
 
 .schoolItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -952,7 +943,6 @@
 }
 
 .instagramItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }
@@ -1018,7 +1008,6 @@
 }
 
 .podcastItem:hover {
-    cursor: pointer;
 
     transform: scale(1.1) !important; 
 }

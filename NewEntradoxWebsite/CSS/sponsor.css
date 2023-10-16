@@ -172,14 +172,12 @@
 }
 .LearnMoreSponsorButton:hover {
     background-color: rgb(255, 255, 255);
-    cursor: pointer;
     transform: scale(1.08);
 
 }
 .LearnMoreSponsorButton:hover .LearnMoreTextSponsor {
     color: rgb(0, 0, 0);
 
-    cursor: pointer;
 }
 
 .LearnMoreTextSponsor {
@@ -231,12 +229,10 @@
 .OurSponsorsButton:hover {
     background-color: rgb(255, 255, 255);
     transform: scale(1.08);
-    cursor: pointer;
 }
 .OurSponsorsButton:hover .OurSponsorsButtonText {
     color: rgb(0, 0, 0);
     
-    cursor: pointer;
 }
 
 .OurSponsorsButtonText {
@@ -365,7 +361,6 @@
     transform: scale(1.05);
     color: rgb(0, 0, 0);
     background-color: white;
-    cursor: pointer;
 
 }
 
