@@ -236,12 +236,10 @@ body {
 
 [id="Aasha Askew"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 }
 [id="Daniel Ashtiani"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
@@ -322,25 +320,21 @@ body {
 
 [id="Hari Baidwan"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Liam Bradley"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Aella Gong"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Nicole Zhang"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
@@ -348,25 +342,21 @@ body {
 
 [id="Amy Xu"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Oliver Low"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Derek Lee"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 
 }
 [id="Carrie Mohoruk"]:hover {
     transform: scale(1.15) !important; 
-    cursor: pointer;
     filter: brightness(150%);
 }
 
@@ -391,9 +381,9 @@ body {
     opacity: 0;
 
     position: absolute;
-    top: 5%;
+    top: 30%;
     z-index: 3;
-    left: 6%;
+    left: 24%;
     width: auto;
     height: 95%;
     max-height: 95%;
@@ -465,7 +455,6 @@ body {
 .StaffDescriptionExitButton:hover {
     transform: scale(1.03);
     color: rgb(0, 166, 255);
-    cursor: pointer;
 }
 
 .TagRoleText {
@@ -902,7 +891,6 @@ body {
     .StaffDescriptionExitButton:hover {
         transform: scale(1.03);
         color: rgb(0, 166, 255);
-        cursor: pointer;
     }
     
     .TagRoleText {

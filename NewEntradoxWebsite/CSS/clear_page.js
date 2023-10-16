@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //CLEAR PAGE
 function clearPage(pageType) {
+    document.querySelector(".trt2").style.top = "0%"
+    document.querySelector(".sponsorComponentsContainer").style.top = '200%'
+    document.querySelector(".sponsorComponentsContainer").classList.remove("floatingSponsorItemsA")
+
     var elements = document.querySelectorAll('[data-custom="' + pageType + '"]');
 
     if (pageType == "Outreach") {
@@ -63,14 +67,10 @@ function closeMenu() {
 //SPECIAL PAGE TYPES
 function specialPages(pageToLoad) {
   if (pageToLoad == 'Sponsor') {
-    document.querySelector(".TableOfBenifits").classList.add("shake3");
-    document.querySelector(".TextContainer").classList.add("textShake");
-    document.querySelector(".PageBackgroundSponsor").classList.add("flutterS");
-
-    if (document.querySelector(".trt").classList.contains("blackTitle")) {
-      document.querySelector(".trt").classList.remove("blackTitle");
-      document.querySelector(".trt").classList.add("whiteTitle");
-    }
+    document.querySelector(".trt2").style.top = "-110%"
+    document.querySelector(".sponsorComponentsContainer").style.top = '7%'
+    document.querySelector(".sponsorComponentsContainer").classList.add("floatingSponsorItemsA")
+  
   }
   if (pageToLoad == 'Outreach') {
     outreachContainerOn();

@@ -37,10 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //CALL ON FUNCTIONS//
 
     menuButtonTop.addEventListener("mouseover", function(){
-        menuButtonTop.style.cursor = 'pointer';
     })
     menuButtonTop.addEventListener("mouseout", function(){
-        menuButtonTop.style.cursor = 'auto';
     })
 
     menuButtonTop.addEventListener("click", function() {
@@ -74,12 +72,10 @@ document.addEventListener("DOMContentLoaded", function() {
     loadPageButtonText.addEventListener('mouseover', function(){
         currentScale += 0.05;
         loadPageButtonText.style.transform = `scale(${currentScale})`;
-        loadPageButtonText.style.cursor = 'pointer';
     })
     loadPageButtonText.addEventListener('mouseout', function(){
         currentScale -= 0.05;
         loadPageButtonText.style.transform = `scale(${currentScale})`;
-        loadPageButtonText.style.cursor = 'auto';
     })
 
     loadPageButtonText.addEventListener('click', function() {
@@ -154,13 +150,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     aboutUs.addEventListener('mouseover', function() {
         if (open_or_not === true) {
-            aboutUs.style.cursor = 'pointer';
             document.querySelector('.AboutUsHover').classList.add('hoverMenu');
         }
     });
 
     aboutUs.addEventListener('mouseout', function() {
-        aboutUs.style.cursor = 'auto';
 
         void document.querySelector('.AboutUsHover').offsetWidth;
         document.querySelector('.AboutUsHover').classList.remove('hoverMenu');
@@ -171,14 +165,12 @@ document.addEventListener("DOMContentLoaded", function() {
     staff.addEventListener('mouseover', function() {
         if (open_or_not === true) {
         
-        staff.style.cursor = 'pointer';
 
         document.querySelector('.StaffHover').classList.add('hoverMenu');
         }
     });
 
     staff.addEventListener('mouseout', function() {
-        staff.style.cursor = 'auto';
         
         void document.querySelector('.StaffHover').offsetWidth;
         document.querySelector('.StaffHover').classList.remove('hoverMenu');
@@ -188,14 +180,12 @@ document.addEventListener("DOMContentLoaded", function() {
     Robots.addEventListener('mouseover', function() {
         if (open_or_not === true) {
         
-        Robots.style.cursor = 'pointer';
 
         document.querySelector('.RobotsHover').classList.add('hoverMenu');
         }
     });
 
     Robots.addEventListener('mouseout', function() {
-        Robots.style.cursor = 'auto';
         
         void document.querySelector('.RobotsHover').offsetWidth;
         document.querySelector('.RobotsHover').classList.remove('hoverMenu');
@@ -205,14 +195,12 @@ document.addEventListener("DOMContentLoaded", function() {
     Sponsor.addEventListener('mouseover', function() {
         if (open_or_not === true) {
         
-        Sponsor.style.cursor = 'pointer';
 
         document.querySelector('.SponsorHover').classList.add('hoverMenu');
         }
     });
 
     Sponsor.addEventListener('mouseout', function() {
-        Sponsor.style.cursor = 'auto';
         
         void document.querySelector('.SponsorHover').offsetWidth;
         document.querySelector('.SponsorHover').classList.remove('hoverMenu');
@@ -222,14 +210,12 @@ document.addEventListener("DOMContentLoaded", function() {
     Social.addEventListener('mouseover', function() {
         if (open_or_not === true) {
         
-        Social.style.cursor = 'pointer';
 
         document.querySelector('.SocialHover').classList.add('hoverMenu');
         }
     });
 
     Social.addEventListener('mouseout', function() {
-        Social.style.cursor = 'auto';
         
         void document.querySelector('.SocialHover').offsetWidth;
         document.querySelector('.SocialHover').classList.remove('hoverMenu');
@@ -247,7 +233,6 @@ const homeContainer = document.querySelector('.homeMenuContainerClass');
 
 
 homeContainer.addEventListener('mouseover', function() {
-    homeContainer.style.cursor = 'pointer';
     document.querySelector('.homeMenuContainerHover').classList.add('hoverMenu');
 });
 

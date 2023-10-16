@@ -6,19 +6,11 @@ const mailButton = document.querySelector('.mailItem');
 const schoolButton = document.querySelector('.schoolItem');
 const instagramButton = document.querySelector('.instagramItem');
 const podcastButton = document.querySelector('.podcastItem');
-const learnMoreSponsor = document.querySelector('.LearnMoreSponsorButton');
 var pageT = 'social'
 /* MAIN */
 rankingButton.addEventListener("click", function() {
     if (checkPageType() == 'social') {
         window.open("https://ftcscout.org/teams/14316", "_blank");
-
-    }
-})
-
-learnMoreSponsor.addEventListener("click", function() {
-    if (checkPageType() == 'Sponsor') {
-        window.open('pdf/pdf.html', "_blank");
 
     }
 })
@@ -39,22 +31,38 @@ mailButton.addEventListener("click", function() {
 
 schoolButton.addEventListener("click", function() {
     if (checkPageType() == 'social') {
-        window.open("https://www.meadowridge.bc.ca/", "_blank");
+        let pop = window.open("https://www.meadowridge.bc.ca/", "_blank");
+        if (pop) {
+            console.log("opened popup")
+        } else {
+            alert("Pop up was blocked. Please enable pop ups to view the page")
+        }
 
     }
 })
 
 instagramButton.addEventListener("click", function() {
     if (checkPageType() == 'social') {
-        window.open("https://www.instagram.com/entradox/", "_blank");
 
+        let pop = window.open("https://www.instagram.com/entradox/", "_blank");
+        if (pop) {
+            console.log("opened popup")
+        } else {
+            alert("Pop up was blocked. Please enable pop ups to view the page")
+        }
 
     }
 })
 
 podcastButton.addEventListener("click", function() {
     if (checkPageType() == 'social') {
-        window.open("https://open.spotify.com/show/3HeGGq8z0BoYhlDHMtkI3N", "_blank");
+        let pop = window.open("https://open.spotify.com/show/3HeGGq8z0BoYhlDHMtkI3N", "_blank");
+
+        if (pop) {
+            console.log("opened popup")
+        } else {
+            alert("Pop up was blocked. Please enable pop ups to view the page")
+        }
 
 
     }

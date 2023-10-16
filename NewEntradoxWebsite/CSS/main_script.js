@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     var video = document.getElementById("video");
     var videocontainer = document.querySelector(".video-container");
     video.addEventListener("ended", function() {
@@ -29,4 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 100); 
 
 
+});
+
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.querySelector('.cursor');
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+});
+
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.querySelector('.cursorDot');
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
 });
