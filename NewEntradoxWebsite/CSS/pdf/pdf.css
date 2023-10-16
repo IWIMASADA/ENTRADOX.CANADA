@@ -1,0 +1,98 @@
+/* Reset some default margin/padding for the body and html elements */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "PrintClearly";
+    src: url("/CSS/fonts/PRINC___.TTF") format("truetype");
+}
+
+/* Create a split-screen layout using flexbox */
+.split-screen {
+    display: flex;
+    height: 100%;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+}
+
+/* Style the left and right panels */
+.left-panel {
+    flex: 1; /* Takes up half of the available width */
+    background-color: #121212; /* Optional background color for the PDF container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+}
+
+.right-panel {
+    flex: 1; /* Takes up half of the available width */
+    background-color: #272727; /* Optional background color for the content */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+}
+.con {
+    top: 40%;
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+
+}
+.em {
+    top: 50%;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+}
+.em2 {
+    top: 100%;
+    font-size: 1.5rem;
+    color: rgb(0, 140, 255);
+    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    user-select: none;
+    -webkit-user-select: none; /* For Safari and older versions of Chrome */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Microsoft Edge */
+}
+
+.em2:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+    color: orange;
+}
+
+#canvas {
+    position: absolute;
+    z-index: 10;
+}
