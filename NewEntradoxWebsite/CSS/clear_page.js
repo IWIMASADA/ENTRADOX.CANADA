@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
 //CLEAR PAGE
 function clearPage(pageType) {
     document.querySelector(".trt2").style.top = "0%"
+    document.querySelector(".sponsorComponentsContainer").style.top = '200%'
+    document.querySelector(".sponsorComponentsContainer").classList.remove("floatingSponsorItemsA")
 
     var elements = document.querySelectorAll('[data-custom="' + pageType + '"]');
 
@@ -66,6 +68,9 @@ function closeMenu() {
 function specialPages(pageToLoad) {
   if (pageToLoad == 'Sponsor') {
     document.querySelector(".trt2").style.top = "-110%"
+    document.querySelector(".sponsorComponentsContainer").style.top = '7%'
+    document.querySelector(".sponsorComponentsContainer").classList.add("floatingSponsorItemsA")
+  
   }
   if (pageToLoad == 'Outreach') {
     outreachContainerOn();
