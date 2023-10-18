@@ -467,7 +467,3 @@
     -moz-user-select: none; /* For Firefox */
     -ms-user-select: none; /* For Microsoft Edge */
 }
-div[data-custom="Sponsor"] {
-    opacity: 0;
-}
-  

@@ -30,7 +30,7 @@ function clearPage(pageType) {
     }
 
     for (var i = 0; i < elements.length; i++) {
-      elements[i].style.opacity = '0';
+      elements[i].style.opacity = '1';
     }
   }
 

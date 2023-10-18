@@ -3,7 +3,6 @@
     src: url("fonts/TWFONT/Tw\ Cen\ MT\ Regular.ttf") format("truetype");
 }
 .aboutUsBackgroundPage {
-    opacity: 0;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -37,7 +36,6 @@
 
 
 .backgroundContainerForAboutUs {
-    opacity: 0;
     background-color: transparent;
     position:absolute;
     z-index: 2;
@@ -90,7 +88,6 @@
     letter-spacing: 1.7rem;
     left: 3%;
     transition: all .7s linear;
-
     top: 10%;
 }
 .AboutUsTextTitleOutline {
@@ -169,7 +166,6 @@
     
 
     .aboutUsBackgroundPage {
-        opacity: 0;
         position: absolute;
         z-index: 1;
         top: 50%;
@@ -184,7 +180,6 @@
     
     
     .backgroundContainerForAboutUs {
-        opacity: 0;
         background-color: transparent;
         position:absolute;
         z-index: 2;

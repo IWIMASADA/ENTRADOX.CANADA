@@ -13,7 +13,6 @@
     top: 150%;
     /* ORIGINAL 10% */
     left: 40%;   
-    opacity: 0;
 
 }
 .instagramContainer {
@@ -26,7 +25,6 @@
     top: 150%;
     /* ORIGINAL 70% */
     left: 25%;
-    opacity: 0;
 
 }
 .tutorialContainer {
@@ -40,7 +38,6 @@
     top: 150%;
     /* ORIGINAL 10% */
     left: 65%;
-    opacity: 0;
 
 }
 .mailContainer {
@@ -53,7 +50,6 @@
     top: 150%;
     /* ORIGINAL 25% */
     left: 8%;
-    opacity: 0;
 
 }
 .podcastContainer {
@@ -66,7 +62,6 @@
     top: 150%;
     /* ORIGINAL 60% */
     left: 50%;
-    opacity: 0;
 
 }
 
@@ -80,7 +75,6 @@
     top: 150%;
     /* ORIGINAL 55% */
     left: 75%;
-    opacity: 0;
 
 }
 
@@ -94,7 +88,6 @@
     max-height: 100%;
     image-rendering:optimizeQuality;
     filter:brightness(110%);
-    opacity: 0;
 
 }
 .vignette {
@@ -105,7 +98,6 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 0 10rem rgba(0,0,0,0.9) inset;
-    opacity: 0;
 
   }
 
