@@ -26,7 +26,6 @@ function clearPage(pageType) {
       outreachContainerOff();
     }
     if (pageType == "social") {
-      socialDown();
     }
 
     for (var i = 0; i < elements.length; i++) {
@@ -84,11 +83,7 @@ function specialPages(pageToLoad) {
       document.querySelector(".trt").classList.add("whiteTitle");
     }
   }
-  if (pageToLoad == 'social') {
-    socialUp();
-    
 
-  }
   if (pageToLoad == 'Staff') {
     if (window.innerWidth <= 700) {
       staffUpForMobile();
@@ -104,62 +99,10 @@ function outreachContainerOff() {
   document.querySelector(".TitleContainer").style.backgroundColor  = "transparent";
 }
 
-var rankingContainer = document.querySelector('.rankingContainer');
-var tutorialContainer = document.querySelector('.tutorialContainer');
-var mailContainer = document.querySelector('.mailContainer');
-var schoolContainer = document.querySelector('.schoolContainer');
-var instagramContainer = document.querySelector('.instagramContainer');
-var podcastContainer = document.querySelector('.podcastContainer');
-var StaffPictureBody = document.querySelector('.StaffPictureBody');
-var mobileNextButton = document.querySelector('.mobileNextButton');
-var mobileNextButton2 = document.querySelector('.mobileNextButton2');
-
-function socialUp() {
-    rankingContainer.style.top = '10%';
-    tutorialContainer.style.top = '10%';
-    mailContainer.style.top = '25%';
-    schoolContainer.style.top = '55%';
-    instagramContainer.style.top = '70%';
-    podcastContainer.style.top = '60%';
-
-    // Example usage
-    if (isMobileDevice()) {
-      mobileNextButton.style.top = '80%';
-      console.log("User is on a mobile device");
-    } else {
-      mobileNextButton.style.top = '200%';
-
-      console.log("User is on a desktop or tablet");
-    }
-
-    
-
-    
-
-
-}
-function socialDown() {
-  rankingContainer.style.top = '150%';
-  tutorialContainer.style.top = '150%';
-  mailContainer.style.top = '150%';
-  schoolContainer.style.top = '150%';
-  instagramContainer.style.top = '150%';
-  podcastContainer.style.top = '150%';
-
-  if (isMobileDevice()) {
-    mobileNextButton.style.top = '200%';
-    console.log("User is on a mobile device");
-  } else {
-    mobileNextButton.style.top = '200%';
-
-    console.log("User is on a desktop or tablet");
-  }
 
 
 
 
-
-}
 
 function staffUpForMobile() {
 

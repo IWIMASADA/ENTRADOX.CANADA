@@ -10,7 +10,7 @@
     width: 200px;
     height: 200px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 10%;
     /* ORIGINAL 10% */
     left: 40%;   
 
@@ -22,7 +22,7 @@
     width: 400px;
     height: 400px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 70%;
     /* ORIGINAL 70% */
     left: 25%;
 
@@ -35,7 +35,7 @@
     width: 400px;
     height: 400px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 10%;
     /* ORIGINAL 10% */
     left: 65%;
 
@@ -47,7 +47,7 @@
     width: 300px;
     height: 300px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 25%;
     /* ORIGINAL 25% */
     left: 8%;
 
@@ -59,9 +59,10 @@
     width: 180px;
     height: 180px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 60%;
     /* ORIGINAL 60% */
     left: 50%;
+    opacity: 1;
 
 }
 
@@ -72,7 +73,7 @@
     width: 500px;
     height: 500px;
     transition: transform 0.3s linear;
-    top: 150%;
+    top: 55%;
     /* ORIGINAL 55% */
     left: 75%;
 
@@ -503,7 +504,7 @@
     font-size: 1rem;
     color: white;
     font-weight: normal;
-    opacity: 0;
+    opacity: 1;
     letter-spacing: 30px;
     text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
 }
@@ -519,24 +520,8 @@
     width: auto;
     height: auto;
     transition: transform 0.3s linear;
-    opacity: 0;
+    opacity: 1;
 
-
-}
-.MapLogo {
-    position: absolute;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left: 50%;
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    filter:contrast(200%);
-    opacity: 0;
 
 }
 
@@ -556,7 +541,7 @@
     left: 200%;  
     transform: translate(-50%, -50%);
     transition: left 0.3s linear;
-    opacity: 0;
+    opacity: 1;
 }
 .instagramContainer {
     position: absolute;
@@ -570,7 +555,7 @@
 
     transition: left 0.3s linear;
 
-    opacity: 0;
+    opacity: 1;
 
 }
 .tutorialContainer {
@@ -586,7 +571,7 @@
 
     transition: left 0.3s linear;
 
-    opacity: 0;
+    opacity: 1;
 
 }
 .mailContainer {
@@ -601,7 +586,7 @@
 
     transition: left 0.3s linear;
 
-    opacity: 0;
+    opacity: 1;
 
 }
 .podcastContainer {
@@ -616,7 +601,7 @@
 
     transition: left 0.3s linear;
 
-    opacity: 0;
+    opacity: 1;
 
 }
 
@@ -630,7 +615,7 @@
     left: 200%;  
     transform: translate(-50%, -50%);
     transition: left 0.3s linear;
-    opacity: 0;
+    opacity: 1;
 
 }
 
@@ -645,7 +630,7 @@
     object-fit: cover;
     image-rendering:optimizeQuality;
     filter:brightness(70%);
-    opacity: 0;
+    opacity: 1;
 
 }
 .vignette {
@@ -656,7 +641,7 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 0 10rem rgba(0,0,0,0.9) inset;
-    opacity: 0;
+    opacity: 1;
 
   }
 
@@ -1122,6 +1107,7 @@
     background-color: transparent;
     width: 70%;
     height: 10%;
+    opacity: 1;
     transform: translate(-50%,-50%);
     }
 }

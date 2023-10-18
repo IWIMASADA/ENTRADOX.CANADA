@@ -19,7 +19,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
-
+    opacity: 1;
     animation: moveCircularly2 12s ease-in-out infinite;
 
 }
@@ -52,7 +52,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     top: 0%;
-    opacity: 0;
+    opacity: 1;
 
 }
 .fullScreenStaffWrapper2 {
@@ -364,7 +364,7 @@ body {
 /* MAIN PART OF STAFF PAGE */
 .ContainerForStaffOverview {
     position: absolute;
-    z-index: 10000;
+    z-index: 1;
     height: 80%;
     width: 80%;
     top: 200%;
@@ -785,10 +785,10 @@ body {
 
     .ContainerForStaffOverview {
         position: absolute;
-        z-index: 10000;
+        z-index: 2147483647;
         height: 80%;
         width: 100%;
-        top: 30%;
+        top: 1000%;
         left: 0%;
         max-width: 100%;
         max-height: 100%;
