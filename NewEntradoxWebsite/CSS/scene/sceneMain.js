@@ -1,9 +1,9 @@
 // Set up scene
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+camera.position.z = 10;
 
-const renderer = new THREE.WebGLRenderer(); 
+const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -11,9 +11,12 @@ document.body.appendChild(renderer.domElement);
 const image = new Image();
 image.src = 'sceneLogoMain.png'; // Change the path
 
-const imageScale = 0.2; // Adjusted scale for the entire image
-const particleRadius = 0.001; // Adjusted radius for individual particles
-const maxParticles = 11900; // Maximum nufddddddddddddddddddddddddddddddddddddddddddddddddwamber of particles
+const imageScale = 0.1; // Adjusted scale for the entire image
+const particleRadius = 0.1; // Adjusted radius for individual particles
+const maxParticles = 3615; // Maximum number of particles
+
+// Load sprite texture (use your own circular texture or create one)
+const spriteTexture = new THREE.TextureLoader().load('circle.png');
 
 image.onload = function () {
   const canvas = document.createElement('canvas');
@@ -26,7 +29,15 @@ image.onload = function () {
 
   // Create particle system using BufferGeometry
   const particleGeometry = new THREE.BufferGeometry();
-  const particleMaterial = new THREE.PointsMaterial({ color: 0x888888, size: particleRadius });
+  
+  // Use PointsMaterial with the sprite texture
+  const particleMaterial = new THREE.PointsMaterial({
+    size: particleRadius,
+    transparent: true,
+    alphaTest: 0.5,
+    depthTest: false,
+    map: spriteTexture, // Set the sprite texture
+  });
 
   const positions = new Float32Array(maxParticles * 3);
 
@@ -37,15 +48,18 @@ image.onload = function () {
     for (let x = 0; x < canvas.width && particleCount < maxParticles; x += 1) {
       const index = (x + y * canvas.width) * 4;
 
-      const posX = (x / canvas.width - 0.5) * 5;
-      const posY = (0.5 - y / canvas.height) * 5;
-      const posZ = (imageData.data[index] / 255) * 2; // Use image brightness for Z position
+      // Check if the pixel is non-transparent
+      if (imageData.data[index + 3] > 0) {
+        const posX = (x / canvas.width - 0.5) * 5;
+        const posY = (0.5 - y / canvas.height) * 5;
+        const posZ = (imageData.data[index] / 255) * 2; // Use image brightness for Z position
 
-      positions[particleCount * 3] = posX;
-      positions[particleCount * 3 + 1] = posY;
-      positions[particleCount * 3 + 2] = posZ;
+        positions[particleCount * 3] = posX;
+        positions[particleCount * 3 + 1] = posY;
+        positions[particleCount * 3 + 2] = posZ;
 
-      particleCount++;
+        particleCount++;
+      }
     }
   }
 
