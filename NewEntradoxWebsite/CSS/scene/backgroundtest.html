@@ -9,13 +9,48 @@
     <title>Particle Image Manipulation</title>
     <style>
       body {
+        cursor: none !important; /* Hide the default cursor */
         margin: 0;
         overflow: hidden;
       }
+      #cursorHitbox {
+        position: absolute;
+    z-index: 2147483647;
+    width: 40px;
+    height: 40px;
+    border: 0.1px solid #bbbbbb;
+    border-radius: 50%;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+    background-color: transparent; /* Make the cursor transparent inside the circle */
+    transition: all .07s linear;
+      }
+
+    .hitboxDot {
+    position: absolute;
+    z-index: 2147483647;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+    background-color: rgb(233, 233, 233); /* Make the cursor transparent inside the circle */
+    }
+
+
     </style>
   </head>
   <body>
+    <div id="cursorHitbox" class="hitbox"></div>
+    <div id="hitboxDotID" class="hitboxDot"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="sceneMain.js"></script>
+    <script src="cc.js"></script>
+
+
+
   </body>
+
+  
 </html>
