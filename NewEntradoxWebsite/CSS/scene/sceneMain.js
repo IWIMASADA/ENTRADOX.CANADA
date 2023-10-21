@@ -40,7 +40,7 @@ image.onload = function () {
   canvas.height = image.height * imageScale;
   canvas.style.width = '100%';
   canvas.style.height = '100%';
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height * 0.85);
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height * 0.8);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
@@ -111,11 +111,19 @@ image.onload = function () {
   const cursor = { x: 10, y: 10 };
   const pushForce = 0.1;
 
+  const cursorLARGE = { x: 10, y: 10 };
+  const pushForceLARGE = -0.0003;
+
   // Set position of cursor to be the person's mouse cursor
   document.addEventListener('mousemove', (event) => {
     cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
     cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+
+    cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+    cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
   });
+
+
 
   const animate = function () {
     requestAnimationFrame(animate);
@@ -129,13 +137,27 @@ image.onload = function () {
       const distanceSquared = (particleX - cursor.x) ** 2 + (particleY - cursor.y) ** 2;
       const distance = Math.sqrt(distanceSquared);
 
-      if (distance <= 0.5) {
-        const forceX = (particleX - cursor.x) * pushForce;
-        const forceY = (particleY - cursor.y) * pushForce;
+      
+      const distanceSquaredLARGE = (particleX - cursorLARGE.x) ** 2 + (particleY - cursorLARGE.y) ** 2;
+      const distanceLARGE = Math.sqrt(distanceSquaredLARGE);
+      
+      if (distanceLARGE <= 10) {
+        const forceXLARGE = (particleX - cursorLARGE.x) * pushForceLARGE;
+        const forceYLARGE = (particleY - cursorLARGE.y) * pushForceLARGE;
 
-        particlePositions.array[i] += forceX;
-        particlePositions.array[i + 1] += forceY;
+        particlePositions.array[i] += forceXLARGE;
+        particlePositions.array[i + 1] += forceYLARGE;
+        
+        if (distance <= 0.5) {
+          const forceX = (particleX - cursor.x) * pushForce;
+          const forceY = (particleY - cursor.y) * pushForce;
+  
+          particlePositions.array[i] += forceX;
+          particlePositions.array[i + 1] += forceY;
+        }
       }
+      
+
     }
 
     // Gradually move particles back to their original positions
