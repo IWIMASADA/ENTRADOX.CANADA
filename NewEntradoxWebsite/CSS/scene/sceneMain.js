@@ -60,8 +60,6 @@ image.onload = function () {
   let particleCount = 0;
   const stepSize = 2;
 
-
-
   for (let y = 0; y < canvas.height && particleCount < maxParticles; y += stepSize) {
     for (let x = 0; x < canvas.width && particleCount < maxParticles; x += stepSize) {
       const index = (x + y * canvas.width) * 4;
@@ -87,12 +85,12 @@ image.onload = function () {
     }
   }
 
-    // Adjust particle system aspect ratio
-    const aspectRatio = canvas.width / canvas.height;
-    const particleScaleX = aspectRatio; // Adjust as needed
-    const particleScaleY = 1; // Keep the same scale along the y-axis
-    particleGeometry.scale(particleScaleX, particleScaleY, 1);
-  
+  // Adjust particle system aspect ratio
+  const aspectRatio = canvas.width / canvas.height;
+  const particleScaleX = aspectRatio; // Adjust as needed
+  const particleScaleY = 1; // Keep the same scale along the y-axis
+  particleGeometry.scale(particleScaleX, particleScaleY, 1);
+
   // Store original positions
   originalPositions = new Float32Array(positions.length);
   originalPositions.set(positions);
@@ -124,10 +122,113 @@ image.onload = function () {
   });
 
 
+  // ... (Previous code)
 
-  const animate = function () {
-    requestAnimationFrame(animate);
+// Additional parameters for disintegration effect
+const disintegrationDuration = 1000; // in milliseconds
+const disintegrationParticleCount = particleCount; // Store the original particle count
 
+// Variable to track whether disintegration is in progress
+let disintegrationInProgress = false;
+const startTime  = Date.now();
+const maxScatterDistance = 0.2;
+
+// Function to disintegrate particles
+const animateDisintegration = function () {
+  alert("ok")
+  const currentTime = Date.now();
+  const elapsed = currentTime - startTime;
+
+  if (elapsed < disintegrationDuration) {
+    const progress = elapsed / disintegrationDuration;
+
+    // Move particles away from their original positions with a maximum scatter distance
+    for (let i = 0; i < particles.geometry.attributes.position.array.length; i += 3) {
+      const originalX = originalPositions[i];
+      const originalY = originalPositions[i + 1];
+
+      const deltaX = originalX - particles.geometry.attributes.position.array[i];
+      const deltaY = originalY - particles.geometry.attributes.position.array[i + 1];
+
+      // Calculate the scatter distance based on progress
+      const scatterDistanceX = deltaX * progress * maxScatterDistance;
+      const scatterDistanceY = deltaY * progress * maxScatterDistance;
+
+      // Apply the scatter distance
+      particles.geometry.attributes.position.array[i] += scatterDistanceX;
+      particles.geometry.attributes.position.array[i + 1] += scatterDistanceY;
+
+      // Set opacity to 0
+      particles.material.opacity = 1 - progress;
+    }
+
+    // Update particle positions
+    particles.geometry.attributes.position.needsUpdate = true;
+    particles.material.needsUpdate = true;
+
+    requestAnimationFrame(animateDisintegration);
+  } else {
+    // Disintegration complete, move particles off-screen
+    particles.position.set(100, 100, 100); // Adjust to move off-screen
+    disintegrationInProgress = false;
+  }
+};
+
+
+// Variable to track whether disintegration was triggered
+let disintegrationTriggered = false;
+
+// Event listener for wheel
+document.addEventListener('wheel', () => {
+  // Check if scroll position meets a certain condition (adjust as needed)
+  if (!disintegrationTriggered) {
+    alert("ok")
+    // Trigger disintegration effect
+    disintegrateParticles();
+    disintegrationTriggered = true;
+  }
+});
+
+// Event listener for cursor movement
+document.addEventListener('mousemove', (event) => {
+  // Check if disintegration is in progress
+  if (!disintegrationInProgress) {
+    // Update cursor position only if disintegration is not in progress
+    cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+    cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+
+    cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+    cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+  }
+});
+
+// Event listener for wheel scroll
+// Event listener for wheel
+window.addEventListener('wheel', (event) => {
+  // Check if scroll position meets a certain condition (adjust as needed)
+  if (!disintegrationInProgress) {
+    disintegrateParticles();
+  }
+});
+
+// Event listener for scroll
+window.addEventListener('scroll', () => {
+  // Check if scroll position meets a certain condition (adjust as needed)
+  if (!disintegrationInProgress) {
+    // Trigger disintegration effect
+    disintegrateParticles();
+  }
+});
+
+
+// ... (Remaining code)
+
+
+const animate = function () {
+  requestAnimationFrame(animate);
+
+  // Check if disintegration is in progress
+  if (!disintegrationInProgress) {
     // Push particles away
     const particlePositions = particles.geometry.attributes.position;
     for (let i = 0; i < particlePositions.array.length; i += 3) {
@@ -135,29 +236,24 @@ image.onload = function () {
       const particleY = particlePositions.array[i + 1];
 
       const distanceSquared = (particleX - cursor.x) ** 2 + (particleY - cursor.y) ** 2;
-      const distance = Math.sqrt(distanceSquared);
 
-      
       const distanceSquaredLARGE = (particleX - cursorLARGE.x) ** 2 + (particleY - cursorLARGE.y) ** 2;
-      const distanceLARGE = Math.sqrt(distanceSquaredLARGE);
-      
-      if (distanceLARGE <= 10) {
+
+      if (distanceSquaredLARGE <= 100) {
         const forceXLARGE = (particleX - cursorLARGE.x) * pushForceLARGE;
         const forceYLARGE = (particleY - cursorLARGE.y) * pushForceLARGE;
 
         particlePositions.array[i] += forceXLARGE;
         particlePositions.array[i + 1] += forceYLARGE;
-        
-        if (distance <= 0.5) {
+
+        if (distanceSquared <= 0.5) {
           const forceX = (particleX - cursor.x) * pushForce;
           const forceY = (particleY - cursor.y) * pushForce;
-  
+
           particlePositions.array[i] += forceX;
           particlePositions.array[i + 1] += forceY;
         }
       }
-      
-
     }
 
     // Gradually move particles back to their original positions
@@ -175,9 +271,12 @@ image.onload = function () {
 
     // Update particles position
     particles.geometry.attributes.position.needsUpdate = true;
+  }
 
-    renderer.render(scene, camera);
-  };
+  // Render the scene
+  renderer.render(scene, camera);
+};
 
-  animate();
+animate();
+
 };
