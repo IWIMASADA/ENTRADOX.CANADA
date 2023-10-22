@@ -1,7 +1,7 @@
 // Set up scene
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(-0.2, 0.5, 5); // Adjusted camera position
+camera.position.set(-2, 0.5, 5); // Adjusted camera position
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -110,11 +110,11 @@ image.onload = function () {
   const pushForce = 0.1;
 
   const cursorLARGE = { x: 10, y: 10 };
-  const pushForceLARGE = -0.0003;
+  const pushForceLARGE = -0.0002;
 
   // Set position of cursor to be the person's mouse cursor
   document.addEventListener('mousemove', (event) => {
-    cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+    cursor.x = (event.clientX / window.innerWidth) * 8 - 6;
     cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
 
     cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
@@ -237,19 +237,6 @@ document.addEventListener('keydown', function(event) {
 
 
 
-
-  // Event listener for cursor movement
-  document.addEventListener('mousemove', (event) => {
-    // Check if disintegration is in progress
-    if (!disintegrationInProgress) {
-      // Update cursor position only if disintegration is not in progress
-      cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
-      cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
-
-      cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
-      cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
-    }
-  });
 
 
 

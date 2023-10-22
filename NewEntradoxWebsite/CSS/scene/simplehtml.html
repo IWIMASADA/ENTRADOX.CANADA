@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--Language-->
+<html lang="en">
+<!--Head-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ENTRADOX CANADA</title>
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/main_style.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/animations.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/LargeLogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Old+Permic&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="pages.css">
+  <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/menu_style.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/LargeLogo.png">
+  <link rel="stylesheet" type="text/css" href="menu_animations.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/aboutus.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/staff.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/robots.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/sponsor.css">
+  <link rel="stylesheet" type="text/css" href="/NewEntradoxWebsite/CSS/contacts.css">
+</head>
+
+<style>
+    body {
+      cursor: none !important; /* Hide the default cursor */
+      margin: 0;
+      overflow: hidden;
+    }
+    #cursorHitbox {
+      position: absolute;
+  z-index: 2147483647;
+  width: 40px;
+  height: 40px;
+  border: 0.1px solid #bbbbbb;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+  transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+  background-color: transparent; /* Make the cursor transparent inside the circle */
+  transition: all .02s linear;
+    }
+
+  .hitboxDot {
+  position: absolute;
+  z-index: 2147483647;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+  transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+  background-color: rgb(233, 233, 233); /* Make the cursor transparent inside the circle */
+  }
+
+
+  </style>
+<!--Body-->
+<body>
+
+        
+  
+    <div class="cover"></div>
+
+
+    <div class="trTitle">
+        <img id="toprighttitle2" src="/NewEntradoxWebsite/HomeScreenAssets//entradoxText.png" draggable="false" alt="top right title2" class="trt2">
+    </div>
+
+    <div class="blackLogo">
+        <img id="blogo" src="/NewEntradoxWebsite/HomeScreenAssets/homeScreenLogo.png" draggable="false" alt="blackL" class="bl">
+    </div>
+    <div id="MenuButtonContainer" class="MenuButtonContainer" id="MenuButtonContainerID">
+        <div id="arrowTop" class="MenuButtonTop"></div>
+        <div id="arrowMiddle" class="MenuButtonMiddle"></div>
+        <div id="arrowBottom" class="MenuButtonBottom"></div>
+    </div>
+
+    </div>
+
+    <!--UNIVERSAL ITEMS END-->
+
+
+
+
+
+    <div id="cursorHitbox" class="hitbox"></div>
+    <div id="hitboxDotID" class="hitboxDot"></div>
+    <div class="imageCanvas"></div>
+
+
+
+
+
+    <header>
+    </header>
+
+
+<script src="contactsCursorTracker.js"></script>
+<script src="contactPages.js"></script>
+<script src="staffmoveeffect.js"></script>
+<script src="animateMenuButton.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+<script src="sceneMain.js"></script>
+<script src="cc.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>

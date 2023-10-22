@@ -39,7 +39,7 @@ body {
     pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
     transform: translate(-50%, -50%); /* Center the cursor on the pointer */
     background-color: transparent; /* Make the cursor transparent inside the circle */
-    transition: all .1s linear;
+    transition: all .01s linear;
 }
 .cursorDot {
     position: absolute;
