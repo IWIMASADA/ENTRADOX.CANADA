@@ -274,7 +274,7 @@ document.addEventListener('keydown', function(event) {
       }
 
       // Gradually move particles back to their original positions
-      const dampingFactor = 0.005;
+      const dampingFactor = 0.01;
       for (let i = 0; i < particlePositions.array.length; i += 3) {
         const originalX = originalPositions[i];
         const originalY = originalPositions[i + 1];
