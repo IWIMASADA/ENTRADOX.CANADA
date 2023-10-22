@@ -12,7 +12,7 @@ let originalPositions; // Added variable to store original positions
 
 const image = new Image();
 image.src = 'sceneLogoMain.png';
-const imageScale = 0.28;
+const imageScale = 0.26;
 const particleRadius = 0.023;
 const maxParticles = 10000;
 const size = 128;
@@ -121,162 +121,191 @@ image.onload = function () {
     cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
   });
 
+  // Additional parameters for disintegration effect
+  const disintegrationDuration = 500; // in milliseconds
 
-  // ... (Previous code)
+  // Variable to track whether disintegration is in progress
+  let disintegrationInProgress = false;
+  let disintegrationTriggered = false;
+  let startTime;
+  
+  
+// Add a separate material for transparency
+const transparentMaterial = new THREE.PointsMaterial({
+  size: particleRadius,
+  transparent: true,
+  alphaTest: 0,
+  depthTest: false,
+  vertexColors: true,
+  opacity: 1, // Initial opacity
+  map: createCircularTexture(),
+});
 
-// Additional parameters for disintegration effect
-const disintegrationDuration = 1000; // in milliseconds
-const disintegrationParticleCount = particleCount; // Store the original particle count
 
-// Variable to track whether disintegration is in progress
-let disintegrationInProgress = false;
-const startTime  = Date.now();
-const maxScatterDistance = 0.2;
+let disWait = false;
 
-// Function to disintegrate particles
+
+
 const animateDisintegration = function () {
-  alert("ok")
-  const currentTime = Date.now();
-  const elapsed = currentTime - startTime;
+  if (disWait == false) {
 
-  if (elapsed < disintegrationDuration) {
-    const progress = elapsed / disintegrationDuration;
+    //disintegrationInProgress = false;
+    const currentTime = Date.now();
+    const elapsed = currentTime - startTime;
 
-    // Move particles away from their original positions with a maximum scatter distance
-    for (let i = 0; i < particles.geometry.attributes.position.array.length; i += 3) {
-      const originalX = originalPositions[i];
-      const originalY = originalPositions[i + 1];
+    if (elapsed < disintegrationDuration) {
+      const progress = elapsed / disintegrationDuration;
 
-      const deltaX = originalX - particles.geometry.attributes.position.array[i];
-      const deltaY = originalY - particles.geometry.attributes.position.array[i + 1];
+      // Instantly scatter particles with an explosive effect
+      const maxExplosiveScatterDistance = 0.3;
 
-      // Calculate the scatter distance based on progress
-      const scatterDistanceX = deltaX * progress * maxScatterDistance;
-      const scatterDistanceY = deltaY * progress * maxScatterDistance;
+      for (let i = 0; i < particles.geometry.attributes.position.array.length; i += 3) {
+        // Calculate the scatter distance based on progress with randomness
+        const scatterDistanceX = (Math.random() - 0.5) * maxExplosiveScatterDistance;
+        const scatterDistanceY = (Math.random() - 0.5) * maxExplosiveScatterDistance;
 
-      // Apply the scatter distance
-      particles.geometry.attributes.position.array[i] += scatterDistanceX;
-      particles.geometry.attributes.position.array[i + 1] += scatterDistanceY;
+        // Apply the scatter distance
+        particles.geometry.attributes.position.array[i] += scatterDistanceX;
+        particles.geometry.attributes.position.array[i + 1] += scatterDistanceY;
+      }
 
-      // Set opacity to 0
-      particles.material.opacity = 1 - progress;
-    }
+      // Set the opacity for the transparent material
+      transparentMaterial.opacity = 1 - progress;
 
-    // Update particle positions
-    particles.geometry.attributes.position.needsUpdate = true;
-    particles.material.needsUpdate = true;
+      // Update particle positions
+      particles.geometry.attributes.position.needsUpdate = true;
+      particles.material = transparentMaterial;
 
-    requestAnimationFrame(animateDisintegration);
-  } else {
-    // Disintegration complete, move particles off-screen
-    particles.position.set(100, 100, 100); // Adjust to move off-screen
-    disintegrationInProgress = false;
-  }
+      particles.position.set(0, 0, 0);
+      requestAnimationFrame(animateDisintegration);
+    disintegrationTriggered = true;
+
+    } 
+    //disWait = true;
+
+    
+
+
+  }  
 };
 
+document.addEventListener('keydown', function(event) {
+  // Check if the pressed key is 'a'
+  if (event.key === 'a') {
+    console.log("pressed a");
 
-// Variable to track whether disintegration was triggered
-let disintegrationTriggered = false;
+      disintegrationInProgress = false;
+      disWait = false;
 
-// Event listener for wheel
-document.addEventListener('wheel', () => {
-  // Check if scroll position meets a certain condition (adjust as needed)
-  if (!disintegrationTriggered) {
-    alert("ok")
-    // Trigger disintegration effect
-    disintegrateParticles();
-    disintegrationTriggered = true;
+
+      requestAnimationFrame(animateDisintegration);
+
+      particles.material = particleMaterial;
+      
   }
 });
 
-// Event listener for cursor movement
-document.addEventListener('mousemove', (event) => {
-  // Check if disintegration is in progress
-  if (!disintegrationInProgress) {
-    // Update cursor position only if disintegration is not in progress
-    cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
-    cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'b') {
 
-    cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
-    cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+        // Check if scroll position meets a certain condition (adjust as needed)
+        if (disWait === false) {
+          // Trigger disintegration
+          disintegrationTriggered = true
+          disintegrateParticles();
+    
+    
+          disintegrationInProgress = true;
+    
+          
+        } else {
+    
+        }
+ 
+      
   }
 });
 
-// Event listener for wheel scroll
-// Event listener for wheel
-window.addEventListener('wheel', (event) => {
-  // Check if scroll position meets a certain condition (adjust as needed)
-  if (!disintegrationInProgress) {
-    disintegrateParticles();
-  }
-});
+  const disintegrateParticles = function () {
+    // Trigger disintegration
+    startTime = Date.now();
+    animateDisintegration();
 
-// Event listener for scroll
-window.addEventListener('scroll', () => {
-  // Check if scroll position meets a certain condition (adjust as needed)
-  if (!disintegrationInProgress) {
-    // Trigger disintegration effect
-    disintegrateParticles();
-  }
-});
+    
+
+  };
 
 
-// ... (Remaining code)
 
 
-const animate = function () {
-  requestAnimationFrame(animate);
+  // Event listener for cursor movement
+  document.addEventListener('mousemove', (event) => {
+    // Check if disintegration is in progress
+    if (!disintegrationInProgress) {
+      // Update cursor position only if disintegration is not in progress
+      cursor.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+      cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
 
-  // Check if disintegration is in progress
-  if (!disintegrationInProgress) {
-    // Push particles away
-    const particlePositions = particles.geometry.attributes.position;
-    for (let i = 0; i < particlePositions.array.length; i += 3) {
-      const particleX = particlePositions.array[i];
-      const particleY = particlePositions.array[i + 1];
+      cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
+      cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+    }
+  });
 
-      const distanceSquared = (particleX - cursor.x) ** 2 + (particleY - cursor.y) ** 2;
 
-      const distanceSquaredLARGE = (particleX - cursorLARGE.x) ** 2 + (particleY - cursorLARGE.y) ** 2;
 
-      if (distanceSquaredLARGE <= 100) {
-        const forceXLARGE = (particleX - cursorLARGE.x) * pushForceLARGE;
-        const forceYLARGE = (particleY - cursorLARGE.y) * pushForceLARGE;
 
-        particlePositions.array[i] += forceXLARGE;
-        particlePositions.array[i + 1] += forceYLARGE;
+  const animate = function () {
+    requestAnimationFrame(animate);
 
-        if (distanceSquared <= 0.5) {
-          const forceX = (particleX - cursor.x) * pushForce;
-          const forceY = (particleY - cursor.y) * pushForce;
+    // Check if disintegration is in progress
+    if (!disintegrationInProgress) {
+      // Push particles away
+      const particlePositions = particles.geometry.attributes.position;
+      for (let i = 0; i < particlePositions.array.length; i += 3) {
+        const particleX = particlePositions.array[i];
+        const particleY = particlePositions.array[i + 1];
 
-          particlePositions.array[i] += forceX;
-          particlePositions.array[i + 1] += forceY;
+        const distanceSquared = (particleX - cursor.x) ** 2 + (particleY - cursor.y) ** 2;
+
+        const distanceSquaredLARGE = (particleX - cursorLARGE.x) ** 2 + (particleY - cursorLARGE.y) ** 2;
+
+        if (distanceSquaredLARGE <= 100) {
+          const forceXLARGE = (particleX - cursorLARGE.x) * pushForceLARGE;
+          const forceYLARGE = (particleY - cursorLARGE.y) * pushForceLARGE;
+
+          particlePositions.array[i] += forceXLARGE;
+          particlePositions.array[i + 1] += forceYLARGE;
+
+          if (distanceSquared <= 0.2) {
+            const forceX = (particleX - cursor.x) * pushForce;
+            const forceY = (particleY - cursor.y) * pushForce;
+
+            particlePositions.array[i] += forceX;
+            particlePositions.array[i + 1] += forceY;
+          }
         }
       }
+
+      // Gradually move particles back to their original positions
+      const dampingFactor = 0.005;
+      for (let i = 0; i < particlePositions.array.length; i += 3) {
+        const originalX = originalPositions[i];
+        const originalY = originalPositions[i + 1];
+
+        const deltaX = originalX - particlePositions.array[i];
+        const deltaY = originalY - particlePositions.array[i + 1];
+
+        particlePositions.array[i] += deltaX * dampingFactor;
+        particlePositions.array[i + 1] += deltaY * dampingFactor;
+      }
+
+      // Update particles position
+      particles.geometry.attributes.position.needsUpdate = true;
     }
 
-    // Gradually move particles back to their original positions
-    const dampingFactor = 0.005;
-    for (let i = 0; i < particlePositions.array.length; i += 3) {
-      const originalX = originalPositions[i];
-      const originalY = originalPositions[i + 1];
+    // Render the scene
+    renderer.render(scene, camera);
+  };
 
-      const deltaX = originalX - particlePositions.array[i];
-      const deltaY = originalY - particlePositions.array[i + 1];
-
-      particlePositions.array[i] += deltaX * dampingFactor;
-      particlePositions.array[i + 1] += deltaY * dampingFactor;
-    }
-
-    // Update particles position
-    particles.geometry.attributes.position.needsUpdate = true;
-  }
-
-  // Render the scene
-  renderer.render(scene, camera);
-};
-
-animate();
-
+  animate();
 };
