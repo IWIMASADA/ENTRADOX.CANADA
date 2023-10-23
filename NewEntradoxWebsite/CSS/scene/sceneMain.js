@@ -1,25 +1,30 @@
 // Set up scene
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(-2, 0.5, 5); // Adjusted camera position
+camera.position.set(-2.4, 0, 5); // Adjusted camera position
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+const canvasContainer = document.querySelector('.testbg');
 
+renderer.sortObjects = true;
+renderer.setClearColor( 0x000000, 0 );
 let particles;
 let originalPositions; // Added variable to store original positions
 
 const image = new Image();
-image.src = 'sceneLogoMain.png';
-const imageScale = 0.26;
-const particleRadius = 0.023;
-const maxParticles = 10000;
+image.src = 'sceneLogoMain4.png';
+const imageScale = 2;
+const particleRadius = 0.018;
+const maxParticles = 24875;
 const size = 128;
 const size2 = 128;
 
+
 function createCircularTexture() {
-  const canvas = document.createElement('canvas');
+  const canvas = document.getElementById('canvas2');
+
+  canvas.style.zIndex = '2147483646';
   canvas.width = size;
   canvas.height = size2;
   const ctx = canvas.getContext('2d');
@@ -33,16 +38,16 @@ function createCircularTexture() {
 
 var helperCanvas;
 image.onload = function () {
-  const canvas = document.createElement('canvas');
+  const canvas = document.getElementById('canvas');
   helperCanvas = canvas;
   const ctx = canvas.getContext('2d');
   canvas.width = (image.width) * imageScale;
   canvas.height = image.height * imageScale;
   canvas.style.width = '100%';
   canvas.style.height = '100%';
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height * 0.8);
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const imageData = ctx.getImageData(0, 0, canvas.width , canvas.height);
 
   const particleGeometry = new THREE.BufferGeometry();
   const particleMaterial = new THREE.PointsMaterial({
@@ -70,7 +75,7 @@ image.onload = function () {
         const posZ = (imageData.data[index] / 255) * 2;
 
         const color = new THREE.Color();
-        color.setHex(Math.random() > 0.5 ? 0xa1a1a1 : 0xbfbfbf);
+        color.setHex(Math.random() > 0.2 ? 0xEDEDED : 0xCCCCCC);
 
         positions[particleCount * 3] = posX;
         positions[particleCount * 3 + 1] = posY;
@@ -99,9 +104,17 @@ image.onload = function () {
   particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   particles = new THREE.Points(particleGeometry, particleMaterial);
+  const testbg = document.querySelector('.testbg');
+  testbg.renderOrder = 1;
+  canvasContainer.appendChild(renderer.domElement);
+  renderer.domElement.style.zIndex = '1';
+  particles.renderOrder = 100;
+  particleMaterial.renderOrder = 99; 
   scene.add(particles);
 
-  scene.background = new THREE.Color(0x111111);
+
+
+  
 
   particles.rotation.x = 0;
   particles.rotation.y = 0;
@@ -110,15 +123,15 @@ image.onload = function () {
   const pushForce = 0.1;
 
   const cursorLARGE = { x: 10, y: 10 };
-  const pushForceLARGE = -0.0002;
+  const pushForceLARGE = -0.0005;
 
   // Set position of cursor to be the person's mouse cursor
   document.addEventListener('mousemove', (event) => {
-    cursor.x = (event.clientX / window.innerWidth) * 8 - 6;
-    cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+    cursor.x = (event.clientX / window.innerWidth) * 8 - 6.3;
+    cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.48;
 
-    cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 4.2;
-    cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.9;
+    cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 6.3;
+    cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.48;
   });
 
   // Additional parameters for disintegration effect
@@ -295,4 +308,7 @@ document.addEventListener('keydown', function(event) {
   };
 
   animate();
+
 };
+
+
