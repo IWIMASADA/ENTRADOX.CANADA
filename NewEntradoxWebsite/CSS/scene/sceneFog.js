@@ -18,7 +18,7 @@ canvasContainer2.appendChild(renderer2.domElement);
 renderer2.domElement.style.zIndex = '1';
 scene2.add(particles2);
 
-var particleCount = 100;
+var particleCount = 120;
 
 for (var i = 0; i < particleCount; i++) {
     var particleSize = Math.random() * 0.04 + 0.01; // Random size between 0.01 and 0.06
