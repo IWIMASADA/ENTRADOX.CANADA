@@ -8,7 +8,7 @@ renderer2.sortObjects = true;
 renderer2.setClearColor(0x000000, 0);
 
 // Parameters
-var spreadOut = 25; // Adjust how far they spread out
+var spreadOut = 40; // Adjust how far they spread out
 
 // Create particles2
 var particles2 = new THREE.Group();
@@ -18,7 +18,7 @@ canvasContainer2.appendChild(renderer2.domElement);
 renderer2.domElement.style.zIndex = '1';
 scene2.add(particles2);
 
-var particleCount = 40;
+var particleCount = 100;
 
 for (var i = 0; i < particleCount; i++) {
     var particleSize = Math.random() * 0.04 + 0.01; // Random size between 0.01 and 0.06
