@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         6: "Builder, Programmer, Outreach Department",
         7: "Strategist and Field Coach",
         8: "Website Developer",
-        9: "Robotics Coach [Not an Entradox Member]"
+        9: "Undetermined"
     };
 
     var frame = document.querySelectorAll('[data-custom2="StaffMove"]');

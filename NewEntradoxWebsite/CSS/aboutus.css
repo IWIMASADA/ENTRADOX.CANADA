@@ -8,9 +8,41 @@
     top: 0;
     left: 0;
     width: 100%;
+    opacity: 0;
     height: 100%;
     filter: brightness(80%);
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.aboutusLabel {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 95%;
+    left: 90%;
+    text-align: right;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
+.aboutusNameLabel {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    text-align: right;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 1%;
+    left: 85%;
+    object-fit: cover;
+    text-wrap: nowrap;
 }
 
 .mobileCircleAboutUs {
@@ -32,6 +64,57 @@
     position: absolute;
     top: 200%;
 
+    
+}
+
+
+.icon-scroll2,
+.icon-scroll2:before {
+    position: absolute;
+    z-index: 10;
+    left: 95%;
+  
+}
+
+.icon-scroll2 {
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top: 88%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: iconShiftDown;
+}
+
+.icon-scroll-text2 {
+    position: absolute;
+    opacity: 1; 
+    z-index: 10;
+    width: 40rem;
+    margin-left: -8rem;
+    margin-top: 50%;
+    color: rgb(179, 179, 179);
+    font-family: 'TW', Arial, sans-serif;
+    font-weight: lighter; 
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+}
+
+.icon-scroll2:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    left: 50%;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
 }
 
 
@@ -62,8 +145,8 @@
     max-height: 600px;
     z-index: 5;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 4%;
+    left: 20%;
+    top: -10%;
     
 }
 .AboutUsItemSide {
@@ -100,7 +183,7 @@
     top: 20%;
     color: transparent;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke: .5px white;
+    -webkit-text-stroke: 1px rgb(0, 145, 255);
     transition: all .7s linear;
 
 }
