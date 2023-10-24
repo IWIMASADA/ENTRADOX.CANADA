@@ -19,6 +19,7 @@
 }
 
 
+
 body, html {
     margin: 0;
     padding: 0;
@@ -30,6 +31,32 @@ body, html {
 body {
     cursor: none;
 }
+
+/* 1: bar */
+
+.preloader-bar,
+.preloader-bar2 {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  z-index: 2147483647;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.preloader-bar {
+  background-color: #c9c9c9;
+  width: 100%;
+}
+
+.preloader-bar2 {
+  width: 0%;
+  background-color: #00aaff;
+  transition: all 300ms;
+}
+
+/* 2: progress circle */
 
 #canvas {
     position: absolute;
@@ -51,6 +78,21 @@ body {
     max-height: 104%;
     z-index: 1;
 
+}
+.loadingTextIndicator {
+    position: absolute;
+    opacity: 1;
+    font-family: 'Cinzel', serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 68%;
+    object-fit: cover;
+    text-wrap: nowrap;
 }
 .testbg { 
     position: absolute;
@@ -303,7 +345,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 2147483647;
+    z-index: 2147483646;
 }
 
 [data-custom="homeMovingItems"] {

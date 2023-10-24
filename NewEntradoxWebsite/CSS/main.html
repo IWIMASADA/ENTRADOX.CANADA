@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Old+Permic&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Yuji+Hentaigana+Akari&family=Zen+Loop&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="menu_style.css">
     <link rel="icon" type="image/x-icon" href="/Assets/LargeLogo.png">
@@ -35,9 +38,14 @@
     <div class="testbg2"></div>
 
     <!--UNIVERSAL ITEMS--> 
+    <div class="relative" id="relativeID">
+        <span class="d-block absolute preloader-bar"></span>
+        <span id="preloader-bar" class="d-block absolute preloader-bar2"></span>
+      </div>
     <div class="video-container">
-        <video id="video" autoplay muted playsinline>
-            <source src="/NewEntradoxWebsite/Assets/loadingType3.webm" draggable="false" type="video/webm">
+        <div class="loadingTextIndicator" id="loadingIDIndicator">LOADING: 000%</div>
+        <video id="video" muted playsinline>
+            <source id="playThis" src="/NewEntradoxWebsite/Assets/loadingScreenFinisher.webm" draggable="false" type="video/webm">
         </video>
             
     </div>
@@ -82,9 +90,6 @@
     <div class="cover"></div>
 
 
-    <div class="trTitle">
-        <img id="toprighttitle2" src="/NewEntradoxWebsite/HomeScreenAssets//entradoxText.png" draggable="false" alt="top right title2" class="trt2">
-    </div>
 
     <div class="blackLogo">
         <img id="blogo" src="/NewEntradoxWebsite/HomeScreenAssets/homeScreenLogo.png" draggable="false" alt="blackL" class="bl">

@@ -279,6 +279,8 @@ document.addEventListener('keydown', function(event) {
       }
   });
 
+  var firstTimeScroll = true;
+
   function liftPages() {
 
       // Get all pages
@@ -298,6 +300,17 @@ document.addEventListener('keydown', function(event) {
           page.style.display = 'block';
       });
 
+      if (firstTimeScroll == true) {
+                // Check if scroll position meets a certain condition (adjust as needed)
+                if (disWait === false) {
+                  // Trigger disintegration
+                  disintegrationTriggered = true;
+                  disintegrateParticles();
+                  disintegrationInProgress = true;
+                } 
+                firstTimeScroll = false;
+      }
+
       if (homePage.style.top == '-100%' && initialHomeTop == '0%') {
                 // Check if scroll position meets a certain condition (adjust as needed)
                 if (disWait === false) {
@@ -309,19 +322,20 @@ document.addEventListener('keydown', function(event) {
                   disintegrationInProgress = true;
             
                   
-                } else {
-            
-                }
+                } 
       }
 
       if (homePage.style.top == '0%' && initialHomeTop == '-100%') {
-        disintegrationInProgress = false;
-        disWait = false;
-  
-  
-        requestAnimationFrame(animateDisintegration);
-  
-        particles.material = particleMaterial;
+        setTimeout(function() {
+          disintegrationInProgress = false;
+          disWait = false;
+    
+    
+          requestAnimationFrame(animateDisintegration);
+    
+          particles.material = particleMaterial;
+      }, 900); 
+
       }
 
 
