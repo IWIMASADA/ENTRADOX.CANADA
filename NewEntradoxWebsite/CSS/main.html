@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ENTRADOX CANADA</title>
+    <title>Entradox</title>
     <link rel="stylesheet" type="text/css" href="main_style.css">
     <link rel="stylesheet" type="text/css" href="animations.css">
     <link rel="icon" type="image/x-icon" href="/Assets/LargeLogo.png">
@@ -22,6 +22,17 @@
     <link rel="stylesheet" type="text/css" href="contacts.css">
 </head>
 <body>
+    <div class="cursor" id="cursorID"></div>
+    <div class="cursorDot" id="cusorDotID"></div>
+    </div>
+
+    <!--THREEJS ITEMS-->
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+    <div class="testbg"></div>
+
+
+    <div class="testbg2"></div>
 
     <!--UNIVERSAL ITEMS--> 
     <div class="video-container">
@@ -30,8 +41,17 @@
         </video>
             
     </div>
+
     <div class="blackScreen" id="bscreen"></div>
         
+    <video data-custom="Home" id="lightRay" autoplay muted playsinline loop>
+        <source src="/NewEntradoxWebsite/Assets/lightRayWebm.webm" draggable="false" type="video/webm">
+    </video>
+
+    <video data-custom="Home" id="smokeEffectHome" autoplay muted playsinline loop>
+        <source src="/NewEntradoxWebsite/Assets/smokeEffectHomeNew.webm" draggable="false" type="video/webm">
+    </video>
+
     <div id="menupage" class="menu">
         <div class="AboutUsContainer">
         
@@ -83,35 +103,39 @@
         <div id="arrowBottom" class="MenuButtonBottom"></div>
     </div>
 
-    <div class="cursor"></div>
-    <div class="cursorDot"></div>
-    </div>
+
+
 
     <!--HOME PAGE-->
-    <div data-custom="Home" class="sectionWrapper" id="page1">
+    <div data-custom="Home" data-custom2="HomeMove"class="sectionWrapper" id="page1">
+        <div class='icon-scroll'>
+            <div class="icon-scroll-text">SCROLL V</div>
+        </div>
         <div data-v-33779a56 data-custom="Home" class="homeBGContainer" >
             <div class="containerforMobileAssets">
+                <div class="homeLabel">| HOME |</div>
+                <div class="entradoxNameLabel">> ENTRADOX | HOME</div>
+                
                 <div class="lineDownMobile SideMobileLine"></div>
                 <div class="lineDownMobile2 upDownMobileLine"></div>
                 <img src="/NewEntradoxWebsite/HomeScreenAssets/mobileCricleAsset.png" class="mobileCircle" >
     
-                <img src="/NewEntradoxWebsite/Assets/partnerMDRTeam.png" class="MDRTeamSymbol">
-                <div class="mobile_title">TEAM ENTRADOX</div>
-                <div class="mobile_titleDATE">2018 - 2024</div>
+                <img data-custom="homeMovingItems" src="/NewEntradoxWebsite/Assets/partnerMDRTeam.png" class="MDRTeamSymbol">
+                <div data-custom="homeMovingItems"class="mobile_title">TEAM ENTRADOX</div>
+                <div data-custom="homeMovingItems" class="mobile_titleDATE">2018 - 2024</div>
     
-                <p class="containerBottomLeftTextMOBILE">Our team's tag is [ #14316 ]. <br> We are competing in the BC circuit.<br>
+                <p data-custom="homeMovingItems" class="containerBottomLeftTextMOBILE">Our team's tag is [ #14316 ]. <br> We are competing in the BC circuit.<br>
                     2023-2024 will be our 5th year.</p>
-                <p class="containerBottomLeftTextMOBILE2">Entradox  is  a  team  of<br>[ Meadowridge School ]</p>
+                <p data-custom="homeMovingItems" class="containerBottomLeftTextMOBILE2">Entradox  is  a  team  of<br>[ Meadowridge School ]</p>
             </div>
     
             <img src="/NewEntradoxWebsite/Assets/doubleLine.png" draggable="false" class="doubleLineHomeBG">
     
-            <img src="/NewEntradoxWebsite/closerImageENtradox.png" draggable="false" class="homeBackgroundRender" id="homeBackgroundR">
-            <img src="/NewEntradoxWebsite/HomeScreenAssets/3logos.png" draggable="false" class="bottomLogosHome">
-            <div class="containerBottomLeft">
+            <img src="/NewEntradoxWebsite/closerImageENtradox.png" draggable="false" class="homeBackgroundRender backgroundScale" id="homeBackgroundR">
+            <img data-custom="homeMovingItems" src="/NewEntradoxWebsite/HomeScreenAssets/3logos.png" draggable="false" class="bottomLogosHome">
+            <div data-custom="homeMovingItems" class="containerBottomLeft">
                 <img src="/NewEntradoxWebsite/HomeScreenAssets/mascotIconGilbert.png" draggable="false" class="mascotIcon">
-                <p class="containerBottomLeftText">FTC robotics team [#14316] competing in the BC circuit. 
-                    <br>The 2023-2024 FTC season will be our fifth year competing.</p>
+                <p class="containerBottomLeftText">We are a FIRST Tech Challenge team Entradox [#13416]<br> based in Maple Ridge, British Columbia, we are in the BC circuit. <br>The 2023-2024 FTC season will be our fifth year competing.</p>
                 <div class="barForSideOfContainer"></div>
                 <div class="barForSideOfContainer2"></div>
             </div>
@@ -121,6 +145,15 @@
             </div>
     
         </div>
+
+  
+    <div class="cover"></div>
+
+
+    <div class="trTitle">
+    </div>
+
+
 
     <!--ABOUT US PAGE-->
     <div data-custom="AboutUs" class="sectionWrapper" id="page2">
@@ -492,6 +525,11 @@
     <script src="mobileSocial.js"></script>
     <script src="cursorHover.js"></script> 
     <script src="scrolling.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="/NewEntradoxWebsite/CSS/sceneMain.js"></script>
+    <script src="/NewEntradoxWebsite/CSS/main_script.js"></script>
+    <script src="/NewEntradoxWebsite/CSS/homeMainMoving.js"></script>
+    <script src="/NewEntradoxWebsite/CSS/scene/sceneFog.js"></script>
 
 </body>
 </html>

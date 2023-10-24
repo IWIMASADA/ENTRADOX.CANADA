@@ -56,7 +56,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    
     background-color: rgba(255, 0, 0, 0);
     z-index: 10;
 }
@@ -150,13 +149,96 @@ body {
     z-index: 2;
     width: 130%;
     height: 130%;
-    opacity: 0.4;
-    top: -8%;
+    opacity: 0.3;
+    top: -20%;
     left: -30%;
     object-fit: cover;
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
     -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    z-index: 10;
+    left: 6%;
+  
+}
+
+.icon-scroll {
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top: 88%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: iconShiftDown;
+}
+
+.icon-scroll-text {
+    position: absolute;
+    opacity: 1; 
+    z-index: 10;
+    width: 40rem;
+    margin-left: 4rem;
+    margin-top: 50%;
+    color: rgb(179, 179, 179);
+    font-family: 'TW', Arial, sans-serif;
+    font-weight: lighter; 
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+}
+
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    left: 50%;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(46px);
+      }
+}
+
+@keyframes iconShiftDown {
+    0% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-10%);
+    }
+}
+
+   
+#lightRay {
+    position: absolute;
+    z-index: 10;
+    width: 130%;
+    height: 130%;
+    top: -8%;
+    left: -30%;
+    object-fit: cover;
+    filter: brightness(150%);
 }
 .MDRTeamSymbol {
     position: absolute;
@@ -169,7 +251,7 @@ body {
     background-color: transparent;
     z-index: 101;
     top: 48%;
-    left: 23%;
+    left: 25%;
   }
 
 
@@ -648,7 +730,7 @@ video {
     max-height: 100%;
     object-fit: cover;
     left: 0%;
-    filter: saturate(30%);
+    filter: saturate(80%);
   }
 
   .containerforMobileAssets {
@@ -678,7 +760,7 @@ video {
     opacity: 1;
     color: rgb(222, 222, 222);
     top: 25%;
-    left: 2%;
+    left: 3.5%;
     object-fit: cover;
     text-wrap: nowrap;
   }
@@ -702,7 +784,7 @@ video {
     max-width: 31%;
     max-height: 31%;
     top: -85%;
-    left: -71%;
+    left: -65%;
     z-index: 100;
   }
   .mobile_titleDATE {
@@ -714,7 +796,7 @@ video {
     color: rgb(222, 222, 222);
     top: 22.5%;
     letter-spacing: 3rem;
-    left:10%;
+    left:12.5%;
     object-fit: cover;
     text-wrap: nowrap;
   }
@@ -723,7 +805,7 @@ video {
     position: absolute;
     z-index: 10;
     top: -30%;
-    left: -63%;
+    left: -58%;
     font-family: 'TW', monospace;
     font-size: 1.2rem;
     letter-spacing: .1rem;
@@ -809,7 +891,7 @@ video {
     max-width: 18rem;
     max-height: 8rem;
     top: 55%;
-    left: 2%;
+    left: 3.5%;
 }
 
 .doubleLineHomeBG {
