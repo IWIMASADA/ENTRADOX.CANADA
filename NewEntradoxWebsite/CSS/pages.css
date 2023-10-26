@@ -20,5 +20,7 @@
 }
 #page5 {
     top: 400%;
+    object-fit: contain;
+
 }
 
