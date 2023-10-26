@@ -119,7 +119,7 @@ class Preloader {
 
   
   function clearLoadingText() {
-    document.getElementById('loadingIDIndicator').classList.add("fadeOut");
+    document.getElementById('loadingIDIndicator').classList.add("smokeFade");
     setTimeout(function() {
         document.getElementById('loadingIDIndicator').style.display = 'none';
     }, 1000);

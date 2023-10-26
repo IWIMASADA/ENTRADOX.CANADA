@@ -16,6 +16,13 @@ body, html {
     animation: fadeInUniversal 1s ease-in-out reverse;
 }
 
+.smokeFade {
+    animation: fadeOutUniversal 1s linear forwards;
+}
+.smokeFadeIn {
+    animation: SmokeInUniversal 1s linear forwards;
+}
+
 .shake {
     animation: moveUpDown 10s ease-in-out infinite;
 }
@@ -86,6 +93,24 @@ body, html {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes SmokeInUniversal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeOutUniversal {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

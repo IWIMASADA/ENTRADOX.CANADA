@@ -281,6 +281,32 @@ document.addEventListener('keydown', function(event) {
 
   var firstTimeScroll = true;
 
+  function clearSmokeScreen() {
+    
+    const smokeScreen = document.getElementById('smokeEffectHome');
+    smokeScreen.classList.add("fadeOut");
+    setTimeout(function() {
+      smokeScreen.style.opacity = 0;
+      smokeScreen.classList.remove("fadeOut");
+
+    }, 900);
+  }
+
+  function unClearSmokeScreen() {
+    
+    const smokeScreen = document.getElementById('smokeEffectHome');
+
+    smokeScreen.classList.add("fadeIn");
+
+    setTimeout(function() {
+      smokeScreen.style.opacity = 0.2;
+      smokeScreen.classList.remove("fadeIn");
+
+
+    }, 1001);
+  }
+
+
   function liftPages() {
 
       // Get all pages
@@ -306,6 +332,7 @@ document.addEventListener('keydown', function(event) {
                   // Trigger disintegration
                   disintegrationTriggered = true;
                   disintegrateParticles();
+                  clearSmokeScreen();
                   disintegrationInProgress = true;
                 } 
                 firstTimeScroll = false;
@@ -317,6 +344,7 @@ document.addEventListener('keydown', function(event) {
                   // Trigger disintegration
                   disintegrationTriggered = true;
                   disintegrateParticles();
+                  clearSmokeScreen();
             
             
                   disintegrationInProgress = true;
@@ -334,6 +362,7 @@ document.addEventListener('keydown', function(event) {
           requestAnimationFrame(animateDisintegration);
     
           particles.material = particleMaterial;
+          unClearSmokeScreen();
       }, 900); 
 
       }

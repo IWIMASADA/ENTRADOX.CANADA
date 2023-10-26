@@ -14,53 +14,65 @@ body {
 .staffPanelContainer {
     position: absolute;
     z-index: 1000;
-    width: 35%;
+    width: 40%;
     height: 85%;
     left: 25%;
-    top: 50%;
+    top: 55%;
+    object-fit: cover;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0);
 }
 
 .CurrentStaffList {
     position: absolute;
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 255, 0);
     z-index: 10000;
-    margin-top: 16%;
+    margin-top: 5%;
 }
 .StaffDisplayList {
     position: absolute;
     background-color: rgba(255, 166, 0, 0);
     display: flex;
     flex-wrap: wrap;
+    object-fit: cover;
     flex-direction: column;
     height: 100%;
     width: 100%;
 }
 .displayNames {
     position: relative;
-    margin-top: 2%;
+    margin-top: 4%;
     object-fit: cover;
     font-family: 'TW', Arial, Helvetica, sans-serif;
     letter-spacing: .3rem;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
-    font-size: 3rem;
-    margin-left: 2%;
+    font-size: 2.5rem;
+    margin-left: 10%;
 }
-#CurrentStaffList-Field {
-    display: none;
+
+.StaffDisplayListIcons {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    object-fit: cover;
+    flex-direction: column;
 }
+
+.displayNameIcon {
+    position: relative;
+    margin-top: 75%;
+    width: auto;
+    top: .3%;
+    object-fit: cover;
+    height: 2.5rem;
+}
+
 #CurrentStaffList-Engineer {
     display: inline;
-}
-#CurrentStaffList-Marketing {
-    display: none;
-}
-#CurrentStaffList-Managers {
-    display: none;
 }
 
 
@@ -71,8 +83,9 @@ body {
     display: flex;
     flex-wrap:wrap;
     margin-top: 0px;
-    width: 100%;
+    width: 50%;
     height: 10%;
+    top: -10%;
     background-color: rgba(255, 0, 0, 0);
 }
 .staffPanelBody {
