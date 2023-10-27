@@ -16,12 +16,14 @@ body {
     z-index: 1000;
     width: 40%;
     height: 85%;
-    left: 25%;
+    left: 20%;
     top: 55%;
     object-fit: cover;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0);
 }
+
+
 
 .CurrentStaffList {
     position: absolute;
@@ -40,6 +42,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    left: 10%;
 }
 .displayNames {
     position: relative;
@@ -94,8 +97,30 @@ body {
     margin-top: 0px;
     width: 50%;
     height: 10%;
-    top: -10%;
+    left: 8%;
+    top: -8%;
     background-color: rgba(255, 0, 0, 0);
+}
+
+.displayNamesIconsLeft {
+    position: absolute;
+    background-color: rgba(255, 166, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    left: 10%;
+    
+}
+.displayNameIconTestLeft {
+    position: relative;
+    background-color: rgba(255, 166, 0, 0);
+    height: 2.7rem;
+    object-fit: cover;
+    width: 2.7rem;
+    margin-top: 4%;
 }
 .staffPanelBody {
     position: absolute;
@@ -111,9 +136,10 @@ body {
     padding: 10px;
     font-family: 'TW', Arial, Helvetica, sans-serif;
     letter-spacing: .2rem;
-    font-size: 1.2rem;
+    font-size: 3rem;
+    font-weight: bold;
     background-color: rgba(0, 0, 255, 0);
-    color: rgb(255, 255, 255);
+    color: rgb(208, 208, 208);
 }
 
 
