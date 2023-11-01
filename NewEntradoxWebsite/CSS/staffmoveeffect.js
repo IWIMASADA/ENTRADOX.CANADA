@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         7: ["Andy Xu", "DRIVER", "BUILDER"],
         8: ["Oliver Low", "STRATEGIST", "BUILDER"],
         9: ["Hari Baidwan", "BUILDER", "OUTREACH"],
-        10: ["Derek Lee", "PROGRAMMER", "WEBSITE DESIGN"],
+        10: ["Derek Lee", "PROGRAMMER", "WEBSITE DESIGN"]
     };
 
     function getRoleValues(name) {
@@ -37,20 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Return null if the name is not found
         return null;
     }
-    function staffNameChanger(staffName){
-        var name = document.querySelector('.TagNamePerson');
-        name.textContent = staffName;
-    }
-
-    function staffDescriptionChanger(ID){
-        var desc = document.querySelector('.TagStaffMemberDescription');
-        desc.textContent  = descriptions[ID];
-
-        var dept = document.querySelector('.TagRoleText');
-        dept.textContent = departments[ID];
-
-    }
-
 
 
     // new functions
@@ -62,12 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     xbutton.addEventListener('click', function() {
         hideStaff()
+        xbutton.style.opacity = 0;
     })
 
     employees.forEach(staff => {
         staff.addEventListener('click', function() {
             var name = document.getElementById('StaffMemberHeadlineContainer-NameID')
             var nameBackground = document.getElementById('StaffMemberHeadlineContainer2ID')
+            xbutton.style.opacity = 1;
             showStaff()
             nameHelper = staff.id;
             name.textContent = nameHelper;
@@ -83,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainRole.textContent = value1;
                 var secondRole = document.querySelector('.StaffRoleTextDisplay2')
                 secondRole.textContent = value2;
-                
+
                 console.log(`Values for ${nameHelper}: Value 1 - ${value1}, Value 2 - ${value2}`);
             } else {
                 console.log(`${nameHelper} not found in the table.`);
@@ -100,9 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         displayOffForStaff()
     }
     function showStaff() {
+        ContainerForStaffDescriptionBodyID.style.opacity = 1;
         evaporateNewStaffList()
-        xbutton.style.display = 'unset';
-        ContainerForStaffDescriptionBodyID.style.display = 'unset';
         displayOnForStaff()
     }
 
@@ -114,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
         var desc = document.getElementById('ContainerForStaffDescriptionTextID');
         var labels = document.getElementById('StaffLabelOnContainerForDescID');
         var headline = document.getElementById('StaffMemberHeadlineContainer2ID');
-        
+        document.querySelector(".VerticleDownRect").style.opacity = 1;
+        document.querySelector(".LineThroughTopExtend").style.opacity = 1;
         picutre.classList.add("displayOnFlicker")
         shadow.classList.add("displayOnFlickerShadow")
         name.classList.add("flickerInText")
@@ -192,7 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
             desc.style.opacity = 0;
 
             labels.classList.remove('staffContainerSlideOut');
-            labels.style = "left: 84%";
+            labels.style = "left: 82%";
+            document.querySelector(".VerticleDownRect").style.opacity = 0;
+            document.querySelector(".LineThroughTopExtend").style.opacity = 0;
             labels.style.opacity = 0;
 
             headline.classList.remove('headlineFlickerOutText');
@@ -201,9 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             xbutton.classList.remove("xbuttonFlickerOut")
             xbutton.classList.opacity = 0;
-            
-            ContainerForStaffDescriptionBodyID.style.display = 'none';
-            xbutton.style.display = 'none';
+
 
         }, 1000);
 
@@ -275,7 +263,8 @@ displayNames.forEach(name => {
 
 
 var staffPanelContainer = document.querySelector('.staffPanelContainer');
-    
+var aboutUsContainer = document.querySelector('.backgroundContainerForAboutUs');
+
 document.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
@@ -283,5 +272,6 @@ document.addEventListener('mousemove', (e) => {
         const translateX = (x - window.innerWidth / 2) * 0.015;
         const translateY = (y - window.innerHeight / 2) * 0.015;
 
+        aboutUsContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
         staffPanelContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
 });

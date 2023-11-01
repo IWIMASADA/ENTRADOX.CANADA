@@ -876,7 +876,9 @@ body {
     z-index: 2147483647;
     background-color: rgba(102, 51, 153, 0);
     transition: transform .15s linear;
-    display: none;
+}
+#staffPageStaffContentXButtonID {
+    opacity: 0;
 }
 .staffPageStaffContentXButton:hover {
     transform: scale(1.2);
@@ -1009,6 +1011,7 @@ body {
     color: rgb(255, 200, 0);
     z-index: 50;
     left: 17%;
+    text-align: left;
     top: 20%;
 }
 .StaffRoleTextDisplay p {

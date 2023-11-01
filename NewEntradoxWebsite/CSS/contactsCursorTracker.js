@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
     var squares = document.querySelectorAll('[data-custom2="moveSquare"]');

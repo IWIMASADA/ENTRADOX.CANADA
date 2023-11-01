@@ -453,7 +453,7 @@ body, html {
 /* ANIMATE FOR STAFF CONTENT DISPLAY*/
 
 #ContainerForStaffDescriptionBodyID {
-    display:none;
+    opacity: 0;
 }
 
 
