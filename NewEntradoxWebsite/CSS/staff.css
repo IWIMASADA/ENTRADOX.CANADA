@@ -978,6 +978,7 @@ body {
     left: 83%;
     top: 73%;
     z-index: 20;
+    text-align: left;
 }
 
 
@@ -1010,17 +1011,20 @@ body {
     transform: translate(-50%,-50%);
     color: rgb(255, 200, 0);
     z-index: 50;
-    left: 17%;
+    left: 52%;
     text-align: left;
+    background-color: rgba(0, 255, 255, 0);
     top: 20%;
+    width: 100%;
 }
-.StaffRoleTextDisplay p {
+.StaffRoleTextDisplayText {
+    position: absolute;
     font-family: 'Servant', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: lighter;
     transform: translate(-50%,-50%);
-    left: 10%;
-    top: -90%;
+    left: 4%;
+    top: 10%;
     color: rgb(226, 226, 226);
     z-index: 50;
 }
@@ -1033,16 +1037,20 @@ body {
     transform: translate(-50%,-50%);
     color: rgb(203, 203, 203);
     z-index: 50;
-    left: 49%;
+    left: 89%;
     top: 20%;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+
 }
-.StaffRoleTextDisplay2 p {
+.StaffRoleTextDisplayText2 {
+    position: absolute;
     font-family: 'Servant', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight:lighter;
     transform: translate(-50%,-50%);
-    left: 10%;
-    top: -90%;
+    left: 43%;
+    top: 10%;
     color: rgb(226, 226, 226);
     z-index: 50;
 }
