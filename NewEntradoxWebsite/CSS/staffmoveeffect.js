@@ -27,8 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         10: ["Derek Lee", "PROGRAMMER", "WEBSITE DESIGN"],
     };
 
-
-
+    function getRoleValues(name) {
+        for (var id in nameToRole) {
+            if (nameToRole.hasOwnProperty(id) && nameToRole[id][0] === name) {
+                // Return an array with two values
+                return [nameToRole[id][1], nameToRole[id][2]];
+            }
+        }
+        // Return null if the name is not found
+        return null;
+    }
     function staffNameChanger(staffName){
         var name = document.querySelector('.TagNamePerson');
         name.textContent = staffName;
@@ -64,8 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
             nameHelper = staff.id;
             name.textContent = nameHelper;
             nameBackground.textContent = nameHelper;
+            
+            var values = getRoleValues(nameHelper);
+    
+            if (values !== null) {
+                var value1 = values[0]; // Access the first value
+                var value2 = values[1]; // Access the second value
+            
+                var mainRole = document.querySelector('.StaffRoleTextDisplay')
+                mainRole.textContent = value1;
+                var secondRole = document.querySelector('.StaffRoleTextDisplay2')
+                secondRole.textContent = value2;
+                
+                console.log(`Values for ${nameHelper}: Value 1 - ${value1}, Value 2 - ${value2}`);
+            } else {
+                console.log(`${nameHelper} not found in the table.`);
+            }
+    
+            
         });
     });
+
+
+    
     function hideStaff() {
         unevaporateNewStaffList()
         displayOffForStaff()
