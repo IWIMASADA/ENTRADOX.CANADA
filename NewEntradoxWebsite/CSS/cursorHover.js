@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         element18: document.querySelector('.homeMenuContainerClass'),
         element19: document.querySelector('.trTitle'),
         element20: document.querySelector('.StaffDescriptionExitButton'),
-        element21: document.querySelector('.displayNames')
+        element21: document.querySelector('.displayNames'),
+        element22: document.querySelector('.staffPageStaffContentXButton')
       };
       const circle = document.querySelector(".cursor")
 

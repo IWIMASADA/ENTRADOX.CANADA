@@ -254,26 +254,6 @@
     -ms-user-select: none; /* For Microsoft Edge */
 }
 
-.SponsorBackground {
-    position: absolute;
-    width: 100%;
-    top: 0%;
-    left: -1%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    background-color: rgb(10, 10, 10);
-}
-.backgroundIMGSponsor {
-    position: absolute;
-    width: 103%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(200%);
-    image-rendering: optimizeQuality;
-
-}
-
 
 
 .sponsoHeaderBackgroundColor {

@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     /* STAFF DESCRIPTIONS */
 
     var nameToDescription = {
-        1: ["Daniel Ashtiani", "Hello, I'm Daniel Ashtiani. I am currently a grade 11 student enrolled in Meadowridge School. My hobbies include CAD modelling, kickboxing, RC car racing, swimming, and robotics"],
-        2: ["Aasha Askew", "Hello! My name is Aasha and I am a current grade 11 student at Meadowridge school. Outside of robotics, I like the gym, watching anime, and playing competitive waterpolo."],
-        3: ["Amy Xu", "My name is Amy. This is my 4th year participating in the FIRST program. I hope my past experiences will help us succeed in the competition this year. I am confident this will be a year full of learning and successes"],
-        4: ["Liam Bradley", "I'm BRADLEY and I'm the best coder and builder on Entradox as well as a pro athlete and gamer"],
-        5: ["Nicole Zhang", "Hello, my name's Nicole and I've been a builder for Meadowridge's robotics team for the last 2 years. This year I will look into doing more arts + promo along with the building and finance that I did previously. I really enjoy skiing and going to the gym"],
-        6: ["Aella Gong", "Hello, my name is Aella, and I've been doing Arts and Promo for Meadowridge's robotics team for the last year and a half. However, this will be my first time in Outreach. I'm very excited to be a part of Entradox this year!"],
-        7: ["Andy Xu", "Add later"],
-        8: ["Oliver Low", "Hello, I'm Oliver and this is the first time I've been the strategist/field coach for a FIRST team. I'm really looking forward to being a part of Entradox and spending time working on the robot with my friends. I enjoy curling, skiing, and Formula 1 racing"],
-        9: ["Hari Baidwan", "I am a sixteen year old at Meadowridge School who is relatively experienced in the area of building (for robotics), I have been a builder on two prior teams. That being said, I am looking forward to diving into the arts and promo component for our team this year as I am entirely new to this"],
-        10: ["Derek Lee", "Hey, my name's Derek. I enjoy walking and listening to leaves rustling. I often trip over my own feet. This year I will be... What am I doing again?"],
+        1: ["Daniel Ashtiani", "Hello, I'm Daniel Ashtiani. I am currently a grade 11 student enrolled in Meadowridge School. My hobbies include CAD modelling, kickboxing, RC car racing, swimming, and robotics", "The CAD builder designs the model of the robot. They collaborate closely with team members to iterate on designs, troubleshoot potential issues, and contribute to the overall success of the FTC team."],
+        2: ["Aasha Askew", "Hello! My name is Aasha and I am a current grade 11 student at Meadowridge school. Outside of robotics, I like the gym, watching anime, and playing competitive waterpolo.", "Managers are like the leaders of a work team. They plan what needs to be done, organize resources, and guide everyone to reach their goals."],
+        3: ["Amy Xu", "My name is Amy. This is my 4th year participating in the FIRST program. I hope my past experiences will help us succeed in the competition this year. I am confident this will be a year full of learning and successes", "Builders, assemble, and fine-tune the mechanical and electronic parts of our robot. Our builders prioritize the robots adaptability with our programmers to ensure the robot is ready for success."],
+        4: ["Liam Bradley", "I'm BRADLEY and I'm the best coder and builder on Entradox as well as a pro athlete and gamer", "Programmers code the robot's movements and turn our plans into executable instructions. They troubleshoot problems and collaborate with the builders to make sure the code works well with the robot. "],
+        5: ["Nicole Zhang", "Hello, my name's Nicole and I've been a builder for Meadowridge's robotics team for the last 2 years. This year I will look into doing more arts + promo along with the building and finance that I did previously. I really enjoy skiing and going to the gym", "The finance department manages the team's financial resources and ensuring we dont go broke. They handle budgeting, financial planning, and fundraising activities to secure the necessary funds for the team's projects and competitions."],
+        6: ["Aella Gong", "Hello, my name is Aella, and I've been doing Arts and Promo for Meadowridge's robotics team for the last year and a half. However, this will be my first time in Outreach. I'm very excited to be a part of Entradox this year!", "The promotion department helps build the team's image and promoting content. They make strategies to promote the team within the school, local community, and online."],
+        7: ["Andy Xu", "Add later", "The driver is the hands-on operator of the robot. They control its movements and actions during competitions using a gamepad. The strategists help them come up with plans during the game to help us win."],
+        8: ["Oliver Low", "Hello, I'm Oliver and this is the first time I've been the strategist/field coach for a FIRST team. I'm really looking forward to being a part of Entradox and spending time working on the robot with my friends. I enjoy curling, skiing, and Formula 1 racing", "The strategist guides the robot's actions based on real-time observations. They communicate with the drive team, offering insights and new strategies. They have a good understanding of the game rules, and good field vision."],
+        9: ["Hari Baidwan", "I am a sixteen year old at Meadowridge School who is relatively experienced in the area of building (for robotics), I have been a builder on two prior teams. That being said, I am looking forward to diving into the arts and promo component for our team this year as I am entirely new to this", "Builders, assemble, and fine-tune the mechanical and electronic parts of our robot. Our builders prioritize the robots adaptability with our programmers to ensure the robot is ready for success."],
+        10: ["Derek Lee", "Hey, my name's Derek. I enjoy walking and listening to leaves rustling. I often trip over my own feet. This year I will be... What am I doing again?", "Programmers code the robot's movements and turn our plans into executable instructions. They troubleshoot problems and collaborate with the builders to make sure the code works well with the robot. "],
     };
 
     var nameToRole = {
@@ -30,11 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function getRoleValues(name) {
         for (var id in nameToRole) {
             if (nameToRole.hasOwnProperty(id) && nameToRole[id][0] === name) {
-                // Return an array with two values
                 return [nameToRole[id][1], nameToRole[id][2]];
             }
         }
-        // Return null if the name is not found
+        return null;
+    }
+
+    function getDescription(name) {
+        for (var id in nameToDescription) {
+            if (nameToDescription.hasOwnProperty(id) && nameToDescription[id][0] === name) {
+                return [nameToDescription[id][1], nameToDescription[id][2]];
+            }
+        }
         return null;
     }
 
@@ -51,6 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
         xbutton.style.opacity = 0;
     })
 
+    function getColor(name) {
+        if (name == 'Daniel Ashtiani' || name == 'Aasha Askew') {
+            var ManagerColor = 'rgb(255, 200, 0)';
+            return ManagerColor;
+        } else if (name == 'Oliver Low') {
+            var StratColor = 'rgb(183, 0, 255)'
+            return StratColor;
+        } 
+        var normalColor = 'rgb(226, 226, 226)';
+        return normalColor;
+    };
+
+
     employees.forEach(staff => {
         staff.addEventListener('click', function() {
             var name = document.getElementById('StaffMemberHeadlineContainer-NameID')
@@ -60,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
             nameHelper = staff.id;
             name.textContent = nameHelper;
             nameBackground.textContent = nameHelper;
+
             
             var values = getRoleValues(nameHelper);
-    
             if (values !== null) {
                 var value1 = values[0]; // Access the first value
                 var value2 = values[1]; // Access the second value
@@ -71,8 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainRole.textContent = value1;
                 var secondRole = document.querySelector('.StaffRoleTextDisplay2')
                 secondRole.textContent = value2;
+                document.getElementById('MainRoleColorID').style.color = getColor(nameHelper);
+                
 
                 console.log(`Values for ${nameHelper}: Value 1 - ${value1}, Value 2 - ${value2}`);
+            } else {
+                console.log(`${nameHelper} not found in the table.`);
+            }
+
+            var descriptionValues = getDescription(nameHelper);
+
+            if (descriptionValues !== null) {
+                var value1Desc = descriptionValues[0]; // Access the first value
+                var value2Desc = descriptionValues[1]; // Access the second value
+            
+                var descMain = document.querySelector('.ContainerForStaffDescriptionTextContent')
+                descMain.textContent = value1Desc;
+                var descSecond = document.querySelector('.ContainerForStaffDescriptionTextContent2')
+                descSecond.textContent = value2Desc;
             } else {
                 console.log(`${nameHelper} not found in the table.`);
             }
@@ -263,7 +299,7 @@ displayNames.forEach(name => {
 
 
 var staffPanelContainer = document.querySelector('.staffPanelContainer');
-var aboutUsContainer = document.querySelector('.backgroundContainerForAboutUs');
+var aboutUsContainer = document.querySelector('.AboutUsItemSide');
 
 document.addEventListener('mousemove', (e) => {
         const x = e.clientX;

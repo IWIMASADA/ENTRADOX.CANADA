@@ -982,14 +982,24 @@ body {
 }
 
 
-.ContainerForStaffDescriptionText p {
+.ContainerForStaffDescriptionTextContent {
     position: absolute;
     font-size: 1.1rem;
     font-weight: normal;
     transform: translate(-50%,-50%);
-    left: 35%;
+    left: 34.8%;
     color: rgb(199, 199, 199);
-    top: 50%;
+    top: 38%;
+    font-family: 'Servant', Arial, Helvetica, sans-serif;
+}
+.ContainerForStaffDescriptionTextContent2 {
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: normal;
+    transform: translate(-50%,-50%);
+    left: 34.8%;
+    color: rgb(199, 199, 199);
+    top: 58%;
     font-family: 'Servant', Arial, Helvetica, sans-serif;
 }
 .LineThroughTopExtend {
