@@ -782,3 +782,179 @@ body, html {
         opacity: 0;
     }
 }
+
+
+
+/* HEADLINE ANIMATIONS */
+.headlineFlickerInText {
+    animation-name: headlineFlickerInText;
+    animation-duration: 1s;
+}
+
+.headlineFlickerOutText {
+    animation-name: headlineFlickerOutText;
+    animation-duration: 1s;
+}
+
+
+@keyframes headlineFlickerInText {
+    0% {
+        left: 40%;
+        opacity: 0;
+    }
+    
+
+    3% {
+        opacity: 0;
+    }
+
+    6% {
+        opacity: 1;
+    }
+
+    9% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+    80% {
+        left: 50%;
+
+    }
+    100% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+@keyframes headlineFlickerOutText {
+    0% {
+        left: 50%;
+        opacity: 0;
+    }
+    
+
+    3% {
+        opacity: 1;
+    }
+
+    6% {
+        opacity: 0;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+
+    }
+    80% {
+        left: 78%;
+
+    }
+    100% {
+        opacity: 0;
+        left: 40%;
+
+    }
+}
+
+
+.xbuttonFlicker {
+    animation-name: xbuttonFlicker;
+    animation-duration: 1s;
+}
+
+.xbuttonFlickerOut {
+    animation-name: xbuttonFlickerOut;
+    animation-duration: 1s;
+}
+
+@keyframes xbuttonFlicker {
+    0% {
+        opacity: 0;
+    }
+    
+
+    3% {
+        opacity: 1;
+    }
+
+    6% {
+        opacity: 0;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes xbuttonFlickerOut {
+    0% {
+        opacity: 1;
+    }
+    
+
+    3% {
+        opacity: 0;
+    }
+
+    6% {
+        opacity: 1;
+    }
+
+    9% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
