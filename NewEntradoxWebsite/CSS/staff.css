@@ -13,7 +13,7 @@ body {
 
 .staffPanelContainer {
     position: absolute;
-    z-index: 1000;
+    z-index: 2147483647;
     width: 40%;
     height: 85%;
     left: 20%;
@@ -30,7 +30,6 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 255, 0);
-    z-index: 10000;
     margin-top: 5%;
     left: 0%;
 }
@@ -42,24 +41,27 @@ body {
     object-fit: cover;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-    left: 10%;
+    width: 23%;
+    left: 15%;
+    z-index: 2147483646;
+
 }
 .displayNames {
     position: relative;
-    margin-top: 4%;
+    margin-top: 17.3%;
     font-family: 'TW', Arial, Helvetica, sans-serif;
     letter-spacing: .3rem;
     font-weight: normal;
     color: white;
     font-size: 40px;
-    margin-left: 10%;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 13%;
 }
 
 .StaffDisplayListIcons {
     position: absolute;
     display: flex;
-    opacity: 0;
+    opacity: 1;
     flex-wrap: wrap;
     height: 100%;
     object-fit: cover;
@@ -105,7 +107,7 @@ body {
 
 .displayNamesIconsLeft {
     position: absolute;
-    background-color: rgba(255, 166, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
     display: flex;
     flex-wrap: wrap;
     object-fit: cover;
@@ -113,7 +115,6 @@ body {
     height: 100%;
     width: 100%;
     left: 10%;
-    
 }
 .displayNameIconTestLeft {
     position: relative;
@@ -122,14 +123,9 @@ body {
     object-fit: cover;
     width: 2.7rem;
     margin-top: 4%;
+    transition: transform, color, .1s linear;
 }
-.staffPanelBody {
-    position: absolute;
-    height: 90%;
-    width: 100%;
-    margin-top: 15.5%;
-    background-color: rgba(0, 128, 0, 0);
-}
+
 .staffPanelRole {
     list-style-type: none;
     margin: .1rem;
@@ -396,16 +392,6 @@ body {
 }
 
 
-[id="Aasha Askew"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-}
-[id="Daniel Ashtiani"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-
 .StaffFrame_Row2 {
     background-color: transparent;
     transition: all 0.4s linear;
@@ -478,50 +464,6 @@ body {
    top: 75%;
    left: 60%;
 }
-
-
-[id="Hari Baidwan"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Liam Bradley"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Aella Gong"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Nicole Zhang"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-
-
-[id="Amy Xu"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Oliver Low"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Derek Lee"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-
-}
-[id="Carrie Mohoruk"]:hover {
-    transform: scale(1.15) !important; 
-    filter: brightness(150%);
-}
-
 
 
 /* MAIN PART OF STAFF PAGE */
@@ -890,17 +832,7 @@ body {
 
 }
 
-.HumanBody-Icon {
-    position: absolute;
-    transform: translate(-50%,-50%) rotate(5deg);
-    width: auto;
-    height: 7%;
-    left: 100%;
-    top:90%;
-    object-fit: cover;
-    z-index: 23;
 
-}
 .StaffMemberHeadlineContainer {
     background-color: rgba(0, 140, 255, 0);
     position: absolute;
@@ -928,7 +860,7 @@ body {
     transform: translate(-50%,-50%);
     width: 22%;
     height: 150%;
-    left: 88%;
+    left: 12.5%;
     top: 26%;
     z-index: 101;
 }
@@ -998,7 +930,7 @@ body {
     height: 80%;
     top: 60%;
     left: 53%;
-    z-index: 30;
+    z-index: 1;
     transform: translate(-50%,-50%);
     color: rgb(13, 13, 13);
 }
@@ -1056,13 +988,13 @@ body {
     font-family: 'Servant', Arial, Helvetica, sans-serif;
 }
 .LineThroughTopExtend {
-    position: absolute;
+    position: relative;
     transform: translate(-50%,-50%);
     width: 90%;
     height: 3px;
-    left: 20%;
-    top: 43%;
-    z-index: 10;
+    left: 15%;
+    top: 30%;
+    z-index: 0;
     background-color: rgb(0, 145, 213);
 }
 

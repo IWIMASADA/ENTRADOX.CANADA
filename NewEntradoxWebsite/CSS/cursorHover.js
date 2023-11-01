@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         element17: document.querySelector('.Robots'),
         element18: document.querySelector('.homeMenuContainerClass'),
         element19: document.querySelector('.trTitle'),
-        element20: document.querySelector('.StaffDescriptionExitButton')
+        element20: document.querySelector('.StaffDescriptionExitButton'),
+        element21: document.querySelector('.displayNames')
       };
       const circle = document.querySelector(".cursor")
 
@@ -71,5 +72,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     
+
+    var displayNames = document.querySelectorAll('.displayNames');
+
+    displayNames.forEach(function (element) {
+        element.addEventListener('mouseover', function () {
+            circle.style.transform = "translate(-50%, -50%) scale(0.5)";
+            circle.style.backgroundColor = "rgba(221, 221, 221, 0.233)";
+        });
+    
+        element.addEventListener('mouseleave', function () {
+            circle.style.transform = "translate(-50%, -50%) scale(1)";
+            circle.style.backgroundColor = "transparent";
+        });
+    });
       
 })

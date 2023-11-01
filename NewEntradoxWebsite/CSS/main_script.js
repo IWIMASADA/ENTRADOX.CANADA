@@ -13,6 +13,7 @@ document.addEventListener('mousemove', (e) => {
 document.body.style.cursor = 'none';
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
 
 
@@ -31,10 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }, 300); 
     }, 100); 
+
 });
+clearLoadingText()
+clearandPlayVideo()
 
-
-
+/*
 class Preloader {
     #c = 0;
     #percentage = 0;
@@ -116,14 +119,32 @@ class Preloader {
     }
 
   );
-
+*/
   
   function clearLoadingText() {
     document.getElementById('loadingIDIndicator').classList.add("smokeFade");
     setTimeout(function() {
         document.getElementById('loadingIDIndicator').style.display = 'none';
     }, 1000);
+}
+function clearandPlayVideo() {
+  document.getElementById("relativeID").style.display = 'none';
+  var video = document.getElementById("video");
+  var videocontainer = document.querySelector(".video-container");
+  clearLoadingText();
+  setTimeout(function() {
+      video.play();
+  }, 1000);
 
+  setTimeout(function() {
+      video.classList.add("fadeOut");
+  }, 2000);
+
+  setTimeout(function() {
+      video.classList.add("ended");
+      video.remove();
+      videocontainer.remove();
+  }, 2800);
 }
 
 

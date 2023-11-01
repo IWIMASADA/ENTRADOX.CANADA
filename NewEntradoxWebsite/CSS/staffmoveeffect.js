@@ -179,8 +179,170 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+
+
+
+
+    // new functions
+    var counter = 0;
+    var ContainerForStaffDescriptionBodyID = document.getElementById('ContainerForStaffDescriptionBodyID');
+
+    document.addEventListener('click', function() {
+        if (counter == 1) {
+            counter = 0;
+            unevaporateNewStaffList()
+            displayOffForStaff()
+
+        } else {
+            counter++;
+            evaporateNewStaffList()
+            ContainerForStaffDescriptionBodyID.style.display = 'unset';
+            displayOnForStaff()
+        }
+    })
+
+    function displayOnForStaff() {
+        var picutre = document.getElementById('HumanBodyID');
+        var shadow = document.getElementById('HumanShadowID');
+        var name = document.getElementById('StaffMemberHeadlineContainer-NameID');
+        var desc = document.getElementById('ContainerForStaffDescriptionTextID');
+        var labels = document.getElementById('StaffLabelOnContainerForDescID');
+
+        picutre.classList.add("displayOnFlicker")
+        shadow.classList.add("displayOnFlickerShadow")
+        name.classList.add("flickerInText")
+        desc.classList.add("slideInStaffDesc")
+        labels.classList.add("staffContainerSlideIn")
+
+
+        setTimeout(function() {
+            picutre.classList.remove('displayOnFlicker');
+            picutre.style = "left: 30%";
+            picutre.style.opacity = 1;
+
+
+            shadow.classList.remove('displayOnFlickerShadow');
+            shadow.style = "left: 15%";
+            shadow.style.opacity = 1;
+
+            
+            name.classList.remove('flickerInText');
+            name.style = "left: 81%";
+            name.style.opacity = 1;
+
+
+            desc.classList.remove('slideInStaffDesc');
+            desc.style = "left: 84%";
+            desc.style.opacity = 1;
+
+            labels.classList.remove('slideInStaffDesc');
+            labels.style = "left: 53%";
+            labels.style.opacity = 1;
+        }, 1000);
+        
+    }
+
+    function displayOffForStaff() {
+        var picutre = document.getElementById('HumanBodyID');
+        var shadow = document.getElementById('HumanShadowID');
+        var name = document.getElementById('StaffMemberHeadlineContainer-NameID');
+        var desc = document.getElementById('ContainerForStaffDescriptionTextID');
+        var labels = document.getElementById('StaffLabelOnContainerForDescID');
+
+        picutre.classList.add("displayOffFlicker")
+        shadow.classList.add("displayOffFlickerShadow")
+        name.classList.add("flickerOutText")
+        desc.classList.add("slideOutStaffDesc")
+        labels.classList.add("staffContainerSlideOut")
+
+        setTimeout(function() {
+            picutre.classList.remove('displayOffFlicker');
+            picutre.style = "left: 25%";
+            picutre.style.opacity = 0;
+
+
+            shadow.classList.remove('displayOffFlickerShadow');
+            shadow.style = "left: 10%";
+            shadow.style.opacity = 0;
+                        
+            name.classList.remove('flickerOutText');
+            name.style = "left: 40%";
+            name.style.opacity = 0;
+
+            desc.classList.remove('slideOutStaffDesc');
+            desc.style = "left: 82%";
+            desc.style.opacity = 0;
+
+            labels.classList.remove('staffContainerSlideOut');
+            labels.style = "left: 84%";
+            labels.style.opacity = 0;
+
+            ContainerForStaffDescriptionBodyID.style.display = 'none';
+
+        }, 1000);
+
+    }
+
+
+
+    function evaporateNewStaffList() {
+        var staffList = document.getElementById("CurrentStaffList-Engineer");
+        var staffListLabel = document.getElementById("rolename_managers");
+
+        staffList.classList.add('evaporateNewStaff');
+        staffListLabel.classList.add('evaporateNewStaff');
+        
+        setTimeout(function() {
+            staffList.classList.remove('evaporateNewStaff');
+            staffList.style = "transform: translateX(-20%)";
+            staffList.style.opacity = 0;
+
+
+            staffListLabel.classList.remove('evaporateNewStaff');
+            staffListLabel.style = "transform: translateX(-20%)";
+            staffListLabel.style.opacity = 0;
+
+        }, 500);
+    }
+
+    function unevaporateNewStaffList() {
+        var staffList = document.getElementById("CurrentStaffList-Engineer");
+        var staffListLabel = document.getElementById("rolename_managers");
+
+        staffList.classList.add('unevaporateNewStaff');
+        staffListLabel.classList.add('unevaporateNewStaff');
+
+        setTimeout(function() {
+            staffList.classList.remove('unevaporateNewStaff');
+            staffList.style = "transform: translateX(0%)";
+            staffList.style.opacity = 1;
+
+
+            staffListLabel.classList.remove('unevaporateNewStaff');
+            staffListLabel.style = "transform: translateX(0%)";
+            staffList.style.opacity = 1;
+
+        }, 500);
+    }
 });
 
 
+var displayNames = document.querySelectorAll('.displayNames')
+
+displayNames.forEach(name => {
+    name.addEventListener('mouseenter', function() {
+        var icon = "Icon_" + name.id
+        var iconImage = document.getElementById(icon)
+        iconImage.classList.add("iconHoverClass");
+    });
+})
+
+displayNames.forEach(name => {
+    name.addEventListener('mouseleave', function() {
+        var icon = "Icon_" + name.id
+        var iconImage = document.getElementById(icon)
+        iconImage.classList.remove("iconHoverClass");
+    });
+})
 
 
