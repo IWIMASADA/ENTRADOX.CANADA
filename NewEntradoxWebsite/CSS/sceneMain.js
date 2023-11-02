@@ -312,6 +312,7 @@ document.addEventListener('keydown', function(event) {
       // Get all pages
       const pages = document.querySelectorAll('.sectionWrapper');
       const homePage = document.getElementById('page1');
+      const sponsorPage = document.getElementById('page3');
 
       var initialHomeTop = homePage.style.top;
       // Set top values dynamically
@@ -362,6 +363,19 @@ document.addEventListener('keydown', function(event) {
           requestAnimationFrame(animateDisintegration);
     
           particles.material = particleMaterial;
+          unClearSmokeScreen();
+      }, 900); 
+
+      }
+
+
+      if (sponsorPage.style.top == '-100%' || sponsorPage.style.top == '100%'  ) {
+                  clearSmokeScreen();
+      }
+
+
+      if (sponsorPage.style.top == '0%') {
+        setTimeout(function() {
           unClearSmokeScreen();
       }, 900); 
 

@@ -22,7 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
         element19: document.querySelector('.trTitle'),
         element20: document.querySelector('.StaffDescriptionExitButton'),
         element21: document.querySelector('.displayNames'),
-        element22: document.querySelector('.staffPageStaffContentXButton')
+        element22: document.querySelector('.staffPageStaffContentXButton'),
+        element23: document.getElementById('Tier1SponsorIcon'),
+        element24: document.getElementById('Tier2SponsorIcon'),
+        element25: document.getElementById('Tier3SponsorIcon'),
+        element26: document.getElementById('Tier4SponsorIcon')
+
       };
       const circle = document.querySelector(".cursor")
 

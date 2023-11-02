@@ -446,20 +446,118 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 222, 173, 0);
-    z-index: 2147483647;
+    z-index: 2147483644;
     display: flex;
     flex-direction: row;
+    transition: all .1s linear;
 }
-.sponsorInformationContainerMain {
+.sponsorshipIcons {
     position: relative;
-    width: 15%;
-    height: 60%;
-    background-color: rgba(245, 222, 179, 0);
-    border: .05rem;
-    border-color: rgb(174, 174, 174);
-    border-style: groove;
+    width: 30%;
+    height: 30%;
     transform: translate(-50%,-50%);
-    left: 20%;
+    left: 10%;
     top: 50%;
-    margin-left: 3%;
+    object-fit: contain;
+    margin-left: 0%;
+    transition: all .2s linear;
+}
+#Tier1SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+
+#Tier2SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+#Tier3SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+#Tier4SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+
+.sponsorIconFlickerIn {
+    animation-name: sponsorIconFlickerIn;
+    animation-duration: 1s;
+}
+
+.sponsorIconFlickerOut {
+    animation-name: sponsorIconFlickerOut;
+    animation-duration: 1s;
+}
+
+@keyframes sponsorIconFlickerIn {
+    0% {
+        opacity: 0;
+        transform: scale(2) translate(-40%, -10%)
+    }
+    
+
+    3% {
+        opacity: 1;
+    }
+
+    6% {
+        opacity: 0;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: scale(2) translate(-50%, -10%);
+        opacity: 1;
+    }
+}
+
+@keyframes sponsorIconFlickerOut {
+    0% {
+        opacity: 1;
+    }
+    
+
+    3% {
+        opacity: 0;
+    }
+
+    6% {
+        opacity: 1;
+    }
+
+    9% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
