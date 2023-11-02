@@ -48,6 +48,7 @@
 .mobileCircleAboutUs {
     position: absolute;
     top: 200%;
+    opacity: 0;
 
 }
 
@@ -63,7 +64,7 @@
 .mobileCircleAboutUs2 {
     position: absolute;
     top: 200%;
-
+    opacity: 0;
     
 }
 
