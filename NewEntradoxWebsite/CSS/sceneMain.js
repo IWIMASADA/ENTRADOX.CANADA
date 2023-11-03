@@ -251,7 +251,7 @@ document.addEventListener('keydown', function(event) {
 
 
   let currentPage = 1;
-  const totalPages = 5;
+  const totalPages = 6;
   let lastScrollTime = 0;
   let isSwitching = false;
 
