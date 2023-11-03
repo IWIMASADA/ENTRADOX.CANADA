@@ -385,11 +385,6 @@ document.addEventListener('keydown', function(event) {
   }
 
 
-
-
-
-
-
   const animate = function () {
     requestAnimationFrame(animate);
 

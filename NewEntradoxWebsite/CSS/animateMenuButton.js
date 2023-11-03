@@ -5,20 +5,16 @@ function animateMenuX() {
     var arrowMiddle = document.getElementById('arrowMiddle');
 
     if (container && arrowTop && arrowBottom && arrowMiddle) {
-        // Get the container's dimensions
         var containerWidth = container.offsetWidth;
         var containerHeight = container.offsetHeight;
 
-        // Increase line thickness
-        var lineThickness = 4.5; // Adjust this value as needed
+        var lineThickness = 4.5;
 
-        // Calculate the positions for the "X"
         var xWidth = Math.min(containerWidth, containerHeight) * 1.25; // Adjust as needed
         var xHeight = lineThickness;
         var extraWidth = .6;
         var xLeft = (containerWidth - xWidth) * 0.0005;
         var xTop = (containerHeight - xHeight) * .0001;
-        // Apply transformations and positions to create an "X"
         arrowTop.style.transform = `rotate(45deg) scaleX(${xWidth / 100}) scaleY(${xHeight / 100})`;
         arrowTop.style.left = xLeft + extraWidth + 'rem';
         arrowTop.style.top = xTop - 1 + 'rem';
@@ -51,20 +47,16 @@ function animateMenuXBack() {
     var arrowMiddle = document.getElementById('arrowMiddle');
 
     if (container && arrowTop && arrowBottom && arrowMiddle) {
-        // Get the container's dimensions
         var containerWidth = container.offsetWidth;
         var containerHeight = container.offsetHeight;
 
-        // Increase line thickness
-        var lineThickness = 4.5; // Adjust this value as needed
+        var lineThickness = 4.5; 
 
-        // Calculate the positions for the "X"
         var xWidth = Math.min(containerWidth, containerHeight) * 1.25; // Adjust as needed
         var xHeight = lineThickness;
         var extraWidth = .6;
         var xLeft = (containerWidth - xWidth) * 0.0005;
         var xTop = (containerHeight - xHeight) * .0001;
-        // Apply transformations and positions to create an "X"
         arrowTop.style.transform = `rotate(0deg) scaleX(${xWidth / 100}) scaleY(${xHeight / 100})`;
         arrowTop.style.left = xLeft + extraWidth + 'rem';
         arrowTop.style.top = xTop -.6 + 'rem';
