@@ -8,19 +8,27 @@
 }
 #page1 {
     top: 0%;
+    object-fit: contain;
 }
 #page2 {
+    object-fit: contain;
     top: 100%;
 }
 #page3 {
+    object-fit: contain;
     top: 200%;
 }
 #page4 {
     top: 300%;
+    object-fit: contain;
 }
 #page5 {
     top: 400%;
     object-fit: contain;
-
 }
+#page6 {
+    top: 500%;
+    object-fit: contain;
+}
+
 

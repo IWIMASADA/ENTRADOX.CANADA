@@ -9,40 +9,34 @@ const podcastButton = document.querySelector('.podcastItem');
 var pageT = 'social'
 /* MAIN */
 rankingButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
-        window.open("https://ftcscout.org/teams/14316", "_blank");
 
-    }
+        let pop = window.open("https://ftcscout.org/teams/14316", "_blank");
+
+        if (pop) {
+            console.log("opened popup")
+        } else {
+            alert("Pop up was blocked. Please enable pop ups to view the page")
+        }
 })
 
 tutorialButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
         window.open("_blank");
-
-    }
 })
 
 mailButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
         openEmail();
-    }
-
 })
 
 schoolButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
         let pop = window.open("https://www.meadowridge.bc.ca/", "_blank");
         if (pop) {
             console.log("opened popup")
         } else {
             alert("Pop up was blocked. Please enable pop ups to view the page")
         }
-
-    }
 })
 
 instagramButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
 
         let pop = window.open("https://www.instagram.com/entradox/", "_blank");
         if (pop) {
@@ -51,11 +45,9 @@ instagramButton.addEventListener("click", function() {
             alert("Pop up was blocked. Please enable pop ups to view the page")
         }
 
-    }
 })
 
 podcastButton.addEventListener("click", function() {
-    if (checkPageType() == 'social') {
         let pop = window.open("https://open.spotify.com/show/3HeGGq8z0BoYhlDHMtkI3N", "_blank");
 
         if (pop) {
@@ -65,7 +57,6 @@ podcastButton.addEventListener("click", function() {
         }
 
 
-    }
 })
 
 

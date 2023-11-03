@@ -20,6 +20,8 @@ let inClick = false
 
 exit.addEventListener('click', function() {
     SponsorTiersTextContent.style.opacity = 0;
+    exit.style.opacity = 0;
+
     inClick = false;
     s1.style.display = 'unset';
     s2.style.display = 'unset';
@@ -39,6 +41,8 @@ exit.addEventListener('click', function() {
 
 s1.addEventListener('click', function() {
     inClick = true;
+    exit.style.opacity = 1;
+
     changeInnerHTML(tier1TextContent)
     s1.classList.add('sponsorIconFlickerIn')
     s2.style.opacity = 0;
@@ -50,6 +54,7 @@ s1.addEventListener('click', function() {
     s4.style.display = 'none';
 
 
+
     setTimeout(function() {
         s1.classList.remove('sponsorIconFlickerIn')
         s1.style = 'transform: scale(2.2) translate(0%, -15%)'
@@ -59,6 +64,8 @@ s1.addEventListener('click', function() {
 
 s2.addEventListener('click', function() {
     inClick = true;
+    exit.style.opacity = 1;
+
     changeInnerHTML(tier2TextContent)
     s2.classList.add('sponsorIconFlickerIn')
     s1.style.opacity = 0;
@@ -77,6 +84,7 @@ s2.addEventListener('click', function() {
 })
 
 s3.addEventListener('click', function() {
+    exit.style.opacity = 1;
     inClick = true;
     changeInnerHTML(tier3TextContent)
     s3.classList.add('sponsorIconFlickerIn')
@@ -96,6 +104,7 @@ s3.addEventListener('click', function() {
 })
 
 s4.addEventListener('click', function() {
+    exit.style.opacity = 1;
     inClick = true;
     changeInnerHTML(tier4TextContent)
     s4.classList.add('sponsorIconFlickerIn')
@@ -199,3 +208,12 @@ function changeInnerHTML(tierNumber) {
     SponsorTiersTextContent.style.opacity = 1;
     SponsorTiersTextContent.querySelector("p").innerHTML = tierNumber;
 }
+
+
+/* SPONSOR BUTTONS */ 
+
+var LearnMoreTextSponsor = document.querySelector('.LearnMoreTextSponsor');
+
+LearnMoreTextSponsor.addEventListener('click', function() {
+    window.location.href = '/NewEntradoxWebsite/CSS/pdf/pdf.html';
+})
