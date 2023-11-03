@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         element23: document.getElementById('Tier1SponsorIcon'),
         element24: document.getElementById('Tier2SponsorIcon'),
         element25: document.getElementById('Tier3SponsorIcon'),
-        element26: document.getElementById('Tier4SponsorIcon')
-
+        element26: document.getElementById('Tier4SponsorIcon'),
+        element27: document.querySelector('.sponsorTierExitButton')
       };
       const circle = document.querySelector(".cursor")
 

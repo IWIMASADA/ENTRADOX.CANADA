@@ -302,7 +302,6 @@ body, html {
     padding-left: 10%;
     z-index: 2147483647;
     background-color: transparent;
-
     transform: rotate(90deg);
 }
 
