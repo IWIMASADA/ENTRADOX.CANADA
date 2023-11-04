@@ -243,7 +243,26 @@
     transition: all 0.5s linear;
 }
 
-
+@media screen and (max-width: 1000px) {
+  #page2 {
+    z-index: 214748364 !important;
+    transform: scale(0.6)!important;
+  }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #page2 {
+        z-index: 214748364 !important;
+        transform: scale(0.6)!important;
+      }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #page2 {
+        z-index: 214748364 !important;
+        transform: scale(0.2)!important;
+      }
+  }
 
 
 

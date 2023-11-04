@@ -32,6 +32,100 @@ body {
     cursor: none;
 }
 
+.FooterContainer p {
+    position:absolute;
+    color: white;    
+    font-family: 'TW';
+    font-size: 1rem;
+    top: 60%;
+    font-weight: 100;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+}
+
+.LogoAndNameFooter {
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    transform: translateX(-50%);
+    left: 40%;
+    display: inline;
+    top: 18%;
+}
+.footerLogo {
+    position: absolute;
+    width: auto;
+    height: 3rem;
+    object-fit: cover;
+}
+.footerEntradoxTitle {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 22%;
+    color: rgb(221, 221, 221);
+    font-family: 'DDay';
+    font-size: 4rem;
+    top: -11%;
+}
+.LogoAndNameFooterMeadowridge {
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    transform: translateX(-50%);
+    left: 60%;
+    top: 18%;
+    display: inline;
+}
+
+.footerLogoMDR {
+    position: absolute;
+    width: auto;
+    height: 3.2rem;
+    object-fit: cover;
+}
+.footerMeadowridgeTitle {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 20%;
+    color: rgb(221, 221, 221);
+    font-family: 'DDay';
+    font-size: 4rem;
+    top: -11%;
+}
+
+.thank {
+    position: absolute;
+    font-family: 'TW';
+    font-size: 1rem;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    color: rgb(113, 113, 113);
+}
+.thank img {
+    position: absolute;
+    width: auto;
+    height: 200%;
+    object-fit: cover;
+    transform: translateY(-50%);
+    top: 50%;
+    opacity: 0.5;
+}
+.footerTopHighlight {
+    width: 100%;
+    height: .1px;
+    background-color: #00aaff;
+}
+.footerTopHighlight2 {
+    width: 20%;
+    height: .1px;
+    background-color: #ffa200;
+}
+
+
 /* 1: bar */
 
 .preloader-bar,

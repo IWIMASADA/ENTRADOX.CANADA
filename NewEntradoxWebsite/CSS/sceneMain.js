@@ -194,64 +194,19 @@ const animateDisintegration = function () {
     disintegrationTriggered = true;
 
     } 
-    //disWait = true;
-
-    
-
-
   }  
 };
 
-document.addEventListener('keydown', function(event) {
-  // Check if the pressed key is 'a'
-  if (event.key === 'a') {
-    console.log("pressed a");
-
-      disintegrationInProgress = false;
-      disWait = false;
-
-
-      requestAnimationFrame(animateDisintegration);
-
-      particles.material = particleMaterial;
-      
-  }
-});
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'b') {
-
-        // Check if scroll position meets a certain condition (adjust as needed)
-        if (disWait === false) {
-          // Trigger disintegration
-          disintegrationTriggered = true;
-          disintegrateParticles();
-    
-    
-          disintegrationInProgress = true;
-    
-          
-        } else {
-    
-        }
- 
-      
-  }
-});
 
   const disintegrateParticles = function () {
-    // Trigger disintegration
     startTime = Date.now();
     animateDisintegration();
-
-    
-
   };
 
 
 
   let currentPage = 1;
-  const totalPages = 6;
+  const totalPages = 7;
   let lastScrollTime = 0;
   let isSwitching = false;
 
@@ -261,21 +216,22 @@ document.addEventListener('keydown', function(event) {
 
       if (timeDiff > 500 && !isSwitching) {
           if (e.deltaY > 0 && currentPage < totalPages) {
-              // Scrolling down
+              // scrolling dwn
               isSwitching = true;
               currentPage++;
           } else if (e.deltaY < 0 && currentPage > 1) {
-              // Scrolling up
+              // scroili up
               isSwitching = true;
               currentPage--;
           }
 
+          clickRequired = true;
           liftPages();
           lastScrollTime = currentTime;
 
           setTimeout(function () {
               isSwitching = false;
-          }, 800); // Set the delay time in milliseconds
+          }, 800); 
       }
   });
 
@@ -307,16 +263,37 @@ document.addEventListener('keydown', function(event) {
   }
 
 
+  let clickRequired = false;
+  const canvaswithparticles = document.querySelector('.testbg');
+  const lightRayVideo = document.getElementById('lightRay');
   function liftPages() {
-
       // Get all pages
       const pages = document.querySelectorAll('.sectionWrapper');
       const homePage = document.getElementById('page1');
-      const sponsorPage = document.getElementById('page3');
-
+      const finalPage = document.getElementById('page6');
       var initialHomeTop = homePage.style.top;
+      const footer = document.getElementById('page7');
       // Set top values dynamically
+      if (footer.style.top === '75%') {
+        footer.style.top = '100%';
+      }
+      if (currentPage === 1) {
+        canvaswithparticles.style.display = 'block';
+      }
+      if (currentPage === 7) {
+        pages.forEach((page, index) => {
+          page.style.top = `${(index - currentPage + 1) * 100}%`;
+        });
 
+        pages.forEach(page => {
+          page.style.display = 'block';
+        });
+
+        finalPage.style.top = '-25%';
+        footer.style.top = '75%';
+
+        return;
+      }
 
       pages.forEach((page, index) => {
           page.style.top = `${(index - currentPage + 1) * 100}%`;
@@ -327,34 +304,40 @@ document.addEventListener('keydown', function(event) {
           page.style.display = 'block';
       });
 
-      if (firstTimeScroll == true) {
-                // Check if scroll position meets a certain condition (adjust as needed)
-                if (disWait === false) {
-                  // Trigger disintegration
-                  disintegrationTriggered = true;
-                  disintegrateParticles();
-                  clearSmokeScreen();
-                  disintegrationInProgress = true;
-                } 
-                firstTimeScroll = false;
+      if (checkInMenu() === true) {
+        animateMenuXBack()
+        makeInMenuFalse()
+        slideOut()
       }
 
-      if (homePage.style.top == '-100%' && initialHomeTop == '0%') {
+      if (firstTimeScroll == true && clickRequired === true) {
                 // Check if scroll position meets a certain condition (adjust as needed)
                 if (disWait === false) {
                   // Trigger disintegration
                   disintegrationTriggered = true;
                   disintegrateParticles();
                   clearSmokeScreen();
-            
-            
                   disintegrationInProgress = true;
-            
+                  lightRayVideo.style.display = 'none';
+                } 
+                firstTimeScroll = false;
+                return;
+      }
+
+      if (homePage.style.top == '-100%' && initialHomeTop == '0%' && clickRequired === true) {
+                // Check if scroll position meets a certain condition (adjust as needed)
+                if (disWait === false) {
+                  // Trigger disintegration
+                  disintegrationTriggered = true;
+                  disintegrateParticles();
+                  clearSmokeScreen();
+                  disintegrationInProgress = true;
+                  lightRayVideo.style.display = 'none';
                   
                 } 
       }
 
-      if (homePage.style.top == '0%' && initialHomeTop == '-100%') {
+      if (homePage.style.top == '0%' && initialHomeTop == '-100%' && clickRequired === true) {
         setTimeout(function() {
           disintegrationInProgress = false;
           disWait = false;
@@ -364,24 +347,13 @@ document.addEventListener('keydown', function(event) {
     
           particles.material = particleMaterial;
           unClearSmokeScreen();
+          lightRayVideo.style.display = 'block';
+
       }, 900); 
 
-      }
-
-
-      if (sponsorPage.style.top == '-100%' || sponsorPage.style.top == '100%'  ) {
-                  clearSmokeScreen();
-      }
-
-
-      if (sponsorPage.style.top == '0%') {
-        setTimeout(function() {
-          unClearSmokeScreen();
-      }, 900); 
+  
 
       }
-
-
   }
 
 
@@ -439,6 +411,194 @@ document.addEventListener('keydown', function(event) {
   };
 
   animate();
+
+  var menuItemContainers = document.querySelectorAll('.menuItemContainer');
+  menuItemContainers.forEach(function(menuItemContainer) {
+    var menuItemType = '';
+
+    if (menuItemContainer.querySelector('.AboutUs')) {
+      menuItemType = 'AboutUs';
+    } else if (menuItemContainer.querySelector('.Staff')) {
+      menuItemType = 'Staff';
+    } else if (menuItemContainer.querySelector('.Sponsor')) {
+      menuItemType = 'Sponsor';
+    } else if (menuItemContainer.querySelector('.Social')) {
+      menuItemType = 'Social';
+    } else if (menuItemContainer.querySelector('.Robots')) {
+      menuItemType = 'Robots';
+    } else if (menuItemContainer.querySelector('.homeMenuContainerClass')) {
+      menuItemType = 'homeMenuContainerClass';
+    }
+
+  menuItemContainer.addEventListener('mouseenter', function() {
+    menuItemContainer.querySelector('.' + menuItemType).classList.add('highlightTextMenu');
+  });
+
+  menuItemContainer.addEventListener('mouseleave', function() {
+    menuItemContainer.querySelector('.' + menuItemType).classList.remove('highlightTextMenu');
+
+  });
+
+  menuItemContainer.addEventListener('click', function() {
+    var currentPageNum = checkCurrentPage();
+    if (currentPageNum === 1) {
+      if (menuItemType === 'AboutUs') {
+        currentPage++;
+      } else if (menuItemType === 'Staff') {
+        currentPage = currentPage + 2;
+
+      } else if (menuItemType === 'Sponsor') {
+        currentPage = currentPage + 3;
+
+      } else if (menuItemType === 'Social') {
+        currentPage = currentPage + 4;
+
+      } else if (menuItemType === 'Robots') {
+        currentPage = currentPage + 5;
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        console.log('on home page already');
+      }
+    }
+
+
+    if (currentPageNum === 2) {
+
+      if (menuItemType === 'AboutUs') {
+        console.log('on aboutus page already');
+      } else if (menuItemType === 'Staff') {
+        currentPage++;;
+
+      } else if (menuItemType === 'Sponsor') {
+        currentPage = currentPage + 2;
+
+      } else if (menuItemType === 'Social') {
+        currentPage = currentPage + 3;
+
+      } else if (menuItemType === 'Robots') {
+        currentPage = currentPage + 4;
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        currentPage--;
+
+      }
+    }
+    
+    if (currentPageNum === 3) {
+
+      if (menuItemType === 'AboutUs') {
+        currentPage--;
+      } else if (menuItemType === 'Staff') {
+        console.log('on staff page already');
+
+      } else if (menuItemType === 'Sponsor') {
+        currentPage++;
+
+      } else if (menuItemType === 'Social') {
+        currentPage = currentPage + 2;
+
+      } else if (menuItemType === 'Robots') {
+        currentPage = currentPage + 3;
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        currentPage = currentPage - 2;
+
+      }
+    }
+    if (currentPageNum === 4) {
+
+      if (menuItemType === 'AboutUs') {
+        currentPage = currentPage - 2;
+      } else if (menuItemType === 'Staff') {
+        currentPage--;
+      } else if (menuItemType === 'Sponsor') {
+        console.log('on sponsor page already');
+
+      } else if (menuItemType === 'Social') {
+        currentPage++;
+
+      } else if (menuItemType === 'Robots') {
+        currentPage = currentPage + 2;
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        currentPage = currentPage - 3;
+
+      }
+    }
+
+    if (currentPageNum === 5) {
+
+      if (menuItemType === 'AboutUs') {
+        currentPage = currentPage - 3;
+      } else if (menuItemType === 'Staff') {
+        currentPage = currentPage - 2;
+      } else if (menuItemType === 'Sponsor') {
+        currentPage--;
+
+      } else if (menuItemType === 'Social') {
+        console.log('on social page already');
+
+      } else if (menuItemType === 'Robots') {
+        currentPage++;
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        currentPage = currentPage - 4;
+
+      }
+    }
+
+    if (currentPageNum === 6) {
+
+      if (menuItemType === 'AboutUs') {
+        currentPage = currentPage - 4;
+      } else if (menuItemType === 'Staff') {
+        currentPage = currentPage - 3;
+      } else if (menuItemType === 'Sponsor') {
+        currentPage = currentPage - 2;
+
+      } else if (menuItemType === 'Social') {
+        currentPage--;
+
+      } else if (menuItemType === 'Robots') {
+        console.log('on robots page already');
+
+      } else if (menuItemType === 'homeMenuContainerClass') {
+        currentPage = currentPage - 5;
+      }
+    }
+
+    clickRequired = false;
+    disintegrateParticles();
+    if (currentPage === 1) {
+      setTimeout(function() {
+
+        disintegrationInProgress = false;
+        disWait = false;
+  
+        requestAnimationFrame(animateDisintegration);
+  
+        particles.material = particleMaterial;
+        unClearSmokeScreen();
+    }, 900); 
+    canvaswithparticles.style.display = 'block';
+    lightRayVideo.style.display = 'block';
+    unClearSmokeScreen()
+
+    liftPages()
+    return;
+    }
+
+    liftPages()
+    canvaswithparticles.style.display = 'none';
+    lightRayVideo.style.display = 'none';
+    clearSmokeScreen()
+  });
+});
+
+
+function checkCurrentPage() {
+  return currentPage;
+}
 
 };
 

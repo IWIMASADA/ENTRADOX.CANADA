@@ -2,5 +2,34 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(16, 16, 16);
+}
+
+
+.robotsPageLabel {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 95%;
+    left: 92%;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
+.robotsHeader {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 2%;
+    left: 87%;
+    object-fit: cover;
+    text-wrap: nowrap;
 }

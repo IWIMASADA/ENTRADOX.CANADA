@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    z-index: 2147483647;
+    z-index: 2147483645;
     background-color: rgba(0, 0, 0, 0.438);
     width: 100%;
     height: 80px;
@@ -101,8 +101,8 @@
 }
 .yourImpact {
     position: absolute;
-    top: 40%;
-    left: 11%;
+    top: 80%;
+    left:8%;
     transform: translate(-50%, -50%);
     text-align: left;
     z-index: 10;
@@ -112,7 +112,7 @@
     background-color: rgba(255, 0, 0, 0);
     font-family: 'TW', Arial;
     font-weight: lighter;
-    font-size: 3.5vw; /* Use vw for font size */
+    font-size: 2vw; /* Use vw for font size */
     padding-right: 15%;
     object-fit: cover;
 
@@ -144,7 +144,7 @@
     position: absolute;
     width: 8vw;
     top: 20%;
-    left: 75%;
+    left: 50%;
     object-fit: cover;
     height: 5vh;
     max-height: 45px;
@@ -173,7 +173,7 @@
 .LearnMoreTextSponsor {
     position: absolute;
     top: 25%;
-    left: 5%;
+    left: 6%;
     text-align: center;
     z-index: 10;
     object-fit: cover;
@@ -191,6 +191,34 @@
 
 
 
+.sponsorPageLabel {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 95%;
+    left: 92%;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
+.sponsorsHeader {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 2%;
+    left: 87%;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
 
 
 
@@ -201,7 +229,7 @@
     width: 8vw;
     top: 20%;
     height: 5vh;
-    left: 85%;
+    left: 60%;
     object-fit: cover;
     max-height: 45px;
     background-color: transparent;
@@ -228,7 +256,7 @@
 .OurSponsorsButtonText {
     position: absolute;
     top: 25%;
-    left: 15%;
+    left: 11%;
     text-align: center;
     object-fit: cover;
     font-size: 1.2vw;

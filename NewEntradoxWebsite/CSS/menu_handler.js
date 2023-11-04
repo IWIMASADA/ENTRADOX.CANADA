@@ -2,8 +2,6 @@ var menuButton = document.querySelector('.MenuButtonContainer')
 let inMenu = false;
 var menuGUI = document.getElementById('menupage')
 
-
-
 menuButton.addEventListener('click', function() {
     if (inMenu == false) {
         animateMenuX()
@@ -16,6 +14,17 @@ menuButton.addEventListener('click', function() {
         slideOut()
     }
 })
+
+function checkInMenu() {
+    if (inMenu === true) {
+        return true;
+    }
+    return false;
+}
+
+function makeInMenuFalse() {
+    inMenu = false;
+}
 
 function slideIn() {
     menuGUI.style = 'width: 40%'
@@ -34,34 +43,3 @@ function slideOut() {
         menuGUI.style.opacity = 0;
     }, 400);
 }
-
-var menuItemContainers = document.querySelectorAll('.menuItemContainer');
-
-var menuItemContainers = document.querySelectorAll('.menuItemContainer');
-
-menuItemContainers.forEach(function(menuItemContainer) {
-    var menuItemType = '';
-
-    if (menuItemContainer.querySelector('.AboutUs')) {
-      menuItemType = 'AboutUs';
-    } else if (menuItemContainer.querySelector('.Staff')) {
-      menuItemType = 'Staff';
-    } else if (menuItemContainer.querySelector('.Sponsor')) {
-      menuItemType = 'Sponsor';
-    } else if (menuItemContainer.querySelector('.Social')) {
-      menuItemType = 'Social';
-    } else if (menuItemContainer.querySelector('.Robots')) {
-      menuItemType = 'Robots';
-    } else if (menuItemContainer.querySelector('.homeMenuContainerClass')) {
-      menuItemType = 'homeMenuContainerClass';
-    }
-
-  menuItemContainer.addEventListener('mouseenter', function() {
-    menuItemContainer.querySelector('.' + menuItemType).classList.add('highlightTextMenu');
-  });
-
-  menuItemContainer.addEventListener('mouseleave', function() {
-    menuItemContainer.querySelector('.' + menuItemType).classList.remove('highlightTextMenu');
-
-  });
-});
