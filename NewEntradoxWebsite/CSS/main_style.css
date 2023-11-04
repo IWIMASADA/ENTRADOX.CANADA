@@ -247,17 +247,17 @@ body {
     opacity: 1;
 
 }
-
 .homeBackgroundRender {
     position: fixed;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    max-height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
     object-fit: cover;
-    left: 0%;
     animation: moveCircularly 12s ease-in-out infinite;
-  }
+}
+
+
 .cursor {
     position: absolute;
     z-index: 2147483647;
