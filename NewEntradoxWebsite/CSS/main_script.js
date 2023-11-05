@@ -15,11 +15,11 @@ document.body.style.cursor = 'none';
 
 
 document.addEventListener("DOMContentLoaded", function() {
-
+    const blackscreenBlocker = document.querySelector('.blackscreenBlocker');
 
     setTimeout(function() {
         var readMoreElements = document.getElementsByClassName("TIMG");
-    
+        blackscreenBlocker.remove();
         for (var i = 0; i < readMoreElements.length; i++) {
             readMoreElements[i].classList.add("shake");
         }

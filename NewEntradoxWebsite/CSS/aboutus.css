@@ -234,18 +234,7 @@
     transition: all 0.5s linear;
 
 }
-.AboutUsHalftoneDecoration3 {
-    position: absolute;
-    width: auto;
-    height: auto;
-    max-width: 30%;
-    max-height: 30%;
-    z-index: 1;
-    left: 1%;
-    top: 55%;
-    filter: brightness(-100%);
-    transition: all 0.5s linear;
-}
+
 @media screen and (max-width: 1800px) {
     #page2 {
       z-index: 214748364 !important;
@@ -654,7 +643,7 @@
     .AboutUsItemSide {
         left: -3%;
         top: 1%;
-        transform: scale(1.6) !important;
+        transform: scale(1.) !important;
     }
   }
 
