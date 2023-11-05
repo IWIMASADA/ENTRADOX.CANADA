@@ -269,6 +269,8 @@ const animateDisintegration = function () {
   const socialsBG = document.querySelector('.socialsBackground');
   const canvaswithparticles = document.querySelector('.testbg');
   const lightRayVideo = document.getElementById('lightRay');
+  liftPages()
+  
   function liftPages() {
       // Get all pages
       const pages = document.querySelectorAll('.sectionWrapper');

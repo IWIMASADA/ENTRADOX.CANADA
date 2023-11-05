@@ -33,6 +33,7 @@ body {
     background-color: rgba(0, 0, 255, 0);
     margin-top: 5%;
     left: 0%;
+    top: 0%;
 }
 .StaffDisplayList {
     position: absolute;
@@ -45,7 +46,7 @@ body {
     width: 23%;
     left: 15%;
     z-index: 2147483646;
-
+    top: 0%;
 }
 .displayNames {
     position: relative;
@@ -116,6 +117,7 @@ body {
     height: 100%;
     width: 100%;
     left: 10%;
+    top: 0%;
 }
 .displayNameIconTestLeft {
     position: relative;
@@ -981,6 +983,9 @@ body {
     text-align: left;
 }
 
+.mobileVersionStaffList {
+    opacity: 0;
+}
 
 .ContainerForStaffDescriptionTextContent {
     position: absolute;
@@ -1423,6 +1428,57 @@ body {
       }
 
   }
+
+  @media only screen and (max-width: 600px) {
+    .CurrentStaffList, .StaffDisplayList, .StaffDisplayListIcons, .CurrentStaffDepartment, .staffPanelBarTopMenu {
+        transition: opacity .1s linear;
+        opacity: 0;
+        left: -200% !important;
+    }
+    .ContainerForStaffDescriptionBody, .staffPageStaffContentXButton {
+        transition: opacity .1s linear;
+        opacity: 0;
+        left: -200% !important;
+    }
+    .staffPageLabel {
+        left: 90% !important;
+        top: 105%;
+    }
+    .staffPageNameLabel {
+        left: 64% !important;
+        top: -10%;
+    }
+    .mobileVersionStaffList {
+        position: absolute;
+        left: 0%;
+        opacity: 1;
+        top: -1%;
+        width: 100%;
+    }
+    .mobileStaffContainer {
+        width: 90%;
+        height: 45px;
+        object-fit: cover;
+    }
+    .mobileStaffContainer p {
+        color: white;
+        font-family: 'TW', Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 25px;
+    }
+    .textonMobileStaffContainer  {
+        position: absolute;
+        left: 8%;
+        color: rgb(217, 217, 217);
+        font-weight: normal;
+        font-size: 19px;
+        transform: translateY(-120%);
+        font-family: 'TW', Arial, Helvetica, sans-serif;
+    }
+
+  }
+
+  
 
 
 
