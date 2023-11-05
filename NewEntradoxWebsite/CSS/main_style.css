@@ -1123,6 +1123,17 @@ video {
       transform: scale(0.9)!important;
       display: inline;
     }
+    #page7 {
+        display: inline;  
+    }
+    .LogoAndNameFooter {
+        left: 37%;
+        transition: left .4s linear;
+    }
+    .footerLogoMDR, .footerLogo {
+        left: -5%;
+        transition: left .4s linear;
+    }
     .testbg {
         left: -8% !important;
         transition: all .2s linear;
@@ -1218,6 +1229,14 @@ video {
         left: 50%;
      
     }
+    .LogoAndNameFooter {
+        left: 30%;
+        transition: left .4s linear;
+    }
+    .footerLogoMDR, .footerLogo {
+        left: -10%;
+        transition: left .4s linear;
+    }
     }
     @media screen and (max-width: 1300px) {
         #page1 {
@@ -1265,6 +1284,14 @@ video {
             left: 50%;
          
         }
+        .LogoAndNameFooter {
+            left: 27%;
+            transition: left .4s linear;
+        }
+        .footerLogoMDR, .footerLogo {
+            left: -13%;
+            transition: left .4s linear;
+        }
         }
 
     @media screen and (max-width: 1200px) {
@@ -1299,6 +1326,14 @@ video {
             left: 43% !important;
             opacity: 0;
             transition: opacity .4s linear;
+        }
+        .LogoAndNameFooter {
+            left: 28%;
+            transition: left .4s linear;
+        }
+        .footerLogoMDR, .footerLogo {
+            left: -14%;
+            transition: left .4s linear;
         }
         }
 @media screen and (max-width: 1100px) {
@@ -1343,7 +1378,14 @@ video {
     .icon-scroll:before {
         top: 10%;
         left: 50%;
-     
+    }
+    .LogoAndNameFooter {
+        left: 25%;
+        transition: left .4s linear;
+    }
+    .footerLogoMDR, .footerLogo {
+        left: -18%;
+        transition: left .4s linear;
     }
     }
 @media screen and (max-width: 1000px) {
@@ -1384,6 +1426,18 @@ video {
         opacity: 0;
         transition: opacity .4s linear;
     }
+    .LogoAndNameFooter {
+        left: 20%;
+        transition: left .4s linear;
+    }
+    .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
+        transform: scale(.9);
+        transition: left .4s linear;
+    }
+    .footerLogoMDR, .footerLogo {
+        left: -20%;
+        transition: left .4s linear;
+    }
   }
 
   @media screen and (max-width: 950px) {
@@ -1419,6 +1473,20 @@ video {
         opacity: 0;
         transition: opacity .4s linear;
     }
+    .LogoAndNameFooter {
+        left: 10%;
+        transition: left .4s linear;
+    }
+    .LogoAndNameFooterMeadowridge {
+        left: 55%;
+        transition: left .4s linear;
+
+    }
+
+    .footerLogoMDR, .footerLogo {
+        left: -30%;
+        transition: left .4s linear;
+    }
 
   }
   
@@ -1452,6 +1520,30 @@ video {
       .testbg {
         display: none;
     }
+    .LogoAndNameFooter {
+        left: 12%;
+        transition: left .4s linear;
+    }
+    .LogoAndNameFooterMeadowridge {
+        left: 53%;
+        transition: left .4s linear;
+
+    }
+
+    .footerLogoMDR, .footerLogo {
+        left: -38%;
+        transition: left .4s linear;
+    }
+    .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
+        transform: scale(.7);
+        transition: left .4s linear;
+    }
+    .thank {
+        font-size: 14px;
+    }
+    .FooterContainer p {
+        font-size: 12px;
+    }
   }
 
 
@@ -1466,6 +1558,15 @@ video {
     }
     .bottomLogosHome {
         left: 0% !important;
+    }
+
+    .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
+        transform: scale(.6);
+        transition: left .4s linear;
+    }
+    .footerLogoMDR, .footerLogo {
+        left: -50%;
+        transition: left .4s linear;
     }
 
   }
