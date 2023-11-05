@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mobileNextButton = document.getElementById('mobileNextButtonID');
     const mobileNextButton2 = document.getElementById('mobileNextButton2ID');
-    const personIMG = document.getElementById('StaffPictureBodyID');
     var itemCounter = 0;
     var itemCounterForStaff = 0;
     var isAtMax = false;
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var notAtMaxDeg = 'translate(-50%, -50%) rotate(180deg)';
     mobileNextButton.style.transform = 'translate(-50%, -50%) rotate(180deg)';
     mobileNextButton2.style.transform = 'translate(-50%, -50%) rotate(180deg)';
-    personIMG.style.transform = 'translate(-50%, -50%)';
 
 
     mobileNextButton2.addEventListener('click', function(){

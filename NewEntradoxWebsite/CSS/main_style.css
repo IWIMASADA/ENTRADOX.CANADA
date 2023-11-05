@@ -301,8 +301,8 @@ body {
     z-index: 2;
     width: 130%;
     height: 130%;
-    opacity: 0.2;
-    top: -30%;
+    opacity: 0.15;
+    top: -15%;
     left: -30%;
     object-fit: cover;
     transform: rotateY(180deg) scaleY(.2);
@@ -389,6 +389,7 @@ body {
     height: 130%;
     top: -8%;
     left: -30%;
+    opacity: 0;
     object-fit: cover;
     filter: brightness(150%);
 }

@@ -255,7 +255,7 @@ const animateDisintegration = function () {
     smokeScreen.classList.add("fadeIn");
 
     setTimeout(function() {
-      smokeScreen.style.opacity = 0.2;
+      smokeScreen.style.opacity = 0.15;
       smokeScreen.classList.remove("fadeIn");
 
 
