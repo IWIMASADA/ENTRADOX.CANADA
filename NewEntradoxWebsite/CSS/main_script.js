@@ -1,16 +1,10 @@
 /* NOTE TO SELF,
-
 IF YUO WANT TO SKIP THE LOADING SCREEN FOR FASTER TESTING
-
 JUST PUT THIS:
-
 clearandPlayVideo()
-
 */
-
 document.addEventListener("DOMContentLoaded", function() {
   const blackscreenBlocker = document.querySelector('.blackscreenBlocker');
-
   if (isMobile()) {
     const cursor = document.querySelector('.cursor');
     const cursorDot = document.querySelector('.cursorDot');
@@ -23,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
       for (var i = 0; i < readMoreElements.length; i++) {
           readMoreElements[i].classList.add("shake");
       }
-  
       setTimeout(function() {
           var tdescElements = document.getElementsByClassName("TDESC");
   
@@ -32,10 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }, 300); 
   }, 100); 
-
-
-
-
   function clearLoadingText() {
     document.getElementById('loadingIDIndicator').classList.add("smokeFade");
     setTimeout(function() {
@@ -50,25 +39,20 @@ function clearandPlayVideo() {
   setTimeout(function() {
       video.play();
   }, 1000);
-
   setTimeout(function() {
       video.classList.add("fadeOut");
   }, 2000);
-
   setTimeout(function() {
       video.classList.add("ended");
       video.remove();
       videocontainer.remove();
   }, 2800);
 }
-
-
 class Preloader {
     #c = 0;
     #percentage = 0;
     #length = 0;
     #elements = [];
-  
     #loaderStep = () => {};
     #loadingFinished = () => {};
     #step = (c, p) => {
@@ -81,12 +65,10 @@ class Preloader {
         }
       }, c * 100);
     };
-  
     handleLoad() {
       this.#percentage = (++this.#c * 100) / this.#length;
       this.#step(this.#c, this.#percentage);
     }
-  
     constructor(numOfAjaxRequests, loaderStep, loadingFinished) {
       this.#elements = [
         ...document.querySelectorAll("link"),
@@ -97,27 +79,21 @@ class Preloader {
         //...document.querySelectorAll('audio:not([loading="lazy"])')
       ];
       this.#length = this.#elements.length + numOfAjaxRequests;
-  
       if (typeof loaderStep == "function") this.#loaderStep = loaderStep;
       if (typeof loadingFinished == "function")
         this.#loadingFinished = loadingFinished;
-  
       for (let elem of this.#elements) {
         if (elem.isConnected) this.handleLoad();
         else elem.addEventListener("load", this.handleLoad.bind(this));
       }
     }
   }
-  
   const preloader = new Preloader(
     0,
     function (c, p) {
     document.getElementById("preloader-bar").style.width = p + "%";
-
     document.getElementById("loadingIDIndicator").innerHTML = 'LOADING: ' +
       Math.round(p) + "%";
-
-
     },
     function () {
         document.getElementById("relativeID").style.display = 'none';
@@ -137,16 +113,8 @@ class Preloader {
             video.remove();
             videocontainer.remove();
         }, 2800);
-        
-
-
-
     }
-
   );
-
-
-
 document.addEventListener('mousemove', (e) => {
   if (isMobile()) {
     return
@@ -155,7 +123,6 @@ document.addEventListener('mousemove', (e) => {
       cursor.style.left = e.pageX + 'px';
       cursor.style.top = e.pageY + 'px';
 });
-
 document.addEventListener('mousemove', (e) => {
   if (isMobile()) {
     return
@@ -164,7 +131,5 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
 });
-
 document.body.style.cursor = 'none';
-
 });

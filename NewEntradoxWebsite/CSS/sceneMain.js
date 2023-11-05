@@ -268,7 +268,6 @@ const animateDisintegration = function () {
   const vignetteOfSocialsBG = document.querySelector('.vignette');
   const socialsBG = document.querySelector('.socialsBackground');
   const canvaswithparticles = document.querySelector('.testbg');
-  const lightRayVideo = document.getElementById('lightRay');
   liftPages()
   
   function liftPages() {
@@ -329,7 +328,6 @@ const animateDisintegration = function () {
                   disintegrateParticles();
                   clearSmokeScreen();
                   disintegrationInProgress = true;
-                  lightRayVideo.style.display = 'none';
                 } 
                 firstTimeScroll = false;
                 return;
@@ -343,7 +341,6 @@ const animateDisintegration = function () {
                   disintegrateParticles();
                   clearSmokeScreen();
                   disintegrationInProgress = true;
-                  lightRayVideo.style.display = 'none';
                   
                 } 
       }
@@ -358,7 +355,6 @@ const animateDisintegration = function () {
     
           particles.material = particleMaterial;
           unClearSmokeScreen();
-          lightRayVideo.style.display = 'block';
 
       }, 900); 
 
@@ -592,7 +588,6 @@ const animateDisintegration = function () {
         unClearSmokeScreen();
     }, 900); 
     canvaswithparticles.style.display = 'block';
-    lightRayVideo.style.display = 'block';
     unClearSmokeScreen()
 
     liftPages()
@@ -601,7 +596,6 @@ const animateDisintegration = function () {
 
     liftPages()
     canvaswithparticles.style.display = 'none';
-    lightRayVideo.style.display = 'none';
     clearSmokeScreen()
   });
 });
