@@ -27,7 +27,7 @@ function makeInMenuFalse() {
 }
 
 function slideIn() {
-    menuGUI.style = 'width: 40%'
+    menuGUI.style = 'width: 100%'
     menuGUI.classList.add('fadeInTheMenu')
     setTimeout(function() {
         menuGUI.classList.remove('fadeInTheMenu')
