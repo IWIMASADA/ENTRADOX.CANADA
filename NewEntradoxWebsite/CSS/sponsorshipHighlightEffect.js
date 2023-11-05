@@ -16,9 +16,92 @@ var tier2TextContent = '<b>Tier 2</b> Sponsorship Package <br><br> Pricing > $10
 var tier3TextContent = '<b>Tier 3</b> Sponsorship Package <br><br> Pricing > $250/Year <br><br> <b>Benefits</b> <br><br> > Social Media posts dedicated to sponsor <br><br> > Certificate of appreciation from us which you can display for your business <br><br> > Social media posts dedicated to sponsor <br><br> > "Brought to you by" name recognition on workshops <br><br> > Logo and Description on competition banners & posters <br><br><br> Click <i>Learn More</i> at the top to sponsor us!'
 var tier4TextContent = '<b>Tier 4</b> Sponsorship Package <br><br> Pricing > $500/Year <br><br> <b>Benefits</b> <br><br> > Social Media posts dedicated to sponsor <br><br> > Certificate of appreciation from us which you can display for your business <br><br> > Social media posts dedicated to sponsor <br><br> > "Brought to you by" name recognition on workshops <br><br> > Logo and Description on competition banners & posters <br><br> > "Brought to you by" name recognition in our logo and advertisements <br><br> > "Brought to you by" recognition on our website <br><br><br> Click <i>Learn More</i> at the top to sponsor us!'
 
-let inClick = false
+var tier1TextContentMobile = '<b>Tier 1</b> Sponsorship <br> > $50/Year <i>Email us</i> to learn more <br> <b>Benefits</b> <br>> Social Media posts dedicated to sponsor <br>> Certificate of appreciation from us'
+var tier2TextContentMobile = '<b>Tier 2</b> Sponsorship <br> > $100/Year <i>Email us</i> to learn more <br> <b>Benefits</b> <br>> Social Media posts dedicated to sponsor <br>> Certificate of appreciation from us <br>> Social media posts dedicated to sponsor <br>> "Brought to you by" recognition on workshops/tutorials'
+var tier3TextContentMobile = '<b>Tier 3</b> Sponsorship <br> > $250/Year <i>Email us</i> to learn more <br> <b>Benefits</b> <br>> Social Media posts dedicated to sponsor <br>> Certificate of appreciation from us <br>> Social media posts dedicated to sponsor <br>> "Brought to you by" recognition on workshops/tutorials <br>> Logo/Description on competition banners & posters'
+var tier4TextContentMobile = '<b>Tier 4</b> Sponsorship <br> > $500/Year <i>Email us</i> to learn more <br> <b>Benefits</b> <br>> Social Media posts dedicated to sponsor <br>> Certificate of appreciation from us <br>> Social media posts dedicated to sponsor <br>> "Brought to you by" recognition on workshops/tutorials <br>> Logo/Description on competition banners & posters <br>> "Brought to you by" recognition in our logo and advertisements <br>> "Brought to you by" recognition on our website'
 
+let inClick = false
+var counterForMobile = 2;
+let inReverse = false;
+const sponsorInformationContainerMainDisplay = document.getElementById('sponsorInformationContainerMainDisplayID');
+const mobileButtonNextSponsor = document.querySelector('.mobileButtonNextSponsor');
+changeForMobile();
+function changeForMobile() {
+    if (isMobile()) {
+        sponsorInformationContainerMainDisplay.style.transform = 'translateX(-20%)'
+        return
+    }
+}
+mobileButtonNextSponsor.addEventListener('click', function() {
+    if (!isMobile()) {
+        return
+    }
+
+    //positions: transform: translateX(-20%), transform: translateX(-217%)
+    //,transform: translateX(-420%), transform: translateX(-618%)
+    if (isMobile()) {
+        if (counterForMobile === 1 && !inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-20%)'
+            counterForMobile++;
+            changeMobileText(tier1TextContentMobile)
+            return
+        }
+        if (counterForMobile === 2 && !inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-217%)'
+            counterForMobile++;
+            changeMobileText(tier2TextContentMobile)
+            return
+
+        }
+        if (counterForMobile === 3 && !inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-420%)'
+            changeMobileText(tier3TextContentMobile)
+            counterForMobile++;
+            return
+
+        }
+        if (counterForMobile === 4 && !inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-618%)'
+            counterForMobile--;
+            inReverse = true;
+            changeMobileText(tier4TextContentMobile)
+            return
+        }
+
+
+
+
+        if (counterForMobile === 1 && inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-20%)'
+            counterForMobile++;
+            changeMobileText(tier1TextContentMobile)
+            inReverse = false;
+            return
+        }
+        if (counterForMobile === 2 && inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-217%)'
+            changeMobileText(tier2TextContentMobile)
+            counterForMobile--;
+            return
+
+        }
+        if (counterForMobile === 3 && inReverse) {
+            sponsorInformationContainerMainDisplay.style.transform = 'translateX(-420%)'
+            changeMobileText(tier3TextContentMobile)
+            counterForMobile--;
+            return
+
+        }
+    }
+
+
+
+})
 exit.addEventListener('click', function() {
+    if (isMobile()) {
+        return
+    }
     SponsorTiersTextContent.style.opacity = 0;
     exit.style.opacity = 0;
 
@@ -40,6 +123,9 @@ exit.addEventListener('click', function() {
 })
 
 s1.addEventListener('click', function() {
+    if (isMobile()) {
+        return
+    }
     inClick = true;
     exit.style.opacity = 1;
 
@@ -63,6 +149,9 @@ s1.addEventListener('click', function() {
 })
 
 s2.addEventListener('click', function() {
+    if (isMobile()) {
+        return
+    }
     inClick = true;
     exit.style.opacity = 1;
 
@@ -84,6 +173,9 @@ s2.addEventListener('click', function() {
 })
 
 s3.addEventListener('click', function() {
+    if (isMobile()) {
+        return
+    }
     exit.style.opacity = 1;
     inClick = true;
     changeInnerHTML(tier3TextContent)
@@ -104,6 +196,9 @@ s3.addEventListener('click', function() {
 })
 
 s4.addEventListener('click', function() {
+    if (isMobile()) {
+        return
+    }
     exit.style.opacity = 1;
     inClick = true;
     changeInnerHTML(tier4TextContent)
@@ -128,6 +223,9 @@ s4.addEventListener('click', function() {
 
 
 s1.addEventListener('mouseenter', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s1.style = 'filter: brightness(150%)'
 
@@ -137,6 +235,9 @@ s1.addEventListener('mouseenter', function() {
     }
 })
 s1.addEventListener('mouseleave', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s1.style = 'filter: brightness(100%)'
         s2.style = 'filter: brightness(100%)'
@@ -146,6 +247,9 @@ s1.addEventListener('mouseleave', function() {
 })
 
 s2.addEventListener('mouseenter', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s2.style = 'filter: brightness(150%)'
 
@@ -155,6 +259,9 @@ s2.addEventListener('mouseenter', function() {
     }
 })
 s2.addEventListener('mouseleave', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s1.style = 'filter: brightness(100%)'
         s3.style = 'filter: brightness(100%)'
@@ -164,6 +271,9 @@ s2.addEventListener('mouseleave', function() {
 })
 
 s3.addEventListener('mouseenter', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s3.style = 'filter: brightness(150%)'
 
@@ -173,6 +283,9 @@ s3.addEventListener('mouseenter', function() {
     }
 })
 s3.addEventListener('mouseleave', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s2.style = 'filter: brightness(100%)'
         s1.style = 'filter: brightness(100%)'
@@ -182,6 +295,9 @@ s3.addEventListener('mouseleave', function() {
 })
 
 s4.addEventListener('mouseenter', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s4.style = 'filter: brightness(150%)'
 
@@ -191,6 +307,9 @@ s4.addEventListener('mouseenter', function() {
     }
 })
 s4.addEventListener('mouseleave', function() {
+    if (isMobile()) {
+        return
+    }
     if (inClick == false) {
         s2.style = 'filter: brightness(100%)'
         s1.style = 'filter: brightness(100%)'
@@ -217,3 +336,14 @@ var LearnMoreTextSponsor = document.querySelector('.LearnMoreTextSponsor');
 LearnMoreTextSponsor.addEventListener('click', function() {
     window.location.href = '/NewEntradoxWebsite/CSS/pdf/pdf.html';
 })
+
+
+function isMobile() {
+    return /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      (window.innerWidth <= 700 && window.innerWidth > 0);
+}
+  
+
+function changeMobileText(tier) {
+    SponsorTiersTextContent.querySelector("p").innerHTML = tier;
+}

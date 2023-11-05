@@ -11,6 +11,12 @@ clearandPlayVideo()
 document.addEventListener("DOMContentLoaded", function() {
   const blackscreenBlocker = document.querySelector('.blackscreenBlocker');
 
+  if (isMobile()) {
+    const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursorDot');
+    cursorDot.display = 'none';
+    cursor.display = 'none'
+  }
   setTimeout(function() {
       var readMoreElements = document.getElementsByClassName("TIMG");
       blackscreenBlocker.remove();
@@ -140,13 +146,20 @@ class Preloader {
   );
 
 
+
 document.addEventListener('mousemove', (e) => {
+  if (isMobile()) {
+    return
+  }
   const cursor = document.querySelector('.cursor');
       cursor.style.left = e.pageX + 'px';
       cursor.style.top = e.pageY + 'px';
 });
 
 document.addEventListener('mousemove', (e) => {
+  if (isMobile()) {
+    return
+  }
   const cursor = document.querySelector('.cursorDot');
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';

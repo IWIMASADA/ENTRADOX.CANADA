@@ -21,7 +21,12 @@
     max-height: 10%;
     top: 0%;
     opacity: 1;
+}
 
+.mobileButtonNextSponsor {
+    opacity: 0;
+    display: none;
+    z-index: 214748364;
 }
 
 .blueBoxBottom1 {
@@ -950,3 +955,82 @@
       }
 
   }
+
+
+  @media only screen and (max-width: 700px) {
+    .mobileButtonNextSponsor {
+        position: absolute;
+        opacity: 1;
+        display: unset;
+        font-family: 'TW', Arial;
+        font-weight: lighter;
+        font-size: 30px; /* Use vw for font size */
+        color: white;
+        background-color: rgba(255, 0, 0, 0);
+        top: 108%;
+        z-index: 2147483645;
+
+    }
+    .sponsorInformationContainerMainDisplay {
+        left: 0%;
+        transform: translateX(20%);
+        transition: transform .2s linear;
+    }
+
+    .sponsorshipIcons {
+        position: relative;
+        width: 130%;
+        height: 130%;
+        transform: translate(-50%,-50%);
+        left: 0%;
+        top: 15%;
+        object-fit: contain;
+        margin-left: 70%;
+        transition: all .2s linear;
+    }
+    .OurSponsorsButton {
+        display: none;
+    }
+    .LearnMoreSponsorButton {
+        display: none;
+    }
+    .SponsorFooter {
+        display: none;
+    }
+    .sponsorTierExitButton {
+        display: none;
+    }
+    .SponsorTiersTextContent {
+        opacity: 1;
+        top: 70% !important;
+        width: 130% !important;
+    }
+    .SponsorTiersTextContent p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .sponsorPageLabel {
+        left: 90% !important;
+    }
+
+  }
+
+  @media only screen and (max-width: 280px) {
+
+    .SponsorTiersTextContent {
+        top: 60% !important;
+    }
+    .mobileButtonNextSponsor {
+        top: 113%;
+        left: -5%;
+
+    }
+    .sponsorPageLabel {
+        top: 115% !important;
+        left: 80% !important;
+    }
+  }
+
+
+
+

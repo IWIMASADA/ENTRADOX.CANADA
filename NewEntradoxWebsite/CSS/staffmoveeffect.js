@@ -301,7 +301,10 @@ displayNames.forEach(name => {
 var staffPanelContainer = document.querySelector('.staffPanelContainer');
 var aboutUsContainer = document.querySelector('.AboutUsItemSide');
 
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => { 
+    if (isMobile()) {
+        return
+    }
         const x = e.clientX;
         const y = e.clientY;
 
