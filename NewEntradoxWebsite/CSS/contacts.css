@@ -85,12 +85,19 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    top: 200%;
+    left: 0;
+    opacity: 1;
     image-rendering:optimizeQuality;
     filter:brightness(110%);
+    transition: all .5s ease-out;
 
 }
+
+
 .vignette {
     position: fixed;
     z-index: 2;
@@ -99,7 +106,6 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 0 10rem rgba(0,0,0,0.9) inset;
-
   }
 
 
@@ -527,588 +533,156 @@
 
 
 
+@media screen and (max-width: 1800px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    }
+@media screen and (max-width: 1600px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(.9)!important;
+    }
 
-@media only screen and (max-width: 700px) {
-    
-    /* CONTAINERS */
-.rankingContainer {
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 200%;  
-    transform: translate(-50%, -50%);
-    transition: left 0.3s linear;
-    opacity: 1;
+    .contactsTextTitle {
+        opacity: 0;
+        transition: opacity 1s linear;
+    }
+    }
+@media screen and (max-width: 1500px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(.8)!important;
+    }
+    .mailContainer {
+        left: -5% !important;
+        transition: left 1s linear;
+    }
+    .instagramContainer {
+        left: 15% !important;
+        transition: left 1s linear;
+
+    }
+    .rankingContainer {
+        left: 30% !important;
+        transition: left 1s linear;
+
+    }
+
+    }
+@media screen and (max-width: 1400px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(.8)!important;
+    }
+    }
+
+@media screen and (max-width: 1250px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(0.8)!important;
+    }
+    }
+@media screen and (max-width: 1200px) {
+    #page4 {
+      z-index: 214748364 !important;
+      transform: scale(0.8)!important;
+      left: -5% !important;
+    }
+    }
+@media screen and (max-width: 1000px) {
+  #page4 {
+    z-index: 214748364 !important;
+    transform: scale(0.7)!important;
+  }
+  .mailContainer {
+    left: -20% !important;
+    transition: left 1s linear;
 }
 .instagramContainer {
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-
-    transition: left 0.3s linear;
-
-    opacity: 1;
+    left: 10% !important;
+    transition: left 1s linear;
+}
+.schoolContainer {
+    left: 90% !important;
+    transition: left 1s linear;
 
 }
 .tutorialContainer {
-    
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 200%;  
-    transform: translate(-50%, -50%);
-
-    transition: left 0.3s linear;
-
-    opacity: 1;
-
-}
-.mailContainer {
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 200%;  
-    transform: translate(-50%, -50%);
-
-    transition: left 0.3s linear;
-
-    opacity: 1;
-
-}
-.podcastContainer {
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 200%;  
-    transform: translate(-50%, -50%);
-
-    transition: left 0.3s linear;
-
-    opacity: 1;
+    left: 80% !important;
+    transition: left 1s linear;
 
 }
 
-.schoolContainer {
-    position: absolute;
-    z-index: 214748364;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 50% !important;
-    left: 200%;  
-    transform: translate(-50%, -50%);
-    transition: left 0.3s linear;
-    opacity: 1;
+  }
+  
+  @media screen and (max-width: 900px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.6)!important;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.55)!important;
+      }
+      .mailContainer {
+        left: -35% !important;
+        transition: left 1s linear;
+    }
 
-}
 
-.socialsBackground {
-    position: absolute;
-    z-index: 1;
-    left: 0%;
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    image-rendering:optimizeQuality;
-    filter:brightness(70%);
-    opacity: 1;
+  }
 
-}
-.vignette {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 10rem rgba(0,0,0,0.9) inset;
-    opacity: 1;
+  @media screen and (max-width: 750px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.5)!important;
+      }
 
   }
 
 
-  /* RANKING ITEM */
+  @media screen and (max-height: 750px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
 
-
-.rankingItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 240px;
-    max-height:240px;
-    width: auto;
-    height: auto;
-    top: 3%;
-    left: 20%;
-
-}
-
-.rankingItem:hover {
-    transform: scale(1.1) !important; 
-}
-
-.rankingContainer:hover .rankingTextWrapper {
-    opacity: 1;
-    width: 15rem;
-}
-.rankingTextWrapper {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.rankingText {
-    position: absolute;
-    transition: all 0.3s linear;
-    padding-left: 1rem;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-align: center;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.rankingWhiteSquare {
-    position: absolute;
-    background-color: transparent;
-    top: 0%;
-    left: -6%;
-    max-width: 230px;
-    max-height:230px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
+      
+  }
     
-}
+  @media screen and (max-height: 800px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
 
-  /* TUTORIAL ITEM */
-.tutorialItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 290px;
-    max-height:290px;
-    width: auto;
-    height: auto;
-    top: 0%;
-    left: -15%;
+  }
+  @media screen and (max-height: 900px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
 
-
-}
-
-.tutorialItem:hover {
-
-    transform: scale(1.1) !important; 
-}
-
-.tutorialContainer:hover .tutorialTextWrapper {
-    opacity: 1;
-    width: 15rem;
-}
-.tutorialTextWrapper {
-    position: absolute;
-    top: 108%;
-    left: -2%;
-    height: 3rem;
-    width: 110%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.tutorialText {
-    position: absolute;
-    transition: all 0.3s ease;
-    padding-left: 1rem;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.tutorialWhiteSquare {
-
-    position: absolute;
-    background-color: transparent;
-    top: 0%;
-    left: -15%;
-    max-width: 270px;
-    max-height:270px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    
-}
-
-/* MAIL ITEM */
-
-
-.mailItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 250px;
-    max-height:250px;
-    width: auto;
-    height: auto;
-    top: -20%;
-    left: 13%;
-
-}
-
-.mailItem:hover {
-
-    transform: scale(1.1) !important; 
-}
-
-.mailContainer:hover .mailTextWrapper {
-    opacity: 1;
-    width: 15rem;
-}
-.mailTextWrapper {
-    position: absolute;
-    top: 110%;
-    left: 10%;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.mailText {
-    position: absolute;
-    transition: all 0.3s linear;
-    padding-left: 1rem;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.mailWhiteSquare {
-    position: absolute;
-    background-color: transparent;
-    top: 0%;
-    left: -10%;
-    max-width: 270px;
-    max-height:270px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    
-}
-
-/* SCHOOL ITEM */
-
-
-.schoolItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 230px;
-    max-height:230px;
-    width: auto;
-    height: auto;
-    top: 15%;
-    left: -10%;
-
-}
-
-.schoolItem:hover {
-
-    transform: scale(1.1) !important; 
-}
-
-.schoolContainer:hover .schoolTextWraper {
-    opacity: 1;
-    width: 15rem;
-}
-.schoolTextWraper {
-    position: absolute;
-    top: 100%;
-    left: 5%;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.schoolText {
-    position: absolute;
-    transition: all 0.3s linear;
-    padding-left: 1rem;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.schoolWhiteSquare {
-    position: absolute;
-    background-color: transparent;
-    top: 0%;
-    left: -10%;
-    max-width: 250px;
-    max-height:250px;
-    width: auto;
-    height: auto;
-    transform: translate(-50%,-50%);
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    
-}
-
-/* INSTAGRAM ITEM */
-
-
-.instagramItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 230px;
-    max-height:230px;
-    width: auto;
-    height: auto;
-    top: 7%;
-    left: 0;
-
-}
-
-.instagramItem:hover {
-
-    transform: scale(1.1) !important; 
-}
-
-.instagramContainer:hover .instagramTextWrapper {
-    opacity: 1;
-    width: 15rem;
-}
-
-.instagramTextWrapper {
-    position: absolute;
-    top: 98%;
-    left: 0%;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.instagramText {
-    position: absolute;
-    transition: all 0.3s linear;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.instagramWhiteSquare {
-    position: absolute;
-    background-color: transparent;
-    top: 5%;
-    left: -5%;
-    max-width: 230px;
-    max-height:230px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    
-}
-
-
-/* PODCAST ITEM */
-
-
-.podcastItem {
-    position: absolute;
-    z-index: 214748364;
-    transition: all 0.3s linear;
-    max-width: 220px;
-    max-height:220px;
-    width: auto;
-    height: auto;
-    top: -5%;
-    left: 0%;
-
-}
-
-.podcastItem:hover {
-
-    transform: scale(1.1) !important; 
-}
-
-.podcastContainer:hover .podcastTextWrapper {
-    opacity: 1;
-    width: 15rem;
-}
-.podcastTextWrapper {
-    position: absolute;
-    top: 90%;
-    left: -5%;
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    overflow: hidden;
-    transition: all 0.4s linear;
-
-}
-.podcastText {
-    position: absolute;
-    transition: all 0.3s linear;
-    padding-left: 1rem;
-    z-index: 9;
-    font-family: 'Courier New', monospace;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: normal;
-    opacity: 1;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-
-.podcastWhiteSquare {
-    position: absolute;
-    background-color: transparent;
-    top: 0%;
-    left: 0%;
-    max-width: 180px;
-    max-height:180px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%); 
-}
-
-.contactsTextTitle {
-    position: absolute;
-    z-index: 10;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-    font-weight: normal;
-    opacity: 0;
-    letter-spacing: 30px;
-    text-shadow: -.4rem .3rem .25rem rgb(14, 14, 14);
-}
-
-.Compass {
-    position: absolute;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    top:70%;
-    left: 20%;
-    max-width: 300px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    opacity: 0;
-    top: 200%;
-
-
-}
-.MapLogo {
-    position: absolute;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left: 200%;
-    max-width: 200px;
-    max-height: 200px;
-    width: auto;
-    height: auto;
-    transition: transform 0.3s linear;
-    filter: brightness(110%);
-    filter:contrast(200%);
-    opacity: 0;
-
-}
-
-.mobileNextButton {
-    position: absolute;
-    z-index: 2147483646;
-    opacity: 0;
-    top: 50%;
-    left: 85%;
-    width: auto;
-    height: 8%;
-    max-width: 100%;
-    object-fit: cover;
-    transform: translate(-50%,-50%);
-    transition: transform .2s ease;
-
-}
-
-.mobileDescriptionText {
-    position: absolute;
-    z-index: 10;
-    font-family: 'Courier New', monospace;
-    font-size: .9rem;
-    color: white;
-    font-weight: lighter;
-    top: 81%;
-    left: 40%;
-    background-color: transparent;
-    width: 70%;
-    height: 10%;
-    opacity: 1;
-    transform: translate(-50%,-50%);
+      .mailContainer {
+        top: 10% !important;
+        transition: left 1s linear;
     }
-}
 
+
+  }
+
+
+  
+  @media screen and (max-height: 500px) {
+    #page4 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+        opacity: 0 !important;
+      }
+
+  }

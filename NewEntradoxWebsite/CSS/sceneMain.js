@@ -264,6 +264,9 @@ const animateDisintegration = function () {
 
 
   let clickRequired = false;
+  const RobotsGrayBackground = document.querySelector('.RobotsGrayBackground');
+  const vignetteOfSocialsBG = document.querySelector('.vignette');
+  const socialsBG = document.querySelector('.socialsBackground');
   const canvaswithparticles = document.querySelector('.testbg');
   const lightRayVideo = document.getElementById('lightRay');
   function liftPages() {
@@ -271,6 +274,7 @@ const animateDisintegration = function () {
       const pages = document.querySelectorAll('.sectionWrapper');
       const homePage = document.getElementById('page1');
       const finalPage = document.getElementById('page6');
+      const contactPage = document.getElementById('page4');
       var initialHomeTop = homePage.style.top;
       const footer = document.getElementById('page7');
       // Set top values dynamically
@@ -283,6 +287,8 @@ const animateDisintegration = function () {
       if (currentPage === 7) {
         pages.forEach((page, index) => {
           page.style.top = `${(index - currentPage + 1) * 100}%`;
+          RobotsGrayBackground.style.top = `${(index - currentPage + 1) * 100}%`;
+
         });
 
         pages.forEach(page => {
@@ -291,12 +297,15 @@ const animateDisintegration = function () {
 
         finalPage.style.top = '-25%';
         footer.style.top = '75%';
-
+        RobotsGrayBackground.style.top = '-25%';
         return;
       }
 
       pages.forEach((page, index) => {
+          socialsBG.style.top = contactPage.style.top;
+          vignetteOfSocialsBG.style.top = socialsBG.style.top;
           page.style.top = `${(index - currentPage + 1) * 100}%`;
+          RobotsGrayBackground.style.top = `${(index - currentPage + 1) * 100}%`;
       });
 
       // Show the pages

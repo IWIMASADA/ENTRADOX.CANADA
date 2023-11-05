@@ -657,12 +657,12 @@ body {
 }
 
 .mobileNextButton2{
-    position: absolute;
-    z-index: 2147483646;
     opacity: 0;
-    top: 200%;
 }
 
+.mobileNextButton{
+    opacity: 0;
+}
 
 @keyframes staffItemsGoUp {
     0%,
