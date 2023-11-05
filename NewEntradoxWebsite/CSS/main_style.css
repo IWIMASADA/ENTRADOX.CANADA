@@ -1619,3 +1619,133 @@ video {
 
 
 
+  @media only screen and (max-width: 700px) {
+    #page1 {
+        transform: scale(0.5)!important;
+      }
+    .testbg {
+        display: none;
+    }
+    .icon-scroll,
+    .icon-scroll:before {
+        opacity: 1;
+        top: 135%;
+        left: -20%;
+        transition: opacity .3s linear;
+    }
+    .icon-scroll:before {
+        top: 10%;
+        left: 50%;
+     
+    }
+    .movingWarningUnderline {
+        opacity: 0;
+    }
+    .containerBottomLeft {
+        top: 110% !important;
+        left: 50% !important;
+    }
+    .mascotIcon {
+        opacity: 0;
+    }
+    .bottomLogosHome {
+        top: 120% !important;
+        left: 70% !important;
+        transform: scale(1.25) !important;
+    }
+    .MDRTeamSymbol {
+        top: 20% !important;
+        left: -5% !important;
+        transform: scale(2) !important;
+    }
+
+    .mobile_title {
+        left: -25% !important;
+        font-size: 110px;
+        top: 64%;
+    }
+    .mobile_titleDATE {
+        left: -22% !important;
+        top: 80%;
+        font-size: 35px;
+    }
+    .homeLabel {
+        left: 124%;
+        top: 110%;
+    }
+    .entradoxNameLabel {
+        left: 105%;
+        top: -45%;
+    }
+
+    .homeBackgroundRender {
+        position: fixed;
+        transform: scale(3.3) !important;
+        top: -30%;
+        left: 165% !important;
+        min-width: 200%;
+        min-height: 100%;
+        filter: brightness(190%);
+    }
+    
+  }
+
+  @media only screen and (max-width: 280px) {
+    #page1 {
+        transform: scale(0.4)!important;
+      }
+    
+      .bottomLogosHome {
+        top: 145% !important;
+        left: 70% !important;
+        transform: scale(1.25) !important;
+    }
+    .icon-scroll,
+    .icon-scroll:before {
+        opacity: 1;
+        top: 160%;
+        left: -40%;
+        transition: opacity .3s linear;
+    }
+    .icon-scroll:before {
+        top: 10%;
+        left: 50%;
+     
+    }
+    .homeLabel {
+        left: 140%;
+        top: 135%;
+    }
+    .entradoxNameLabel {
+        left: 105%;
+        top: -65%;
+    }
+    .mobile_title {
+        left: -45% !important;
+        font-size: 100px;
+        top: 64%;
+    }
+    .mobile_titleDATE {
+        left: -40% !important;
+        top: 80%;
+        font-size: 22px;
+    }
+    .containerBottomLeft {
+        top: 110% !important;
+        left: 15% !important;
+        font-size: 22px;
+        width: 100%;
+    }
+    .containerBottomLeftText {
+        font-size: 25px;
+    }
+    .MDRTeamSymbol {
+        top: 20% !important;
+        left: -15% !important;
+        transform: scale(2) !important;
+    }
+    .homeBackgroundRender {
+        left: 215% !important;
+    }
+  }
+

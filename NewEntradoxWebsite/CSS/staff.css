@@ -1141,12 +1141,10 @@ body {
     }
     .staffPageLabel {
         left: 105% !important;
-        top: 105% !important;
 
     }
     .staffPageNameLabel {
         left: 98% !important;
-        top: -10% !important;
 
     }
 
@@ -1172,9 +1170,7 @@ body {
     .StaffMemberHeadlineContainer-Name {
         left: 88% !important;
     }
-    .ContainerForStaffDescriptionTextContent2 {
-        top: 70% !important;
-    }
+
     .StaffLabelOnContainerForDesc {
         opacity: 0 !important;
     }
@@ -1184,11 +1180,9 @@ body {
 
     .staffPageLabel {
         left: 107% !important;
-        top: 110% !important;
     }
     .staffPageNameLabel {
         left: 100% !important;
-        top: -14% !important;
     }
     }
 @media screen and (max-width: 1100px) {
@@ -1242,11 +1236,9 @@ body {
     }
     .staffPageLabel {
         left: 115% !important;
-        top: 120% !important;
     }
     .staffPageNameLabel {
         left: 105% !important;
-        top: -24% !important;
     }
   }
   
@@ -1281,9 +1273,6 @@ body {
         transform: scale(0.6)!important;
       }
 
-      .ContainerForStaffDescriptionTextContent {
-        top: 42% !important;
-    }
 
     .ContainerForStaffDescriptionTextContent2 {
         top: 80% !important;
@@ -1329,7 +1318,7 @@ body {
     #page5 {
         z-index: 214748364 !important;
         transform: scale(0.8)!important;
-        top: 10% !important;
+        top: 10%;
 
       }
 
@@ -1338,14 +1327,14 @@ body {
     }
     
     .ContainerForStaffDescriptionTextContent2 {
-        top: 80% !important;
+        top: 80%;
     }
     .ContainerForStaffDescriptionTextContent {
-        top: 45% !important;
+        top: 45%;
     }
 
     .staffPanelContainer {
-        top: -23% !important;
+        top: -23% ;
         height: 120% !important;
         left: -13% !important;
         transform: scale(0.89) !important;
@@ -1356,15 +1345,15 @@ body {
     #page5 {
         z-index: 214748364 !important;
         transform: scale(0.7)!important;
-        top: 10% !important;
+        top: 10%;
 
       }
       .HumanBody-ImageShadow {
-        left: 20% !important;
+        left: 15% !important;
     }
 
     .staffPanelContainer {
-        top: -30% !important;
+        top: -30%;
         height: 140% !important;
         left: -20% !important;
         transform: scale(0.9) !important;
@@ -1376,19 +1365,22 @@ body {
         transform: scale(0.7)!important;
       }
     .StaffMemberHeadlineContainer-Name {
-        top: 90% !important;
+        top: 90%;
     }
     .StaffRoleTextDisplayText2 {
-        top: 5% !important;
+        top: 5% ;
     }
     .StaffRoleTextDisplayText {
-        top: 5% !important;
+        top: 5% ;
     }
     .staffPanelContainer {
-        top: -38% !important;
+        top: -38% ;
         height: 150% !important;
         left: -20% !important;
         transform: scale(0.82) !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 20% !important;
     }
 
   }
@@ -1399,7 +1391,7 @@ body {
         transform: scale(0.7)!important;
       }
       .staffPanelContainer {
-        top: -50% !important;
+        top: -50% ;
         height: 180% !important;
         left: -25% !important;
         transform: scale(0.68) !important;
@@ -1416,7 +1408,7 @@ body {
         left: 24% !important;
     }
     .staffPanelContainer {
-        top: -70% !important;
+        top: -70%;
         height: 230% !important;
         left: -32% !important;
         transform: scale(0.5) !important;
