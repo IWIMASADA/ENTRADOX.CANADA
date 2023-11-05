@@ -1078,259 +1078,359 @@ body {
 
 
 
-@media only screen and (max-width: 700px) {
- 
-    .StaffFramesHolder {
-        z-index: 2147483647;
-        position:absolute;
-        top:265%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-wrap: wrap;
-        background-color: transparent;
-        width: 90%;
-        max-width: 90%;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        margin: 0 auto; /* Center the container */
-    }
-    .StaffFramesHolder2 {
-        
-        z-index: 2147483647;
-        position:absolute;
-        top:265%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-wrap: wrap;
-        background-color: transparent;
-        width: 90%;
-        max-width: 90%;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        margin: 0 auto; /* Center the container */
-    }
-    .StaffFramesHolder3 {
-        
-        z-index: 2147483647;
-        position:absolute;
-        top:265%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-wrap: wrap;
-        background-color: transparent;
-        width: 90%;
-        max-width: 90%;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        margin: 0 auto; /* Center the container */
+@media screen and (max-width: 1800px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
     }
 
-    .bordersStaff1 {
-        position: absolute;
-        top: 200%;
+    .HumanBody-Image {
+        left: 29% !important;
     }
-    .bordersStaff2 {
-        position: absolute;
-        top: 200%;
+    .HumanBody-ImageShadow {
+        left: 13% !important;
     }
-    .StaffMembersUnderline {
-        position: absolute;
-        width: 90%;
-        object-fit: cover;
-        height: 30%;
-        left: 20%;
-        top: 0%;
     }
-    .staffPageTitle {
-        transition: all 0.6s linear;
-        position: absolute;
-        font-family: 'Servant', Arial, Helvetica, sans-serif;
-        letter-spacing: .1rem;
-        left: 19%;
-        top: 2.5%;
-        z-index: 5;
-        transform: translate(-50%, -50%);
-        font-size: 15px;
-        color: white;
-        font-weight: bold;
+@media screen and (max-width: 1600px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+      
+    }
+    .HumanBody-Image {
+        left: 29% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 13% !important;
+    }
+    .StaffDisplayList {
+        left: 20% !important;
     }
 
-    .ArtStaffBottom {
-        position: absolute;
-        top: 200%;
-        left: 25%;
-        width: auto;
-        max-width: 100%;
-        height: 10%;
-        background-color: transparent;
-        object-fit: cover;
-        transition: all 0.3s linear;
-        
+
+
+    }
+@media screen and (max-width: 1500px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    .HumanBody-Image {
+        left: 29% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 9% !important;
+    }
+    }
+@media screen and (max-width: 1400px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(0.8)!important;
+    }
+    .HumanBody-Image {
+        left: 26% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 2% !important;
+    }
+    .StaffDisplayList {
+        left: 25% !important;
+    }
+    .staffPanelContainer {
+        left: -13% !important;
+    }
+    .staffPageLabel {
+        left: 105% !important;
+        top: 105% !important;
+
+    }
+    .staffPageNameLabel {
+        left: 98% !important;
+        top: -10% !important;
+
     }
 
-    .ContainerForStaffOverview {
-        position: absolute;
-        z-index: 2147483647;
-        height: 80%;
-        width: 100%;
-        top: 1000%;
-        left: 0%;
-        max-width: 100%;
-        max-height: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        transition: all .3s linear;
-        opacity: 1;
     }
 
-    .StaffPictureBody {
-        opacity: 1;
-        transition: transform .3s linear;
-        position: absolute;
-        top: 200%;
-        z-index: 3;
-        left: 50%;
-        width: auto;
-        height: 90%;
-        /*ORIGINAL TOP: 50%*/
-        max-height: 90%;
-        transform: translate(-50%,-50%);
+@media screen and (max-width: 1250px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(0.76)!important;
+    }
+    .HumanBody-Image {
+        left: 30% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 2% !important;
+    }
+    .ContainerForStaffDescriptionText {
+        left: 95% !important;
+    }
+    .staffPageStaffContentXButton {
+        left: 105% !important;
+    }
+    .StaffMemberHeadlineContainer-Name {
+        left: 88% !important;
+    }
+    .ContainerForStaffDescriptionTextContent2 {
+        top: 70% !important;
+    }
+    .StaffLabelOnContainerForDesc {
+        opacity: 0 !important;
+    }
+    .staffPanelContainer {
+        left: -15% !important;
+    }
+
+    .staffPageLabel {
+        left: 107% !important;
+        top: 110% !important;
+    }
+    .staffPageNameLabel {
+        left: 100% !important;
+        top: -14% !important;
+    }
+    }
+@media screen and (max-width: 1100px) {
+    #page5 {
+      z-index: 214748364 !important;
+      transform: scale(0.73)!important;
+    }
+    .HumanBody-Image {
+        left: 28% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 0% !important;
+    }
+    .ContainerForStaffDescriptionText {
+        left: 95% !important;
+    }
+    .staffPageStaffContentXButton {
+        left: 110% !important;
+    }
+    .StaffMemberHeadlineContainer-Name {
+        left: 87% !important;
+    }
+    .StaffLabelOnContainerForDesc {
+        opacity: 0 !important;
+    }
+    .staffPanelContainer {
+        left: -15% !important;
+    }
+
+    }
+@media screen and (max-width: 1000px) {
+  #page5 {
+    z-index: 214748364 !important;
+    transform: scale(0.65)!important;
+  }
+      .HumanBody-Image {
+        left: 28% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: -5% !important;
+    }
+
+    .ContainerForStaffDescriptionText {
+        left: 100% !important;
+    }
+    .staffPageStaffContentXButton {
+        left: 110% !important;
+    }
+    .StaffMemberHeadlineContainer-Name {
+        left: 91% !important;
+    }
+    .staffPageLabel {
+        left: 115% !important;
+        top: 120% !important;
+    }
+    .staffPageNameLabel {
+        left: 105% !important;
+        top: -24% !important;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.65)!important;
+      }
+      .HumanBody-Image {
+        left: 35% !important;
+    }
+    .HumanBody-ImageShadow {
+        left: 10% !important;
+    }
+      .ContainerForStaffDescriptionText {
+        left: 110% !important;
+    }
+    .staffPageStaffContentXButton {
+        left: 125% !important;
+    }
+    .StaffMemberHeadlineContainer-Name {
+        left: 99% !important;
+    }
+    .StaffLabelOnContainerForDesc {
+        opacity: 0 !important;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.6)!important;
+      }
+
+      .ContainerForStaffDescriptionTextContent {
+        top: 42% !important;
+    }
+
+    .ContainerForStaffDescriptionTextContent2 {
+        top: 80% !important;
+    }
+    .StaffDisplayList {
+        left: 30% !important;
+    }
+    .StaffLabelOnContainerForDesc {
+        opacity: 0 !important;
+    }
+  }
+
+
+  @media screen and (max-height: 900px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.9)!important;
+      }
+      .staffPanelContainer {
+        top: 10% !important;
+        height: 110% !important;
+        left: -8% !important;
+        transform: scale(0.95) !important;
+    }
+  }
+  
+  @media screen and (max-height: 800px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.8)!important;
+      }
+
+      .staffPanelContainer {
+        top: 10% !important;
+        height: 110% !important;
+        left: -15% !important;
+        transform: scale(0.95) !important;
+    }
+
+  }
+  
+  @media screen and (max-height: 700px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.8)!important;
+        top: 10% !important;
+
+      }
+
+      .StaffLabelOnContainerForDesc {
+        opacity: 0 !important;
     }
     
-    .StaffEntradoxTag {
-        position: absolute;
-        z-index: 10;
-        background-color: white;
-        top: -5%;
-        left: 10%;
-        height: 33px;
-        width: 130px;
-        transform: translate(-50%,-50%);
+    .ContainerForStaffDescriptionTextContent2 {
+        top: 80% !important;
     }
-    .EntradoxTagTitle {
-        position: absolute;
-        z-index: 10;
-        width: 80%;
-        height: auto;
-        max-width: 75%;
-        max-height: auto;
-        left: 22%;
-        top: 15%;
+    .ContainerForStaffDescriptionTextContent {
+        top: 45% !important;
     }
-    
-    .StaffDescGuiLayoutContainer {
+
+    .staffPanelContainer {
+        top: -23% !important;
+        height: 120% !important;
+        left: -13% !important;
+        transform: scale(0.89) !important;
+    }
+      
+  }
+  @media screen and (max-height: 600px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+        top: 10% !important;
+
+      }
+      .HumanBody-ImageShadow {
+        left: 20% !important;
+    }
+
+    .staffPanelContainer {
+        top: -30% !important;
+        height: 140% !important;
+        left: -20% !important;
+        transform: scale(0.9) !important;
+    }
+  }
+  @media screen and (max-height: 500px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
+    .StaffMemberHeadlineContainer-Name {
+        top: 90% !important;
+    }
+    .StaffRoleTextDisplayText2 {
+        top: 5% !important;
+    }
+    .StaffRoleTextDisplayText {
+        top: 5% !important;
+    }
+    .staffPanelContainer {
+        top: -38% !important;
+        height: 150% !important;
+        left: -20% !important;
+        transform: scale(0.82) !important;
+    }
+
+  }
+  
+  @media screen and (max-height: 500px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
+      .staffPanelContainer {
+        top: -50% !important;
+        height: 180% !important;
+        left: -25% !important;
+        transform: scale(0.68) !important;
+    }
+  }
+
+  @media screen and (max-height: 400px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
+
+      .HumanBody-ImageShadow {
+        left: 24% !important;
+    }
+    .staffPanelContainer {
+        top: -70% !important;
+        height: 230% !important;
+        left: -32% !important;
+        transform: scale(0.5) !important;
+    }
+
+  }
+  @media screen and (max-height: 300px) {
+    #page5 {
+        z-index: 214748364 !important;
+        transform: scale(0.6)!important;
         opacity: 0;
-        position: absolute;
-        background-color: transparent;
-        width: 100%;
-        height: 30%;
-        top: 53%;
-        z-index: 10;
-        object-fit: cover;
+      }
 
-    }
-    .grayLayoutDescriptionContainer {
-        position: absolute;
-        z-index: 9;
-        background-color: #171717da;
-        width: 100%;
-        height: 100%;
-        top: 0%;
-        left: 0%;
-        opacity: 0;
-    
-    }
-    
-    .TagNamePerson {
-        position: absolute;
-        z-index: 100;
-        color: white;
-        font-weight: bold;
-        font-size: 1.3rem;
-        font-family: 'Servant', Arial, Helvetica, sans-serif;
-       width: 70%;
-       height: 20%;
-       top: 10%;
-       left: 5%;
-       text-align: left;
-       text-wrap: nowrap;
-    }
-    
-    .StaffDescriptionExitButton {
-        position: absolute;
-        z-index: 100;
-        color: white;
-        font-weight: bold;
-        font-size: 4.8rem;
-        font-family: 'Servant', Arial, Helvetica, sans-serif;
-       width: 70%;
-       height: 20%;
-       top: -15%;
-       left: 200%;
-       opacity: 0;
-       transition: transform .3s ease-in-out;
-    
-    }
-    .StaffDescriptionExitButton:hover {
-        transform: scale(1.03);
-        color: rgb(0, 166, 255);
-    }
-    
-    .TagRoleText {
-        position: absolute;
-        z-index: 100;
-        color: white;
-        font-weight:200;
-        font-size: .8rem;
-        text-align: left;
-        font-family: Arial, Helvetica, sans-serif;
-       width: 70%;
-       height: 20%;
-       top: 28%;
-       left: 5%;
-       text-wrap: nowrap;
-    }
-    
-    .TagRoleIconType {
-        position: absolute;
-        z-index: 99;
-        width: 15%;
-        height: auto;
-        max-height: 100%;
-        top: 5%;
-        left: 80%;
-    }
-    
-    .TagStaffMemberDescription {
-        position: absolute;
-        z-index: 100;
-        color: rgb(171, 171, 171);
-        font-weight: lighter;
-        font-size: .5rem;
-        font-family: 'TW', monospace;
-        width: 80%;
-        height: 20%;
-        top: 50%;
-        left: 5%;
-    }
+  }
 
-    .mobileNextButton2{
-        position: absolute;
-        z-index: 2147483647;
-        opacity: 1;
-        top: 200%;
-        /*ORIGINAL 50%*/
-        left: 85%;
-        width: auto;
-        height: 6%;
-        max-width: 100%;
-        object-fit: cover;
-        transform: translate(-50%,-50%);
-        transition: transform .2s ease;
-    }
-    
 
-}
 

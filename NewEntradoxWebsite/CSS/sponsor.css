@@ -115,6 +115,8 @@
     font-size: 2vw; /* Use vw for font size */
     padding-right: 15%;
     object-fit: cover;
+    transition: all .5s linear;
+
 
 }
 
@@ -131,7 +133,7 @@
     top: 15%;
     left: 2%;
     object-fit: cover;
-
+    transition: all .5s linear;
 }
 
 
@@ -289,6 +291,7 @@
     background-color: rgb(0, 0, 0);
     height: 10%;
     object-fit: cover;
+    transition: all .5s linear;
 
 }
 
@@ -300,6 +303,8 @@
     height: 7vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
+    transition: all .5s linear;
+
 }
 
 .sponsorComponentsContainer {
@@ -674,3 +679,190 @@
         opacity: 1;
     }
 }
+
+
+@media screen and (max-width: 1800px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    }
+@media screen and (max-width: 1600px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    }
+@media screen and (max-width: 1500px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    .SponsorTiersTextContent {
+        left: 53% !important;
+    }
+    .sponsorTierExitButton {
+        left: 95% !important;
+        top: 20% !important;
+    }
+    }
+@media screen and (max-width: 1400px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1)!important;
+    }
+    .SponsorHeader {
+        top: -3% !important;
+        left: 5% !important;
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpact {
+        top: 80% !important;
+    }
+    .LearnMoreSponsorButton {
+        top: 40% !important; 
+    }
+    .OurSponsorsButton {
+        top: 40% !important; 
+    }
+    .sponsorGilbert {
+        top: 29% !important; 
+        transform: scale(.8);
+    }
+    }
+
+@media screen and (max-width: 1250px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.95)!important;
+    }
+    .SponsorFooter {
+        background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+        top: -3% !important;
+        left: 5% !important;
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpactText {
+        width: 100% !important;
+    }
+    .SponsorTiersTextContent {
+        left: 55% !important;
+        top: 25% !important;
+
+    }
+    .sponsorTierExitButton {
+        left: 110% !important;
+        top: 20% !important;
+    }
+    }
+@media screen and (max-width: 1200px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.8)!important;
+      left: -5% !important;
+    }
+    .SponsorFooter {
+        top: 95% !important;
+        background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+        top: -13% !important;
+        left: 5% !important;
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpact {
+        opacity: 0 !important;
+    }
+    .sponsorGilbert {
+        opacity: 0 !important;
+    }
+
+    .LearnMoreSponsorButton {
+        top: 21% !important;
+        left: 70% !important; 
+        width: 9% !important;
+        height: 50% !important;
+    }
+    .OurSponsorsButton {
+        top: 21% !important;
+        left: 80% !important; 
+        width: 9% !important;
+        height: 50% !important;
+    }
+    .sponsorPageLabel {
+        top: 105% !important;
+        left: 106% !important;
+    }
+    .SponsorTiersTextContent {
+        left: 60% !important;
+    }
+    }
+@media screen and (max-width: 1000px) {
+  #page3 {
+    z-index: 214748364 !important;
+    transform: scale(0.8)!important;
+  }
+  .SponsorTiersTextContent {
+    left: 60% !important;
+    width: 60% !important;
+    top: 30% !important;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #page3 {
+        z-index: 214748364 !important;
+        transform: scale(0.8)!important;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #page3 {
+        z-index: 214748364 !important;
+        transform: scale(0.75)!important;
+      }
+
+      .LearnMoreSponsorButton {
+        top: -25% !important;
+        left: 80% !important; 
+        width: 9% !important;
+        height: 40% !important;
+    }
+    .OurSponsorsButton {
+        top: -25% !important;
+        left: 90% !important; 
+        width: 9% !important;
+        height: 40% !important;
+    }
+    .sponsorPageLabel {
+        top: 110% !important;
+        left: 103% !important;
+    }
+    .sponsorTierExitButton {
+        left: 120% !important;
+        top: 20% !important;
+    }
+
+  }
+
+  @media screen and (max-width: 750px) {
+    #page3 {
+        z-index: 214748364 !important;
+        transform: scale(0.7)!important;
+      }
+
+      .LearnMoreSponsorButton {
+        top: -75% !important;
+        left: 80% !important; 
+        width: 9% !important;
+        height: 40% !important;
+    }
+    .OurSponsorsButton {
+        top: -75% !important;
+        left: 90% !important; 
+        width: 9% !important;
+        height: 40% !important;
+    }
+  }
