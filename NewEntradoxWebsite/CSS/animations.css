@@ -5,88 +5,14 @@ body, html {
     background-color: white;
     overflow: hidden;
 }
-
-/* ANIMATIONS */
-
-
-.fadeIn {
-    animation: fadeInUniversal 2s ease-in-out forwards;
-}
-.fadeOut {
-    animation: fadeInUniversal 1s ease-in-out reverse;
-}
-
-.smokeFade {
-    animation: fadeOutUniversal 1s linear forwards;
-}
-.smokeFadeIn {
-    animation: SmokeInUniversal 1s linear forwards;
-}
-
-.shake {
-    animation: moveUpDown 10s ease-in-out infinite;
-}
-
-.shake2 {
-    animation: moveUpDown2 10s ease-in-out infinite;
-}
-
-.shakeSmall {
-    animation: moveUpDownS 15s ease-in-out infinite;
-}
-
-.shakeSmall2 {
-    animation: moveUpDown2S 15s ease-in-out infinite;
-}
-.textShake {
-    animation: TS 15s ease-in-out infinite;
-}
-
-.shake3 {
-    animation: moveUpDown3 10s ease-in-out infinite;
-}
-.shake_blue {
-    animation: moveUpDownBlue 5s ease-out infinite;
-}
-
-.circularShake {
-    animation: circularShake 10s ease-in-out infinite;
-    
-}
-.circularShake2 {
-    animation: circularShake2 10s ease-in infinite;
-    
-}
-
-.flutter {
-    animation: flutter 3s ease-in-out infinite;
-}
-.flutterS {
-    animation: flutterS 3s ease-in-out infinite;
-}
-
-
-.anim_open {
-    animation: content-opener .5s ease-in forwards;
-}
-.anim_close {
-    animation: content-opener .5s ease-out reverse;
-}
-
-
-/* KEYFRAMES */
-
 @keyframes content-opener {
     0% {
         width: 3.4;
     }
-
     100% {
         width: 100%;
     }
 }
-
-
 @keyframes fadeInUniversal {
     0% {
         opacity: 0;
@@ -95,7 +21,6 @@ body, html {
         opacity: 1;
     }
 }
-
 @keyframes SmokeInUniversal {
     0% {
         opacity: 0;
@@ -104,7 +29,6 @@ body, html {
         opacity: 0.2;
     }
 }
-
 @keyframes fadeOutUniversal {
     0% {
         opacity: 1;
@@ -113,7 +37,6 @@ body, html {
         opacity: 0;
     }
 }
-
 @keyframes moveUpDown {
     0%,
     10%,
@@ -131,11 +54,7 @@ body, html {
     90% {
         transform: translateY(-5%);
     }
-
-
 }
-
-
 @keyframes moveUpDown2 {
     0%,
     10%,
@@ -153,10 +72,7 @@ body, html {
     90% {
         transform: translateY(-30%);
     }
-
-
 }
-
 @keyframes moveUpDown3 {
     0% {
         transform: translateY(0%);
@@ -170,7 +86,6 @@ body, html {
         transform: translateY(0%);
     }
 }
-
 @keyframes moveUpDownBlue {
     0%,
     10%,
@@ -189,11 +104,7 @@ body, html {
         opacity: 1;
         transform: translateY(8%);
     }
-
-
 }
-
-
 @keyframes flutter {
     0% {
         filter: brightness(100%)
@@ -220,8 +131,6 @@ body, html {
         filter: brightness(100%);
     }
 }
-
-
 @keyframes circularShake {
     0% {
         transform: translate(0%, 0%) ;
@@ -231,19 +140,15 @@ body, html {
     }
     40% {
         transform: translate(5%,-5%);
-        
     }
     60% {
         transform: translate(-5%,5%);
-
     }
     80% {
         transform: translate(-5%,-5%);
-
     }
     100% {
         transform: translate(0%,0%);
-
     }
 }
 @keyframes circularShake2 {
@@ -255,22 +160,17 @@ body, html {
     }
     40% {
         transform: translate(5%,-5%);
-        
     }
     60% {
         transform: translate(-5%,5%);
-
     }
     90% {
         transform: translate(-5%,-5%);
-
     }
     100% {
         transform: translate(0%,0%);
-
     }
 }
-
 @keyframes moveUpDownS {
     0%,
     10%,
@@ -287,11 +187,7 @@ body, html {
     90% {
         transform: translateY(-3%);
     }
-
-
 }
-
-
 @keyframes moveUpDown2S {
     0%,
     10%,
@@ -308,11 +204,7 @@ body, html {
     90% {
         transform: translateY(-15%);
     }
-
-
 }
-
-
 @keyframes TS {
     0%,
     10%,
@@ -330,7 +222,438 @@ body, html {
         transform: translateY(-2%);
     }
 }
+@keyframes evaporateNewStaff {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+}
+@keyframes unevaporateNewStaff {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes displayOnFlicker {
+    0% {
+        left: 25%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    80% {
+        left: 30%;
+    }
+    100% {
+        opacity: 1;
+        left: 30%;
+    }
+}
+@keyframes displayOnFlickerShadow {
+    0% {
+        left: 10%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    80% {
+        left: 15%;
+    }
+    100% {
+        opacity: 1;
+        left: 15%;
+    }
+}
+@keyframes displayOffFlicker {
+    0% {
+        left: 30%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        left: 25%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes displayOffFlickerShadow {
+    0% {
+        left: 15%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        left: 10%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flickerInText {
+    0% {
+        left: 78%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
 
+    50% {
+        opacity: 1;
+    }
+    80% {
+        left: 81%;
+    }
+    100% {
+        opacity: 1;
+        left: 81%;
+    }
+}
+@keyframes flickerOutText {
+    0% {
+        left: 81%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        left: 78%;
+    }
+    100% {
+        opacity: 0;
+        left: 78%;
+    }
+}
+@keyframes slideInStaffDesc {
+    0% {
+        left: 82%;
+        opacity: 0;
+    }
+    100% {
+        left: 84%;
+        opacity: 1;
+    }
+}
+@keyframes slideOutStaffDesc {
+    0% {
+        left: 84%;
+        opacity: 1;
+    }
+    100% {
+        left: 82%;
+        opacity: 0;
+    }
+}
+@keyframes staffContainerSlideIn {
+    0% {
+        left: 47%;
+        opacity: 0;
+    }
+    100% {
+        left: 53%;
+        opacity: 1;
+    }
+}
+@keyframes staffContainerSlideOut {
+    0% {
+        left: 84%;
+        opacity: 1;
+    }
+    100% {
+        left: 82%;
+        opacity: 0;
+    }
+}
+@keyframes headlineFlickerInText {
+    0% {
+        left: 40%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        left: 50%;
+    }
+    100% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+@keyframes headlineFlickerOutText {
+    0% {
+        left: 50%;
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        left: 78%;
+    }
+    100% {
+        opacity: 0;
+        left: 40%;
+    }
+}
+@keyframes xbuttonFlicker {
+    0% {
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes xbuttonFlickerOut {
+    0% {
+        opacity: 1;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.fadeIn {
+    animation: fadeInUniversal 2s ease-in-out forwards;
+}
+.fadeOut {
+    animation: fadeInUniversal 1s ease-in-out reverse;
+}
+.smokeFade {
+    animation: fadeOutUniversal 1s linear forwards;
+}
+.smokeFadeIn {
+    animation: SmokeInUniversal 1s linear forwards;
+}
+.shake {
+    animation: moveUpDown 10s ease-in-out infinite;
+}
+.shake2 {
+    animation: moveUpDown2 10s ease-in-out infinite;
+}
+.shakeSmall {
+    animation: moveUpDownS 15s ease-in-out infinite;
+}
+
+.shakeSmall2 {
+    animation: moveUpDown2S 15s ease-in-out infinite;
+}
+.textShake {
+    animation: TS 15s ease-in-out infinite;
+}
+.shake3 {
+    animation: moveUpDown3 10s ease-in-out infinite;
+}
+.shake_blue {
+    animation: moveUpDownBlue 5s ease-out infinite;
+}
+
+.circularShake {
+    animation: circularShake 10s ease-in-out infinite;
+    
+}
+.circularShake2 {
+    animation: circularShake2 10s ease-in infinite;
+}
+.flutter {
+    animation: flutter 3s ease-in-out infinite;
+}
+.flutterS {
+    animation: flutterS 3s ease-in-out infinite;
+}
+.anim_open {
+    animation: content-opener .5s ease-in forwards;
+}
+.anim_close {
+    animation: content-opener .5s ease-out reverse;
+}
 .evaporateNewStaff {
     animation-name: evaporateNewStaff;
     animation-duration: .5s;
@@ -339,82 +662,20 @@ body, html {
     animation-name: unevaporateNewStaff;
     animation-duration: .5s;
 }
-
-@keyframes evaporateNewStaff {
-    0% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-    
-
-    10% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    30% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-20%);
-        opacity: 0;
-    }
-}
-
-@keyframes unevaporateNewStaff {
-    0% {
-        transform: translateX(-20%);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    20% {
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
 [id="Aasha Askew"],[id="Daniel Ashtiani"],[id="Hari Baidwan"],[id="Liam Bradley"],[id="Aella Gong"],[id="Nicole Zhang"],[id="Amy Xu"],[id="Oliver Low"],[id="Derek Lee"],[id="Andy Xu"] {
     transition: transform, color, .1s linear;
 }
 .iconHoverClass {
     transform: scale(1.17) translateX(-12%);
 }
-/* ANIMATIONS FOR STAFF HOVERING */
 [id="Aasha Askew"]:hover {
     transform: scale(1.1); 
     color: rgb(255, 200, 0);
 }
-
 [id="Daniel Ashtiani"]:hover {
     transform: scale(1.1); 
-
     color: rgb(255, 200, 0);
 }
-
 [id="Hari Baidwan"]:hover {
     transform: scale(1.1); 
     color: rgb(0, 136, 255);
@@ -431,7 +692,6 @@ body, html {
     transform: scale(1.1); 
     color: rgb(0, 136, 255);
 }
-
 [id="Amy Xu"]:hover {
     transform: scale(1.1); 
     color: rgb(0, 136, 255);
@@ -448,276 +708,33 @@ body, html {
     transform: scale(1.1); 
     color: rgb(0, 136, 255);
 }
-
-
-/* ANIMATE FOR STAFF CONTENT DISPLAY*/
-
 #ContainerForStaffDescriptionBodyID {
     opacity: 0;
 }
-
-
 .displayOnFlicker {
     animation-name: displayOnFlicker;
     animation-duration: 1s;
 }
-
 .displayOnFlickerShadow {
     animation-name: displayOnFlickerShadow;
     animation-duration: 1s;
 }
-@keyframes displayOnFlicker {
-    0% {
-        left: 25%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 0;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    9% {
-        opacity: 0;
-    }
-
-    11% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-
-    80% {
-        left: 30%;
-    }
-    100% {
-        opacity: 1;
-        left: 30%;
-
-    }
-}
-@keyframes displayOnFlickerShadow {
-    0% {
-        left: 10%;
-        opacity: 0;
-    }
-    
-    3% {
-        opacity: 0;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    9% {
-        opacity: 0;
-    }
-
-    11% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-
-    80% {
-        left: 15%;
-    }
-    100% {
-        opacity: 1;
-        left: 15%;
-
-    }
-}
-
-/* DISPLAY OFF */
-
 .displayOffFlicker {
     animation-name: displayOffFlicker;
     animation-duration: 1s;
 }
-
 .displayOffFlickerShadow {
     animation-name: displayOffFlickerShadow;
     animation-duration: 1s;
 }
-@keyframes displayOffFlicker {
-    0% {
-        left: 30%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 1;
-    }
-
-    6% {
-        opacity: 0;
-    }
-
-    9% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: 0;
-    }
-    14% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-
-    }
-    80% {
-        left: 25%;
-
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes displayOffFlickerShadow {
-    0% {
-        left: 15%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 1;
-    }
-
-    6% {
-        opacity: 0;
-    }
-
-    9% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: 0;
-    }
-    14% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-
-    }
-    80% {
-        left: 10%;
-
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* TEXT ANIMATIONS */
 .flickerInText {
     animation-name: flickerInText;
     animation-duration: 1s;
 }
-
 .flickerOutText {
     animation-name: flickerOutText;
     animation-duration: 1s;
 }
-
-
-@keyframes flickerInText {
-    0% {
-        left: 78%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 0;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    9% {
-        opacity: 0;
-    }
-
-    11% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-
-    }
-    80% {
-        left: 81%;
-
-    }
-    100% {
-        opacity: 1;
-        left: 81%;
-    }
-}
-
-@keyframes flickerOutText {
-    0% {
-        left: 81%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 1;
-    }
-
-    6% {
-        opacity: 0;
-    }
-
-    9% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: 0;
-    }
-    14% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-
-    }
-    80% {
-        left: 78%;
-
-    }
-    100% {
-        opacity: 0;
-        left: 78%;
-
-    }
-}
-
-
 .slideInStaffDesc {
     animation-name: slideInStaffDesc;
     animation-duration: 1s;
@@ -726,31 +743,6 @@ body, html {
     animation-name: slideOutStaffDesc;
     animation-duration: 1s;
 }
-
-@keyframes slideInStaffDesc {
-    0% {
-        left: 82%;
-        opacity: 0;
-    }
-    100% {
-        left: 84%;
-        opacity: 1;
-    }
-}
-
-
-@keyframes slideOutStaffDesc {
-    0% {
-        left: 84%;
-        opacity: 1;
-    }
-    100% {
-        left: 82%;
-        opacity: 0;
-    }
-}
-
-
 .staffContainerSlideIn {
     animation-name: staffContainerSlideIn;
     animation-duration: 1s;
@@ -759,202 +751,19 @@ body, html {
     animation-name: staffContainerSlideOut;
     animation-duration: 1s;
 }
-
-@keyframes staffContainerSlideIn {
-    0% {
-        left: 47%;
-        opacity: 0;
-    }
-    100% {
-        left: 53%;
-        opacity: 1;
-    }
-}
-
-
-@keyframes staffContainerSlideOut {
-    0% {
-        left: 84%;
-        opacity: 1;
-    }
-    100% {
-        left: 82%;
-        opacity: 0;
-    }
-}
-
-
-
-/* HEADLINE ANIMATIONS */
 .headlineFlickerInText {
     animation-name: headlineFlickerInText;
     animation-duration: 1s;
 }
-
 .headlineFlickerOutText {
     animation-name: headlineFlickerOutText;
     animation-duration: 1s;
 }
-
-
-@keyframes headlineFlickerInText {
-    0% {
-        left: 40%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 0;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    9% {
-        opacity: 0;
-    }
-
-    11% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-
-    }
-    80% {
-        left: 50%;
-
-    }
-    100% {
-        opacity: 1;
-        left: 50%;
-    }
-}
-
-@keyframes headlineFlickerOutText {
-    0% {
-        left: 50%;
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 1;
-    }
-
-    6% {
-        opacity: 0;
-    }
-
-    9% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: 0;
-    }
-    14% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-
-    }
-    80% {
-        left: 78%;
-
-    }
-    100% {
-        opacity: 0;
-        left: 40%;
-
-    }
-}
-
-
 .xbuttonFlicker {
     animation-name: xbuttonFlicker;
     animation-duration: 1s;
 }
-
 .xbuttonFlickerOut {
     animation-name: xbuttonFlickerOut;
     animation-duration: 1s;
-}
-
-@keyframes xbuttonFlicker {
-    0% {
-        opacity: 0;
-    }
-    
-
-    3% {
-        opacity: 1;
-    }
-
-    6% {
-        opacity: 0;
-    }
-
-    9% {
-        opacity: 1;
-    }
-
-    11% {
-        opacity: 0;
-    }
-    14% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes xbuttonFlickerOut {
-    0% {
-        opacity: 1;
-    }
-    
-
-    3% {
-        opacity: 0;
-    }
-
-    6% {
-        opacity: 1;
-    }
-
-    9% {
-        opacity: 0;
-    }
-
-    11% {
-        opacity: 1;
-    }
-    14% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-
-    }
-
-    100% {
-        opacity: 0;
-    }
 }

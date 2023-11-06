@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     var smth = {
         element1: document.querySelector('.MenuButtonContainer'),
         element3: document.querySelector('.LearnMoreSponsorButton'),
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         element7: document.querySelector('.mailContainer'),
         element8: document.querySelector('.schoolContainer'),
         element9: document.querySelector('.instagramContainer'),
-
         element10: document.querySelector('.AboutUs'),
         element11: document.querySelector('.AboutUs'),
         element12: document.querySelector('.LearnMoreSponsorButton'),
@@ -30,67 +28,49 @@ document.addEventListener("DOMContentLoaded", function() {
         element27: document.querySelector('.sponsorTierExitButton')
       };
       const circle = document.querySelector(".cursor")
-
       Object.values(smth).forEach(function (element) {
         if (element) {
-            // Add mouseenter event listener
             element.addEventListener('mouseover', function () {
-                // Do something when mouse enters
                 circle.style.transform = "translate(-50%, -50%) scale(0.5)";
                 circle.style.backgroundColor = "rgba(221, 221, 221, 0.233)";
             });
-    
-            // Add mouseout event listener
             element.addEventListener('mouseleave', function () {
-                // Do something when mouse leaves
                 circle.style.transform = "translate(-50%,-50%) scale(1)";
                 circle.style.backgroundColor = "transparent";
             });
         }
     });
-
-
     var sp = document.querySelectorAll('.pricingComponentRelative');
-
     sp.forEach(function (element) {
         element.addEventListener('mouseover', function () {
             circle.style.transform = "translate(-50%, -50%) scale(0.5)";
             circle.style.backgroundColor = "rgba(221, 221, 221, 0.233)";
         });
-    
         element.addEventListener('mouseleave', function () {
             circle.style.transform = "translate(-50%, -50%) scale(1)";
             circle.style.backgroundColor = "transparent";
         });
     });
-
     var staffSelector = document.querySelectorAll('[data-custom2="StaffMove"]');
-
     staffSelector.forEach(function (element) {
         element.addEventListener('mouseover', function () {
             circle.style.transform = "translate(-50%, -50%) scale(0.5)";
             circle.style.backgroundColor = "rgba(221, 221, 221, 0.233)";
         });
-    
         element.addEventListener('mouseleave', function () {
             circle.style.transform = "translate(-50%, -50%) scale(1)";
             circle.style.backgroundColor = "transparent";
         });
     });
-    
-
     var displayNames = document.querySelectorAll('.displayNames');
-
     displayNames.forEach(function (element) {
         element.addEventListener('mouseover', function () {
             circle.style.transform = "translate(-50%, -50%) scale(0.5)";
             circle.style.backgroundColor = "rgba(221, 221, 221, 0.233)";
         });
-    
         element.addEventListener('mouseleave', function () {
             circle.style.transform = "translate(-50%, -50%) scale(1)";
             circle.style.backgroundColor = "transparent";
         });
     });
-      
 })

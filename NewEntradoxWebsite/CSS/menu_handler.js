@@ -1,7 +1,6 @@
 var menuButton = document.querySelector('.MenuButtonContainer')
 let inMenu = false;
 var menuGUI = document.getElementById('menupage')
-
 menuButton.addEventListener('click', function() {
     if (inMenu == false) {
         animateMenuX()
@@ -14,18 +13,15 @@ menuButton.addEventListener('click', function() {
         slideOut()
     }
 })
-
 function checkInMenu() {
     if (inMenu === true) {
         return true;
     }
     return false;
 }
-
 function makeInMenuFalse() {
     inMenu = false;
 }
-
 function slideIn() {
     menuGUI.style = 'width: 100%'
     menuGUI.classList.add('fadeInTheMenu')
@@ -34,7 +30,6 @@ function slideIn() {
         menuGUI.style.opacity = 1;
     }, 400);
 }
-
 function slideOut() {
     menuGUI.style = 'width: 0%'
     menuGUI.classList.add('fadeOutTheMenu')

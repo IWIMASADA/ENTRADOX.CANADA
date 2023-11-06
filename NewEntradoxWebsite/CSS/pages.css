@@ -4,19 +4,19 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 #page1 {
     top: 0%;
     object-fit: contain;
 }
 #page2 {
-    object-fit: contain;
     top: 100%;
+    object-fit: contain;
 }
 #page3 {
-    object-fit: contain;
     top: 200%;
+    object-fit: contain;
 }
 #page4 {
     top: 300%;
@@ -33,16 +33,12 @@
 #page7 {
     top: 100%;
     object-fit: contain;
-    transition: all .5s ease-out;
-
+    transition: all 0.5s ease-out;
 }
-
 .FooterContainer {
-    position:absolute;
+    position: absolute;
     z-index: 214748365;
     background-color: rgb(5, 5, 5);
     width: 100%;
     height: 25%;
 }
-
-

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* STAFF DESCRIPTIONS */
     console.log("%c⚔️ [重要] アークナイツをやる", "color: #3884ff; font-size: 50px; background: #1a1a1a; padding: 10px; border-radius: 3px;");
     console.log(
       "%c👑 仰るとおり。%cマドロック%cは神です",
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         9: ["Hari Baidwan", "I am a sixteen year old at Meadowridge School who is relatively experienced in the area of building (for robotics), I have been a builder on two prior teams. That being said, I am looking forward to diving into the arts and promo component for our team this year as I am entirely new to this", "Builders, assemble, and fine-tune the mechanical and electronic parts of our robot. Our builders prioritize the robots adaptability with our programmers to ensure the robot is ready for success."],
         10: ["Derek Lee", "Hey, my name's Derek. I enjoy walking and listening to leaves rustling. I often trip over my own feet. This year I will be... What am I doing again?", "Programmers code the robot's movements and turn our plans into executable instructions. They troubleshoot problems and collaborate with the builders to make sure the code works well with the robot. "],
     };
-
     var nameToRole = {
         1: ["Daniel Ashtiani", "ENTRADOX MANAGER", "CAD, BUILDER"],
         2: ["Aasha Askew", "ENTRADOX MANAGER", "BUILDER"],
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         9: ["Hari Baidwan", "BUILDER", "OUTREACH"],
         10: ["Derek Lee", "PROGRAMMER", "WEBSITE DESIGN"]
     };
-
     function getRoleValues(name) {
         for (var id in nameToRole) {
             if (nameToRole.hasOwnProperty(id) && nameToRole[id][0] === name) {
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return null;
     }
-
     function getDescription(name) {
         for (var id in nameToDescription) {
             if (nameToDescription.hasOwnProperty(id) && nameToDescription[id][0] === name) {
@@ -50,20 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return null;
     }
-
-
-    // new functions
     var ContainerForStaffDescriptionBodyID = document.getElementById('ContainerForStaffDescriptionBodyID');
     var xbutton = document.getElementById('staffPageStaffContentXButtonID');
-
     var employees = document.querySelectorAll('.displayNames');
     var nameHelper;
-
     xbutton.addEventListener('click', function() {
         hideStaff()
         xbutton.style.opacity = 0;
     })
-
     function getColor(name) {
         if (name == 'Daniel Ashtiani' || name == 'Aasha Askew') {
             var ManagerColor = 'rgb(255, 200, 0)';
@@ -75,8 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var normalColor = 'rgb(226, 226, 226)';
         return normalColor;
     };
-
-
     employees.forEach(staff => {
         staff.addEventListener('click', function() {
             var name = document.getElementById('StaffMemberHeadlineContainer-NameID')
@@ -86,45 +74,27 @@ document.addEventListener('DOMContentLoaded', () => {
             nameHelper = staff.id;
             name.textContent = nameHelper;
             nameBackground.textContent = nameHelper;
-
-            
             var values = getRoleValues(nameHelper);
             if (values !== null) {
-                var value1 = values[0]; // Access the first value
-                var value2 = values[1]; // Access the second value
-            
+                var value1 = values[0]; 
+                var value2 = values[1];
                 var mainRole = document.querySelector('.StaffRoleTextDisplay')
                 mainRole.textContent = value1;
                 var secondRole = document.querySelector('.StaffRoleTextDisplay2')
                 secondRole.textContent = value2;
                 document.getElementById('MainRoleColorID').style.color = getColor(nameHelper);
-                
-
-                console.log(`Values for ${nameHelper}: Value 1 - ${value1}, Value 2 - ${value2}`);
-            } else {
-                console.log(`${nameHelper} not found in the table.`);
             }
-
             var descriptionValues = getDescription(nameHelper);
-
             if (descriptionValues !== null) {
                 var value1Desc = descriptionValues[0]; // Access the first value
                 var value2Desc = descriptionValues[1]; // Access the second value
-            
                 var descMain = document.querySelector('.ContainerForStaffDescriptionTextContent')
                 descMain.textContent = value1Desc;
                 var descSecond = document.querySelector('.ContainerForStaffDescriptionTextContent2')
                 descSecond.textContent = value2Desc;
-            } else {
-                console.log(`${nameHelper} not found in the table.`);
-            }
-    
-            
+            } 
         });
     });
-
-
-    
     function hideStaff() {
         unevaporateNewStaffList()
         displayOffForStaff()
@@ -134,8 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         evaporateNewStaffList()
         displayOnForStaff()
     }
-
-
     function displayOnForStaff() {
         var picutre = document.getElementById('HumanBodyID');
         var shadow = document.getElementById('HumanShadowID');
@@ -152,41 +120,29 @@ document.addEventListener('DOMContentLoaded', () => {
         labels.classList.add("staffContainerSlideIn")
         headline.classList.add("headlineFlickerInText")
         xbutton.classList.add("xbuttonFlicker")
-
         setTimeout(function() {
             picutre.classList.remove('displayOnFlicker');
             picutre.style = "left: 30%";
             picutre.style.opacity = 1;
-
-
             shadow.classList.remove('displayOnFlickerShadow');
             shadow.style = "left: 15%";
             shadow.style.opacity = 1;
-
-            
             name.classList.remove('flickerInText');
             name.style = "left: 81%";
             name.style.opacity = 1;
-
-
             desc.classList.remove('slideInStaffDesc');
             desc.style = "left: 84%";
             desc.style.opacity = 1;
-
             labels.classList.remove('slideInStaffDesc');
             labels.style = "left: 53%";
             labels.style.opacity = 1;
-
             headline.classList.remove('headlineFlickerInText');
             headline.style = "left: 50%";
             headline.style.opacity = 1;
-            
             xbutton.classList.remove("xbuttonFlicker")
             xbutton.classList.opacity = 1;
         }, 1000);
-        
     }
-
     function displayOffForStaff() {
         var picutre = document.getElementById('HumanBodyID');
         var shadow = document.getElementById('HumanShadowID');
@@ -194,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var desc = document.getElementById('ContainerForStaffDescriptionTextID');
         var labels = document.getElementById('StaffLabelOnContainerForDescID');
         var headline = document.getElementById('StaffMemberHeadlineContainer2ID');
-
         picutre.classList.add("displayOffFlicker")
         shadow.classList.add("displayOffFlickerShadow")
         name.classList.add("flickerOutText")
@@ -202,89 +157,61 @@ document.addEventListener('DOMContentLoaded', () => {
         labels.classList.add("staffContainerSlideOut")
         headline.classList.add("headlineFlickerOutText")
         xbutton.classList.add("xbuttonFlickerOut")
-
         setTimeout(function() {
             picutre.classList.remove('displayOffFlicker');
             picutre.style = "left: 25%";
             picutre.style.opacity = 0;
-
-
             shadow.classList.remove('displayOffFlickerShadow');
             shadow.style = "left: 10%";
             shadow.style.opacity = 0;
-                        
             name.classList.remove('flickerOutText');
             name.style = "left: 40%";
             name.style.opacity = 0;
-
             desc.classList.remove('slideOutStaffDesc');
             desc.style = "left: 82%";
             desc.style.opacity = 0;
-
             labels.classList.remove('staffContainerSlideOut');
             labels.style = "left: 82%";
             document.querySelector(".VerticleDownRect").style.opacity = 0;
             document.querySelector(".LineThroughTopExtend").style.opacity = 0;
             labels.style.opacity = 0;
-
             headline.classList.remove('headlineFlickerOutText');
             headline.style = "left: 40%";
             headline.style.opacity = 0;
-
             xbutton.classList.remove("xbuttonFlickerOut")
             xbutton.classList.opacity = 0;
-
-
         }, 1000);
-
     }
-
-
-
     function evaporateNewStaffList() {
         var staffList = document.getElementById("CurrentStaffList-Engineer");
         var staffListLabel = document.getElementById("rolename_managers");
-
         staffList.classList.add('evaporateNewStaff');
         staffListLabel.classList.add('evaporateNewStaff');
-        
         setTimeout(function() {
             staffList.classList.remove('evaporateNewStaff');
             staffList.style = "transform: translateX(-20%)";
             staffList.style.opacity = 0;
-
-
             staffListLabel.classList.remove('evaporateNewStaff');
             staffListLabel.style = "transform: translateX(-20%)";
             staffListLabel.style.opacity = 0;
-
         }, 500);
     }
-
     function unevaporateNewStaffList() {
         var staffList = document.getElementById("CurrentStaffList-Engineer");
         var staffListLabel = document.getElementById("rolename_managers");
-
         staffList.classList.add('unevaporateNewStaff');
         staffListLabel.classList.add('unevaporateNewStaff');
-
         setTimeout(function() {
             staffList.classList.remove('unevaporateNewStaff');
             staffList.style = "transform: translateX(0%)";
             staffList.style.opacity = 1;
-
-
             staffListLabel.classList.remove('unevaporateNewStaff');
             staffListLabel.style = "transform: translateX(0%)";
             staffList.style.opacity = 1;
-
         }, 500);
     }
 });
-
-
 var displayNames = document.querySelectorAll('.displayNames')
-
 displayNames.forEach(name => {
     name.addEventListener('mouseenter', function() {
         var icon = "Icon_" + name.id
@@ -292,7 +219,6 @@ displayNames.forEach(name => {
         iconImage.classList.add("iconHoverClass");
     });
 })
-
 displayNames.forEach(name => {
     name.addEventListener('mouseleave', function() {
         var icon = "Icon_" + name.id
@@ -300,23 +226,16 @@ displayNames.forEach(name => {
         iconImage.classList.remove("iconHoverClass");
     });
 })
-
-
-
-
 var staffPanelContainer = document.querySelector('.staffPanelContainer');
 var aboutUsContainer = document.querySelector('.AboutUsItemSide');
-
 document.addEventListener('mousemove', (e) => { 
     if (isMobile()) {
         return
     }
         const x = e.clientX;
         const y = e.clientY;
-
         const translateX = (x - window.innerWidth / 2) * 0.015;
         const translateY = (y - window.innerHeight / 2) * 0.015;
-
         aboutUsContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
         staffPanelContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
 });
