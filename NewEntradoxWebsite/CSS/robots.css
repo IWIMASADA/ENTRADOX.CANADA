@@ -9,10 +9,9 @@
     object-fit: cover;
     top: 500%;
     left: 0;
-    opacity: 1;
+    opacity: 0;
     transition: all .5s ease-out;
 }
-
 .robotsPageLabel {
     position: absolute;
     opacity: 1;
@@ -41,3 +40,13 @@
     object-fit: cover;
     text-wrap: nowrap;
 }
+.robot-model-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 24%;
+    top: 8%;
+    transition: all .5s linear;
+    z-index: 100;
+}
+  
