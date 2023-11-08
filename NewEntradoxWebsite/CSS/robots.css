@@ -50,3 +50,45 @@
     z-index: 100;
 }
   
+.robot-name {
+    position: absolute;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    color: #00A2FF;
+    font-weight: bold;
+    letter-spacing: 1.7rem;
+    left: 3%;
+    transition: all .7s linear;
+    top: 30%;
+    z-index: 10;
+}
+  
+.robot-name-outline {
+    position: absolute;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    letter-spacing: 1.7rem;
+    left: 3%;
+    top: 35%;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 145, 255);
+    transition: all .7s linear;
+    z-index: 10;
+
+}
+.robot-description {
+    position: absolute;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    left: 3%;
+    top: 45%;
+    width: 38%;
+    z-index: 4;
+    text-align: left;
+    color: white;
+    line-height: 120%;
+    transition: all .7s linear;
+}
