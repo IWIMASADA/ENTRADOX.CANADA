@@ -279,7 +279,7 @@ function changeInnerHTML(tierNumber) {
 }
 var LearnMoreTextSponsor = document.querySelector('.LearnMoreTextSponsor');
 LearnMoreTextSponsor.addEventListener('click', function() {
-    window.open('/NewEntradoxWebsite/CSS/pdf/pdf.html', '_blank');
+    window.open('pdf.html', '_blank');
 });
 function isMobile() {
     return /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||

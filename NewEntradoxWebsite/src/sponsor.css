@@ -1,0 +1,733 @@
+.bottomBorder {
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 10%;
+    max-width: 100%;
+    max-height: 10%;
+    top: 93%;
+    opacity: 1;
+}
+.borderExtenderTop {
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 8%;
+    max-width: 100%;
+    max-height: 10%;
+    top: 0%;
+    opacity: 1;
+}
+.mobileButtonNextSponsor {
+    opacity: 0;
+    display: none;
+    z-index: 214748364;
+}
+.PageBackgroundSponsor {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: -.5%;
+    opacity: 1;
+}
+.PageBackgroundSponsorClass {
+    width: 120%;
+    height: 100%;
+    max-width: 120%;
+    max-height: 100%;
+    filter: brightness(50%);
+    filter: saturate(150%);
+    filter: grayscale(40%);
+}
+.SponsorHeader {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2147483645;
+    background-color: rgba(0, 0, 0, 0.005);
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+.TextContainer {
+    position:absolute;
+    background-color: transparent;
+    top: 0;
+    left: 3%;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+}
+.yourImpact {
+    position: absolute;
+    top: 80%;
+    left:8%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    z-index: 10;
+    color: white;
+    width: 6vw; 
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0);
+    font-family: 'TW', Arial;
+    font-weight: lighter;
+    font-size: 2vw; 
+    padding-right: 15%;
+    object-fit: cover;
+    transition: all .5s linear;
+}
+.yourImpactText {
+    position: absolute;
+    text-align: left;
+    z-index: 10;
+    color: white;
+    width: 70%;
+    font-family: 'PrintClearly', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    top: 15%;
+    left: 2%;
+    object-fit: cover;
+    transition: all .5s linear;
+}
+.LearnMoreSponsorButton {
+    z-index: 2147483647;
+    position: absolute;
+    width: 8vw;
+    top: 20%;
+    left: 50%;
+    object-fit: cover;
+    height: 5vh;
+    max-height: 45px;
+    background-color: transparent;
+    border: .05rem;
+    border-color: rgb(255, 255, 255);
+    border-style: groove;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+.LearnMoreSponsorButton:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.08);
+}
+.LearnMoreSponsorButton:hover .LearnMoreTextSponsor {
+    color: rgb(0, 0, 0);
+}
+.LearnMoreTextSponsor {
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    text-align: center;
+    z-index: 10;
+    object-fit: cover;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'TW', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2vw;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+}
+.sponsorPageLabel {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 95%;
+    left: 92%;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
+.sponsorsHeader {
+    position: absolute;
+    opacity: 1;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+    z-index: 201;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    opacity: 1;
+    color: rgb(164, 164, 164);
+    top: 2%;
+    left: 87%;
+    object-fit: cover;
+    text-wrap: nowrap;
+}
+.OurSponsorsButton {
+    z-index: 2147483647;
+    position: absolute;
+    width: 8vw;
+    top: 20%;
+    height: 5vh;
+    left: 60%;
+    object-fit: cover;
+    max-height: 45px;
+    background-color: transparent;
+    border: .05rem;
+    border-color: rgb(255, 255, 255);
+    border-style: groove;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+.OurSponsorsButton:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.08);
+}
+.OurSponsorsButton:hover .OurSponsorsButtonText {
+    color: rgb(0, 0, 0);
+}
+.OurSponsorsButtonText {
+    position: absolute;
+    top: 25%;
+    left: 11%;
+    text-align: center;
+    object-fit: cover;
+    font-size: 1.2vw;
+    z-index: 10;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'TW', Arial, sans-serif;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+.sponsoHeaderBackgroundColor {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    object-fit: cover;
+}
+.SponsorFooter {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 90%;
+    background-color: rgb(0, 0, 0);
+    height: 10%;
+    object-fit: cover;
+    transition: all .5s linear;
+}
+.sponsorGilbert {
+    position: absolute;
+    left: 75%;
+    width: 4vw;
+    top: 50%;
+    height: 7vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    transition: all .5s linear;
+}
+.sponsorInformationContainerMainDisplay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 222, 173, 0);
+    z-index: 2147483644;
+    display: flex;
+    flex-direction: row;
+    transition: all .1s linear;
+}
+.sponsorshipIcons {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    transform: translate(-50%,-50%);
+    left: 10%;
+    top: 50%;
+    object-fit: contain;
+    margin-left: 0%;
+    transition: all .2s linear;
+}
+#Tier1SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+
+#Tier2SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+#Tier3SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+#Tier4SponsorIcon:hover {
+    transform: scale(1.03) translate(-50%,-50%);
+    filter: brightness(200%);
+}
+.sponsorIconFlickerIn {
+    animation-name: sponsorIconFlickerIn;
+    animation-duration: 1s;
+}
+.sponsorIconFlickerOut {
+    animation-name: sponsorIconFlickerOut;
+    animation-duration: 1s;
+}
+.fadeOutTierIcons {
+    animation-name: fadeOutTierIcons;
+    animation-duration: 1s;
+}
+.fadeInTierIcons {
+    animation-name: fadeInTierIcons;
+    animation-duration: 1s;
+}
+.sponsorTierExitButton {
+    position: absolute;
+    z-index: 2147483647;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Servant', Arial, sans-serif;
+    font-weight: normal;
+    transform: translate(-50%,-50%);
+    left: 90%;
+    top: 30%;
+    color: white;
+    opacity: 0;
+    transition: all .1s linear;
+}
+.sponsorTierExitButton:hover {
+    transform: scale(1.1) translate(-50%,-50%);
+}
+.SponsorTiersTextContent {
+    position: absolute;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    left: 48%;
+    top: 20%;
+    transition: transform, opacity .1s linear;
+    width: 40%;
+    height: 50%;
+    opacity: 0;
+}
+.SponsorTiersTextContent p {
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-family: 'TW', Arial, sans-serif;
+    color: rgb(204, 204, 204);
+    vertical-align: middle;
+    text-align: left;
+}
+@keyframes sponsorIconFlickerIn {
+    0% {
+        position: absolute;
+        opacity: 0;
+        transform: scale(2.2) translate(0%, -15%)
+    }
+    3% {
+        opacity: 1;
+    }
+    6% {
+        opacity: 0;
+    }
+    9% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    14% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.2) translate(0%, -15%);
+        opacity: 1;
+        position: absolute;
+    }
+}
+@keyframes sponsorIconFlickerOut {
+    0% {
+        opacity: 1;
+    }
+    3% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    14% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOutTierIcons {
+    0% {
+        opacity: 1;
+    }
+    30% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeInTierIcons {
+    0% {
+        opacity: 0;
+    }
+    30% { 
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 1800px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1) !important;
+    }
+  }
+  
+  @media screen and (max-width: 1600px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1) !important;
+    }
+  }
+  
+  @media screen and (max-width: 1500px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1) !important;
+    }
+    .SponsorTiersTextContent {
+      left: 53% !important;
+    }
+    .sponsorTierExitButton {
+      left: 95% !important;
+      top: 20% !important;
+    }
+  }
+  
+  @media screen and (max-width: 1400px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(1) !important;
+    }
+    .SponsorHeader {
+      top: -3% !important;
+      left: 5% !important;
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpact {
+      top: 80% !important;
+    }
+    .LearnMoreSponsorButton {
+      top: 40% !important;
+    }
+    .OurSponsorsButton {
+      top: 40% !important;
+    }
+    .sponsorGilbert {
+      top: 29% !important;
+      transform: scale(.8);
+    }
+  }
+  
+  @media screen and (max-width: 1250px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.95) !important;
+    }
+    .SponsorFooter {
+      background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+      top: -3% !important;
+      left: 5% !important;
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpactText {
+      width: 100% !important;
+    }
+    .SponsorTiersTextContent {
+      left: 55% !important;
+      top: 25% !important;
+    }
+    .sponsorTierExitButton {
+      left: 110% !important;
+      top: 20% !important;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.8) !important;
+      left: -5% !important;
+    }
+    .SponsorFooter {
+      top: 95% !important;
+      background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+      top: -13% !important;
+      left: 5% !important;
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpact {
+      opacity: 0 !important;
+    }
+    .sponsorGilbert {
+      opacity: 0 !important;
+    }
+    .LearnMoreSponsorButton {
+      top: 21% !important;
+      left: 70% !important;
+      width: 9% !important;
+      height: 50% !important;
+    }
+    .OurSponsorsButton {
+      top: 21% !important;
+      left: 80% !important;
+      width: 9% !important;
+      height: 50% !important;
+    }
+    .sponsorPageLabel {
+      top: 105% !important;
+      left: 106% !important;
+    }
+    .SponsorTiersTextContent {
+      left: 60% !important;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.8) !important;
+    }
+    .SponsorTiersTextContent {
+      left: 60% !important;
+      width: 60% !important;
+      top: 30% !important;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.8) !important;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.75) !important;
+    }
+    .LearnMoreSponsorButton {
+      top: -25% !important;
+      left: 80% !important;
+      width: 9% !important;
+      height: 40% !important;
+    }
+    .OurSponsorsButton {
+      top: -25% !important;
+      left: 90% !important;
+      width: 9% !important;
+      height: 40% !important;
+    }
+    .sponsorPageLabel {
+      top: 110% !important;
+      left: 103% !important;
+    }
+    .sponsorTierExitButton {
+      left: 120% !important;
+      top: 20% !important;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.7) !important;
+    }
+    .LearnMoreSponsorButton,
+    .OurSponsorsButton {
+      top: -75% !important;
+      left: 80% !important;
+      width: 9% !important;
+      height: 40% !important;
+    }
+  }
+  
+  @media screen and (max-height: 750px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.7) !important;
+    }
+    .sponsorGilbert {
+      opacity: 0 !important;
+    }
+    .SponsorFooter {
+      top: 95% !important;
+      background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+      top: -13% !important;
+      left: 5% !important;
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .yourImpact {
+      opacity: 0 !important;
+    }
+    .LearnMoreSponsorButton {
+      top: 0% !important;
+      left: 80% !important;
+      width: 8% !important;
+      height: 50% !important;
+    }
+    .OurSponsorsButton {
+      top: 0% !important;
+      left: 90% !important;
+      width: 7% !important;
+      height: 50% !important;
+    }
+    .SponsorTiersTextContent {
+      left: 40% !important;
+      width: 60% !important;
+      top: 9% !important;
+    }
+  }
+  
+  @media screen and (max-height: 800px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.7) !important;
+    }
+    .SponsorTiersTextContent {
+      left: 50% !important;
+      width: 60% !important;
+      top: 9% !important;
+    }
+  }
+  
+  @media screen and (max-height: 900px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.7) !important;
+    }
+    .SponsorTiersTextContent {
+      left: 60% !important;
+      width: 60% !important;
+      top: 20% !important;
+    }
+    .SponsorFooter {
+      background-color: rgba(245, 222, 179, 0) !important;
+    }
+    .SponsorHeader {
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+  }
+  
+  @media screen and (max-height: 500px) {
+    #page3 {
+      z-index: 214748364 !important;
+      transform: scale(0.7) !important;
+      opacity: 0 !important;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .mobileButtonNextSponsor {
+      position: absolute;
+      opacity: 1;
+      display: unset;
+      font-family: 'TW', Arial;
+      font-weight: lighter;
+      font-size: 30px;
+      color: white;
+      background-color: rgba(255, 0, 0, 0);
+      top: 108%;
+      z-index: 2147483645;
+    }
+    .sponsorInformationContainerMainDisplay {
+      left: 0%;
+      transform: translateX(20%);
+      transition: transform .2s linear;
+    }
+    .sponsorshipIcons {
+      position: relative;
+      width: 130%;
+      height: 130%;
+      transform: translate(-50%, -50%);
+      left: 0%;
+      top: 15%;
+      object-fit: contain;
+      margin-left: 70%;
+      transition: all .2s linear;
+    }
+    .OurSponsorsButton,
+    .LearnMoreSponsorButton,
+    .SponsorFooter,
+    .sponsorTierExitButton {
+      display: none;
+    }
+    .SponsorTiersTextContent {
+      opacity: 1;
+      top: 70% !important;
+      width: 130% !important;
+    }
+    .SponsorTiersTextContent p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .sponsorPageLabel {
+      left: 90% !important;
+    }
+  }
+  
+  @media only screen and (max-width: 280px) {
+    .SponsorTiersTextContent {
+      top: 60% !important;
+    }
+    .mobileButtonNextSponsor {
+      top: 113%;
+      left: -5%;
+    }
+    .sponsorPageLabel {
+      top: 115% !important;
+      left: 80% !important;
+    }
+  }
+  
