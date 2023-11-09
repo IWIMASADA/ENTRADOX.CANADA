@@ -1,8 +1,3 @@
-/* NOTE TO SELF,
-IF YUO WANT TO SKIP THE LOADING SCREEN FOR FASTER TESTING
-JUST PUT THIS:
-clearandPlayVideo()
-*/
 document.addEventListener("DOMContentLoaded", function() {
   const blackscreenBlocker = document.querySelector('.blackscreenBlocker');
   if (isMobile()) {

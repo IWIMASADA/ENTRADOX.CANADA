@@ -47,7 +47,8 @@
     <div class="video-container">
         <div class="loadingTextIndicator" id="loadingIDIndicator">LOADING: 000%</div>
         <video id="video" muted playsinline>
-            <source id="playThis" src="../assets/loadingScreenFinisher.webm" draggable="false" type="video/webm">
+            <source id="playThis" preload="auto" src="../assets/loadingScreenFinisher.webm" draggable="false" type="video/webm">
+            Your browser does not support the video tag.
         </video>
     </div>
     <div id="menupage" class="menu">
@@ -159,7 +160,7 @@
         </div>
     <div class="staffPageStaffContentXButton" id="staffPageStaffContentXButtonID">X</div>
     <div data-custom="Staff" class="ContainerForStaffDescriptionBody" id="ContainerForStaffDescriptionBodyID">
-        <img class="HumanBody-Image" id="HumanBodyID" src="../assets/staff-pictures/Name1.png">
+        <img class="HumanBody-Image" id="HumanBodyID" src="../assets/staff-pictures/1.png">
         <div class="HeadlineContainerPicture"></div>
         <div class="StaffMemberHeadlineContainer">
             <div class="StaffMemberHeadlineContainer2" id="StaffMemberHeadlineContainer2ID">DANIEL ASHTIANI</div>
@@ -308,13 +309,13 @@
         </div>
         <div data-custom="social" class="contactsTextTitle">CONTACTS // ENTRADOX</div>
     </div>
-    <video data-custom="Home" id="smokeEffectHome" autoplay muted playsinline loop><source src="../assets/smokeEffectHomeNew.webm" draggable="false" type="video/webm"></video>
+    <video data-custom="Home" id="smokeEffectHome" autoplay muted playsinline loop><source src="../assets/smokeEffectHomeNew.webm" draggable="false" type="video/webm">Your browser does not support the video tag.</video>
     <!--ROBOTS-->
     <div data-custom="Robots" class="sectionWrapper" id="page6">
         <div class="robotsHeader">> ENTRADOX | ROBOTS</div>
         <div class="robotsPageLabel">| ROBOTS |</div>
         <div class="robot-model-container"></div>
-        <div class="robot-name-outline2">2024 ROBOT</div>
+        <div class="robot-name-outline2">2023 ROBOT</div>
         <div class="robot-name">ANASTAISIA</div>
         <div class="robot-name-outline">2024 ROBOT</div>
         <div class="robot-description">ANASTAISIA is a robot developed by Entradox Robotics. This is designed for the 2023-2024 CENTERSTAGE.<br><br> The design includes mecanum wheels, which turn through chains connected to our motors. <br><br>It has a grabber arm extruding from the base to transfor peices onto the board, and a hanging arm to hang onto the bar. <br><br>At the center there is also a projectile propeller, and the robot is incased in clear glass because it's hot.</div>
@@ -332,16 +333,16 @@
     <script src="main_script.js"></script>
     <script src="menu_handler.js"></script>
     <script src="contactsCursorTracker.js"></script>
-    <script src="interaction-handler.js"></script>
-    <script src="staff-handler.js"></script>
+    <script asyn src="interaction-handler.js"></script>
+    <script defer src="staff-handler.js"></script>
     <script src="mobile-handler.js"></script>
     <script src="menu-animator.js"></script>
-    <script src="sponsor-handler.js"></script>
-    <script src="hover-focus.js"></script> 
+    <script defer src="sponsor-handler.js"></script>
+    <script defer src="hover-focus.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-    <script src="sceneMain.js"></script>
+    <script async src="sceneMain.js"></script>
     <script src="home-tracking.js"></script>
-    <script src="dust-particle.js"></script>
+    <script defer src="dust-particle.js"></script>
     <script type="module" src="robot-model-script.js"></script>
 </body>
 </html>
