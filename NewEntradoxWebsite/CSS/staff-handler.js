@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         7: ["Andy Xu", "DRIVER", "FINANCE"],
         8: ["Oliver Low", "STRATEGIST", "BUILDER"],
         9: ["Hari Baidwan", "BUILDER", "OUTREACH"],
-        10: ["Derek Lee", "PROGRAMMER", "WEBSITE DESIGN"]
+        10: ["Derek Lee", "PROGRAMMER", "WEBSITE CREATOR"]
     };
     function getRoleValues(name) {
         for (var id in nameToRole) {
