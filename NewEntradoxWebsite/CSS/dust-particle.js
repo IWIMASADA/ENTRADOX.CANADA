@@ -56,5 +56,3 @@ window.addEventListener('resize', function () {
     renderer2.setSize(newWidth, newHeight);
 });
 animate();
-
-

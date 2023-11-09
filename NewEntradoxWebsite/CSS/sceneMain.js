@@ -6,10 +6,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 const canvasContainer = document.querySelector('.particle-frame');
 renderer.sortObjects = true;
 renderer.setClearColor(0x000000, 0);
-
 let particles;
 let originalPositions;
-
 const image = new Image();
 image.src = "sceneLogoMain4.png";
 const imageScale = 2;
@@ -17,7 +15,6 @@ const particleRadius = 0.018;
 const maxParticles = 24875;
 const size = 128;
 const size2 = 128;
-
 function createCircularTexture() {
   const canvas = document.getElementById('canvas2');
   canvas.style.zIndex = '2147483646';
@@ -30,9 +27,7 @@ function createCircularTexture() {
   ctx.fill();
   return new THREE.CanvasTexture(canvas);
 }
-
 var helperCanvas;
-
 image.onload = function () {
   const canvas = document.getElementById('canvas');
   helperCanvas = canvas;
@@ -53,12 +48,10 @@ image.onload = function () {
     vertexColors: true,
     map: createCircularTexture(),
   });
-
   const positions = new Float32Array(maxParticles * 3);
   const colors = new Float32Array(maxParticles * 3);
   let particleCount = 0;
   const stepSize = 2;
-
   for (let y = 0; y < canvas.height && particleCount < maxParticles; y += stepSize) {
     for (let x = 0; x < canvas.width && particleCount < maxParticles; x += stepSize) {
       const index = (x + y * canvas.width) * 4;
@@ -68,60 +61,47 @@ image.onload = function () {
         const posZ = (imageData.data[index] / 255) * 2;
         const color = new THREE.Color();
         color.setHex(Math.random() > 0.2 ? 0xEDEDED : 0xCCCCCC);
-
         positions[particleCount * 3] = posX;
         positions[particleCount * 3 + 1] = posY;
         positions[particleCount * 3 + 2] = posZ;
-
         colors[particleCount * 3] = color.r;
         colors[particleCount * 3 + 1] = color.g;
         colors[particleCount * 3 + 2] = color.b;
-
         particleCount++;
       }
     }
   }
-
   const aspectRatio = canvas.width / canvas.height;
   const particleScaleX = aspectRatio;
   const particleScaleY = 1;
-
   particleGeometry.scale(particleScaleX, particleScaleY, 1);
   originalPositions = new Float32Array(positions.length);
   originalPositions.set(positions);
-
   particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
   particles = new THREE.Points(particleGeometry, particleMaterial);
-
   const testbg = document.querySelector('.particle-frame');
   testbg.renderOrder = 1;
   canvasContainer.appendChild(renderer.domElement);
   renderer.domElement.style.zIndex = '1';
   particles.renderOrder = 100;
   particleMaterial.renderOrder = 99;
-
   scene.add(particles);
   particles.rotation.x = 0;
   particles.rotation.y = 0;
-
   const cursor = { x: 10, y: 10 };
   const pushForce = 0.1;
   const cursorLARGE = { x: 10, y: 10 };
   const pushForceLARGE = -0.0005;
-
   document.addEventListener('mousemove', (event) => {
     cursor.x = (event.clientX / window.innerWidth) * 8 - 6.3;
     cursor.y = - (event.clientY / window.innerHeight) * 5 + 2.48;
     cursorLARGE.x = (event.clientX / window.innerWidth) * 8 - 6.3;
     cursorLARGE.y = - (event.clientY / window.innerHeight) * 5 + 2.48;
   });
-
   const disintegrationDuration = 500;
   let disintegrationInProgress = false;
   let startTime;
-
   const transparentMaterial = new THREE.PointsMaterial({
     size: particleRadius,
     transparent: true,
@@ -131,9 +111,7 @@ image.onload = function () {
     opacity: 1,
     map: createCircularTexture(),
   });
-
   let disWait = false;
-
   const animateDisintegration = function () {
     if (disWait == false) {
       const currentTime = Date.now();
@@ -141,7 +119,6 @@ image.onload = function () {
       if (elapsed < disintegrationDuration) {
         const progress = elapsed / disintegrationDuration;
         const maxExplosiveScatterDistance = 0.3;
-
         for (let i = 0; i < particles.geometry.attributes.position.array.length; i += 3) {
           const scatterDistanceX = (Math.random() - 0.5) * maxExplosiveScatterDistance;
           const scatterDistanceY = (Math.random() - 0.5) * maxExplosiveScatterDistance;
@@ -149,12 +126,10 @@ image.onload = function () {
           particles.geometry.attributes.position.array[i] += scatterDistanceX;
           particles.geometry.attributes.position.array[i + 1] += scatterDistanceY;
         }
-
         transparentMaterial.opacity = 1 - progress;
         particles.geometry.attributes.position.needsUpdate = true;
         particles.material = transparentMaterial;
         particles.position.set(0, 0, 0);
-
         requestAnimationFrame(animateDisintegration);
         disintegrationTriggered = true;
       }
@@ -241,7 +216,6 @@ image.onload = function () {
     pages.forEach(page => {
       page.style.display = 'block';
     });
-
     if (checkInMenu() === true) {
       animateMenuXBack()
       makeInMenuFalse()

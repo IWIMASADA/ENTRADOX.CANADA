@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             var descriptionValues = getDescription(nameHelper);
             if (descriptionValues !== null) {
-                var value1Desc = descriptionValues[0]; // Access the first value
-                var value2Desc = descriptionValues[1]; // Access the second value
+                var value1Desc = descriptionValues[0];
+                var value2Desc = descriptionValues[1];
                 var descMain = document.querySelector('.ContainerForStaffDescriptionTextContent')
                 descMain.textContent = value1Desc;
                 var descSecond = document.querySelector('.ContainerForStaffDescriptionTextContent2')
@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             staffList.style.opacity = 1;
         }, 500);
     }
+
 });
 var displayNames = document.querySelectorAll('.displayNames')
 displayNames.forEach(name => {

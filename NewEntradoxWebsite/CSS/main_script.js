@@ -135,8 +135,11 @@ document.addEventListener('mousemove', (e) => {
 document.body.style.cursor = 'none';
 });
 let loadingIsOver = false;
+const menuDisplay = document.getElementById('MenuButtonContainer')
+menuDisplay.style.display = 'none';
 function doneLoading() {
   loadingIsOver = true;
+  menuDisplay.style.display = 'unset';
 }
 function loadingIsOverFunc() {
   if (loadingIsOver) {

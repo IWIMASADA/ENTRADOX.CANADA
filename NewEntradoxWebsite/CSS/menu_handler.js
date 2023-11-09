@@ -2,12 +2,12 @@ var menuButton = document.querySelector('.MenuButtonContainer')
 let inMenu = false;
 var menuGUI = document.getElementById('menupage')
 menuButton.addEventListener('click', function() {
-    if (inMenu == false) {
+    if (inMenu == false && loadingIsOverFunc()) {
         animateMenuX()
         inMenu = true;
         slideIn()
 
-    } else {
+    } else if (loadingIsOverFunc()) {
         animateMenuXBack()
         inMenu = false;
         slideOut()
