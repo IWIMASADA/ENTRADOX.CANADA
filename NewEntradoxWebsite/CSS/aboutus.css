@@ -127,7 +127,7 @@
     font-weight: bold;
     letter-spacing: 1.7rem;
     left: 3%;
-    transition: all .7s linear;
+    transition: all .1s linear;
     top: 10%;
 }
 .AboutUsTextTitleOutline {
@@ -141,7 +141,7 @@
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px rgb(0, 145, 255);
-    transition: all .7s linear;
+    transition: all .2s linear;
 }
 .AboutUsTextDesc {
     position: absolute;
@@ -155,7 +155,7 @@
     text-align: left;
     color: white;
     line-height: 120%;
-    transition: all .7s linear;
+    transition: all .25s linear;
 }
 .AboutUsTextDescForMobile {
     opacity: 0;

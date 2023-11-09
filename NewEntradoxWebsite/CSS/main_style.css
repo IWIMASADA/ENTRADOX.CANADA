@@ -333,6 +333,7 @@ body {
     height: 25%;
     max-width: 100%;
     max-height: 100%;
+    transition: all .1s linear;
     background-color: transparent;
     z-index: 101;
     top: 48%;
@@ -490,6 +491,7 @@ video {
     left: 3.5%;
     object-fit: cover;
     text-wrap: nowrap;
+    transition: all .15s linear;
 }
 
 .containerBottomLeft {
@@ -609,6 +611,7 @@ video {
     max-height: 8rem;
     top: 55%;
     left: 3.5%;
+    transition: all .2s linear;
 }
 
 .movingWarningUnderline2 {
