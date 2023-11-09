@@ -279,8 +279,8 @@ function changeInnerHTML(tierNumber) {
 }
 var LearnMoreTextSponsor = document.querySelector('.LearnMoreTextSponsor');
 LearnMoreTextSponsor.addEventListener('click', function() {
-    window.location.href = '/NewEntradoxWebsite/CSS/pdf/pdf.html';
-})
+    window.open('/NewEntradoxWebsite/CSS/pdf/pdf.html', '_blank');
+});
 function isMobile() {
     return /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
       (window.innerWidth <= 700 && window.innerWidth > 0);

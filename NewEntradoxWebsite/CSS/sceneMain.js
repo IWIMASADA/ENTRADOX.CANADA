@@ -160,22 +160,18 @@ image.onload = function () {
       }
     }
   };
-
   const disintegrateParticles = function () {
     startTime = Date.now();
     animateDisintegration();
   };
-
   let currentPage = 1;
   const totalPages = 7;
   let lastScrollTime = 0;
   let isSwitching = false;
-
   window.addEventListener('wheel', function (e) {
     const currentTime = new Date().getTime();
     const timeDiff = currentTime - lastScrollTime;
-
-    if (timeDiff > 500 && !isSwitching) {
+    if (timeDiff > 500 && !isSwitching && loadingIsOverFunc()) {
       if (e.deltaY > 0 && currentPage < totalPages) {
         isSwitching = true;
         currentPage++;
@@ -183,19 +179,15 @@ image.onload = function () {
         isSwitching = true;
         currentPage--;
       }
-
       clickRequired = true;
       liftPages();
       lastScrollTime = currentTime;
-
       setTimeout(function () {
         isSwitching = false;
       }, 800);
     }
   });
-
   var firstTimeScroll = true;
-
   function clearSmokeScreen() {
     const smokeScreen = document.getElementById('smokeEffectHome');
     smokeScreen.classList.add("fadeOut");
@@ -204,7 +196,6 @@ image.onload = function () {
       smokeScreen.classList.remove("fadeOut");
     }, 900);
   }
-
   function unClearSmokeScreen() {
     const smokeScreen = document.getElementById('smokeEffectHome');
     smokeScreen.classList.add("fadeIn");
@@ -213,55 +204,40 @@ image.onload = function () {
       smokeScreen.classList.remove("fadeIn");
     }, 1001);
   }
-
   let clickRequired = false;
-
-  const RobotsGrayBackground = document.querySelector('.RobotsGrayBackground');
   const vignetteOfSocialsBG = document.querySelector('.vignette');
   const socialsBG = document.querySelector('.socialsBackground');
   const canvaswithparticles = document.querySelector('.particle-frame');
-
   liftPages();
-
   function liftPages() {
     const pages = document.querySelectorAll('.sectionWrapper');
     const homePage = document.getElementById('page1');
     const finalPage = document.getElementById('page6');
     const contactPage = document.getElementById('page4');
     var initialHomeTop = homePage.style.top;
-
     const footer = document.getElementById('page7');
     if (footer.style.top === '75%') {
       footer.style.top = '100%';
     }
-
     if (currentPage === 1) {
       canvaswithparticles.style.display = 'block';
     }
-
     if (currentPage === 7) {
       pages.forEach((page, index) => {
         page.style.top = `${(index - currentPage + 1) * 100}%`;
-        RobotsGrayBackground.style.top = `${(index - currentPage + 1) * 100}%`;
       });
-
       pages.forEach(page => {
         page.style.display = 'block';
       });
-
       finalPage.style.top = '-25%';
       footer.style.top = '75%';
-      RobotsGrayBackground.style.top = '-25%';
       return;
     }
-
     pages.forEach((page, index) => {
       socialsBG.style.top = contactPage.style.top;
       vignetteOfSocialsBG.style.top = socialsBG.style.top;
       page.style.top = `${(index - currentPage + 1) * 100}%`;
-      RobotsGrayBackground.style.top = `${(index - currentPage + 1) * 100}%`;
     });
-
     pages.forEach(page => {
       page.style.display = 'block';
     });
@@ -271,7 +247,6 @@ image.onload = function () {
       makeInMenuFalse()
       slideOut()
     }
-
     if (firstTimeScroll == true && clickRequired === true) {
       if (disWait === false) {
         disintegrationTriggered = true;
@@ -282,7 +257,6 @@ image.onload = function () {
       firstTimeScroll = false;
       return;
     }
-
     if (homePage.style.top == '-100%' && initialHomeTop == '0%' && clickRequired === true) {
       if (disWait === false) {
         disintegrationTriggered = true;
@@ -291,7 +265,6 @@ image.onload = function () {
         disintegrationInProgress = true;
       }
     }
-
     if (homePage.style.top == '0%' && initialHomeTop == '-100%' && clickRequired === true) {
       setTimeout(function () {
         disintegrationInProgress = false;
@@ -302,7 +275,6 @@ image.onload = function () {
       }, 900);
     }
   }
-
   const animate = function () {
     requestAnimationFrame(animate);
     if (!disintegrationInProgress) {
@@ -312,46 +284,34 @@ image.onload = function () {
         const particleY = particlePositions.array[i + 1];
         const distanceSquared = (particleX - cursor.x) ** 2 + (particleY - cursor.y) ** 2;
         const distanceSquaredLARGE = (particleX - cursorLARGE.x) ** 2 + (particleY - cursorLARGE.y) ** 2;
-
         if (distanceSquaredLARGE <= 100) {
           const forceXLARGE = (particleX - cursorLARGE.x) * pushForceLARGE;
           const forceYLARGE = (particleY - cursorLARGE.y) * pushForceLARGE;
-
           particlePositions.array[i] += forceXLARGE;
           particlePositions.array[i + 1] += forceYLARGE;
-
           if (distanceSquared <= 0.2) {
             const forceX = (particleX - cursor.x) * pushForce;
             const forceY = (particleY - cursor.y) * pushForce;
-
             particlePositions.array[i] += forceX;
             particlePositions.array[i + 1] += forceY;
           }
         }
       }
-
       const dampingFactor = 0.01;
-
       for (let i = 0; i < particlePositions.array.length; i += 3) {
         const originalX = originalPositions[i];
         const originalY = originalPositions[i + 1];
         const deltaX = originalX - particlePositions.array[i];
         const deltaY = originalY - particlePositions.array[i + 1];
-
         particlePositions.array[i] += deltaX * dampingFactor;
         particlePositions.array[i + 1] += deltaY * dampingFactor;
       }
-
       particles.geometry.attributes.position.needsUpdate = true;
     }
-
     renderer.render(scene, camera);
   };
-
   animate();
-
   var menuItemContainers = document.querySelectorAll('.menuItemContainer');
-
   menuItemContainers.forEach(function (menuItemContainer) {
     var menuItemType = '';
     if (menuItemContainer.querySelector('.AboutUs')) {
@@ -367,18 +327,14 @@ image.onload = function () {
     } else if (menuItemContainer.querySelector('.homeMenuContainerClass')) {
       menuItemType = 'homeMenuContainerClass';
     }
-
     menuItemContainer.addEventListener('mouseenter', function () {
       menuItemContainer.querySelector('.' + menuItemType).classList.add('highlightTextMenu');
     });
-
     menuItemContainer.addEventListener('mouseleave', function () {
       menuItemContainer.querySelector('.' + menuItemType).classList.remove('highlightTextMenu');
     });
-
     menuItemContainer.addEventListener('click', function () {
       var currentPageNum = checkCurrentPage();
-
       if (currentPageNum === 1) {
         if (menuItemType === 'AboutUs') {
           currentPage++;
@@ -394,7 +350,6 @@ image.onload = function () {
           console.log('on home page already');
         }
       }
-
       if (currentPageNum === 2) {
         if (menuItemType === 'AboutUs') {
           console.log('on aboutus page already');
@@ -410,7 +365,6 @@ image.onload = function () {
           currentPage--;
         }
       }
-
       if (currentPageNum === 3) {
         if (menuItemType === 'AboutUs') {
           currentPage--;
@@ -426,7 +380,6 @@ image.onload = function () {
           currentPage = currentPage - 2;
         }
       }
-
       if (currentPageNum === 4) {
         if (menuItemType === 'AboutUs') {
           currentPage = currentPage - 2;
@@ -442,7 +395,6 @@ image.onload = function () {
           currentPage = currentPage - 3;
         }
       }
-
       if (currentPageNum === 5) {
         if (menuItemType === 'AboutUs') {
           currentPage = currentPage - 3;
@@ -458,7 +410,6 @@ image.onload = function () {
           currentPage = currentPage - 4;
         }
       }
-
       if (currentPageNum === 6) {
         if (menuItemType === 'AboutUs') {
           currentPage = currentPage - 4;
@@ -474,10 +425,8 @@ image.onload = function () {
           currentPage = currentPage - 5;
         }
       }
-
       clickRequired = false;
       disintegrateParticles();
-
       if (currentPage === 1) {
         setTimeout(function () {
           disintegrationInProgress = false;
@@ -491,13 +440,11 @@ image.onload = function () {
         liftPages();
         return;
       }
-
       liftPages();
       canvaswithparticles.style.display = 'none';
       clearSmokeScreen();
     });
   });
-
   function checkCurrentPage() {
     return currentPage;
   }

@@ -1,17 +1,3 @@
-.RobotsGrayBackground {
-    position: absolute;
-    z-index: 1;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    top: 500%;
-    left: 0;
-    opacity: 0;
-    transition: all .5s ease-out;
-}
 .robotsPageLabel {
     position: absolute;
     opacity: 1;
@@ -62,7 +48,6 @@
     text-wrap: nowrap;
     z-index: 10;
 }
-  
 .robot-name-outline {
     position: absolute;
     font-family: 'TW', Arial, Helvetica, sans-serif;
@@ -94,7 +79,6 @@
     transition: all .2s linear;
     z-index: 10;
     text-wrap: nowrap;
-
 }
 .robot-description {
     position: absolute;
@@ -110,7 +94,6 @@
     line-height: 120%;
     transition: all .1s linear;
 }
-
 @media screen and (max-width: 1800px) {
     #page6 {
         transform: scale(1) !important;
@@ -260,7 +243,6 @@
         top: 12%;
         transform: scale(.6) translateX(-50%)!important;
     }
-      
     .robot-name-outline {
         left: 15%;
         top: 6%;
@@ -270,11 +252,9 @@
         top: 18%;
         left: 15%;
         transform: scale(.6) translateX(-50%)!important;
-    
     }
   }
   @media screen and (max-width: 750px) {
-
     #page6 {
         transform: scale(.9) !important;
         z-index: 10;
@@ -289,7 +269,6 @@
         top: 12%;
         transform: scale(.6) translateX(-50%)!important;
     }
-      
     .robot-name-outline {
         opacity: 0;
     }
@@ -297,10 +276,8 @@
         top: 18%;
         left: 15%;
         transform: scale(.6) translateX(-50%)!important;
-    
     }
   }
-
 @media screen and (max-height: 900px) {
 
     #page6 {
@@ -341,10 +318,7 @@
     .robot-name-outline {
         top: 24%;
     }
-    
-    
   }
-
   @media screen and (max-height: 500px) {
     #page6 {
         transform: scale(.4) !important;
@@ -427,7 +401,6 @@
         transform: scale(.5) translateX(50%)!important;
     }
   }
-
   @media only screen and (max-width: 280px) {
     
     #page6 {

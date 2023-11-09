@@ -72,7 +72,7 @@ class Preloader {
     constructor(numOfAjaxRequests, loaderStep, loadingFinished) {
       this.#elements = [
         ...document.querySelectorAll("link"),
-        //...document.querySelectorAll('img:not([loading="lazy"])'),
+        ...document.querySelectorAll('img:not([loading="lazy"])'),
         ...document.querySelectorAll('object:not([loading="lazy"])'),
         //...document.querySelectorAll('iframe:not([loading="lazy"])'),
         //...document.querySelectorAll('video:not([loading="lazy"])'),
@@ -112,6 +112,7 @@ class Preloader {
             video.classList.add("ended");
             video.remove();
             videocontainer.remove();
+            doneLoading()
         }, 2800);
     }
   );
@@ -133,3 +134,12 @@ document.addEventListener('mousemove', (e) => {
 });
 document.body.style.cursor = 'none';
 });
+let loadingIsOver = false;
+function doneLoading() {
+  loadingIsOver = true;
+}
+function loadingIsOverFunc() {
+  if (loadingIsOver) {
+    return true;
+  }
+}
