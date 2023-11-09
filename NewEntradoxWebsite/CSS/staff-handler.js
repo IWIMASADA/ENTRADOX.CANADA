@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function displayOnForStaff() {
         var picutre = document.getElementById('HumanBodyID');
-        var shadow = document.getElementById('HumanShadowID');
         var name = document.getElementById('StaffMemberHeadlineContainer-NameID');
         var desc = document.getElementById('ContainerForStaffDescriptionTextID');
         var labels = document.getElementById('StaffLabelOnContainerForDescID');
@@ -114,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(".VerticleDownRect").style.opacity = 1;
         document.querySelector(".LineThroughTopExtend").style.opacity = 1;
         picutre.classList.add("displayOnFlicker")
-        shadow.classList.add("displayOnFlickerShadow")
         name.classList.add("flickerInText")
         desc.classList.add("slideInStaffDesc")
         labels.classList.add("staffContainerSlideIn")
@@ -124,9 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
             picutre.classList.remove('displayOnFlicker');
             picutre.style = "left: 30%";
             picutre.style.opacity = 1;
-            shadow.classList.remove('displayOnFlickerShadow');
-            shadow.style = "left: 15%";
-            shadow.style.opacity = 1;
             name.classList.remove('flickerInText');
             name.style = "left: 81%";
             name.style.opacity = 1;
@@ -145,13 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function displayOffForStaff() {
         var picutre = document.getElementById('HumanBodyID');
-        var shadow = document.getElementById('HumanShadowID');
         var name = document.getElementById('StaffMemberHeadlineContainer-NameID');
         var desc = document.getElementById('ContainerForStaffDescriptionTextID');
         var labels = document.getElementById('StaffLabelOnContainerForDescID');
         var headline = document.getElementById('StaffMemberHeadlineContainer2ID');
         picutre.classList.add("displayOffFlicker")
-        shadow.classList.add("displayOffFlickerShadow")
         name.classList.add("flickerOutText")
         desc.classList.add("slideOutStaffDesc")
         labels.classList.add("staffContainerSlideOut")
@@ -161,9 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
             picutre.classList.remove('displayOffFlicker');
             picutre.style = "left: 25%";
             picutre.style.opacity = 0;
-            shadow.classList.remove('displayOffFlickerShadow');
-            shadow.style = "left: 10%";
-            shadow.style.opacity = 0;
             name.classList.remove('flickerOutText');
             name.style = "left: 40%";
             name.style.opacity = 0;
