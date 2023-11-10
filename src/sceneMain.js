@@ -15,6 +15,7 @@ const particleRadius = 0.02;
 const maxParticles = 1300;
 const size = 128;
 const size2 = 128;
+const smokeScreen = document.getElementById('smokeEffectHome');
 function createCircularTexture() {
   const canvas = document.getElementById('canvas2');
   canvas.style.zIndex = '2147483646';
@@ -132,6 +133,8 @@ image.onload = function () {
         particles.position.set(0, 0, 0);
         requestAnimationFrame(animateDisintegration);
         disintegrationTriggered = true;
+      
+
       }
     }
   };
@@ -155,16 +158,15 @@ image.onload = function () {
         currentPage--;
       }
       clickRequired = true;
-      liftPages();
+      liftPagesX(currentPage);
       lastScrollTime = currentTime;
       setTimeout(function () {
         isSwitching = false;
       }, 800);
     }
   });
-  var firstTimeScroll = true;
+
   function clearSmokeScreen() {
-    const smokeScreen = document.getElementById('smokeEffectHome');
     smokeScreen.classList.add("fadeOut");
     setTimeout(function () {
       smokeScreen.style.opacity = 0;
@@ -172,83 +174,13 @@ image.onload = function () {
     }, 900);
   }
   function unClearSmokeScreen() {
-    const smokeScreen = document.getElementById('smokeEffectHome');
     smokeScreen.classList.add("fadeIn");
     setTimeout(function () {
       smokeScreen.style.opacity = 0.15;
       smokeScreen.classList.remove("fadeIn");
     }, 1001);
   }
-  let clickRequired = false;
-  const vignetteOfSocialsBG = document.querySelector('.vignette');
-  const socialsBG = document.querySelector('.socialsBackground');
-  const canvaswithparticles = document.querySelector('.particle-frame');
-  liftPages();
-  function liftPages() {
-    const pages = document.querySelectorAll('.sectionWrapper');
-    const homePage = document.getElementById('page1');
-    const finalPage = document.getElementById('page6');
-    const contactPage = document.getElementById('page4');
-    var initialHomeTop = homePage.style.top;
-    const footer = document.getElementById('page7');
-    if (footer.style.top === '75%') {
-      footer.style.top = '100%';
-    }
-    if (currentPage === 1) {
-      canvaswithparticles.style.display = 'block';
-    }
-    if (currentPage === 7) {
-      pages.forEach((page, index) => {
-        page.style.top = `${(index - currentPage + 1) * 100}%`;
-      });
-      pages.forEach(page => {
-        page.style.display = 'block';
-      });
-      finalPage.style.top = '-25%';
-      footer.style.top = '75%';
-      return;
-    }
-    pages.forEach((page, index) => {
-      socialsBG.style.top = contactPage.style.top;
-      vignetteOfSocialsBG.style.top = socialsBG.style.top;
-      page.style.top = `${(index - currentPage + 1) * 100}%`;
-    });
-    pages.forEach(page => {
-      page.style.display = 'block';
-    });
-    if (checkInMenu() === true) {
-      animateMenuXBack()
-      makeInMenuFalse()
-      slideOut()
-    }
-    if (firstTimeScroll == true && clickRequired === true) {
-      if (disWait === false) {
-        disintegrationTriggered = true;
-        disintegrateParticles();
-        clearSmokeScreen();
-        disintegrationInProgress = true;
-      }
-      firstTimeScroll = false;
-      return;
-    }
-    if (homePage.style.top == '-100%' && initialHomeTop == '0%' && clickRequired === true) {
-      if (disWait === false) {
-        disintegrationTriggered = true;
-        disintegrateParticles();
-        clearSmokeScreen();
-        disintegrationInProgress = true;
-      }
-    }
-    if (homePage.style.top == '0%' && initialHomeTop == '-100%' && clickRequired === true) {
-      setTimeout(function () {
-        disintegrationInProgress = false;
-        disWait = false;
-        requestAnimationFrame(animateDisintegration);
-        particles.material = particleMaterial;
-        unClearSmokeScreen();
-      }, 900);
-    }
-  }
+
   const animate = function () {
     if (animationRunning) {
       requestAnimationFrame(animate);
@@ -284,148 +216,161 @@ image.onload = function () {
         particles.geometry.attributes.position.needsUpdate = true;
       }
       renderer.render(scene, camera);
-    } else if (!animationRunning) {
-      return;
     }
-  };
-  animate();
-  var menuItemContainers = document.querySelectorAll('.menuItemContainer');
-  menuItemContainers.forEach(function (menuItemContainer) {
-    var menuItemType = '';
-    if (menuItemContainer.querySelector('.AboutUs')) {
-      menuItemType = 'AboutUs';
-    } else if (menuItemContainer.querySelector('.Staff')) {
-      menuItemType = 'Staff';
-    } else if (menuItemContainer.querySelector('.Sponsor')) {
-      menuItemType = 'Sponsor';
-    } else if (menuItemContainer.querySelector('.Social')) {
-      menuItemType = 'Social';
-    } else if (menuItemContainer.querySelector('.Robots')) {
-      menuItemType = 'Robots';
-    } else if (menuItemContainer.querySelector('.homeMenuContainerClass')) {
-      menuItemType = 'homeMenuContainerClass';
-    }
-    menuItemContainer.addEventListener('mouseenter', function () {
-      menuItemContainer.querySelector('.' + menuItemType).classList.add('highlightTextMenu');
-    });
-    menuItemContainer.addEventListener('mouseleave', function () {
-      menuItemContainer.querySelector('.' + menuItemType).classList.remove('highlightTextMenu');
-    });
-    menuItemContainer.addEventListener('click', function () {
-      var currentPageNum = checkCurrentPage();
-      if (currentPageNum === 1) {
-        if (menuItemType === 'AboutUs') {
-          currentPage++;
-        } else if (menuItemType === 'Staff') {
-          currentPage = currentPage + 2;
-        } else if (menuItemType === 'Sponsor') {
-          currentPage = currentPage + 3;
-        } else if (menuItemType === 'Social') {
-          currentPage = currentPage + 4;
-        } else if (menuItemType === 'Robots') {
-          currentPage = currentPage + 5;
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          console.log('on home page already');
-        }
-      }
-      if (currentPageNum === 2) {
-        if (menuItemType === 'AboutUs') {
-          console.log('on aboutus page already');
-        } else if (menuItemType === 'Staff') {
-          currentPage++;
-        } else if (menuItemType === 'Sponsor') {
-          currentPage = currentPage + 2;
-        } else if (menuItemType === 'Social') {
-          currentPage = currentPage + 3;
-        } else if (menuItemType === 'Robots') {
-          currentPage = currentPage + 4;
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          currentPage--;
-        }
-      }
-      if (currentPageNum === 3) {
-        if (menuItemType === 'AboutUs') {
-          currentPage--;
-        } else if (menuItemType === 'Staff') {
-          console.log('on staff page already');
-        } else if (menuItemType === 'Sponsor') {
-          currentPage++;
-        } else if (menuItemType === 'Social') {
-          currentPage = currentPage + 2;
-        } else if (menuItemType === 'Robots') {
-          currentPage = currentPage + 3;
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          currentPage = currentPage - 2;
-        }
-      }
-      if (currentPageNum === 4) {
-        if (menuItemType === 'AboutUs') {
-          currentPage = currentPage - 2;
-        } else if (menuItemType === 'Staff') {
-          currentPage--;
-        } else if (menuItemType === 'Sponsor') {
-          console.log('on sponsor page already');
-        } else if (menuItemType === 'Social') {
-          currentPage++;
-        } else if (menuItemType === 'Robots') {
-          currentPage = currentPage + 2;
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          currentPage = currentPage - 3;
-        }
-      }
-      if (currentPageNum === 5) {
-        if (menuItemType === 'AboutUs') {
-          currentPage = currentPage - 3;
-        } else if (menuItemType === 'Staff') {
-          currentPage = currentPage - 2;
-        } else if (menuItemType === 'Sponsor') {
-          currentPage--;
-        } else if (menuItemType === 'Social') {
-          console.log('on social page already');
-        } else if (menuItemType === 'Robots') {
-          currentPage++;
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          currentPage = currentPage - 4;
-        }
-      }
-      if (currentPageNum === 6) {
-        if (menuItemType === 'AboutUs') {
-          currentPage = currentPage - 4;
-        } else if (menuItemType === 'Staff') {
-          currentPage = currentPage - 3;
-        } else if (menuItemType === 'Sponsor') {
-          currentPage = currentPage - 2;
-        } else if (menuItemType === 'Social') {
-          currentPage--;
-        } else if (menuItemType === 'Robots') {
-          console.log('on robots page already');
-        } else if (menuItemType === 'homeMenuContainerClass') {
-          currentPage = currentPage - 5;
-        }
-      }
-      clickRequired = false;
-      disintegrateParticles();
-      if (currentPage === 1) {
-        setTimeout(function () {
-          disintegrationInProgress = false;
-          disWait = false;
-          requestAnimationFrame(animateDisintegration);
-          particles.material = particleMaterial;
-          unClearSmokeScreen();
-        }, 900);
-        canvaswithparticles.style.display = 'block';
-        unClearSmokeScreen();
-        liftPages();
-        return;
-      }
-      liftPages();
-      canvaswithparticles.style.display = 'none';
-      clearSmokeScreen();
-    });
-  });
-  function checkCurrentPage() {
-    return currentPage;
+};
+animate();
+  
+const a = document.getElementById('page1');
+const b = document.getElementById('page2');
+const c = document.getElementById('page5');
+const d = document.getElementById('page3');
+const e = document.getElementById('page4');
+const f = document.getElementById('page6');
+const g = document.getElementById('page7');
+
+function section1() {
+    unClearSmokeScreen();
+    callStyle1();
+    animate();
+
+    a.style.top = '0%'
+    b.style.top = '100%'
+    c.style.top = '200%'
+    d.style.top = '300%'
+    e.style.top = '400%'
+    f.style.top = '500%'
+    g.style.top = '100%'
+
+}
+function section2() {
+    clearSmokeScreen();
+    a.style.top = '-100%'
+    b.style.top = '0%'
+    c.style.top = '100%'
+    d.style.top = '200%'
+    e.style.top = '300%'
+    f.style.top = '400%'
+    g.style.top = '100%'
+}
+function section3() {
+    a.style.top = '-200%'
+    b.style.top = '-100%'
+    c.style.top = '0%'
+    d.style.top = '100%'
+    e.style.top = '200%'
+    f.style.top = '300%'
+    g.style.top = '100%'
+}
+function section4() {
+    a.style.top = '-300%'
+    b.style.top = '-200%'
+    c.style.top = '-100%'
+    d.style.top = '0%'
+    e.style.top = '100%'
+    f.style.top = '200%'
+    g.style.top = '100%'
+}
+function section5() {
+    a.style.top = '-400%'
+    b.style.top = '-300%'
+    c.style.top = '-200%'
+    d.style.top = '-100%'
+    e.style.top = '0%'
+    f.style.top = '100%'
+    g.style.top = '100%'
+}
+function section6() {
+  a.style.top = '-500%'
+  b.style.top = '-400%'
+  c.style.top = '-300%'
+  d.style.top = '-200%'
+  e.style.top = '-100%'
+  f.style.top = '0%'
+  g.style.top = '100%'
+}
+function section7() {
+  a.style.top = '-600%'
+  b.style.top = '-500%'
+  c.style.top = '-400%'
+  d.style.top = '-300%'
+  e.style.top = '-200%'
+  f.style.top = '-25%'
+  g.style.top = '75%'
+}
+
+function liftPagesX(currentPage) {
+  checkfirstOnPage()
+  if (checkInMenu() === true) {
+    animateMenuXBack()
+    makeInMenuFalse()
+    slideOut()
   }
+  if (currentPage != 5) {
+    document.querySelector('.socialsBackground').style = 'top: 0%'
+    document.querySelector('.socialsBackground').style.opacity = 0;
+  }
+  if (currentPage === 5) {
+    document.querySelector('.socialsBackground').style = 'top: 0%'
+    document.querySelector('.socialsBackground').style.opacity = 1;
+  }
+  if (currentPage != 1) {
+    checkDisStatus();
+  }
+  if (currentPage === 3 || currentPage === 4 || currentPage === 5){
+    endAnimation();
+  }
+  if (currentPage === 1){
+    callAnimation();
+  }
+    switch (currentPage) {
+        case 1:
+            section1();
+            break;
+        case 2:
+            section2();
+            break;
+        case 3:
+            section3();
+            break;
+        case 4:
+            section4();
+            break;
+        case 5:
+            section5();
+            break;
+        case 6:
+            section6();
+            break;
+        case 7:
+            section7();
+            break;
+        default:
+            console.error('Function not found for currentPage:', currentPage);
+    }
+}
+var firstOnPage = true;
+function checkfirstOnPage() {
+  if (firstOnPage) {
+    firstOnPage = false;
+    disWait = false
+  }
+}
+function checkDisStatus() {
+  if (disWait === false) {
+    disintegrationTriggered = true;
+    disintegrateParticles();
+    disintegrationInProgress = true;
+  }
+}
+function callStyle1() {
+  setTimeout(function () {
+    disintegrationInProgress = false;
+    disWait = false;
+    requestAnimationFrame(animateDisintegration);
+    particles.material = particleMaterial;
+  }, 900);
+}
+section1()
 };
 let animationRunning = true;
 function callAnimation() {
@@ -434,3 +379,4 @@ function callAnimation() {
 function endAnimation() {
   animationRunning = false;
 }
+
