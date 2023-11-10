@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('loadingIDIndicator').style.display = 'none';
     }, 1000);
 }
+clearandPlayVideo();
 function clearandPlayVideo() {
   document.getElementById("relativeID").style.display = 'none';
   var video = document.getElementById("video");
@@ -67,8 +68,8 @@ class Preloader {
     constructor(numOfAjaxRequests, loaderStep, loadingFinished) {
       this.#elements = [
         //...document.querySelectorAll("link"),
-        ...document.querySelectorAll('img:not([loading="lazy"])'),
-        ...document.querySelectorAll('object:not([loading="lazy"])'),
+        //...document.querySelectorAll('img:not([loading="lazy"])'),
+        //...document.querySelectorAll('object:not([loading="lazy"])'),
         //...document.querySelectorAll('iframe:not([loading="lazy"])'),
         //...document.querySelectorAll('video:not([loading="lazy"])'),
         //...document.querySelectorAll('audio:not([loading="lazy"])')
@@ -129,13 +130,14 @@ document.addEventListener('mousemove', (e) => {
 });
 document.body.style.cursor = 'none';
 });
-let loadingIsOver = false;
+let loadingIsOver = true;
 const menuDisplay = document.getElementById('MenuButtonContainer')
 menuDisplay.style.display = 'none';
 function doneLoading() {
   loadingIsOver = true;
   menuDisplay.style.display = 'unset';
 }
+
 function loadingIsOverFunc() {
   if (loadingIsOver) {
     return true;

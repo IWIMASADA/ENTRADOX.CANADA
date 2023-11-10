@@ -6,10 +6,6 @@
     font-family: "Servant";
     src: url("fonts/the-servant-italic.ttf") format("truetype");
 }
-body {
-    user-select: none;
-    background-color: blue;
-}
 .adding-pic-soon {
     position: absolute;
     background-color: black;
