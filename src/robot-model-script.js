@@ -35,7 +35,7 @@ const frameTime = 1000 / targetFPS;
 let lastTimestamp = 0;
 function loadModel() {
     loader.load(
-        '../online/src/1892382.glb', 
+        'src/1892382.glb', 
         function (gltf) {
             const loadedModel = gltf.scene;
             loadedModel.traverse((child) => {

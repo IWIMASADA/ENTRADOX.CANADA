@@ -10,6 +10,20 @@ body {
     user-select: none;
     background-color: blue;
 }
+.adding-pic-soon {
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    width: 20%;
+    height: 10%;
+    z-index: 10000;
+    color: white;
+    font-size: 2rem;
+    transform: translate(-50%,-50%);
+    left: 30%;
+    top: 50%;
+    font-family: 'TW', Arial, Helvetica, sans-serif;
+}
 .staffPanelContainer {
     position: absolute;
     z-index: 2147483647;
