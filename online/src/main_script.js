@@ -66,12 +66,12 @@ class Preloader {
     }
     constructor(numOfAjaxRequests, loaderStep, loadingFinished) {
       this.#elements = [
-        ...document.querySelectorAll("link"),
+        //...document.querySelectorAll("link"),
         ...document.querySelectorAll('img:not([loading="lazy"])'),
         ...document.querySelectorAll('object:not([loading="lazy"])'),
         //...document.querySelectorAll('iframe:not([loading="lazy"])'),
         //...document.querySelectorAll('video:not([loading="lazy"])'),
-        ...document.querySelectorAll('audio:not([loading="lazy"])')
+        //...document.querySelectorAll('audio:not([loading="lazy"])')
       ];
       this.#length = this.#elements.length + numOfAjaxRequests;
       if (typeof loaderStep == "function") this.#loaderStep = loaderStep;
