@@ -221,7 +221,21 @@ image.onload = function () {
     }
 };
 animate();
-  
+var optionsBtns = document.querySelectorAll('.menuItemContainer')
+Object.values(optionsBtns).forEach(function (option) {
+  option.addEventListener("click", function () {
+      animateMenuXBack()
+      makeInMenuFalse()
+      slideOut()
+      var id = Number(option.id.substring("option-".length));
+      currentPage = id;
+      currentPage = currentPage * (-1)
+      clickRequired = true;
+      canvasContainer.style.display = 'none';
+      liftPagesX(currentPage);
+  });
+});
+
 const a = document.getElementById('page1');
 const b = document.getElementById('page2');
 const c = document.getElementById('page5');
@@ -327,6 +341,7 @@ function section7() {
 let helpSmokeScreen = true;
 function liftPagesX(currentPage) {
   checkfirstOnPage()
+  console.log(currentPage)
   if (checkInMenu() === true) {
     animateMenuXBack()
     makeInMenuFalse()
@@ -343,7 +358,7 @@ function liftPagesX(currentPage) {
   if (currentPage != 1) {
     checkDisStatus();
   }
-  if (currentPage === 3 || currentPage === 4 || currentPage === 5){
+  if (currentPage === 3 || currentPage === 4 || currentPage === 5 || currentPage === 6 || currentPage === 7){
     endAnimation();
   }
   if (currentPage === 1){
@@ -352,6 +367,7 @@ function liftPagesX(currentPage) {
     switch (currentPage) {
         case 1:
             section1();
+            canvasContainer.style.display = 'block';
             unClearSmokeScreen();
             helpSmokeScreen = true;
             break;
@@ -368,7 +384,6 @@ function liftPagesX(currentPage) {
             section5();
             break;
         case 6:
-            
             section6();
             break;
         case 7:
