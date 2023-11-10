@@ -141,7 +141,7 @@ document.addEventListener('mousemove', throttleUpdate);
 
 document.body.style.cursor = 'none';
 });
-let loadingIsOver = true;
+let loadingIsOver = false;
 const menuDisplay = document.getElementById('MenuButtonContainer')
 menuDisplay.style.display = 'none';
 function doneLoading() {
