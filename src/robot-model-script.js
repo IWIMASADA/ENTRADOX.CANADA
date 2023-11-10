@@ -77,34 +77,17 @@ document.addEventListener('mousemove', (e) => {
     canvas.style.transform = `translate(${translateX}px, ${translateY}px)`;
 });
 function animate(timestamp) {
-    const elapsed = timestamp - lastTimestamp;
-    if (elapsed > frameTime) {
-        if (isMouseDown) {
-            controls.update();
-        } else {
-            scene.rotation.y -= 0.0005;
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        lastTimestamp = timestamp - (elapsed % frameTime);
-    }
-    requestAnimationFrame(animate);
-}
-loader.load(
-    '1892382.glb',
-    function (gltf) {
-        const loadedModel = gltf.scene;
-        loadedModel.traverse((child) => {
-            if (child.isMesh) {
-                if (child.material.isMeshStandardMaterial || child.material.isMeshPhysicalMaterial) {
-                    child.material.metalness = .3;
-                    child.material.roughness = 0.1; 
-                }
+        console.log("a")
+        const elapsed = timestamp - lastTimestamp;
+        if (elapsed > frameTime) {
+            if (isMouseDown) {
+                controls.update();
+            } else {
+                scene.rotation.y -= 0.0005;
+                controls.update();
+                renderer.render(scene, camera);
             }
-        });
-        loadedModel.position.set(0, -loadedModel.position.y - 7, 0);
-        scene.add(loadedModel);
-        isModelLoaded = true;
-        animate();
-    }
-);
+            lastTimestamp = timestamp - (elapsed % frameTime);
+        }
+        requestAnimationFrame(animate);
+}

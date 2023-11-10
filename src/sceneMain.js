@@ -339,6 +339,7 @@ function liftPagesX(currentPage) {
             section5();
             break;
         case 6:
+            
             section6();
             break;
         case 7:
@@ -379,4 +380,3 @@ function callAnimation() {
 function endAnimation() {
   animationRunning = false;
 }
-
