@@ -112,22 +112,34 @@ class Preloader {
         }, 2800);
     }
   );
-document.addEventListener('mousemove', (e) => {
-  if (isMobile()) {
-    return
-  }
-  const cursor = document.querySelector('.cursor');
-      cursor.style.left = e.pageX + 'px';
-      cursor.style.top = e.pageY + 'px';
-});
-document.addEventListener('mousemove', (e) => {
-  if (isMobile()) {
-    return
-  }
-  const cursor = document.querySelector('.cursorDot');
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-});
+// Throttle the update function to control the framerate
+const throttleUpdate = (function() {
+  let lastUpdate = 0;
+  const framerate = 60; // Adjust this value to set the desired framerate
+
+  return function(e) {
+      if (isMobile()) {
+          return;
+      }
+
+      const now = Date.now();
+      if (now - lastUpdate >= 1000 / framerate) {
+          const cursor = document.querySelector('.cursor');
+          const cursorDot = document.querySelector('.cursorDot');
+
+          cursor.style.left = e.pageX + 'px';
+          cursor.style.top = e.pageY + 'px';
+
+          cursorDot.style.left = e.pageX + 'px';
+          cursorDot.style.top = e.pageY + 'px';
+
+          lastUpdate = now;
+      }
+  };
+})();
+
+document.addEventListener('mousemove', throttleUpdate);
+
 document.body.style.cursor = 'none';
 });
 let loadingIsOver = true;

@@ -242,16 +242,3 @@ displayNames.forEach(name => {
         iconImage.classList.remove("iconHoverClass");
     });
 })
-var staffPanelContainer = document.querySelector('.staffPanelContainer');
-var aboutUsContainer = document.querySelector('.AboutUsItemSide');
-document.addEventListener('mousemove', (e) => { 
-    if (isMobile()) {
-        return
-    }
-        const x = e.clientX;
-        const y = e.clientY;
-        const translateX = (x - window.innerWidth / 2) * 0.015;
-        const translateY = (y - window.innerHeight / 2) * 0.015;
-        aboutUsContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
-        staffPanelContainer.style.transform = `translate(${translateX}px, ${translateY}px)`;
-});

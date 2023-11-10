@@ -21,6 +21,14 @@ body, html {
         opacity: 1;
     }
 }
+@keyframes fadeInUniversalSmoke {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
 @keyframes SmokeInUniversal {
     0% {
         opacity: 0;
@@ -602,6 +610,9 @@ body, html {
 }
 .fadeIn {
     animation: fadeInUniversal 2s ease-in-out forwards;
+}
+.fadeInSM {
+    animation: fadeInUniversalSmoke 2s ease-in-out forwards;
 }
 .fadeOut {
     animation: fadeInUniversal 1s ease-in-out reverse;

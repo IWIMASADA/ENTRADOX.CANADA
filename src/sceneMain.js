@@ -167,18 +167,20 @@ image.onload = function () {
   });
 
   function clearSmokeScreen() {
+    helpSmokeScreen = false;
     smokeScreen.classList.add("fadeOut");
     setTimeout(function () {
       smokeScreen.style.opacity = 0;
       smokeScreen.classList.remove("fadeOut");
     }, 900);
   }
+    
   function unClearSmokeScreen() {
-    smokeScreen.classList.add("fadeIn");
-    setTimeout(function () {
-      smokeScreen.style.opacity = 0.15;
-      smokeScreen.classList.remove("fadeIn");
-    }, 1001);
+      smokeScreen.classList.add("fadeInSM");
+      setTimeout(function () {
+        smokeScreen.style.opacity = 0.15;
+        smokeScreen.classList.remove("fadeInSM");
+      }, 1001);
   }
 
   const animate = function () {
@@ -229,7 +231,6 @@ const f = document.getElementById('page6');
 const g = document.getElementById('page7');
 
 function section1() {
-    unClearSmokeScreen();
     callStyle1();
     animate();
 
@@ -240,10 +241,12 @@ function section1() {
     e.style.top = '400%'
     f.style.top = '500%'
     g.style.top = '100%'
+    a.style.display = 'block';
+
+    f.style.display = 'none';
 
 }
 function section2() {
-    clearSmokeScreen();
     a.style.top = '-100%'
     b.style.top = '0%'
     c.style.top = '100%'
@@ -251,6 +254,10 @@ function section2() {
     e.style.top = '300%'
     f.style.top = '400%'
     g.style.top = '100%'
+    a.style.display = 'block';
+
+    f.style.display = 'none';
+
 }
 function section3() {
     a.style.top = '-200%'
@@ -260,6 +267,10 @@ function section3() {
     e.style.top = '200%'
     f.style.top = '300%'
     g.style.top = '100%'
+    a.style.display = 'none';
+    
+    f.style.display = 'none';
+
 }
 function section4() {
     a.style.top = '-300%'
@@ -269,6 +280,10 @@ function section4() {
     e.style.top = '100%'
     f.style.top = '200%'
     g.style.top = '100%'
+    a.style.display = 'none';
+
+    f.style.display = 'none';
+    
 }
 function section5() {
     a.style.top = '-400%'
@@ -278,6 +293,10 @@ function section5() {
     e.style.top = '0%'
     f.style.top = '100%'
     g.style.top = '100%'
+    a.style.display = 'none';
+
+    f.style.display = 'block';
+
 }
 function section6() {
   a.style.top = '-500%'
@@ -287,6 +306,10 @@ function section6() {
   e.style.top = '-100%'
   f.style.top = '0%'
   g.style.top = '100%'
+  a.style.display = 'none';
+
+  f.style.display = 'block';
+
 }
 function section7() {
   a.style.top = '-600%'
@@ -296,8 +319,12 @@ function section7() {
   e.style.top = '-200%'
   f.style.top = '-25%'
   g.style.top = '75%'
-}
+  a.style.display = 'none';
 
+  f.style.display = 'block';
+
+}
+let helpSmokeScreen = true;
 function liftPagesX(currentPage) {
   checkfirstOnPage()
   if (checkInMenu() === true) {
@@ -325,6 +352,8 @@ function liftPagesX(currentPage) {
     switch (currentPage) {
         case 1:
             section1();
+            unClearSmokeScreen();
+            helpSmokeScreen = true;
             break;
         case 2:
             section2();
@@ -347,6 +376,11 @@ function liftPagesX(currentPage) {
             break;
         default:
             console.error('Function not found for currentPage:', currentPage);
+    }
+    if (currentPage != 1){
+      if (helpSmokeScreen) {
+        clearSmokeScreen();
+      }
     }
 }
 var firstOnPage = true;

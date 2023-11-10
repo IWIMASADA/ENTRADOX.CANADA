@@ -69,13 +69,7 @@ function handleIntersection(entries, observer) {
         }
     });
 }
-document.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    const translateX = (x - window.innerWidth / 2) * 0.015;
-    const translateY = (y - window.innerHeight / 2) * 0.015;
-    canvas.style.transform = `translate(${translateX}px, ${translateY}px)`;
-});
+
 function animate(timestamp) {
         console.log("a")
         const elapsed = timestamp - lastTimestamp;
