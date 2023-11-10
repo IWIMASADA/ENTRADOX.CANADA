@@ -31,16 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
         10: ["Derek Lee", "PROGRAMMER", "WEBSITE CREATOR"]
     };
     var nameToIMG = {
-        1: ["Daniel Ashtiani","../assets/staff-pictures/1.png"],
-        2: ["Aasha Askew","../assets/staff-pictures/2.png"],
-        3: ["Amy Xu","../assets/staff-pictures/3.png"],
-        4: ["Liam Bradley","../assets/staff-pictures/4.png"],
-        5: ["Nicole Zhang","../assets/staff-pictures/5.png"],
-        6: ["Aella Gong","../assets/staff-pictures/6.png"],
-        7: ["Andy Xu","../assets/staff-pictures/7.png"],
-        8: ["Oliver Low","../assets/staff-pictures/8.png"],
-        9: ["Hari Baidwan","../assets/staff-pictures/9.png"],
-        10: ["Derek Lee","../assets/staff-pictures/10.png"]
+        1: ["Daniel Ashtiani","../online/assets/staff-pictures/1.png"],
+        2: ["Aasha Askew","../online/assets/staff-pictures/2.png"],
+        3: ["Amy Xu","../online/assets/staff-pictures/3.png"],
+        4: ["Liam Bradley","../online/assets/staff-pictures/4.png"],
+        5: ["Nicole Zhang","../online/assets/staff-pictures/5.png"],
+        6: ["Aella Gong../online/assets/staff-pictures/6.png"],
+        7: ["Andy Xu","../online/assets/staff-pictures/7.png"],
+        8: ["Oliver Low","../online/assets/staff-pictures/8.png"],
+        9: ["Hari Baidwan","../online/assets/staff-pictures/9.png"],
+        10: ["Derek Lee","../online/assets/staff-pictures/10.png"]
     };
     function getRoleValues(name) {
         for (var id in nameToRole) {
