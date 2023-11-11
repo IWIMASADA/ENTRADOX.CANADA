@@ -28,7 +28,7 @@ camera.fov = 60;
 camera.updateProjectionMatrix();
 let isMouseDown = false;
 let isModelLoaded = false;
-const targetFPS = 50;
+
 function loadModel() {
     loader.load(
         'src/1892382.glb', 
@@ -85,3 +85,4 @@ function animate(currentTimestamp) {
 
     requestAnimationFrame(animate);
 }
+

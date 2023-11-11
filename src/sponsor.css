@@ -311,8 +311,8 @@
     position: absolute;
     z-index: 100;
     transform: translate(-50%,-50%);
-    left: 48%;
-    top: 20%;
+    left: 70%;
+    top: 45%;
     transition: transform, opacity .1s linear;
     width: 40%;
     height: 50%;
@@ -431,6 +431,8 @@
     }
     .SponsorTiersTextContent {
       left: 53% !important;
+      top: 20%;
+      transform: scale(.9);
     }
     .sponsorTierExitButton {
       left: 95% !important;
@@ -481,7 +483,8 @@
     }
     .SponsorTiersTextContent {
       left: 55% !important;
-      top: 25% !important;
+      top: 20% !important;
+      width: 50%;
     }
     .sponsorTierExitButton {
       left: 110% !important;
@@ -534,12 +537,12 @@
   @media screen and (max-width: 1000px) {
     #page3 {
       z-index: 214748364 !important;
-      transform: scale(0.8) !important;
+      transform: scale(0.85) !important;
     }
     .SponsorTiersTextContent {
-      left: 60% !important;
+      left: 55% !important;
       width: 60% !important;
-      top: 30% !important;
+      top: 20% !important;
     }
   }
   
@@ -590,66 +593,32 @@
     }
   }
   
-  @media screen and (max-height: 750px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.7) !important;
-    }
-    .sponsorGilbert {
-      opacity: 0 !important;
-    }
-    .SponsorFooter {
-      top: 95% !important;
-      background-color: rgba(245, 222, 179, 0) !important;
-    }
-    .SponsorHeader {
-      top: -13% !important;
-      left: 5% !important;
-      background-color: rgba(255, 0, 0, 0) !important;
-    }
-    .yourImpact {
-      opacity: 0 !important;
-    }
-    .LearnMoreSponsorButton {
-      top: 0% !important;
-      left: 80% !important;
-      width: 8% !important;
-      height: 50% !important;
-    }
-    .OurSponsorsButton {
-      top: 0% !important;
-      left: 90% !important;
-      width: 7% !important;
-      height: 50% !important;
-    }
-    .SponsorTiersTextContent {
-      left: 40% !important;
-      width: 60% !important;
-      top: 9% !important;
-    }
-  }
   
   @media screen and (max-height: 800px) {
     #page3 {
       z-index: 214748364 !important;
-      transform: scale(0.7) !important;
+      transform: scale(0.8) !important;
     }
     .SponsorTiersTextContent {
       left: 50% !important;
-      width: 60% !important;
-      top: 9% !important;
+      width: 100% !important;
+      top: -10% !important;
+    }
+    .SponsorTiersTextContent p {
+      font-size: 25px;
+      line-height: 17px;
     }
   }
   
   @media screen and (max-height: 900px) {
     #page3 {
       z-index: 214748364 !important;
-      transform: scale(0.7) !important;
+      transform: scale(0.9) !important;
     }
     .SponsorTiersTextContent {
-      left: 60% !important;
+      left: 50% !important;
       width: 60% !important;
-      top: 20% !important;
+      top: 25% !important;
     }
     .SponsorFooter {
       background-color: rgba(245, 222, 179, 0) !important;
@@ -704,7 +673,7 @@
     }
     .SponsorTiersTextContent {
       opacity: 1;
-      top: 70% !important;
+      top: 50% !important;
       width: 130% !important;
     }
     .SponsorTiersTextContent p {
