@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('loadingIDIndicator').style.display = 'none';
     }, 1000);
 }
-function clearandPlayVideo() {
+/*function clearandPlayVideo() {
   document.getElementById("relativeID").style.display = 'none';
   var video = document.getElementById("video");
   var videocontainer = document.querySelector(".video-container");
@@ -52,7 +52,7 @@ function clearandPlayVideo() {
       video.remove();
       videocontainer.remove();
   }, 2800);
-}
+}*/
 class Preloader {
     #c = 0;
     #percentage = 0;

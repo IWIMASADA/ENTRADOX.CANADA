@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const throttleUpdate = (function() {
         let lastUpdate = 0;
-        const framerate = 10; // Adjust this value to set the desired framerate
+        const framerate = 10;
 
         return function(e) {
             const now = Date.now();

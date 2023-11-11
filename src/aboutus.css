@@ -288,12 +288,16 @@
         z-index: 214748364 !important;
         transform: scale(0.55)!important;
       }
+      .aboutusLabel {
+        opacity: 0;
+    }
   }
   @media screen and (max-width: 800px) {
     #page2 {
         z-index: 214748364 !important;
         transform: scale(0.4)!important;
       }
+      
   }
   @media screen and (max-width: 850px) {
     #page2 {
@@ -317,10 +321,6 @@
     .aboutusNameLabel {
         left: 110%;
         top: -30%;
-    }
-    .aboutusLabel {
-        left: 120%;
-        top: 130%;
     }
   }
   @media screen and (max-width: 750px) {
@@ -346,10 +346,7 @@
         left: 110%;
         top: -30%;
     }
-    .aboutusLabel {
-        left: 120%;
-        top: 130%;
-    }
+
   }
 @media screen and (max-height: 900px) {
     #page2 {
@@ -400,9 +397,6 @@
     .aboutusNameLabel {
         opacity: 0;
     }
-    .aboutusLabel {
-        opacity: 0;
-    }
     .AboutUsBottomBar {
         top: 150%;
     }
@@ -419,9 +413,6 @@
         top: 14%;
     }
     .aboutusNameLabel {
-        opacity: 0;
-    }
-    .aboutusLabel {
         opacity: 0;
     }
     .AboutUsTextDesc {
@@ -443,9 +434,6 @@
         top: 20%;
     }
     .aboutusNameLabel {
-        opacity: 0;
-    }
-    .aboutusLabel {
         opacity: 0;
     }
     .AboutUsTextDesc {

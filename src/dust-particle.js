@@ -12,7 +12,7 @@ testbg2.renderOrder = 1;
 canvasContainer2.appendChild(renderer2.domElement);
 renderer2.domElement.style.zIndex = '1';
 scene2.add(particles2);
-var particleCount = 130;
+var particleCount = 230;
 for (var i = 0; i < particleCount; i++) {
     var particleSize = Math.random() * 0.04 + 0.01; 
     var color = Math.random() < 0.3 ? 0x8F8F8F : 0xffffff;

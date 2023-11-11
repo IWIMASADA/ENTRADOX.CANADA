@@ -1,18 +1,3 @@
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    var link = document.querySelector('.em2');
-
-    link.addEventListener('click', function(){
-        openM();
-
-    })
-
-});
-
-
 document.addEventListener("DOMContentLoaded", function () {
     var link = document.querySelector('.em2');
 

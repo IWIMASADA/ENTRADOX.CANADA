@@ -15,8 +15,6 @@ controls.screenSpacePanning = false;
 controls.maxPolarAngle = Math.PI / 2;
 controls.enableZoom = false;
 controls.enablePan = false;
-const ambientLight = new THREE.AmbientLight(0x424242);
-scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 5, 5).normalize();
 scene.add(directionalLight);
@@ -70,18 +68,22 @@ function handleIntersection(entries, observer) {
     });
 }
 
-function animate(timestamp) {
-        console.log("a")
-        const elapsed = timestamp - lastTimestamp;
-        if (elapsed > frameTime) {
-            if (isMouseDown) {
-                controls.update();
-            } else {
-                scene.rotation.y -= 0.0005;
-                controls.update();
-                renderer.render(scene, camera);
-            }
-            lastTimestamp = timestamp - (elapsed % frameTime);
+let lastFrameTimestamp = 0;
+
+function animate(currentTimestamp) {
+    const frameInterval = 1000 / 60;
+    const timeElapsed = currentTimestamp - lastFrameTimestamp;
+
+    if (timeElapsed > frameInterval) {
+        if (isMouseDown) {
+            controls.update();
+        } else {
+            scene.rotation.y -= 0.0005;
+            controls.update();
+            renderer.render(scene, camera);
         }
-        requestAnimationFrame(animate);
+        lastFrameTimestamp = currentTimestamp - (timeElapsed % frameInterval);
+    }
+
+    requestAnimationFrame(animate);
 }

@@ -153,10 +153,8 @@ image.onload = function () {
   window.addEventListener('touchmove', handleTouchMove);
   
   function handleScroll(e) {
-    e.preventDefault(); // Prevent the default behavior of scrolling
     const deltaY = e.deltaY;
   
-    // Adjust the sensitivity as needed
     if (Math.abs(deltaY) > 8 && !isSwitching) {
       if (deltaY > 0 && currentPage < totalPages) {
         isSwitching = true;
@@ -256,7 +254,8 @@ image.onload = function () {
       renderer.render(scene, camera);
     }
 };
-animate();
+requestAnimationFrame(animate);
+
 var optionsBtns = document.querySelectorAll('.menuItemContainer')
 Object.values(optionsBtns).forEach(function (option) {
   option.addEventListener("click", function () {
@@ -282,7 +281,7 @@ const g = document.getElementById('page7');
 
 function section1() {
     callStyle1();
-    animate();
+    requestAnimationFrame(animate);
 
     a.style.top = '0%'
     b.style.top = '100%'
@@ -377,7 +376,6 @@ function section7() {
 let helpSmokeScreen = true;
 function liftPagesX(currentPage) {
   checkfirstOnPage()
-  console.log(currentPage)
   if (checkInMenu() === true) {
     animateMenuXBack()
     makeInMenuFalse()
