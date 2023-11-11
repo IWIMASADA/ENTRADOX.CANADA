@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
   const blackscreenBlocker = document.querySelector('.blackscreenBlocker');
+  
   if (isMobile()) {
+    blackscreenBlocker.remove();
+    document.getElementById("video").remove();
+    document.querySelector(".video-container").style.display = 'none';
+    document.getElementById('loadingIDIndicator').style.display = 'none';
     const cursor = document.querySelector('.cursor');
     const cursorDot = document.querySelector('.cursorDot');
     cursorDot.display = 'none';
     cursor.display = 'none'
+    menuDisplay.style.display = 'block';
+    document.getElementById("preloader-bar").style.display = 'none';
+    document.getElementById("relativeID").style.display = 'none';
+    loadingIsOver = true;
+    return;
   }
   setTimeout(function() {
       var readMoreElements = document.getElementsByClassName("TIMG");
@@ -111,10 +121,9 @@ class Preloader {
         }, 2800);
     }
   );
-// Throttle the update function to control the framerate
 const throttleUpdate = (function() {
   let lastUpdate = 0;
-  const framerate = 60; // Adjust this value to set the desired framerate
+  const framerate = 60;
 
   return function(e) {
       if (isMobile()) {

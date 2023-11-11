@@ -24,10 +24,23 @@ body, html {
     background-color: black !important;
     overflow: hidden;
     user-select: none;
+    position: relative;
 }
 body {
     cursor: none;
 }
+@supports (-webkit-overflow-scrolling: touch) {
+    body {
+      overscroll-behavior-y: none;
+    }
+  }
+::-webkit-scrollbar {
+    display: none; 
+  }
+
+  ::-moz-scrollbar {
+    display: none; 
+  }
 .blackscreenBlocker {
     position: absolute;
     width: 100%;
@@ -233,8 +246,8 @@ body {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
+    filter: brightness(0%);
+    -webkit-filter: brightness(70%);
 }
 .cursor {
     position: absolute;
@@ -353,10 +366,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: auto !important;
+    height: 100% !important;
     overflow: hidden;
     z-index: 2147483646;
+    object-fit: cover;
 }
 [data-custom="homeMovingItems"] {
     transition: transform 0.3s linear;
@@ -492,6 +506,7 @@ video {
     object-fit: cover;
     text-wrap: nowrap;
     transition: all .15s linear;
+    width: 100%;
 }
 
 .containerBottomLeft {
@@ -527,6 +542,8 @@ video {
     left:12.5%;
     object-fit: cover;
     text-wrap: nowrap;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 .containerBottomLeftText {
     position: absolute;
@@ -981,6 +998,11 @@ video {
     }
   }
   @media screen and (max-width: 900px) {
+    body, html {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
     #page1 {
         z-index: 214748364 !important;
         transform: scale(0.8)!important;
@@ -1019,6 +1041,16 @@ video {
     }
     .menu {
         transform: scale(0.9) !important;
+    }
+    .homeBackgroundRender {
+        position: fixed;
+        transform: scale(3.3) !important;
+        top: -30%;
+        left: 165% !important;
+        min-width: 200%;
+        min-height: 100%;
+        filter: brightness(130%) saturate(70%);
+        -webkit-filter: brightness(130%) saturate(70%);
     }
   }
   @media screen and (max-width: 800px) {

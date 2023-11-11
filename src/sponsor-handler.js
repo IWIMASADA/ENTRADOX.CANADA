@@ -283,7 +283,7 @@ LearnMoreTextSponsor.addEventListener('click', function() {
 });
 function isMobile() {
     return /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-      (window.innerWidth <= 700 && window.innerWidth > 0);
+      (window.innerWidth <= 900 && window.innerWidth > 0);
 }
 function changeMobileText(tier) {
     SponsorTiersTextContent.querySelector("p").innerHTML = tier;

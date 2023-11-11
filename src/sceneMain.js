@@ -133,8 +133,6 @@ image.onload = function () {
         particles.position.set(0, 0, 0);
         requestAnimationFrame(animateDisintegration);
         disintegrationTriggered = true;
-      
-
       }
     }
   };
@@ -146,26 +144,65 @@ image.onload = function () {
   const totalPages = 7;
   let lastScrollTime = 0;
   let isSwitching = false;
-  window.addEventListener('wheel', function (e) {
-    const currentTime = new Date().getTime();
-    const timeDiff = currentTime - lastScrollTime;
-    if (timeDiff > 500 && !isSwitching && loadingIsOverFunc()) {
-      if (e.deltaY > 0 && currentPage < totalPages) {
+  let startY;
+  
+  window.addEventListener('wheel', handleScroll);
+  window.addEventListener('touchstart', function (e) {
+    startY = Math.abs(e.touches[0].clientY);
+  });
+  window.addEventListener('touchmove', handleTouchMove);
+  
+  function handleScroll(e) {
+    e.preventDefault(); // Prevent the default behavior of scrolling
+    const deltaY = e.deltaY;
+  
+    // Adjust the sensitivity as needed
+    if (Math.abs(deltaY) > 8 && !isSwitching) {
+      if (deltaY > 0 && currentPage < totalPages) {
         isSwitching = true;
         currentPage++;
-      } else if (e.deltaY < 0 && currentPage > 1) {
+      } else if (deltaY < 0 && currentPage > 1) {
         isSwitching = true;
         currentPage--;
       }
+  
       clickRequired = true;
       liftPagesX(currentPage);
-      lastScrollTime = currentTime;
+      lastScrollTime = new Date().getTime();
+  
       setTimeout(function () {
         isSwitching = false;
-      }, 800);
+      }, 600);
     }
-  });
+  }
+  
+  function handleTouchMove(e) {
+    e.preventDefault(); // Prevent the default behavior of scrolling
+    const deltaY = startY - e.touches[0].clientY;
+  
+    // Adjust the sensitivity as needed
+    if (Math.abs(deltaY) > 10 && !isSwitching) {
+      if (deltaY > 0 && currentPage < totalPages) {
+        isSwitching = true;
+        currentPage++;
+      } else if (deltaY < 0 && currentPage > 1) {
+        isSwitching = true;
+        currentPage--;
+      }
+  
+      clickRequired = true;
+      liftPagesX(currentPage);
+      lastScrollTime = new Date().getTime();
+  
+      setTimeout(function () {
+        isSwitching = false;
+      }, 600);
+    }
+  }
+  
 
+
+  
   function clearSmokeScreen() {
     helpSmokeScreen = false;
     smokeScreen.classList.add("fadeOut");
@@ -174,7 +211,6 @@ image.onload = function () {
       smokeScreen.classList.remove("fadeOut");
     }, 900);
   }
-    
   function unClearSmokeScreen() {
       smokeScreen.classList.add("fadeInSM");
       setTimeout(function () {
