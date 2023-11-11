@@ -207,9 +207,11 @@ image.onload = function () {
     setTimeout(function () {
       smokeScreen.style.opacity = 0;
       smokeScreen.classList.remove("fadeOut");
+      smokeScreen.style.display = 'none';
     }, 900);
   }
   function unClearSmokeScreen() {
+      smokeScreen.style.display = 'block';
       smokeScreen.classList.add("fadeInSM");
       setTimeout(function () {
         smokeScreen.style.opacity = 0.15;

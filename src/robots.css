@@ -56,7 +56,7 @@
     letter-spacing: 1.7rem;
     left: 55%;
     top: 34%;
-    width: 100%;
+    width: 200%;
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px rgb(0, 145, 255);
@@ -222,6 +222,9 @@
     }
     .robot-description {
         width: 80%;
+    }
+    .robot-name-outline {
+        width: 200%;
     }
   }
   @media screen and (max-width: 800px) {
