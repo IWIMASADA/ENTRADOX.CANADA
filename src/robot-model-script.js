@@ -29,8 +29,6 @@ camera.updateProjectionMatrix();
 let isMouseDown = false;
 let isModelLoaded = false;
 const targetFPS = 50;
-const frameTime = 1000 / targetFPS;
-let lastTimestamp = 0;
 function loadModel() {
     loader.load(
         'src/1892382.glb', 
