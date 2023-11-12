@@ -546,20 +546,21 @@
     }
   }
   
+  
   @media screen and (max-width: 900px) {
     #page3 {
       z-index: 214748364 !important;
-      transform: scale(0.8) !important;
+      transform: scale(0.6) !important;
     }
-    .sponsorPageLabel {
-      opacity: 0;
+    .SponsorTiersTextContent {
+      left: -10% !important;
+      width: 100% !important;
+      top: -10% !important;
+      transform: translateY(-15%);
     }
-  }
-  
-  @media screen and (max-width: 800px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.75) !important;
+    .SponsorTiersTextContent p {
+      font-size: 25px !important;
+      line-height: 30px !important;
     }
     .LearnMoreSponsorButton {
       top: -25% !important;
@@ -577,56 +578,12 @@
       left: 120% !important;
       top: 20% !important;
     }
-  }
-  
-  @media screen and (max-width: 750px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.7) !important;
-    }
-    .LearnMoreSponsorButton,
-    .OurSponsorsButton {
-      top: -75% !important;
-      left: 80% !important;
-      width: 9% !important;
-      height: 40% !important;
+    .mobileButtonNextSponsor {
+      top: 120% !important;
     }
   }
   
-  
-  @media screen and (max-height: 800px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.8) !important;
-    }
-    .SponsorTiersTextContent {
-      left: 50% !important;
-      width: 100% !important;
-      top: -10% !important;
-    }
-    .SponsorTiersTextContent p {
-      font-size: 25px;
-      line-height: 17px;
-    }
-  }
-  
-  @media screen and (max-height: 900px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.9) !important;
-    }
-    .SponsorTiersTextContent {
-      left: 50% !important;
-      width: 60% !important;
-      top: 25% !important;
-    }
-    .SponsorFooter {
-      background-color: rgba(245, 222, 179, 0) !important;
-    }
-    .SponsorHeader {
-      background-color: rgba(255, 0, 0, 0) !important;
-    }
-  }
+
   
   @media screen and (max-height: 500px) {
     #page3 {
@@ -689,6 +646,16 @@
     .mobileButtonNextSponsor {
       top: 113%;
       left: -5%;
+    }
+    .SponsorTiersTextContent {
+      left: -10% !important;
+      width: 130% !important;
+      top: 50% !important;
+      transform: translateY(-15%);
+    }
+    .SponsorTiersTextContent p {
+      font-size: 20px !important;
+      line-height: 30px !important;
     }
 
   }

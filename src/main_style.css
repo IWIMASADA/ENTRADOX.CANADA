@@ -1020,8 +1020,12 @@ video {
     .MDRTeamSymbol {
         left: 38% !important;
     }
+    .mobile_title {
+        width: 200%;
+    }
     .mobile_titleDATE {
         left: 18% !important;
+        width: 200%;
     }
     .movingWarningUnderline {
         opacity: 0;
