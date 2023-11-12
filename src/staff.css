@@ -662,3 +662,81 @@
         font-family: 'TW', Arial, Helvetica, sans-serif;
     }
   }
+
+
+    /* HEIGHT STYLYE */
+
+@media screen and (max-height: 800px) and (orientation: landscape) {
+}
+@media screen and (max-height: 700px) and (orientation: landscape) {
+}
+@media screen and (max-height: 600px) and (orientation: landscape) {
+
+    .ContainerForStaffDescriptionTextContent2 {
+        top: 70%;
+    }
+}
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    .StaffMemberHeadlineContainer-Name {
+        top: 110%;
+    }
+}
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    #page5 {
+        transform: scale(.8) !important;
+    }
+    .staffPanelContainer {
+        top: -6%;
+        height: 110%;
+    }
+    
+    .StaffMemberHeadlineContainer-Name {
+        top: 100%;
+    }
+    .ContainerForStaffDescriptionTextContent {
+        top: 50%;
+    }
+    .ContainerForStaffDescriptionTextContent2 {
+        top: 90%;
+    }
+    .StaffRoleTextDisplay {
+        top:25%;
+    }
+    .StaffRoleTextDisplay2 {
+        top:25%;
+    }
+}
+@media screen and (max-height: 400px) and (orientation: landscape) {
+    #page5 {
+        transform: scale(.6) !important;
+    }
+    .staffPanelContainer {
+        top: -10%;
+        height: 130%;
+    }
+}
+@media screen and (max-height: 300px) and (orientation: landscape) {
+    #page5 {
+        transform: scale(.5) !important;
+    }
+    .staffPanelContainer {
+        top: -30%;
+        height: 150%;
+    }
+}
+@media screen and (max-height: 200px) and (orientation: landscape) {
+    #page5 {
+        transform: scale(.4) !important;
+    }
+    .staffPanelContainer {
+        top: -50%;
+        height: 200%;
+    }
+}
+@media screen and (max-height: 100px) and (orientation: landscape) {
+    #page5 {
+        transform: scale(.5) !important;
+        opacity: 0;
+    }
+}

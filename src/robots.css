@@ -376,3 +376,100 @@
     
     }
   }
+
+
+    /* HEIGHT STYLE */
+
+    @media screen and (max-height: 800px) and (orientation: landscape) {
+        .robot-model-container {
+            top: -15%;
+        }
+        .robot-name {
+            top:14%;
+        }
+        .robot-name-outline2 {
+            top: 2%;
+        }
+        .robot-name-outline {
+            top: 25%;
+        }
+        .robot-description {
+            font-size: 25px;
+        }
+      }
+
+      @media screen and (max-height: 600px) and (orientation: landscape) {
+        .robot-model-container {
+            top: -20%;
+            transform: scale(.6);
+        }
+        .robot-name {
+            top:14%;
+            font-size: 70px;
+        }
+        .robot-name-outline2 {
+            font-size: 70px;
+            top: 2%;
+        }
+        .robot-name-outline {
+            font-size: 70px;
+
+            top: 26%;
+        }
+        .robot-description {
+            font-size: 20px;
+        }
+      }
+
+      @media screen and (max-height: 400px) and (orientation: landscape) {
+        .robot-model-container {
+            top: -25%;
+            transform: scale(.4);
+        }
+        .robot-name {
+            top:14%;
+            font-size: 50px;
+        }
+        .robot-name-outline2 {
+            font-size: 50px;
+            top: 2%;
+        }
+        .robot-name-outline {
+            font-size: 50px;
+
+            top: 26%;
+        }
+        .robot-description {
+            font-size: 15px;
+        }
+      }
+
+      @media screen and (max-height: 300px) and (orientation: landscape) {
+        .robot-model-container {
+            top: -25%;
+            transform: scale(.2);
+        }
+        .robot-name {
+            top:14%;
+            font-size: 30px;
+        }
+        .robot-name-outline2 {
+            font-size: 30px;
+            top: 2%;
+        }
+        .robot-name-outline {
+            font-size: 30px;
+
+            top: 26%;
+        }
+        .robot-description {
+            font-size: 10px;
+        }
+      }
+
+      @media screen and (max-height: 200px) and (orientation: landscape) {
+        #page6 {
+           opacity: 0;
+        }
+
+      }

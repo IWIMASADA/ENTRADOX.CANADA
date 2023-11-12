@@ -652,3 +652,54 @@
         top: 8%;
     }
   }
+
+  /* HEIGHT STYLE */
+
+  @media screen and (max-height: 600px) and (orientation: landscape) {
+    #page4 {
+        transform: scale(.8) !important;
+    }
+    .mailContainer {
+        top: 5%;
+    }
+  }
+
+  @media screen and (max-height: 400px) and (orientation: landscape) {
+    #page4 {
+        transform: scale(.5) !important;
+    }
+    .mailContainer {
+        top: -20%;
+    }
+    .rankingContainer {
+        top: -18%;
+    }
+    .tutorialContainer {
+        top: -10%;
+    }
+  }
+
+  
+  @media screen and (max-height: 300px) and (orientation: landscape) {
+    #page4 {
+        transform: scale(.4) !important;
+    }
+    .mailContainer {
+        top: -40%;
+    }
+    .rankingContainer {
+        top: -38%;
+    }
+    .tutorialContainer {
+        top: -20%;
+    }
+    .instagramContainer {
+        top: 90%;
+    }
+  }
+    
+  @media screen and (max-height: 200px) and (orientation: landscape) {
+    #page4 {
+        opacity: 0;
+    }
+  }
