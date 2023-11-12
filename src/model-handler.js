@@ -3,7 +3,7 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.0/examples/jsm/l
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.133.0/examples/jsm/controls/OrbitControls.js";
 
 function loadRobotIfDesktop() {
-    if (!returnIsMobile()) {
+    if (!returnIsMobileRobot()) {
         const loader = new GLTFLoader();
         const canvas = document.querySelector('.robot-model-container');
         const scene = new THREE.Scene();
@@ -154,3 +154,24 @@ window.addEventListener('resize', function () {
     renderer2.setSize(newWidth, newHeight);
 });
 animate();
+
+
+var isMobileDeviceRobot = (function () {
+	var ua = navigator.userAgent;
+	var p = navigator.platform;
+	var iphone = ua.indexOf("iPhone") > -1;
+	var ipod = ua.indexOf("iPod") > -1;
+	var ipad = ua.indexOf("iPad") > -1;
+	var android = /Android (\d+(?:\.\d+)*)/.test(ua);
+	if (/iPad|iPhone|iPod/.test(p) | (iphone | ipad | ipod | android)) {
+		return true;
+	}
+	else {
+		return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(p);
+	}
+})();
+
+function returnIsMobileRobot() {
+    return isMobileDeviceRobot;
+}
+

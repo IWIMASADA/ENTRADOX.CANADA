@@ -2239,7 +2239,13 @@ video {
     animation-duration: 1s;
 }
 
-
+/* CSS to visually hide the navigation while keeping it accessible for SEO */
+nav {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  /* Additional styling as needed */
 
 
 /* HEIGHT STYLYE */

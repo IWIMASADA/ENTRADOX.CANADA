@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /three/
+Disallow: /cgi-bin/
+Disallow: /assets/
+Disallow: /dist/
+Disallow: /COPYRIGHT/
+Disallow: /src/interactions-handler.js
+Disallow: /src/main-handler.js
+Disallow: /src/model-handler.js
+Disallow: /src/pdf.js
+Disallow: /src/1892382.glb
+Disallow: /src/pdf.css
+Disallow: /src/pdf.html
+
+
+
