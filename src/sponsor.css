@@ -582,16 +582,7 @@
       top: 120% !important;
     }
   }
-  
-
-  
-  @media screen and (max-height: 500px) {
-    #page3 {
-      z-index: 214748364 !important;
-      transform: scale(0.7) !important;
-      opacity: 0 !important;
-    }
-  }
+ 
   
   @media only screen and (max-width: 700px) {
     .mobileButtonNextSponsor {

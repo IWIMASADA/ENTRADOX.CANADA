@@ -1135,159 +1135,6 @@ video {
     }
 
   }
-@media screen and (max-height: 900px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.9)!important;
-      }
-      .particle-frame {
-        left: 0% !important;
-        transform: scale(0.95)!important;
-        transition: all .2s linear;
-    }
-  }
-  
-  @media screen and (max-height: 800px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.8)!important;
-      }
-      .particle-frame {
-        left: 0% !important;
-        transform: scale(0.9)!important;
-        top: -5% !important;
-        transition: all .2s linear;
-    }
-    .containerBottomLeft {
-        top: 59% !important;
-    }
-    .bottomLogosHome {
-        top: 60% !important;
-    }
-    .MDRTeamSymbol {
-        top: 60% !important;
-    }
-    .icon-scroll,
-    .icon-scroll:before {
-        position: absolute;
-        z-index: 10;
-        left: -8%;
-        top: 95%;
-    }
-    
-    .icon-scroll:before {
-        top: 10%;
-        left: 50%;
-    }
-  }
-  
-  @media screen and (max-height: 700px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.6)!important;
-      } 
-      .particle-frame {
-        left: 0% !important;
-        transform: scale(0.7)!important;
-        top: -10% !important;
-        transition: all .2s linear;
-    }
-    .icon-scroll,
-    .icon-scroll:before {
-        opacity: 0;
-        transition: opacity .3s linear;
-    }
-    .movingWarningUnderline {
-        opacity: 0;
-    }
-    .containerBottomLeft {
-        top: 65% !important;
-    }
-    .bottomLogosHome {
-        top: 70% !important;
-    }
-    .MDRTeamSymbol {
-        top: 70% !important;
-    }
-    .thank, .FooterContainer p, .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
-        transform: scale(.8) translateX(-50%);
-        transition: transform .4s linear;
-    }
-  }
-  @media screen and (max-height: 600px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.5)!important;
-      }
-      .particle-frame {
-        left: 0% !important;
-        transform: scale(0.6)!important;
-        top: -15% !important;
-        transition: all .2s linear;
-    }
-    .icon-scroll,
-    .icon-scroll:before {
-        opacity: 0;
-        transition: opacity .3s linear;
-    }
-    .movingWarningUnderline {
-        opacity: 0;
-    }
-    .containerBottomLeft {
-        top: 70% !important;
-    }
-    .bottomLogosHome {
-        top: 80% !important;
-    }
-    .MDRTeamSymbol {
-        top: 80% !important;
-    }
-    .thank, .FooterContainer p, .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
-        transform: scale(.5) translateX(-50%);
-        transition: transform .4s linear;
-    }
-    .FooterContainer p {
-        top: 40%;
-        left: 40%;
-        text-align: left;
-    }
-    .thank {
-        left: 40%;
-    }
-  }
-
-  @media screen and (max-height: 500px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.5)!important;
-      }
-      .containerBottomLeft {
-        top: 80% !important;
-    }
-    .particle-frame {
-        left: 0% !important;
-        transform: scale(0.5)!important;
-        top: -15% !important;
-        transition: all .2s linear;
-    }
-
-  }
-  @media screen and (max-height: 400px) {
-    #page1 {
-        z-index: 214748364 !important;
-        transform: scale(0.1)!important;
-        opacity: 0;
-      }
-      .particle-frame {
-        opacity: 0;
-        transform: scale(0.1)!important;
-        transition: opacity transform .2s linear;
-    }
-    .thank, .FooterContainer p, .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
-        transition: opacity .4s linear;
-        opacity: 0;
-    }
-  }
   @media only screen and (max-width: 600px) {
     #page1 {
         transform: scale(0.5)!important;
@@ -2390,4 +2237,186 @@ video {
 .xbuttonFlickerOut {
     animation-name: xbuttonFlickerOut;
     animation-duration: 1s;
+}
+
+
+
+
+/* HEIGHT STYLYE */
+
+@media screen and (max-height: 800px) and (orientation: landscape) {
+    /*#page1 {
+    
+    }*/
+    .mobile_title {
+        top: 20%;
+    }
+    .mobile_titleDATE {
+        top: 15%;
+    }
+    .particle-frame {
+        top: -10%;
+    }
+}
+
+
+@media screen and (max-height: 700px) and (orientation: landscape) {
+    /*#page1 {
+        opacity: 0;
+    }*/
+    .mobile_title {
+        top: 20%;
+    }
+    .mobile_titleDATE {
+        top: 15%;
+    }
+    .mascotIcon {
+        top: -87%;
+    }
+    .containerBottomLeft {
+        top: 60%;
+    }
+    .MDRTeamSymbol {
+        top: 60%;
+    }
+}
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.9) !important;
+    }
+    .mobile_title {
+        top: 20%;
+    }
+    .mobile_titleDATE {
+        top: 15%;
+    }
+    .mascotIcon {
+        top: -83%;
+    }
+    .containerBottomLeft {
+        top: 65%;
+    }
+    .MDRTeamSymbol {
+        top: 60%;
+    }
+    .particle-frame {
+        top: -28%;
+    }
+}
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.9) !important;
+    }
+    .mobile_title {
+        top:15%;
+    }
+    .mobile_titleDATE {
+        top: 10%;
+    }
+    .mascotIcon {
+        top: -83%;
+        opacity: 0;
+    }
+    .containerBottomLeft {
+        top: 65%;
+    }
+    .particle-frame {
+        top: -30%;
+    }
+}
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.8) !important;
+    }
+    .mobile_title {
+        top:8%;
+    }
+    .mobile_titleDATE {
+        top: 1%;
+    }
+    .mascotIcon {
+        top: -83%;
+        opacity: 0;
+    }
+    .containerBottomLeft {
+        top: 65%;
+    }
+    .MDRTeamSymbol {
+        opacity: 0;
+    }
+    .particle-frame {
+        top: -45%;
+    }
+}
+@media screen and (max-height: 400px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.8) !important;
+    }
+    .mobile_title {
+        top:5%;
+    }
+    .mobile_titleDATE {
+        top: 0%;
+    }
+    .mascotIcon {
+        top: -83%;
+        opacity: 0;
+    }
+    .containerBottomLeft {
+        top: 70%;
+    }
+    .MDRTeamSymbol {
+        opacity: 0;
+    }
+    .particle-frame {
+        opacity: 0 !important;
+        display: none !important;
+    }
+}
+@media screen and (max-height: 300px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.6) !important;
+    }
+    .mobile_title {
+        top:-10%;
+    }
+    .mobile_titleDATE {
+        top:-20%;
+    }
+    .containerBottomLeft {
+        top: 50%;
+    }
+    .bottomLogosHome {
+        top: 90%;
+    }
+    .icon-scroll,
+    .icon-scroll:before {
+        opacity: 0;
+    }
+}
+@media screen and (max-height: 300px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.3) !important;
+    }
+    .mobile_title {
+        top:-50%;
+    }
+    .mobile_titleDATE {
+        top:-70%;
+    }
+
+}
+@media screen and (max-height: 100px) and (orientation: landscape) {
+    #page1 {
+        transform: scale(.2) !important;
+    }
+    .mobile_title {
+        top:-130%;
+    }
+    .mobile_titleDATE {
+        top:-150%;
+    }
+    .containerBottomLeft {
+        top: 130%;
+    }
 }

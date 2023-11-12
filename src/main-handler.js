@@ -1130,3 +1130,4 @@ var isMobileDevice = (function () {
 function returnIsMobile() {
     return isMobileDevice;
 }
+
