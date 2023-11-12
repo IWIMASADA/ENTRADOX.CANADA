@@ -170,6 +170,7 @@
     #page2 {
       z-index: 214748364 !important;
       transform: scale(0.9)!important;
+
     }
     .aboutusNameLabel {
         left: 90%;
@@ -178,6 +179,12 @@
     .aboutusLabel {
         left: 96%;
         top: 100%;
+    }
+    .AboutUsTextDesc {
+        width: 45%;
+    }
+    .AboutUsItemSide {
+        left: 50%;
     }
     }
 @media screen and (max-width: 1500px) {
@@ -208,6 +215,7 @@
     }
     .AboutUsTextTitle {
         left: -10%;
+        top: 5%;
     }
     .AboutUsTextTitleOutline {
         left: -10%;
@@ -464,23 +472,115 @@
     }
 }
 @media screen and (max-height: 600px) and (orientation: landscape) {
-
+    #page2 {
+        transform: scale(.8) !important;
+    }
+    .AboutUsTextTitle {
+        top: -10%;
+    }
+    .AboutUsTextTitleOutline {
+        top: 6%;
+    }
+    .AboutUsBottomBarIcons {
+        top: 5%;
+    }
+    .AboutUsTextDesc {
+        top: 25%;
+    }
 
 }
 @media screen and (max-height: 500px) and (orientation: landscape) {
+    #page2 {
+        transform: scale(.75) !important;
+    }
+    .AboutUsTextTitle {
+        top: -15%;
+        font-size: 90px;
+    }
+    .AboutUsTextTitleOutline {
+        top: 3%;
+        font-size: 90px;
 
+    }
+    .AboutUsBottomBarIcons {
+        opacity: 0;
+    }
+    .AboutUsTextDesc {
+        top: 28%;
+    }
+    .icon-scroll2,
+    .icon-scroll2:before {
+        opacity: 0;
+    }
+    .AboutUsItemSide {
+        transform: scale(1.2) !important;
+    }
 }
 @media screen and (max-height: 450px) and (orientation: landscape) {
+    #page2 {
+        transform: scale(.7) !important;
+    }
+    .AboutUsItemSide {
+        transform: scale(1.5) !important;
+    }
+    .AboutUsTextTitle {
+        top: -30%;
+        font-size: 90px;
+    }
+    .AboutUsTextTitleOutline {
+        top: -10%;
+        font-size: 90px;
+    }
 }
 @media screen and (max-height: 400px) and (orientation: landscape) {
 
+    #page2 {
+        transform: scale(.5) !important;
+    }
+    .AboutUsTextTitle {
+        top: -50%;
+        font-size: 50px;
+    }
+    .AboutUsTextTitleOutline {
+        font-size: 50px;
+        top: -30%;
+    }
+    .AboutUsTextDesc {
+        top: -5%;
+        font-size: 15px;
+    }
 }
 @media screen and (max-height: 300px) and (orientation: landscape) {
-
+    .AboutUsTextTitle {
+        top: -100%;
+        font-size: 50px;
+    }
+    .AboutUsTextTitleOutline {
+        font-size: 50px;
+        top: -60%;
+    }
+    #page2 {
+        transform: scale(.3) !important;
+    }
+    .AboutUsItemSide {
+        opacity: 0;
+    }
 }
 @media screen and (max-height: 300px) and (orientation: landscape) {
-
+    #page2 {
+        transform: scale(.2) !important;
+    }
+    .AboutUsTextTitle {
+        top: -150%;
+        font-size: 50px;
+    }
+    .AboutUsTextTitleOutline {
+        font-size: 50px;
+        top: -100%;
+    }
 }
 @media screen and (max-height: 100px) and (orientation: landscape) {
-
+    #page2 {
+        opacity: 0;
+    }
 }
