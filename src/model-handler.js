@@ -1,37 +1,9 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.133.0/build/three.module.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.0/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.133.0/examples/jsm/controls/OrbitControls.js";
-
 function loadRobotIfDesktop() {
     if (!returnIsMobileRobot()) {
-        const loader = new GLTFLoader();
-        const canvas = document.querySelector('.robot-model-container');
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        canvas.appendChild(renderer.domElement);
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.25;
-        controls.screenSpacePanning = false;
-        controls.maxPolarAngle = Math.PI / 2;
-        controls.enableZoom = false;
-        controls.enablePan = false;
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(5, 5, 5).normalize();
-        scene.add(directionalLight);
-        const pointLight = new THREE.PointLight(0xffffff, 2, 50);
-        pointLight.position.set(0, 10, 10);
-        scene.add(pointLight);
-        const hemisphereLight = new THREE.HemisphereLight(0xddeeff, 0x202020, 1);
-        scene.add(hemisphereLight);
-        camera.position.z = 22;
-        camera.fov = 60; 
-        camera.updateProjectionMatrix();
-        let isMouseDown = false;
-        let isModelLoaded = false;
-        
+        const loader=new GLTFLoader,canvas=document.querySelector(".robot-model-container"),scene=new THREE.Scene,camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,1e3),renderer=new THREE.WebGLRenderer({alpha:!0});renderer.setSize(window.innerWidth,window.innerHeight),canvas.appendChild(renderer.domElement);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=!0,controls.dampingFactor=.25,controls.screenSpacePanning=!1,controls.maxPolarAngle=Math.PI/2,controls.enableZoom=!1,controls.enablePan=!1;const directionalLight=new THREE.DirectionalLight(16777215,1);directionalLight.position.set(5,5,5).normalize(),scene.add(directionalLight);const pointLight=new THREE.PointLight(16777215,2,50);pointLight.position.set(0,10,10),scene.add(pointLight);const hemisphereLight=new THREE.HemisphereLight(14544639,2105376,1);scene.add(hemisphereLight),camera.position.z=22,camera.fov=60,camera.updateProjectionMatrix();let isMouseDown=!1,isModelLoaded=!1;
         function loadModel() {
             loader.load(
                 'src/1892382.glb', 
@@ -68,13 +40,10 @@ function loadRobotIfDesktop() {
                 }
             });
         }
-        
         let lastFrameTimestamp = 0;
-        
         function animate(currentTimestamp) {
-            const frameInterval = 1000 / 60;
+            const frameInterval = 1000 / 40;
             const timeElapsed = currentTimestamp - lastFrameTimestamp;
-        
             if (timeElapsed > frameInterval) {
                 if (isMouseDown) {
                     controls.update();
@@ -85,93 +54,11 @@ function loadRobotIfDesktop() {
                 }
                 lastFrameTimestamp = currentTimestamp - (timeElapsed % frameInterval);
             }
-        
             requestAnimationFrame(animate);
         }
-        
-        
     }
 }
-
 loadRobotIfDesktop()
-
-
-var scene2 = new THREE.Scene();
-var camera2 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer2 = new THREE.WebGLRenderer({ alpha: true });
-renderer2.setSize(window.innerWidth, window.innerHeight);
-const canvasContainer2 = document.querySelector('.particle-frame2');
-renderer2.sortObjects = true;
-renderer2.setClearColor(0x000000, 0);
-var spreadOut = 40; 
-var particles2 = new THREE.Group();
-const testbg2 = document.querySelector('.particle-frame2');
-testbg2.renderOrder = 1;
-canvasContainer2.appendChild(renderer2.domElement);
-renderer2.domElement.style.zIndex = '1';
-scene2.add(particles2);
-var particleCount = 150;
-for (var i = 0; i < particleCount; i++) {
-    var particleSize = Math.random() * 0.04 + 0.01; 
-    var color = Math.random() < 0.3 ? 0x8F8F8F : 0xffffff;
-    var particle = new THREE.Mesh(
-        new THREE.PlaneBufferGeometry(particleSize, particleSize),
-        new THREE.MeshBasicMaterial({
-            color: color,
-            side: THREE.DoubleSide,
-            transparent: true,
-        })
-    );
-    particle.position.x = Math.random() * -spreadOut;
-    particle.position.y = Math.random() * -spreadOut;
-    particle.position.z = Math.random() * 2 - 1;
-    particle.speed = Math.random() * 0.01 + 0.004; 
-    particle.rotation.z = Math.random() * Math.PI * 2;
-    particles2.add(particle);
-}
-camera2.position.set(-1, 0, 5); 
-var animate = function () {
-    requestAnimationFrame(animate);
-    particles2.children.forEach(function (particle) {
-        particle.position.x += particle.speed;
-        particle.position.y += particle.speed;
-        if (Math.random() < 0.2 && particle.position.x > 0) {
-            particle.material.opacity -= 0.01;
-        }
-        if (particle.position.x > spreadOut || particle.position.y > spreadOut) {
-            particle.position.x = Math.random() * -spreadOut;
-            particle.position.y = Math.random() * -spreadOut;
-            particle.material.opacity = 1;
-        }
-    });
-    renderer2.render(scene2, camera2);
-};
-window.addEventListener('resize', function () {
-    var newWidth = window.innerWidth;
-    var newHeight = window.innerHeight;
-    camera2.aspect = newWidth / newHeight;
-    camera2.updateProjectionMatrix();
-    renderer2.setSize(newWidth, newHeight);
-});
-animate();
-
-
-var isMobileDeviceRobot = (function () {
-	var ua = navigator.userAgent;
-	var p = navigator.platform;
-	var iphone = ua.indexOf("iPhone") > -1;
-	var ipod = ua.indexOf("iPod") > -1;
-	var ipad = ua.indexOf("iPad") > -1;
-	var android = /Android (\d+(?:\.\d+)*)/.test(ua);
-	if (/iPad|iPhone|iPod/.test(p) | (iphone | ipad | ipod | android)) {
-		return true;
-	}
-	else {
-		return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(p);
-	}
-})();
-
-function returnIsMobileRobot() {
-    return isMobileDeviceRobot;
-}
-
+function returnIsMobileRobot(){return isMobileDeviceRobot}
+var isMobileDeviceRobot=function(){var i=navigator.userAgent,e=navigator.platform,o=i.indexOf("iPhone")>-1,t=i.indexOf("iPod")>-1,n=i.indexOf("iPad")>-1,d=/Android (\d+(?:\.\d+)*)/.test(i);return!!(/iPad|iPhone|iPod/.test(e)|(o|n|t|d))||navigator.maxTouchPoints&&navigator.maxTouchPoints>2&&/MacIntel/.test(e)}();
+var scene2=new THREE.Scene,camera2=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,1e3),renderer2=new THREE.WebGLRenderer({alpha:!0});renderer2.setSize(window.innerWidth,window.innerHeight);const canvasContainer2=document.querySelector(".particle-frame2");renderer2.sortObjects=!0,renderer2.setClearColor(0,0);var spreadOut=40,particles2=new THREE.Group;const testbg2=document.querySelector(".particle-frame2");testbg2.renderOrder=1,canvasContainer2.appendChild(renderer2.domElement),renderer2.domElement.style.zIndex="1",scene2.add(particles2);for(var particleCount=140,i=0;i<particleCount;i++){var e=.04*Math.random()+.01,r=.3>Math.random()?9408399:16777215,n=new THREE.Mesh(new THREE.PlaneBufferGeometry(e,e),new THREE.MeshBasicMaterial({color:r,side:THREE.DoubleSide,transparent:!0}));n.position.x=-(Math.random()*spreadOut),n.position.y=-(Math.random()*spreadOut),n.position.z=2*Math.random()-1,n.speed=.01*Math.random()+.004,n.rotation.z=Math.random()*Math.PI*2,particles2.add(n)}camera2.position.set(-1,0,5);var animate=function(){requestAnimationFrame(animate),particles2.children.forEach(function(e){e.position.x+=e.speed,e.position.y+=e.speed,.2>Math.random()&&e.position.x>0&&(e.material.opacity-=.01),(e.position.x>spreadOut||e.position.y>spreadOut)&&(e.position.x=-(Math.random()*spreadOut),e.position.y=-(Math.random()*spreadOut),e.material.opacity=1)}),renderer2.render(scene2,camera2)};window.addEventListener("resize",function(){var e=window.innerWidth,r=window.innerHeight;camera2.aspect=e/r,camera2.updateProjectionMatrix(),renderer2.setSize(e,r)}),animate();

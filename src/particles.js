@@ -377,7 +377,8 @@ function section7() {
 }
 let helpSmokeScreen = true;
 function liftPagesX(currentPage) {
-  checkfirstOnPage()
+  if (loadingIsOverFunc()) {
+    checkfirstOnPage()
   if (checkInMenu() === true) {
     animateMenuXBack()
     makeInMenuFalse()
@@ -433,6 +434,8 @@ function liftPagesX(currentPage) {
         clearSmokeScreen();
       }
     }
+  }
+
 }
 var firstOnPage = true;
 function checkfirstOnPage() {
