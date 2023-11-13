@@ -5,10 +5,7 @@ html, body {
     overflow-y: hidden;
     overflow-x: hidden;
 }
-@font-face {
-    font-family: "PrintClearly";
-    src: url("/CSS/fonts/PRINC___.TTF") format("truetype");
-}
+
 .split-screen {
     display: flex;
     height: 100%;
@@ -48,7 +45,7 @@ html, body {
     position: absolute;
     color: white;
     font-size: 2rem;
-    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     user-select: none;
     -webkit-user-select: none; 
@@ -59,7 +56,7 @@ html, body {
     top: 50%;
     font-size: 1.5rem;
     color: white;
-    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     user-select: none;
     -webkit-user-select: none; 
@@ -70,7 +67,7 @@ html, body {
     top: 100%;
     font-size: 1.5rem;
     color: rgb(0, 140, 255);
-    font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     user-select: none;
     -webkit-user-select: none; 

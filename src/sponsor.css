@@ -86,9 +86,9 @@
     z-index: 10;
     color: white;
     width: 70%;
-    font-family: 'PrintClearly', Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 1.4rem;
+    font-family: 'Segoe UI Light', Arial, sans-serif;
+    font-weight: 100px;
+    font-size: 1.2rem;
     top: 15%;
     left: 2%;
     object-fit: cover;

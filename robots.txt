@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /three/
 Disallow: /cgi-bin/
 Disallow: /assets/
 Disallow: /dist/

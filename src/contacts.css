@@ -619,12 +619,12 @@
         background-color: rgb(35, 165, 247);
         color: rgb(0, 0, 0);
         font-weight: normal;
-        font-size: 50px;
+        font-size: 40px;
         transition: all .2s linear;
         -webkit-transition: all .2s linear; 
         -moz-transition: all .2s linear; 
         -o-transition: all .2s linear;
-        font-family: 'PrintClearly', Arial, Helvetica, sans-serif;
+        font-family: 'TW', Arial, Helvetica, sans-serif;
     }
     #mobileSocialsHeaderText-Instagram {
         color: white;
