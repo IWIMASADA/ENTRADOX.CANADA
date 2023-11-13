@@ -16,18 +16,7 @@ const maxParticles = 1300;
 const size = 128;
 const size2 = 128;
 const smokeScreen = document.getElementById('smokeEffectHome');
-function createCircularTexture() {
-  const canvas = document.getElementById('canvas2');
-  canvas.style.zIndex = '2147483646';
-  canvas.width = size;
-  canvas.height = size2;
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = 'white';
-  ctx.beginPath();
-  ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-  ctx.fill();
-  return new THREE.CanvasTexture(canvas);
-}
+function createCircularTexture(){let e=document.getElementById("canvas2");e.style.zIndex="2147483646",e.width=size,e.height=size2;let t=e.getContext("2d");return t.fillStyle="white",t.beginPath(),t.arc(size/2,size/2,size/2,0,2*Math.PI),t.fill(),new THREE.CanvasTexture(e)}
 var helperCanvas;
 image.onload = function () {
   const canvas = document.getElementById('canvas');
@@ -123,7 +112,6 @@ image.onload = function () {
         for (let i = 0; i < particles.geometry.attributes.position.array.length; i += 3) {
           const scatterDistanceX = (Math.random() - 0.5) * maxExplosiveScatterDistance;
           const scatterDistanceY = (Math.random() - 0.5) * maxExplosiveScatterDistance;
-
           particles.geometry.attributes.position.array[i] += scatterDistanceX;
           particles.geometry.attributes.position.array[i + 1] += scatterDistanceY;
         }
@@ -142,19 +130,15 @@ image.onload = function () {
   };
   let currentPage = 1;
   const totalPages = 7;
-  let lastScrollTime = 0;
   let isSwitching = false;
   let startY;
-  
   window.addEventListener('wheel', handleScroll);
   window.addEventListener('touchstart', function (e) {
     startY = Math.abs(e.touches[0].clientY);
   });
   window.addEventListener('touchmove', handleTouchMove);
-  
   function handleScroll(e) {
     const deltaY = e.deltaY;
-  
     if (Math.abs(deltaY) > 8 && !isSwitching) {
       if (deltaY > 0 && currentPage < totalPages) {
         isSwitching = true;
@@ -163,22 +147,17 @@ image.onload = function () {
         isSwitching = true;
         currentPage--;
       }
-  
       clickRequired = true;
       liftPagesX(currentPage);
       lastScrollTime = new Date().getTime();
-  
       setTimeout(function () {
         isSwitching = false;
       }, 600);
     }
   }
-  
   function handleTouchMove(e) {
-    e.preventDefault(); // Prevent the default behavior of scrolling
+    e.preventDefault(); 
     const deltaY = startY - e.touches[0].clientY;
-  
-    // Adjust the sensitivity as needed
     if (Math.abs(deltaY) > 10 && !isSwitching) {
       if (deltaY > 0 && currentPage < totalPages) {
         isSwitching = true;
@@ -187,20 +166,14 @@ image.onload = function () {
         isSwitching = true;
         currentPage--;
       }
-  
       clickRequired = true;
       liftPagesX(currentPage);
       lastScrollTime = new Date().getTime();
-  
       setTimeout(function () {
         isSwitching = false;
       }, 600);
     }
   }
-  
-
-
-  
   function clearSmokeScreen() {
     helpSmokeScreen = false;
     smokeScreen.classList.add("fadeOut");
@@ -218,7 +191,6 @@ image.onload = function () {
         smokeScreen.classList.remove("fadeInSM");
       }, 1001);
   }
-
   const animate = function () {
     if (animationRunning) {
       requestAnimationFrame(animate);
@@ -257,7 +229,6 @@ image.onload = function () {
     }
 };
 requestAnimationFrame(animate);
-
 var optionsBtns = document.querySelectorAll('.menuItemContainer')
 Object.values(optionsBtns).forEach(function (option) {
   option.addEventListener("click", function () {
@@ -273,111 +244,9 @@ Object.values(optionsBtns).forEach(function (option) {
   });
 });
 
-const a = document.getElementById('page1');
-const b = document.getElementById('page2');
-const c = document.getElementById('page5');
-const d = document.getElementById('page3');
-const e = document.getElementById('page4');
-const f = document.getElementById('page6');
-const g = document.getElementById('page7');
-
-function section1() {
-    callStyle1();
-    requestAnimationFrame(animate);
-
-    a.style.top = '0%'
-    b.style.top = '100%'
-    c.style.top = '200%'
-    d.style.top = '300%'
-    e.style.top = '400%'
-    f.style.top = '500%'
-    g.style.top = '100%'
-    a.style.display = 'block';
-
-    f.style.display = 'none';
-
-}
-function section2() {
-    a.style.top = '-100%'
-    b.style.top = '0%'
-    c.style.top = '100%'
-    d.style.top = '200%'
-    e.style.top = '300%'
-    f.style.top = '400%'
-    g.style.top = '100%'
-    a.style.display = 'block';
-
-    f.style.display = 'none';
-
-}
-function section3() {
-    a.style.top = '-200%'
-    b.style.top = '-100%'
-    c.style.top = '0%'
-    d.style.top = '100%'
-    e.style.top = '200%'
-    f.style.top = '300%'
-    g.style.top = '100%'
-    a.style.display = 'none';
-    
-    f.style.display = 'none';
-
-}
-function section4() {
-    a.style.top = '-300%'
-    b.style.top = '-200%'
-    c.style.top = '-100%'
-    d.style.top = '0%'
-    e.style.top = '100%'
-    f.style.top = '200%'
-    g.style.top = '100%'
-    a.style.display = 'none';
-
-    f.style.display = 'none';
-    
-}
-function section5() {
-    a.style.top = '-400%'
-    b.style.top = '-300%'
-    c.style.top = '-200%'
-    d.style.top = '-100%'
-    e.style.top = '0%'
-    f.style.top = '100%'
-    g.style.top = '100%'
-    a.style.display = 'none';
-
-    f.style.display = 'block';
-
-}
-function section6() {
-  a.style.top = '-500%'
-  b.style.top = '-400%'
-  c.style.top = '-300%'
-  d.style.top = '-200%'
-  e.style.top = '-100%'
-  f.style.top = '0%'
-  g.style.top = '100%'
-  a.style.display = 'none';
-
-  f.style.display = 'block';
-
-}
-function section7() {
-  a.style.top = '-600%'
-  b.style.top = '-500%'
-  c.style.top = '-400%'
-  d.style.top = '-300%'
-  e.style.top = '-200%'
-  f.style.top = '-25%'
-  g.style.top = '75%'
-  a.style.display = 'none';
-
-  f.style.display = 'block';
-
-}
+const a=document.getElementById("page1"),b=document.getElementById("page2"),c=document.getElementById("page5"),d=document.getElementById("page3"),e=document.getElementById("page4"),f=document.getElementById("page6"),g=document.getElementById("page7");function section1(){callStyle1(),requestAnimationFrame(animate),a.style.top="0%",b.style.top="100%",c.style.top="200%",d.style.top="300%",e.style.top="400%",f.style.top="500%",g.style.top="100%",a.style.display="block",f.style.display="none"}function section2(){a.style.top="-100%",b.style.top="0%",c.style.top="100%",d.style.top="200%",e.style.top="300%",f.style.top="400%",g.style.top="100%",a.style.display="block",f.style.display="none"}function section3(){a.style.top="-200%",b.style.top="-100%",c.style.top="0%",d.style.top="100%",e.style.top="200%",f.style.top="300%",g.style.top="100%",a.style.display="none",f.style.display="none"}function section4(){a.style.top="-300%",b.style.top="-200%",c.style.top="-100%",d.style.top="0%",e.style.top="100%",f.style.top="200%",g.style.top="100%",a.style.display="none",f.style.display="none"}function section5(){a.style.top="-400%",b.style.top="-300%",c.style.top="-200%",d.style.top="-100%",e.style.top="0%",f.style.top="100%",g.style.top="100%",a.style.display="none",f.style.display="block"}function section6(){a.style.top="-500%",b.style.top="-400%",c.style.top="-300%",d.style.top="-200%",e.style.top="-100%",f.style.top="0%",g.style.top="100%",a.style.display="none",f.style.display="block"}function section7(){a.style.top="-600%",b.style.top="-500%",c.style.top="-400%",d.style.top="-300%",e.style.top="-200%",f.style.top="-25%",g.style.top="75%",a.style.display="none",f.style.display="block"}
 let helpSmokeScreen = true;
 function liftPagesX(currentPage) {
-  if (loadingIsOverFunc()) {
     checkfirstOnPage()
   if (checkInMenu() === true) {
     animateMenuXBack()
@@ -433,9 +302,7 @@ function liftPagesX(currentPage) {
       if (helpSmokeScreen) {
         clearSmokeScreen();
       }
-    }
   }
-
 }
 var firstOnPage = true;
 function checkfirstOnPage() {
