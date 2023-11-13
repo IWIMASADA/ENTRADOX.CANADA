@@ -239,8 +239,8 @@ body {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    filter: brightness(0%);
-    -webkit-filter: brightness(70%);
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
 }
 .cursor {
     position: absolute;
@@ -1035,16 +1035,6 @@ video {
     .menu {
         transform: scale(0.9) !important;
     }
-    .homeBackgroundRender {
-        position: fixed;
-        transform: scale(3.3) !important;
-        top: -30%;
-        left: 165% !important;
-        min-width: 200%;
-        min-height: 100%;
-        filter: brightness(130%) saturate(70%);
-        -webkit-filter: brightness(130%) saturate(70%);
-    }
   }
   @media screen and (max-width: 800px) {
     #page1 {
@@ -1179,16 +1169,6 @@ video {
         left: 105%;
         top: -45%;
     }
-    .homeBackgroundRender {
-        position: fixed;
-        transform: scale(3.3) !important;
-        top: -30%;
-        left: 165% !important;
-        min-width: 200%;
-        min-height: 100%;
-        filter: brightness(130%) saturate(70%);
-        -webkit-filter: brightness(130%) saturate(70%);
-    }
     .thank, .FooterContainer p, .LogoAndNameFooterMeadowridge, .LogoAndNameFooter {
         transition: transform .4s linear;
     }
@@ -1277,9 +1257,6 @@ video {
         top: 20% !important;
         left: -15% !important;
         transform: scale(2) !important;
-    }
-    .homeBackgroundRender {
-        left: 215% !important;
     }
     .LogoAndNameFooter {
         top: 5%;
@@ -2421,5 +2398,18 @@ nav {
     }
     .containerBottomLeft {
         top: 130%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+    .homeBackgroundRender {
+        transform: scale(1) !important;
+        top: 0%;
+        left: -50% !important;
+        min-width: 200%;
+        min-height: 100%;
+        filter: brightness(130%) saturate(70%);
+        -webkit-filter: brightness(130%) saturate(70%);
     }
 }

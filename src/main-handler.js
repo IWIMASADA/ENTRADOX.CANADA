@@ -1128,5 +1128,3 @@ var isMobileDevice = (function () {
 function returnIsMobile() {
     return isMobileDevice;
 }
-
-/* PARTICLE SYSTEM AND INTERACTIONS */
