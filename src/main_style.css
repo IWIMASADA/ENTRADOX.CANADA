@@ -403,10 +403,6 @@ video {
     background-color: transparent;
     box-sizing: border-box;
 }
-.containerBottomLeftTextMOBILE2 {
-    position: absolute;
-    opacity: 0;
-  }
   .upDownMobileLine {
     animation: moveUpDownMobile 12s ease-in-out infinite;
 }
@@ -2238,6 +2234,15 @@ video {
     animation-name: xbuttonFlickerOut;
     animation-duration: 1s;
 }
+h1 {
+    position: absolute;
+    opacity: 0;
+}
+h2 {
+    position: absolute;
+    opacity: 0;
+}
+
 
 /* CSS to visually hide the navigation while keeping it accessible for SEO */
 nav {
