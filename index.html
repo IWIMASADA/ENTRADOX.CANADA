@@ -31,13 +31,9 @@
         <link rel="apple-touch-icon" href="https://github.com/MASADASRCHOLDER/entradox.online.img.src/blob/main/download.png?raw=true">
         <link rel="canonical" href="https://entradox.online/" />
         <link rel="stylesheet" type="text/css" href="src/main_style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Old+Permic&family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Yuji+Hentaigana+Akari&family=Zen+Loop&display=swap" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="https://github.com/MASADASRCHOLDER/entradox.online.img.src/blob/main/download.png?raw=true">
         <script type="application/ld+json">
             {
@@ -70,11 +66,26 @@
               }
             }
         </script>
-        <link rel="stylesheet" type="text/css" href="src/aboutus.css">
-        <link rel="stylesheet" type="text/css" href="src/staff.css">
+        <script>
+            function loadNonCriticalCSS() {
+              var cssFiles = [
+                'src/sponsor.css',
+                'src/staff.css',
+                'src/contacts.css',
+                'src/aboutus.css'
+              ];
+        
+              cssFiles.forEach(function (cssFile) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = cssFile;
+                document.head.appendChild(link);
+              });
+            }
+        
+            window.onload = loadNonCriticalCSS;
+        </script>
         <link rel="stylesheet" type="text/css" href="src/robots.css">
-        <link rel="stylesheet" type="text/css" href="src/sponsor.css">
-        <link rel="stylesheet" type="text/css" href="src/contacts.css">
     </head>
 <body>
     <nav>
@@ -394,8 +405,8 @@
     </section>
     <img src="https://cdn.jsdelivr.net/gh/MASADASRCHOLDER/entradox.online.img.src@main/closerImageENtradox.png?raw=true" draggable="false" class="homeBackgroundRender backgroundScale" id="homeBackgroundR" alt="entradox robotics members picture">
     <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-    <script defer src="src/main-handler.js"></script>
+    <script async src="src/main-handler.js"></script>
     <script src="src/particles.js"></script>
-    <script async type="module" src="src/model-handler.js"></script>
+    <script defer type="module" src="src/model-handler.js"></script>
 </body>
 </html>
