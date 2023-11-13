@@ -1,0 +1,2765 @@
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+	.homeBackgroundRender {
+		transform: scale(1) !important;
+		top: 0%;
+		left: -50% !important;
+		min-width: 200%;
+		min-height: 100%;
+		filter: brightness(130%) saturate(70%);
+		-webkit-filter: brightness(130%) saturate(70%);
+	}
+}
+
+@media screen and (max-width: 1800px) {
+	#page2,
+	#page4,
+	#page6,
+	#page1,
+	#page3,
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+	.particle-frame {
+		left: 0% !important;
+		transition: all .2s linear;
+	}
+
+	.HumanBody-Image {
+		left: 29% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 13% !important;
+	}
+}
+
+@media screen and (max-width: 1650px) {
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	.particle-frame {
+		left: -4% !important;
+		transition: all .2s linear;
+	}
+
+	.mobile_title {
+		left: -5% !important;
+		transition: all .2s linear;
+	}
+
+	.containerBottomLeft {
+		left: 14% !important;
+		transition: all .2s linear;
+	}
+
+	.bottomLogosHome {
+		left: -5% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 20% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 5% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 40% !important;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		position: absolute;
+		z-index: 10;
+		left: 0%;
+		top: 95%;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	.HumanBody-Image {
+		left: 29% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 13% !important;
+	}
+
+	.StaffDisplayList {
+		left: 20% !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	#page6 {
+		transform: scale(.9) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -30% !important;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.9) !important;
+		display: inline;
+	}
+
+	#page7 {
+		display: inline;
+	}
+
+	.LogoAndNameFooter {
+		left: 37%;
+		transition: left .4s linear;
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -5%;
+		transition: left .4s linear;
+	}
+
+	.particle-frame {
+		left: -8% !important;
+		transition: all .2s linear;
+	}
+
+	.mobile_title {
+		left: -3.5% !important;
+	}
+
+	.containerBottomLeft {
+		left: 14% !important;
+	}
+
+	.bottomLogosHome {
+		left: -3.5% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 18% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 6% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 41% !important;
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.9) !important;
+	}
+
+	.aboutusNameLabel {
+		left: 90%;
+		top: -4%;
+	}
+
+	.aboutusLabel {
+		left: 96%;
+		top: 100%;
+	}
+
+	.AboutUsTextDesc {
+		width: 45%;
+	}
+
+	.AboutUsItemSide {
+		left: 50%;
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(.9) !important;
+	}
+
+	.contactsTextTitle {
+		opacity: 0;
+		transition: opacity 1s linear;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.85) !important;
+	}
+
+	.particle-frame {
+		left: -15% !important;
+		transition: all .2s linear;
+	}
+
+	.mobile_title {
+		left: -5% !important;
+	}
+
+	.containerBottomLeft {
+		left: 14% !important;
+	}
+
+	.bottomLogosHome {
+		left: -4% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 17% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 5% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 40% !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	.SponsorTiersTextContent {
+		left: 53% !important;
+		top: 20%;
+		transform: scale(.9);
+	}
+
+	.sponsorTierExitButton {
+		left: 95% !important;
+		top: 20% !important;
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(.8) !important;
+	}
+
+	.mailContainer {
+		left: -5% !important;
+		transition: left 1s linear;
+	}
+
+	.instagramContainer {
+		left: 15% !important;
+		transition: left 1s linear;
+	}
+
+	.rankingContainer {
+		left: 30% !important;
+		transition: left 1s linear;
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.85) !important;
+	}
+
+	.aboutusNameLabel {
+		left: 92%;
+		top: -8%;
+	}
+
+	.aboutusLabel {
+		left: 100%;
+		top: 105%;
+	}
+
+	#page6 {
+		transform: scale(.85) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -35% !important;
+	}
+
+	.robotsPageLabel {
+		left: 100%;
+		top: 105%;
+	}
+
+	.robotsHeader {
+		left: 96%;
+		top: -10%;
+	}
+
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	.HumanBody-Image {
+		left: 29% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 9% !important;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+	}
+
+	.HumanBody-Image {
+		left: 26% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 2% !important;
+	}
+
+	.StaffDisplayList {
+		left: 25% !important;
+	}
+
+	.staffPanelContainer {
+		left: -13% !important;
+	}
+
+	.staffPageLabel {
+		left: 105% !important;
+	}
+
+	.staffPageNameLabel {
+		left: 98% !important;
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(.8) !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(1) !important;
+	}
+
+	.SponsorHeader {
+		top: -3% !important;
+		left: 5% !important;
+		background-color: rgba(255, 0, 0, 0) !important;
+	}
+
+	.yourImpact {
+		top: 80% !important;
+	}
+
+	.LearnMoreSponsorButton {
+		top: 40% !important;
+	}
+
+	.OurSponsorsButton {
+		top: 40% !important;
+	}
+
+	.sponsorGilbert {
+		top: 29% !important;
+		transform: scale(.8);
+	}
+
+	#page6 {
+		transform: scale(.8) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -42% !important;
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+	}
+
+	.AboutUsTextDesc {
+		left: -10%;
+	}
+
+	.AboutUsBottomBar {
+		left: -3%;
+		top: 103%;
+	}
+
+	.AboutUsTextTitle {
+		left: -10%;
+		top: 5%;
+	}
+
+	.AboutUsTextTitleOutline {
+		left: -10%;
+	}
+
+	.aboutusNameLabel {
+		left: 95%;
+		top: -8%;
+	}
+
+	.aboutusLabel {
+		left: 100%;
+		top: 105%;
+	}
+
+	.icon-scroll2,
+	.icon-scroll2:before {
+		position: absolute;
+		z-index: 10;
+		left: 105%;
+		opacity: 0;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+	}
+
+	.particle-frame {
+		left: -20% !important;
+		transition: all .2s linear;
+	}
+
+	.mobile_title {
+		left: -10% !important;
+	}
+
+	.containerBottomLeft {
+		left: 10.5% !important;
+	}
+
+	.bottomLogosHome {
+		left: -10% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 16% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 1% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 38% !important;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		position: absolute;
+		z-index: 10;
+		left: -8%;
+		top: 95%;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+
+	.LogoAndNameFooter {
+		left: 30%;
+		transition: left .4s linear;
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -10%;
+		transition: left .4s linear;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+		left: -5% !important;
+	}
+
+	.particle-frame {
+		left: -25% !important;
+		transition: all .2s linear;
+		transform: scale(.9) !important;
+	}
+
+	.mobile_title {
+		left: -6% !important;
+	}
+
+	.containerBottomLeft {
+		left: 16% !important;
+	}
+
+	.bottomLogosHome {
+		left: -6% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 20% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 5.6% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 43% !important;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		position: absolute;
+		z-index: 10;
+		left: -1%;
+		top: 95%;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+
+	.LogoAndNameFooter {
+		left: 27%;
+		transition: left .4s linear;
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -13%;
+		transition: left .4s linear;
+	}
+
+	#page6 {
+		transform: scale(.75) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -48% !important;
+	}
+
+	.robotsPageLabel {
+		left: 120%;
+		top: 120%;
+	}
+
+	.robotsHeader {
+		left: 110%;
+		top: -30%;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.76) !important;
+	}
+
+	.HumanBody-Image {
+		left: 30% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 2% !important;
+	}
+
+	.ContainerForStaffDescriptionText {
+		left: 95% !important;
+	}
+
+	.staffPageStaffContentXButton {
+		left: 105% !important;
+	}
+
+	.StaffMemberHeadlineContainer-Name {
+		left: 88% !important;
+	}
+
+	.StaffLabelOnContainerForDesc {
+		opacity: 0 !important;
+	}
+
+	.staffPanelContainer {
+		left: -15% !important;
+	}
+
+	.staffPageLabel {
+		left: 107% !important;
+	}
+
+	.staffPageNameLabel {
+		left: 100% !important;
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(0.95) !important;
+	}
+
+	.SponsorFooter {
+		background-color: rgba(245, 222, 179, 0) !important;
+	}
+
+	.SponsorHeader {
+		top: -3% !important;
+		left: 5% !important;
+		background-color: rgba(255, 0, 0, 0) !important;
+	}
+
+	.yourImpactText {
+		width: 100% !important;
+	}
+
+	.SponsorTiersTextContent {
+		left: 55% !important;
+		top: 20% !important;
+		width: 50%;
+	}
+
+	.sponsorTierExitButton {
+		left: 110% !important;
+		top: 20% !important;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+		left: -5% !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+		left: -5% !important;
+	}
+
+	.SponsorFooter {
+		top: 95% !important;
+		background-color: rgba(245, 222, 179, 0) !important;
+	}
+
+	.SponsorHeader {
+		top: -13% !important;
+		left: 5% !important;
+		background-color: rgba(255, 0, 0, 0) !important;
+	}
+
+	.yourImpact {
+		opacity: 0 !important;
+	}
+
+	.sponsorGilbert {
+		opacity: 0 !important;
+	}
+
+	.LearnMoreSponsorButton {
+		top: 21% !important;
+		left: 70% !important;
+		width: 9% !important;
+		height: 50% !important;
+	}
+
+	.OurSponsorsButton {
+		top: 21% !important;
+		left: 80% !important;
+		width: 9% !important;
+		height: 50% !important;
+	}
+
+	.sponsorPageLabel {
+		top: 105% !important;
+		left: 106% !important;
+	}
+
+	.SponsorTiersTextContent {
+		left: 60% !important;
+	}
+
+	#page6 {
+		transform: scale(.6) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -68% !important;
+	}
+
+	.robot-description {
+		width: 80%;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+		left: -6% !important;
+	}
+
+	.particle-frame {
+		left: -25% !important;
+		transition: all .2s linear;
+		transform: scale(.8) !important;
+	}
+
+	.mobile_title {
+		left: -4% !important;
+	}
+
+	.containerBottomLeft {
+		left: 20% !important;
+	}
+
+	.bottomLogosHome {
+		left: -3% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 25% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 9% !important;
+	}
+
+	.movingWarningUnderline {
+		left: 43% !important;
+		opacity: 0;
+		transition: opacity .4s linear;
+	}
+
+	.LogoAndNameFooter {
+		left: 28%;
+		transition: left .4s linear;
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -14%;
+		transition: left .4s linear;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.73) !important;
+	}
+
+	.HumanBody-Image {
+		left: 28% !important;
+	}
+
+	.HumanBody-ImageShadow {
+		left: 0% !important;
+	}
+
+	.ContainerForStaffDescriptionText {
+		left: 95% !important;
+	}
+
+	.staffPageStaffContentXButton {
+		left: 110% !important;
+	}
+
+	.StaffMemberHeadlineContainer-Name {
+		left: 87% !important;
+	}
+
+	.StaffLabelOnContainerForDesc {
+		opacity: 0 !important;
+	}
+
+	.staffPanelContainer {
+		left: -15% !important;
+	}
+
+	#page6 {
+		transform: scale(.6) !important;
+		z-index: 10;
+	}
+
+	.robot-model-container {
+		left: -65% !important;
+	}
+
+	.robot-description {
+		width: 70%;
+	}
+
+	.robotsPageLabel {
+		opacity: 0;
+	}
+
+	.robotsHeader {
+		opacity: 0;
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.73)!important;
+	}
+
+	.AboutUsTextDesc {
+		left: -15%;
+	}
+
+	.AboutUsBottomBar {
+		left: 25%;
+		top: 120%;
+	}
+
+	.AboutUsTextTitle {
+		left: -15%;
+	}
+
+	.AboutUsTextTitleOutline {
+		left: -15%;
+	}
+
+	.aboutusNameLabel {
+		left: 95%;
+		top: -8%;
+	}
+
+	.aboutusLabel {
+		left: 100%;
+		top: 105%;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.73) !important;
+	}
+
+	.particle-frame {
+		left: -35% !important;
+		transition: all .2s linear;
+		transform: scale(.8) !important;
+	}
+
+	.mobile_title {
+		left: -8% !important;
+	}
+
+	.containerBottomLeft {
+		left: 18% !important;
+	}
+
+	.bottomLogosHome {
+		left: -8% !important;
+	}
+
+	.MDRTeamSymbol {
+		left: 23% !important;
+	}
+
+	.mobile_titleDATE {
+		left: 6% !important;
+	}
+
+	.movingWarningUnderline {
+		opacity: 0;
+		transition: opacity .4s linear;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		position: absolute;
+		z-index: 10;
+		left: -5%;
+		top: 95%;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+
+	.LogoAndNameFooter {
+		left: 25%;
+		transition: left .4s linear;
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -18%;
+		transition: left .4s linear;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#page6 {
+		transform: scale(.5) !important;
+		z-index: 10;
+		.robot-model-container {
+			left: -80% !important;
+		}
+		.robot-description {
+			width: 70%;
+		}
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.7) !important;
+		.mailContainer {
+			left: -20% !important;
+			transition: left 1s linear;
+		}
+		.instagramContainer {
+			left: 10% !important;
+			transition: left 1s linear;
+		}
+		.schoolContainer {
+			left: 90% !important;
+			transition: left 1s linear;
+		}
+		.tutorialContainer {
+			left: 80% !important;
+			transition: left 1s linear;
+		}
+	}
+
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.65) !important;
+		.HumanBody-Image {
+			left: 28% !important;
+		}
+		.HumanBody-ImageShadow {
+			left: -5% !important;
+		}
+		.ContainerForStaffDescriptionText {
+			left: 100% !important;
+		}
+		.staffPageStaffContentXButton {
+			left: 110% !important;
+		}
+		.StaffMemberHeadlineContainer-Name {
+			left: 91% !important;
+		}
+		.staffPageLabel {
+			left: 115% !important;
+		}
+		.staffPageNameLabel {
+			left: 105% !important;
+		}
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(0.85) !important;
+		.SponsorTiersTextContent {
+			left: 55% !important;
+			width: 60% !important;
+			top: 20% !important;
+		}
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.6)!important;
+		.AboutUsTextDesc {
+			left: -27%;
+		}
+		.AboutUsBottomBar {
+			left: 25%;
+			top: 120%;
+			opacity: 0;
+		}
+		.AboutUsTextTitle {
+			left: -27%;
+		}
+		.AboutUsTextTitleOutline {
+			left: -27%;
+		}
+		.aboutusNameLabel {
+			left: 110%;
+			top: -30%;
+		}
+		.aboutusLabel {
+			left: 120%;
+			top: 130%;
+		}
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.6) !important;
+		.particle-frame {
+			left: -40% !important;
+			transition: all .2s linear;
+			transform: scale(.75) !important;
+		}
+		.icon-scroll,
+		.icon-scroll:before {
+			opacity: 0;
+			transition: opacity .3s linear;
+		}
+		.mobile_title {
+			left: -20% !important;
+		}
+		.containerBottomLeft {
+			left: 9% !important;
+		}
+		.bottomLogosHome {
+			left: -20% !important;
+		}
+		.MDRTeamSymbol {
+			left: 15% !important;
+		}
+		.mobile_titleDATE {
+			left: -5% !important;
+		}
+		.movingWarningUnderline {
+			opacity: 0;
+			transition: opacity .4s linear;
+		}
+		.LogoAndNameFooter {
+			left: 20%;
+			transition: left .4s linear;
+		}
+		.LogoAndNameFooterMeadowridge,
+		.LogoAndNameFooter {
+			transform: scale(.9);
+			transition: left .4s linear;
+		}
+		.footerLogoMDR,
+		.footerLogo {
+			left: -20%;
+			transition: left .4s linear;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.particle-frame {
+		opacity: 0;
+		transition: all .2s linear;
+	}
+
+	#page6 {
+		transform: scale(.5) !important;
+		z-index: 10;
+		.robot-model-container {
+			left: -85% !important;
+		}
+		.robot-description {
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.65) !important;
+		.HumanBody-Image {
+			left: 35% !important;
+		}
+		.HumanBody-ImageShadow {
+			left: 10% !important;
+		}
+		.ContainerForStaffDescriptionText {
+			left: 110% !important;
+		}
+		.staffPageStaffContentXButton {
+			left: 125% !important;
+		}
+		.StaffMemberHeadlineContainer-Name {
+			left: 99% !important;
+		}
+		.StaffLabelOnContainerForDesc {
+			opacity: 0 !important;
+		}
+		.staffPageLabel {
+			opacity: 0;
+		}
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.6) !important;
+	}
+
+	#page3 {
+		z-index: 214748364 !important;
+		transform: scale(0.6) !important;
+		.SponsorTiersTextContent {
+			left: -10% !important;
+			width: 100% !important;
+			top: -10% !important;
+			transform: translateY(-15%);
+		}
+		.SponsorTiersTextContent p {
+			font-size: 25px !important;
+			line-height: 30px !important;
+		}
+		.LearnMoreSponsorButton {
+			top: -25% !important;
+			left: 80% !important;
+			width: 9% !important;
+			height: 40% !important;
+		}
+		.OurSponsorsButton {
+			top: -25% !important;
+			left: 90% !important;
+			width: 9% !important;
+			height: 40% !important;
+		}
+		.sponsorTierExitButton {
+			left: 120% !important;
+			top: 20% !important;
+		}
+		.mobileButtonNextSponsor {
+			top: 120% !important;
+		}
+	}
+
+	#page6 {
+		transform: scale(.5) !important;
+		z-index: 10;
+		.robot-model-container {
+			left: -90% !important;
+		}
+		.robot-description {
+			width: 80%;
+		}
+		.robot-name-outline {
+			width: 200%;
+		}
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.55)!important;
+		.aboutusLabel {
+			opacity: 0;
+		}
+	}
+
+	body,
+	html {
+		overflow: hidden;
+		position: relative;
+		height: 100%;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.8) !important;
+		.mobile_title {
+			left: 0% !important;
+			width: 200%;
+		}
+		.containerBottomLeft {
+			left: 32.5% !important;
+		}
+		.bottomLogosHome {
+			left: 0% !important;
+		}
+		.MDRTeamSymbol {
+			left: 38% !important;
+		}
+		.mobile_title {
+			width: 200%;
+		}
+		.mobile_titleDATE {
+			left: 18% !important;
+			width: 200%;
+		}
+		.movingWarningUnderline {
+			opacity: 0;
+			transition: opacity .4s linear;
+		}
+		.LogoAndNameFooter {
+			left: 10%;
+			transition: left .4s linear;
+		}
+		.LogoAndNameFooterMeadowridge {
+			left: 55%;
+			transition: left .4s linear;
+		}
+		.footerLogoMDR,
+		.footerLogo {
+			left: -30%;
+			transition: left .4s linear;
+		}
+		.menu {
+			transform: scale(0.9) !important;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#page5 {
+		z-index: 214748364 !important;
+		transform: scale(0.6) !important;
+		.ContainerForStaffDescriptionTextContent2 {
+			top: 80% !important;
+		}
+		.StaffDisplayList {
+			left: 30% !important;
+		}
+		.StaffLabelOnContainerForDesc {
+			opacity: 0 !important;
+		}
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.55) !important;
+		.mailContainer {
+			left: -35% !important;
+			transition: left 1s linear;
+		}
+	}
+
+	#page6 {
+		transform: scale(1) !important;
+		z-index: 10;
+		.robot-model-container {
+			left: 0% !important;
+			top: 10%;
+			transform: scale(.65) translateX(-50%) !important;
+		}
+		.robot-description {
+			width: 100%;
+			opacity: 0 !important;
+		}
+		.robot-name {
+			left: 15%;
+			top: 12%;
+			transform: scale(.6) translateX(-50%) !important;
+		}
+		.robot-name-outline {
+			left: 15%;
+			top: 6%;
+			transform: scale(.6) translateX(-50%) !important;
+		}
+		.robot-name-outline2 {
+			top: 18%;
+			left: 15%;
+			transform: scale(.6) translateX(-50%) !important;
+		}
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.4)!important;
+	}
+
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.85) !important;
+		.mobile_title {
+			left: 5% !important;
+		}
+		.containerBottomLeft {
+			left: 40% !important;
+		}
+		.bottomLogosHome {
+			left: 5% !important;
+		}
+		.MDRTeamSymbol {
+			left: 48% !important;
+		}
+		.mobile_titleDATE {
+			left: 25% !important;
+		}
+		.movingWarningUnderline {
+			opacity: 0;
+			transition: opacity .4s linear;
+		}
+		.particle-frame {
+			display: none;
+		}
+		.LogoAndNameFooter {
+			left: 12%;
+			transition: left .4s linear;
+		}
+		.LogoAndNameFooterMeadowridge {
+			left: 53%;
+			transition: left .4s linear;
+		}
+		.footerLogoMDR,
+		.footerLogo {
+			left: -38%;
+			transition: left .4s linear;
+		}
+		.LogoAndNameFooterMeadowridge,
+		.LogoAndNameFooter {
+			transform: scale(.7);
+			transition: left .4s linear;
+		}
+		.thank {
+			font-size: 14px;
+		}
+		.FooterContainer p {
+			font-size: 12px;
+		}
+		.menu {
+			transform: scale(0.8) !important;
+			width: 110% !important;
+			left: -5% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+    #page2 {
+        z-index: 214748364 !important;
+        transform: scale(0.4)!important;
+      }
+      .AboutUsTextDesc {
+        left: -50%;
+    }
+    .AboutUsBottomBar {
+        left: 25%;
+        top: 120%;
+        opacity: 0;
+    }
+    .AboutUsTextTitle {
+        left: -50%;
+    }
+    .AboutUsTextTitleOutline {
+        left: -50%;
+    }
+    .aboutusNameLabel {
+        left: 110%;
+        top: -30%;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+	#page1 {
+		z-index: 214748364 !important;
+		transform: scale(0.7) !important;
+		.mobile_title {
+			left: 0% !important;
+		}
+		.bottomLogosHome {
+			left: 0% !important;
+		}
+		.LogoAndNameFooterMeadowridge,
+		.LogoAndNameFooter {
+			transform: scale(.6);
+			transition: left .4s linear;
+		}
+		.footerLogoMDR,
+		.footerLogo {
+			left: -50%;
+			transition: left .4s linear;
+		}
+	}
+
+	#page2 {
+		z-index: 214748364 !important;
+		transform: scale(0.3)!important;
+		.AboutUsTextDesc {
+			left: -50%;
+		}
+		.AboutUsBottomBar {
+			left: 25%;
+			top: 120%;
+			opacity: 0;
+		}
+		.AboutUsTextTitle {
+			left: -50%;
+		}
+		.AboutUsTextTitleOutline {
+			left: -50%;
+		}
+		.aboutusNameLabel {
+			left: 110%;
+			top: -30%;
+		}
+	}
+
+	#page6 {
+		transform: scale(.9) !important;
+		z-index: 10;
+		.robot-model-container {
+			left: 0% !important;
+			top: 10%;
+			transform: scale(.65) translateX(-70%) !important;
+		}
+		.robot-name {
+			left: 15%;
+			top: 12%;
+			transform: scale(.6) translateX(-50%) !important;
+		}
+		.robot-name-outline {
+			opacity: 0;
+		}
+		.robot-name-outline2 {
+			top: 18%;
+			left: 15%;
+			transform: scale(.6) translateX(-50%) !important;
+		}
+	}
+
+	#page4 {
+		z-index: 214748364 !important;
+		transform: scale(0.5) !important;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.mbOurEmail {
+		position: absolute;
+		display: unset;
+		opacity: 0;
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		color: white;
+		font-size: 30px;
+		font-weight: lighter;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+	}
+
+	#mobileSIMG-Email {
+		opacity: 0;
+	}
+
+	.socialsBackground,
+	.rankingContainer,
+	.tutorialContainer,
+	.mailContainer,
+	.schoolContainer,
+	.podcastContainer,
+	.instagramContainer,
+	.contactsTextTitle {
+		display: none;
+		opacity: 0;
+	}
+
+	.mobileSocials {
+		position: absolute;
+		z-index: 214748364;
+		display: inline;
+		opacity: 1;
+		height: 110%;
+		width: 120%;
+		transform: translate(-50%, -50%);
+		left: 57%;
+		top: 60%;
+	}
+
+	.mobileSocialsHeader {
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		top: 0%;
+		z-index: 214748364;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.mobileSocialsHeaderLine {
+		z-index: 214748364;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 5%;
+		background-color: rgb(211, 211, 211);
+	}
+
+	.mobileSocialsFooterLine {
+		position: absolute;
+		width: 100%;
+		height: .5px;
+		top: 90%;
+		background-color: rgb(211, 211, 211);
+	}
+
+	.mobileSocialsHeaderText {
+		z-index: 2147483647;
+		font-size: 30px;
+		font-weight: lighter;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		margin-left: 10%;
+		width: 100%;
+		height: 50%;
+	}
+
+	.mobileSocialImage {
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: -4%;
+		object-fit: contain;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+	}
+
+	.tagOnImage-Mobile {
+		position: absolute;
+		width: 50%;
+		height: 7%;
+		top: 80%;
+		left: -5%;
+		z-index: 2;
+		background-color: rgb(35, 165, 247);
+		color: rgb(0, 0, 0);
+		font-weight: normal;
+		font-size: 40px;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+	}
+
+	#mobileSocialsHeaderText-Instagram {
+		color: white;
+	}
+
+	#mobileSocialsHeaderText-Email {
+		color: rgb(165, 165, 165);
+	}
+
+	.mobileButtonNextSponsor {
+		position: absolute;
+		opacity: 1;
+		display: unset;
+		font-family: 'TW', Arial;
+		font-weight: lighter;
+		font-size: 30px;
+		color: white;
+		background-color: rgba(255, 0, 0, 0);
+		top: 108%;
+		z-index: 2147483645;
+	}
+
+	.sponsorInformationContainerMainDisplay {
+		left: 0%;
+		transform: translateX(20%);
+		transition: transform .2s linear;
+	}
+
+	.sponsorshipIcons {
+		position: relative;
+		width: 130%;
+		height: 130%;
+		transform: translate(-50%, -50%);
+		left: 0%;
+		top: 15%;
+		object-fit: contain;
+		margin-left: 70%;
+		transition: all .2s linear;
+	}
+
+	.OurSponsorsButton,
+	.LearnMoreSponsorButton,
+	.SponsorFooter,
+	.sponsorTierExitButton {
+		display: none;
+	}
+
+	.SponsorTiersTextContent {
+		opacity: 1;
+		top: 50% !important;
+		width: 130% !important;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 22px;
+		line-height: 30px;
+	}
+    .AboutUsTextTitle {
+        font-size: 62px !important;
+        left: -12% !important;
+        top: 65% !important;
+    }
+    .AboutUsTextTitleOutline {
+        font-size: 62px !important;
+        left: -12% !important;
+        top: 72% !important;
+    }
+    .AboutUsTextDescForMobile {
+        top:85% !important;
+    }
+    .AboutUsItemSide {
+        left: 20% !important;
+        top: 10%;
+        transform: scale(2.5) !important;
+    }
+    .SponsorTiersTextContent {
+        transform: translateY(150%) scale(1.5) translateX(20%) !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.CurrentStaffList,
+	.StaffDisplayList,
+	.StaffDisplayListIcons,
+	.CurrentStaffDepartment,
+	.staffPanelBarTopMenu {
+		transition: opacity .1s linear;
+		opacity: 0;
+		left: -200% !important;
+	}
+
+	.ContainerForStaffDescriptionBody,
+	.staffPageStaffContentXButton {
+		transition: opacity .1s linear;
+		opacity: 0;
+		left: -200% !important;
+	}
+
+	.staffPageLabel {
+		left: 90% !important;
+		top: 105%;
+	}
+
+	.staffPageNameLabel {
+		left: 64% !important;
+		top: -10%;
+	}
+
+	.mobileVersionStaffList {
+		position: absolute;
+		left: 0%;
+		opacity: 1;
+		top: 5%;
+		width: 100%;
+        transform: scale(1.5);
+	}
+
+	.mobileStaffContainer {
+		width: 90%;
+		height: 45px;
+		object-fit: cover;
+	}
+
+	.mobileStaffContainer p {
+		color: white;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		font-size: 25px;
+	}
+
+	.textonMobileStaffContainer {
+		position: absolute;
+		left: 8%;
+		color: rgb(217, 217, 217);
+		font-weight: normal;
+		font-size: 19px;
+		transform: translateY(-120%);
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+	}
+	
+	#page6 {
+		transform: scale(.81) !important;
+		z-index: 10;
+	}
+	.robot-model-container {
+		left: -86% !important;
+		top: 5%;
+		transform: scale(.6) translateX(50%) !important;
+	}
+	.robot-name {
+		left: -30%;
+		top: 0%;
+		transform: scale(.7) !important;
+	}
+	.robot-name-outline2 {
+		top: 7%;
+		left: 15%;
+		transform: scale(.7) translateX(-50%) !important;
+	}
+
+	#page2 {
+		transform: scale(0.7)!important;
+	}
+
+	.aboutusNameLabel {
+		top: 115%;
+		left: -16%;
+	}
+	.aboutusLabel {
+		left: 87%;
+		top: 115%;
+	}
+	.AboutUsTextDesc {
+		opacity: 0 !important;
+	}
+	.AboutUsTextDescForMobile {
+		left: -10%;
+		text-align: left;
+		font-size: 22px;
+		width: 120%;
+		top: 87%;
+		position: absolute;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		font-weight: lighter;
+		z-index: 4;
+		color: white;
+		line-height: 120%;
+		transition: all .7s linear;
+		opacity: 1;
+	}
+	.AboutUsTextTitle {
+		font-size: 38px;
+		left: -10%;
+		top: 70%;
+	}
+	.AboutUsTextTitleOutline {
+		font-size: 38px;
+		left: -10%;
+		top: 75%;
+	}
+
+	#page1 {
+		transform: scale(0.5) !important;
+	}
+
+	.particle-frame {
+		display: none;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		opacity: 1;
+		top: 135%;
+		left: -20%;
+		transition: opacity .3s linear;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+
+	.movingWarningUnderline {
+		opacity: 0;
+	}
+
+	.containerBottomLeft {
+		top: 105% !important;
+        width: 100%;
+        transform: translateX(-9%);
+	}
+    .containerBottomLeft p {
+        font-size: 30px;
+    }
+
+	.mascotIcon {
+		opacity: 0;
+	}
+
+	.bottomLogosHome {
+		top: 120% !important;
+		transform: scale(1.6) translateX(-20%)!important;
+	}
+
+	.MDRTeamSymbol {
+		top: 15% !important;
+		transform: scale(2.3) translateX(-55%)!important;
+	}
+
+	.mobile_title {
+		font-size: 160px;
+		top: 60%;
+        transform: translateX(-15%);
+	}
+
+	.mobile_titleDATE {
+        transform: translateX(-25%);
+		top: 80%;
+		font-size: 60px;
+        letter-spacing: 65px;
+	}
+
+	.homeLabel {
+		left: 124%;
+		top: 110%;
+	}
+
+	.entradoxNameLabel {
+		left: 105%;
+		top: -45%;
+	}
+
+	.thank,
+	.FooterContainer p,
+	.LogoAndNameFooterMeadowridge,
+	.LogoAndNameFooter {
+		transition: transform .4s linear;
+	}
+
+	.LogoAndNameFooter {
+		top: 5%;
+		left: 3%;
+		transform: scale(.4);
+	}
+
+	.LogoAndNameFooterMeadowridge {
+		top: 5%;
+		left: 40%;
+		transform: scale(.4);
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -80%;
+		top: 6%;
+	}
+
+	.FooterContainer p {
+		top: 40%;
+		left: 50%;
+		text-align: center;
+		font-size: 10px;
+	}
+
+	.thank {
+		left: 50%;
+		top: 50%;
+		opacity: 0;
+		font-size: 8px;
+		text-align: center;
+	}
+
+	.menu {
+		transform: scale(0.6) !important;
+		width: 150% !important;
+		left: -20% !important;
+		top: 1.5% !important;
+	}
+    .SponsorTiersTextContent {
+        transform: translateY(130%) scale(1.2) translateX(20%) !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+	#page6 {
+		transform: scale(.8) !important;
+		z-index: 10;
+	}
+	.robot-model-container {
+		left: -85% !important;
+		top: 5%;
+		transform: scale(.5) translateX(50%) !important;
+	}
+	.robot-name {
+		left: -40%;
+		top: 0%;
+		transform: scale(.6) !important;
+	}
+	.robot-name-outline2 {
+		top: 7%;
+		left: 2%;
+		transform: scale(.6) translateX(-50%) !important;
+
+	}
+    .mobile_title {
+        font-size: 120px;
+    }
+    .mobile_titleDATE {
+        font-size: 50px;
+        top: 73%;
+        letter-spacing: 42px;
+    }
+    .containerBottomLeft {
+        top: 95% !important;
+    }
+    .containerBottomLeft p {
+        font-size: 25px;
+    }
+    .MDRTeamSymbol {
+        transform: scale(2) translateX(-45%) !important;
+    }
+    .bottomLogosHome {
+        transform: scale(1.3) translateX(-20%) !important;
+    }
+    .AboutUsItemSide {
+        left: 15% !important;
+        transform: scale(2) !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+	.robot-name {
+		left: -55%;
+		top: 0%;
+		transform: scale(.55) !important;
+	}
+	.robot-name-outline2 {
+		top: 7%;
+		left: -1%;
+		transform: scale(.57) translateX(-50%) !important;
+	}
+	.robot-model-container {
+		left: -95% !important;
+		top: 5%;
+		transform: scale(.5) translateX(50%) !important;
+	}
+    .mobile_title {
+        font-size: 100px;
+    }
+    .mobile_titleDATE {
+        font-size: 30px;
+        letter-spacing: 42px;
+    }
+    .containerBottomLeft p {
+        font-size: 20px;
+    }
+    .containerBottomLeft {
+        top: 100% !important;
+    }
+    .MDRTeamSymbol {
+        transform: scale(2) translateX(-50%) !important;
+    }
+    .bottomLogosHome {
+        transform: scale(1.3) translateX(-20%) !important;
+    }
+    .AboutUsItemSide {
+        transform: scale(1.8) !important;
+        left: 10% !important;
+    }
+    .AboutUsTextTitle {
+        top: 70% !important;
+    }
+    .AboutUsTextTitleOutline {
+        top: 80% !important;
+    }
+    .AboutUsTextDescForMobile {
+        top: 95% !important;
+    }
+    .SponsorTiersTextContent {
+        transform: translateY(100%) scale(.9) translateX(20%) !important;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .MDRTeamSymbol {
+        transform: scale(2) translateX(-50%) !important;
+    }
+
+    .mobile_titleDATE {
+        top: 75%;
+    }
+    .AboutUsTextDescForMobile {
+        left: -15% !important;
+    }
+    .AboutUsTextTitle {
+        left: -15% !important;
+    }
+    .AboutUsTextTitleOutline {
+        left: -15% !important;
+    }
+    .mobileVersionStaffList {
+        top: -10%;
+        left: -12%;
+        transform: scale(1.2);
+	}
+}
+@media only screen and (max-width: 280px) {
+	.tagOnImage-Mobile {
+		top: 72%;
+		width: 60%;
+		font-size: 40px;
+	}
+
+	.mobileSocialsHeaderLine {
+		top: 14%;
+		height: 1.5px;
+	}
+
+	.mobileSocialsFooterLine {
+		top: 82%;
+		height: 1.5px;
+	}
+
+	.mobileSocialsHeader {
+		top: 8%;
+	}
+
+	.SponsorTiersTextContent {
+		top: 60% !important;
+		left: -10% !important;
+		width: 130% !important;
+		transform: translateY(-15%);
+	}
+
+	.mobileButtonNextSponsor {
+		top: 113%;
+		left: -5%;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 20px !important;
+		line-height: 30px !important;
+	}
+
+	#page2 {
+		transform: scale(0.6)!important;
+	}
+
+	.aboutusNameLabel {
+		top: 128%;
+		left: -28%;
+	}
+
+	.aboutusLabel {
+		left: 87%;
+		top: 128%;
+	}
+
+	.AboutUsTextTitle {
+		font-size: 38px;
+		left: -20%;
+		top: 70%;
+	}
+
+	.AboutUsTextTitleOutline {
+		font-size: 38px;
+		left: -20%;
+		top: 75%;
+	}
+
+	.AboutUsTextDescForMobile {
+		left: -20%;
+		width: 140%;
+	}
+
+	.AboutUsItemSide {
+		left: -3%;
+		top: 1%;
+		transform: scale(1.) !important;
+	}
+
+	#page1 {
+		transform: scale(0.4) !important;
+	}
+
+	.bottomLogosHome {
+		top: 145% !important;
+		transform: scale(1.25) translateX(-30%)!important;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		opacity: 1;
+		top: 160%;
+		left: -40%;
+		transition: opacity .3s linear;
+	}
+
+	.icon-scroll:before {
+		top: 10%;
+		left: 50%;
+	}
+
+	.homeLabel {
+		left: 140%;
+		top: 135%;
+	}
+
+	.entradoxNameLabel {
+		left: 105%;
+		top: -65%;
+	}
+
+	.mobile_title {
+        transform: translateX(-25%);
+		font-size: 100px;
+		top: 64%;
+	}
+
+	.mobile_titleDATE {
+        transform: translateX(-35%);
+		top: 80%;
+		font-size: 32px;
+	}
+
+	.containerBottomLeft {
+		top: 110% !important;
+		left: 15% !important;
+		font-size: 22px;
+		width: 130%;
+	}
+
+	.containerBottomLeft p {
+		font-size: 25px;
+	}
+
+	.MDRTeamSymbol {
+		top: 20% !important;
+		transform: scale(2.4) translateX(-40%) !important;
+	}
+
+	.LogoAndNameFooter {
+		top: 5%;
+		left: 3%;
+		transform: scale(.3);
+	}
+
+	.LogoAndNameFooterMeadowridge {
+		top: 5%;
+		left: 40%;
+		transform: scale(.3);
+	}
+
+	.footerLogoMDR,
+	.footerLogo {
+		left: -105%;
+		top: 6%;
+	}
+
+	.FooterContainer p {
+		top: 40%;
+		left: 25%;
+		text-align: left;
+		font-size: 10px;
+	}
+
+	.menu {
+		transform: scale(0.5) !important;
+		width: 200% !important;
+		left: -51% !important;
+		top: 5% !important;
+	}
+
+	#page6 {
+		transform: scale(.9) !important;
+		z-index: 10;
+	}
+	.robot-model-container {
+		left: -65% !important;
+		top: 5%;
+		transform: scale(.3) !important;
+	}
+	.robot-name {
+		top: 0%;
+		left: -95%;
+		transform: scale(.35) !important;
+	}
+	.robot-name-outline {
+		top: 5%;
+		left: -35%;
+		transform: scale(.35) !important;
+		opacity: 1;
+	}
+	.robot-name-outline2 {
+		top: 8%;
+		left: -35%;
+		transform: scale(.35) !important;
+	}
+    .SponsorTiersTextContent {
+        transform: translateY(90%) scale(.8) translateX(-10%) !important;
+    }
+    .SponsorTiersTextContent p {
+        width: 180% !important;
+
+    }
+}
+
+@media screen and (max-height: 800px) and (orientation: landscape) {
+	.mobile_title {
+		top: 20%;
+	}
+
+	.mobile_titleDATE {
+		top: 15%;
+	}
+
+	.particle-frame {
+		top: -10%;
+	}
+
+	.AboutUsTextTitle {
+		top: 5%;
+	}
+
+	.AboutUsBottomBarIcons {
+		top: -2%;
+	}
+
+	.AboutUsItemSide {
+		left: 50%;
+	}
+
+	.robot-model-container {
+		top: -15%;
+	}
+
+	.robot-name {
+		top: 14%;
+	}
+
+	.robot-name-outline2 {
+		top: 2%;
+	}
+
+	.robot-name-outline {
+		top: 25%;
+	}
+
+	.robot-description {
+		font-size: 25px;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-height: 700px) and (orientation: landscape) {
+	.mobile_title {
+		top: 20%;
+	}
+
+	.mobile_titleDATE {
+		top: 15%;
+	}
+
+	.mascotIcon {
+		top: -87%;
+	}
+
+	.containerBottomLeft {
+		top: 60%;
+	}
+
+	.MDRTeamSymbol {
+		top: 60%;
+	}
+
+	#page2 {
+		transform: scale(.9) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: 0%;
+	}
+
+	.AboutUsTextTitleOutline {
+		top: 15%;
+	}
+
+	.AboutUsBottomBarIcons {
+		top: 5%;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-height: 650px) and (orientation: landscape) {
+	.SponsorTiersTextContent p {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+	#page1 {
+		transform: scale(.9) !important;
+	}
+
+	.mobile_title {
+		top: 20%;
+	}
+
+	.mobile_titleDATE {
+		top: 15%;
+	}
+
+	.mascotIcon {
+		top: -83%;
+	}
+
+	.containerBottomLeft {
+		top: 65%;
+	}
+
+	.MDRTeamSymbol {
+		top: 60%;
+	}
+
+	.particle-frame {
+		top: -28%;
+	}
+
+	#page2 {
+		transform: scale(.8) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: -10%;
+	}
+
+	.AboutUsTextTitleOutline {
+		top: 6%;
+	}
+
+	.AboutUsBottomBarIcons {
+		top: 5%;
+	}
+
+	.AboutUsTextDesc {
+		top: 25%;
+	}
+
+	#page4 {
+		transform: scale(.8) !important;
+	}
+
+	.mailContainer {
+		top: 5%;
+	}
+
+	.ContainerForStaffDescriptionTextContent2 {
+		top: 70%;
+	}
+
+	.robot-model-container {
+		top: -20%;
+		transform: scale(.6);
+	}
+
+	.robot-name {
+		top: 14%;
+		font-size: 70px;
+	}
+
+	.robot-name-outline2 {
+		font-size: 70px;
+		top: 2%;
+	}
+
+	.robot-name-outline {
+		font-size: 70px;
+		top: 26%;
+	}
+
+	.robot-description {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.SponsorTiersTextContent p {
+		font-size: 12px;
+	}
+
+	.StaffMemberHeadlineContainer-Name {
+		top: 110%;
+	}
+
+	#page2 {
+		transform: scale(.75) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: -15%;
+		font-size: 90px;
+	}
+
+	.AboutUsTextTitleOutline {
+		top: 3%;
+		font-size: 90px;
+	}
+
+	.AboutUsBottomBarIcons {
+		opacity: 0;
+	}
+
+	.AboutUsTextDesc {
+		top: 28%;
+	}
+
+	.icon-scroll2,
+	.icon-scroll2:before {
+		opacity: 0;
+	}
+
+	.AboutUsItemSide {
+		transform: scale(1.2) !important;
+	}
+
+	#page1 {
+		transform: scale(.9) !important;
+	}
+
+	.mobile_title {
+		top: 15%;
+	}
+
+	.mobile_titleDATE {
+		top: 10%;
+	}
+
+	.mascotIcon {
+		top: -83%;
+		opacity: 0;
+	}
+
+	.containerBottomLeft {
+		top: 65%;
+	}
+
+	.particle-frame {
+		top: -30%;
+	}
+}
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+	.SponsorTiersTextContent p {
+		font-size: 9px;
+	}
+
+	#page1 {
+		transform: scale(.8) !important;
+	}
+
+	.mobile_title {
+		top: 5%;
+	}
+
+	.mobile_titleDATE {
+		top: 0%;
+	}
+
+	.mascotIcon {
+		top: -83%;
+		opacity: 0;
+	}
+
+	.containerBottomLeft {
+		top: 70%;
+	}
+
+	.MDRTeamSymbol {
+		opacity: 0;
+	}
+
+	.particle-frame {
+		opacity: 0 !important;
+		display: none !important;
+	}
+
+	#page2 {
+		transform: scale(.5) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: -50%;
+		font-size: 50px;
+	}
+
+	.AboutUsTextTitleOutline {
+		font-size: 50px;
+		top: -30%;
+	}
+
+	.AboutUsTextDesc {
+		top: -5%;
+		font-size: 15px;
+	}
+
+	#page5 {
+		transform: scale(.6) !important;
+	}
+
+	.staffPanelContainer {
+		top: -10%;
+		height: 130%;
+	}
+
+	#page4 {
+		transform: scale(.5) !important;
+	}
+
+	.mailContainer {
+		top: -20%;
+	}
+
+	.rankingContainer {
+		top: -18%;
+	}
+
+	.tutorialContainer {
+		top: -10%;
+	}
+
+	.robot-model-container {
+		top: -25%;
+		transform: scale(.4);
+	}
+
+	.robot-name {
+		top: 14%;
+		font-size: 50px;
+	}
+
+	.robot-name-outline2 {
+		font-size: 50px;
+		top: 2%;
+	}
+
+	.robot-name-outline {
+		font-size: 50px;
+		top: 26%;
+	}
+
+	.robot-description {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+	#page1 {
+		transform: scale(.8) !important;
+	}
+
+	.mobile_title {
+		top: 8%;
+	}
+
+	.mobile_titleDATE {
+		top: 1%;
+	}
+
+	.mascotIcon {
+		top: -83%;
+		opacity: 0;
+	}
+
+	.containerBottomLeft {
+		top: 65%;
+	}
+
+	.MDRTeamSymbol {
+		opacity: 0;
+	}
+
+	.particle-frame {
+		top: -45%;
+	}
+
+	#page2 {
+		transform: scale(.7) !important;
+	}
+
+	.AboutUsItemSide {
+		transform: scale(1.5) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: -30%;
+		font-size: 90px;
+	}
+
+	.AboutUsTextTitleOutline {
+		top: -10%;
+		font-size: 90px;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 10px;
+	}
+
+	#page5 {
+		transform: scale(.8) !important;
+	}
+
+	.staffPanelContainer {
+		top: -6%;
+		height: 110%;
+	}
+
+	.StaffMemberHeadlineContainer-Name {
+		top: 100%;
+	}
+
+	.ContainerForStaffDescriptionTextContent {
+		top: 50%;
+	}
+
+	.ContainerForStaffDescriptionTextContent2 {
+		top: 90%;
+	}
+
+	.StaffRoleTextDisplay {
+		top: 25%;
+	}
+
+	.StaffRoleTextDisplay2 {
+		top: 25%;
+	}
+}
+
+
+@media screen and (max-height: 200px) and (orientation: landscape) {
+	#page4 {
+		opacity: 0;
+	}
+
+	#page5 {
+		transform: scale(.4) !important;
+	}
+
+	.staffPanelContainer {
+		top: -50%;
+		height: 200%;
+	}
+
+	#page6 {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-height: 100px) and (orientation: landscape) {
+	#page5 {
+		transform: scale(.5) !important;
+		opacity: 0;
+	}
+
+	#page2 {
+		opacity: 0;
+	}
+
+	#page1 {
+		transform: scale(.2) !important;
+	}
+
+	.mobile_title {
+		top: -130%;
+	}
+
+	.mobile_titleDATE {
+		top: -150%;
+	}
+
+	.containerBottomLeft {
+		top: 130%;
+	}
+}
+
+@media screen and (max-height: 300px) and (orientation: landscape) {
+	#page5 {
+		transform: scale(.5) !important;
+	}
+
+	.staffPanelContainer {
+		top: -30%;
+		height: 150%;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 8px;
+	}
+
+	#page1 {
+		transform: scale(.6) !important;
+	}
+
+	.mobile_title {
+		top: -10%;
+	}
+
+	.mobile_titleDATE {
+		top: -20%;
+	}
+
+	.containerBottomLeft {
+		top: 50%;
+	}
+
+	.bottomLogosHome {
+		top: 90%;
+	}
+
+	.icon-scroll,
+	.icon-scroll:before {
+		opacity: 0;
+	}
+
+	#page1 {
+		transform: scale(.3) !important;
+	}
+
+	.mobile_title {
+		top: -50%;
+	}
+
+	.mobile_titleDATE {
+		top: -70%;
+	}
+
+	.AboutUsTextTitle {
+		top: -100%;
+		font-size: 50px;
+	}
+
+	.AboutUsTextTitleOutline {
+		font-size: 50px;
+		top: -60%;
+	}
+
+	#page2 {
+		transform: scale(.3) !important;
+	}
+
+	.AboutUsItemSide {
+		opacity: 0;
+	}
+
+	#page2 {
+		transform: scale(.2) !important;
+	}
+
+	.AboutUsTextTitle {
+		top: -150%;
+		font-size: 50px;
+	}
+
+	.AboutUsTextTitleOutline {
+		font-size: 50px;
+		top: -100%;
+	}
+}
