@@ -545,7 +545,9 @@ video {
 	width: 100%;
 	z-index: 1;
 }
-
+.staffMobileTextSide {
+	display: none;
+}
 .mobile_title {
 	position: absolute;
 	font-family: 'DDay', Arial, Helvetica, sans-serif;
@@ -3465,11 +3467,9 @@ nav {
     position: absolute;
     z-index: 10;
     width: auto;
-    height: auto;
-    max-width: 95%;
-    max-height: 95%;
-    left: 42%;
-    top: 0%;
+    height: 80%;
+    left: 50%;
+    top: 10%;
     transition: all 0.4s linear;
 }
 .AboutUsTextTitle {
