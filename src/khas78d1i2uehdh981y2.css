@@ -6,7 +6,7 @@
 		width: 200%!important;
 	}
 	.containerBottomLeft {
-	    transform:translateX(10%) !important
+	    transform:translateX(7%) !important;
 	}
 	.homeBackgroundRender {
 		transform: scale(1) !important;
@@ -206,8 +206,8 @@
 
 	.SponsorTiersTextContent {
 		opacity: 1;
-		top: 50% !important;
 		width: 130% !important;
+		top: 50% !important;
 	}
 
 	.SponsorTiersTextContent p {
@@ -433,7 +433,6 @@
 
 	.SponsorTiersTextContent {
 		left: 53% !important;
-		top: 20%;
 		transform: scale(.9);
 	}
 
@@ -823,7 +822,6 @@
 
 	.SponsorTiersTextContent {
 		left: 55% !important;
-		top: 20% !important;
 		width: 50%;
 	}
 
@@ -1153,7 +1151,6 @@
 		.SponsorTiersTextContent {
 			left: 55% !important;
 			width: 60% !important;
-			top: 20% !important;
 		}
 	}
 
@@ -1402,8 +1399,6 @@
 		.SponsorTiersTextContent {
 			left: -10% !important;
 			width: 100% !important;
-			top: -10% !important;
-			transform: translateY(-15%);
 		}
 		.SponsorTiersTextContent p {
 			font-size: 25px !important;
@@ -1969,12 +1964,11 @@
 		display: none;
 	}
 	    .SponsorTiersTextContent {
-        transform: scale(1.5) translateX(20%) !important;
+        transform: scale(1.5)!important;
     }
 
 	.SponsorTiersTextContent {
 		opacity: 1;
-		top: 50% !important;
 		width: 130% !important;
 	}
 
@@ -2008,6 +2002,9 @@
 		z-index: 10;
 	}
 
+    .SponsorTiersTextContent {
+        left:5% !important;
+    }
 
 	.aboutusNameLabel {
 		top: 115%;
@@ -2160,8 +2157,7 @@
 		top: 1.5% !important;
 	}
     .SponsorTiersTextContent {
-        transform: scale(1.2) translateX(0%) !important;
-        top:50% !important;
+        transform: scale(1.2) !important;
     }
 
 	.robot-name {
@@ -2204,13 +2200,17 @@
 	}
     .mobile_title {
         font-size: 120px;
+		transform: translateX(-20%);
+	
     }
     .mobile_titleDATE {
         font-size: 50px;
         top: 73%;
+		transform: translateX(-12%);
         letter-spacing: 42px;
     }
     .containerBottomLeft {
+		transform: translateX(-5%) !important;
         top: 95% !important;
     }
     .containerBottomLeft p {
@@ -2232,6 +2232,10 @@
 	.AboutUsTextTitleOutline {
 		font-size: 70px !important;
 	}
+	.SponsorTiersTextContent {
+        left:5% !important;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -2250,17 +2254,21 @@
 
     .mobile_title {
         font-size: 100px;
-        left: 8% !important;
+        left: 10% !important;
+		transform: translateX(-20%);
+
     }
     .mobile_titleDATE {
         font-size: 30px;
         letter-spacing: 42px;
-    }
+		transform: translateX(-12%);
+	}
     .containerBottomLeft p {
         font-size: 20px;
     }
     .containerBottomLeft {
         top: 100% !important;
+        left:43% !important;
     }
     .MDRTeamSymbol {
         transform: scale(2) translateX(-20%) !important;
@@ -2343,10 +2351,8 @@
 	}
 
 	.SponsorTiersTextContent {
-		top: 60% !important;
 		left: -10% !important;
 		width: 130% !important;
-		transform: translateY(-15%);
 	}
 
 	.mobileButtonNextSponsor {
@@ -2508,7 +2514,7 @@
 		transform: scale(.35) !important;
 	}
     .SponsorTiersTextContent {
-        transform: translateY(90%) scale(.8) translateX(-10%) !important;
+        transform: scale(.8) translateX(-10%) !important;
     }
     .SponsorTiersTextContent p {
         width: 180% !important;
