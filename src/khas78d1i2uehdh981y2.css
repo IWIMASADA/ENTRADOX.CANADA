@@ -12,6 +12,180 @@
 		opacity: 0 !important;
 		display: none;
 	}
+	.mbOurEmail {
+		position: absolute;
+		display: unset;
+		opacity: 0;
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		color: white;
+		font-size: 30px;
+		font-weight: lighter;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+	}
+
+	#mobileSIMG-Email {
+		opacity: 0;
+	}
+
+	.socialsBackground,
+	.rankingContainer,
+	.tutorialContainer,
+	.mailContainer,
+	.schoolContainer,
+	.podcastContainer,
+	.instagramContainer,
+	.contactsTextTitle {
+		display: none;
+		opacity: 0;
+	}
+
+	.mobileSocials {
+		position: absolute;
+		z-index: 214748364;
+		display: inline;
+		opacity: 1;
+		height: 110%;
+		width: 120%;
+		transform: translate(-50%, -50%);
+		left: 57%;
+		top: 60%;
+	}
+
+	.mobileSocialsHeader {
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		top: 0%;
+		z-index: 214748364;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.mobileSocialsHeaderLine {
+		z-index: 214748364;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 5%;
+		background-color: rgb(211, 211, 211);
+	}
+
+	.mobileSocialsFooterLine {
+		position: absolute;
+		width: 100%;
+		height: .5px;
+		top: 90%;
+		background-color: rgb(211, 211, 211);
+	}
+
+	.mobileSocialsHeaderText {
+		z-index: 2147483647;
+		font-size: 30px;
+		font-weight: lighter;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		margin-left: 10%;
+		width: 100%;
+		height: 50%;
+	}
+
+	.mobileSocialImage {
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: -4%;
+		object-fit: contain;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+	}
+
+	.tagOnImage-Mobile {
+		position: absolute;
+		width: 50%;
+		height: 7%;
+		top: 80%;
+		left: -5%;
+		z-index: 2;
+		background-color: rgb(35, 165, 247);
+		color: rgb(0, 0, 0);
+		font-weight: normal;
+		font-size: 40px;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+	}
+
+	#mobileSocialsHeaderText-Instagram {
+		color: white;
+	}
+
+	#mobileSocialsHeaderText-Email {
+		color: rgb(165, 165, 165);
+	}
+
+	.mobileButtonNextSponsor {
+		position: absolute;
+		opacity: 1;
+		display: unset;
+		font-family: 'TW', Arial;
+		font-weight: lighter;
+		font-size: 30px;
+		color: white;
+		background-color: rgba(255, 0, 0, 0);
+		top: 108%;
+		z-index: 2147483645;
+	}
+
+	.sponsorInformationContainerMainDisplay {
+		left: 0%;
+		transform: translateX(20%);
+		transition: transform .2s linear;
+	}
+
+	.sponsorshipIcons {
+		position: relative;
+		width: 130%;
+		height: 130%;
+		transform: translate(-50%, -50%);
+		left: 0%;
+		top: 15%;
+		object-fit: contain;
+		margin-left: 70%;
+		transition: all .2s linear;
+	}
+
+	.OurSponsorsButton,
+	.LearnMoreSponsorButton,
+	.SponsorFooter,
+	.sponsorTierExitButton {
+		display: none;
+	}
+	.SponsorTiersTextContent {
+        transform: translateY(150%) scale(1.5) translateX(20%) !important;
+    }
+
+	.SponsorTiersTextContent {
+		opacity: 1;
+		top: 50% !important;
+		width: 130% !important;
+	}
+
+	.SponsorTiersTextContent p {
+		font-size: 22px;
+		line-height: 30px;
+	}
 }
 @media screen and (max-width: 1800px) {
 	#page2,
@@ -957,7 +1131,6 @@
 
 	#page2 {
 		z-index: 214748364 !important;
-		transform: scale(0.6)!important;
 		.AboutUsTextDesc {
 			left: -27%;
 		}
@@ -984,8 +1157,6 @@
 
 	#page1 {
 		z-index: 214748364 !important;
-		transform: scale(0.6) !important;
-
 		.icon-scroll,
 		.icon-scroll:before {
 			opacity: 0;
@@ -1039,9 +1210,133 @@
 			width: 80%;
 		}
 	}
+
+	.mobile_title {
+		font-size: 10rem;
+		transform: translateX(15%);
+		top: 50%;
+	}
+	.mobile_titleDATE {
+		top: 60%;
+		font-size: 3.8rem;
+		letter-spacing: 66px;
+		transform: translateX(2%);
+	}
+	.MDRTeamSymbol {
+		top: 20%;
+		transform: scale(1.3) translateX(-21%);
+	}
+	.containerBottomLeft p {
+		font-size: 30px;
+	}
+	.containerBottomLeft {
+		top: 75%;
+		transform:translateX(60%) scale(1.2);
+		width: 100%;
+	}
+	.mascotIcon {
+		opacity: 0;
+	}
+	.bottomLogosHome {
+		transform: scale(2.3) translateX(50%);
+		top: 100%;
+	}
+	.AboutUsTextTitle {
+		font-size: 160px;
+		top:60%;
+		left: -10% !important;
+	}
+	.AboutUsTextTitleOutline {
+		font-size: 160px;
+		top:70%;
+		left: -10% !important;
+	}
+	.AboutUsItemSide {
+		transform: scale(1.3) translateX(-40%);
+	}
+	.AboutUsTextDesc {
+		opacity: 0;
+		display: none;
+	}
+	.AboutUsTextDescForMobile {
+		left: -10%;
+		text-align: left;
+		font-size: 43px;
+		width: 120%;
+		top: 85%;
+		position: absolute;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		font-weight: lighter;
+		z-index: 4;
+		color: white;
+		line-height: 120%;
+		transition: all .7s linear;
+		opacity: 1;
+	}
+
 }
 
 @media screen and (max-width: 900px) {
+	.CurrentStaffList,
+	.StaffDisplayList,
+	.StaffDisplayListIcons,
+	.CurrentStaffDepartment,
+	.staffPanelBarTopMenu {
+		transition: opacity .1s linear;
+		opacity: 0;
+		left: -200% !important;
+	}
+
+	.mobileStaffContainer {
+		width: 90%;
+		height: 45px;
+		object-fit: cover;
+	}
+
+	.mobileStaffContainer p {
+		color: white;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		font-size: 25px;
+	}
+
+	.textonMobileStaffContainer {
+		position: absolute;
+		left: 8%;
+		color: rgb(217, 217, 217);
+		font-weight: normal;
+		font-size: 19px;
+		transform: translateY(-120%);
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+	}
+	.ContainerForStaffDescriptionBody,
+	.staffPageStaffContentXButton {
+		transition: opacity .1s linear;
+		opacity: 0;
+		left: -200% !important;
+	}
+
+	.staffPageLabel {
+		left: 90% !important;
+		top: 105%;
+	}
+
+	.staffPageNameLabel {
+		left: 64% !important;
+		top: -10%;
+	}
+
+	.mobileVersionStaffList {
+		position: absolute;
+		left: 0%;
+		opacity: 1;
+		top: 5%;
+		width: 100%;
+        transform: scale(1.5);
+	}
+	.AboutUsItemSide {
+		transform: scale(1.8) translateX(-30%);
+	}
 	#page5 {
 		z-index: 214748364 !important;
 		transform: scale(0.65) !important;
@@ -1123,7 +1418,6 @@
 
 	#page2 {
 		z-index: 214748364 !important;
-		transform: scale(0.55)!important;
 		.aboutusLabel {
 			opacity: 0;
 		}
@@ -1138,26 +1432,8 @@
 
 	#page1 {
 		z-index: 214748364 !important;
-		transform: scale(0.8) !important;
-		.mobile_title {
-			left: 0% !important;
-			width: 200%;
-		}
 		.containerBottomLeft {
 			left: 32.5% !important;
-		}
-		.bottomLogosHome {
-			left: 0% !important;
-		}
-		.MDRTeamSymbol {
-			left: 38% !important;
-		}
-		.mobile_title {
-			width: 200%;
-		}
-		.mobile_titleDATE {
-			left: 18% !important;
-			width: 200%;
 		}
 		.movingWarningUnderline {
 			opacity: 0;
@@ -1180,6 +1456,40 @@
 			transform: scale(0.9) !important;
 		}
 	}
+
+	.mobile_title {
+		font-size: 10rem;
+		transform: translateX(15%);
+		top: 50%;
+	}
+	.mobile_titleDATE {
+		top: 60%;
+		font-size: 3.8rem;
+		letter-spacing: 66px;
+		transform: translateX(2%);
+	}
+	.MDRTeamSymbol {
+		top: 20%;
+		transform: scale(1.3) translateX(-21%);
+	}
+	.containerBottomLeft p {
+		font-size: 30px;
+	}
+	.containerBottomLeft {
+		top: 75%;
+		transform:translateX(30%) scale(1.2);
+		width: 100%;
+	}
+	.mascotIcon {
+		opacity: 0;
+	}
+	.bottomLogosHome {
+		transform: scale(2.3) translateX(50%);
+		top: 100%;
+	}
+	.sponsorshipIcons {
+		transform: scale(.8) translateX(-60%) translateY(-70%);
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -1199,13 +1509,15 @@
 
 	#page4 {
 		z-index: 214748364 !important;
-		transform: scale(0.55) !important;
 		.mailContainer {
 			left: -35% !important;
 			transition: left 1s linear;
 		}
 	}
 
+	.AboutUsItemSide {
+		transform: scale(1.5) translateX(-35%) translateY(-5%);
+	}
 	#page6 {
 		transform: scale(1) !important;
 		z-index: 10;
@@ -1235,29 +1547,10 @@
 		}
 	}
 
-	#page2 {
-		z-index: 214748364 !important;
-		transform: scale(0.4)!important;
-	}
 
 	#page1 {
 		z-index: 214748364 !important;
-		transform: scale(0.85) !important;
-		.mobile_title {
-			left: 5% !important;
-		}
-		.containerBottomLeft {
-			left: 40% !important;
-		}
-		.bottomLogosHome {
-			left: 5% !important;
-		}
-		.MDRTeamSymbol {
-			left: 48% !important;
-		}
-		.mobile_titleDATE {
-			left: 25% !important;
-		}
+		transform: scale(.8) !important;
 		.movingWarningUnderline {
 			opacity: 0;
 			transition: opacity .4s linear;
@@ -1293,12 +1586,42 @@
 			left: -5% !important;
 		}
 	}
+
+	.mobile_title {
+		font-size: 10rem;
+		transform: translateX(-5%);
+		top: 50%;
+	}
+	.mobile_titleDATE {
+		top: 60%;
+		font-size: 3.8rem;
+		letter-spacing: 66px;
+		transform: translateX(2%);
+	}
+	.MDRTeamSymbol {
+		top: 20%;
+		transform: scale(1.3) translateX(-21%);
+	}
+	.containerBottomLeft p {
+		font-size: 30px;
+	}
+	.containerBottomLeft {
+		top: 75%;
+		transform:translateX(30%) scale(1.2);
+		width: 100%;
+	}
+	.mascotIcon {
+		opacity: 0;
+	}
+	.bottomLogosHome {
+		transform: scale(2.3) translateX(50%);
+		top: 100%;
+	}
 }
 
 @media screen and (max-width: 850px) {
     #page2 {
         z-index: 214748364 !important;
-        transform: scale(0.4)!important;
       }
       .AboutUsTextDesc {
         left: -50%;
@@ -1318,12 +1641,43 @@
         left: 110%;
         top: -30%;
     }
+
+	.mobile_title {
+		font-size: 8rem;
+		transform: translateX(18%);
+		top: 50%;
+	}
+	.mobile_titleDATE {
+		top: 59%;
+		font-size: 3rem;
+		letter-spacing: 53px;
+		transform: translateX(5%);
+	}
+	.MDRTeamSymbol {
+		top: 20%;
+		transform: scale(1) translateX(-27%);
+	}
+	.containerBottomLeft p {
+		font-size: 25px;
+	}
+	.containerBottomLeft {
+		top: 75%;
+		transform:translateX(30%) scale(1.2);
+		width: 70%;
+	}
+	.mascotIcon {
+		opacity: 0;
+	}
+	.bottomLogosHome {
+		transform: scale(2) translateX(50%);
+		top: 95%;
+	}
   }
 
   @media screen and (max-width: 750px) {
 	#page1 {
 		z-index: 214748364 !important;
-		transform: scale(0.7) !important;
+
 		.mobile_title {
 			left: 0% !important;
 		}
@@ -1344,7 +1698,6 @@
 
 	#page2 {
 		z-index: 214748364 !important;
-		transform: scale(0.3)!important;
 		.AboutUsTextDesc {
 			left: -50%;
 		}
@@ -1392,7 +1745,39 @@
 		z-index: 214748364 !important;
 		transform: scale(0.5) !important;
 	}
+
+	.mobile_title {
+		font-size: 8rem;
+		transform: translateX(0%);
+		top: 50%;
+	}
+	.mobile_titleDATE {
+		top: 58%;
+		font-size: 3rem;
+		letter-spacing: 46px;
+		transform: translateX(7%);
+	}
+	.MDRTeamSymbol {
+		top: 20%;
+		transform: scale(1) translateX(-21%);
+	}
+	.containerBottomLeft p {
+		font-size: 30px;
+	}
+	.containerBottomLeft {
+		top: 70%;
+		transform:translateX(10%) scale(1);
+		width: 70%;
+	}
+	.mascotIcon {
+		opacity: 0;
+	}
+	.bottomLogosHome {
+		transform: scale(2) translateX(20%);
+		top: 90%;
+	}
 }
+
 
 @media only screen and (max-width: 700px) {
 	.mbOurEmail {
@@ -1555,6 +1940,9 @@
 	.sponsorTierExitButton {
 		display: none;
 	}
+	    .SponsorTiersTextContent {
+        transform: translateY(150%) scale(1.5) translateX(20%) !important;
+    }
 
 	.SponsorTiersTextContent {
 		opacity: 1;
@@ -1567,12 +1955,12 @@
 		line-height: 30px;
 	}
     .AboutUsTextTitle {
-        font-size: 62px !important;
+        font-size: 102px !important;
         left: -12% !important;
-        top: 65% !important;
+        top: 63% !important;
     }
     .AboutUsTextTitleOutline {
-        font-size: 62px !important;
+        font-size: 102px !important;
         left: -12% !important;
         top: 72% !important;
     }
@@ -1580,83 +1968,18 @@
         top:85% !important;
     }
     .AboutUsItemSide {
-        left: 20% !important;
+        left: 10% !important;
         top: 10%;
-        transform: scale(2.5) !important;
-    }
-    .SponsorTiersTextContent {
-        transform: translateY(150%) scale(1.5) translateX(20%) !important;
+        transform: scale(1.3) translateY(-20%)!important;
     }
 }
 
-@media only screen and (max-width: 600px) {
-	.CurrentStaffList,
-	.StaffDisplayList,
-	.StaffDisplayListIcons,
-	.CurrentStaffDepartment,
-	.staffPanelBarTopMenu {
-		transition: opacity .1s linear;
-		opacity: 0;
-		left: -200% !important;
-	}
-
-	.ContainerForStaffDescriptionBody,
-	.staffPageStaffContentXButton {
-		transition: opacity .1s linear;
-		opacity: 0;
-		left: -200% !important;
-	}
-
-	.staffPageLabel {
-		left: 90% !important;
-		top: 105%;
-	}
-
-	.staffPageNameLabel {
-		left: 64% !important;
-		top: -10%;
-	}
-
-	.mobileVersionStaffList {
-		position: absolute;
-		left: 0%;
-		opacity: 1;
-		top: 5%;
-		width: 100%;
-        transform: scale(1.5);
-	}
-
-	.mobileStaffContainer {
-		width: 90%;
-		height: 45px;
-		object-fit: cover;
-	}
-
-	.mobileStaffContainer p {
-		color: white;
-		font-family: 'TW', Arial, Helvetica, sans-serif;
-		font-weight: normal;
-		font-size: 25px;
-	}
-
-	.textonMobileStaffContainer {
-		position: absolute;
-		left: 8%;
-		color: rgb(217, 217, 217);
-		font-weight: normal;
-		font-size: 19px;
-		transform: translateY(-120%);
-		font-family: 'TW', Arial, Helvetica, sans-serif;
-	}
-	
+@media only screen and (max-width: 600px) {	
 	#page6 {
 		transform: scale(.81) !important;
 		z-index: 10;
 	}
 
-	#page2 {
-		transform: scale(0.7)!important;
-	}
 
 	.aboutusNameLabel {
 		top: 115%;
@@ -1719,7 +2042,7 @@
 	.containerBottomLeft {
 		top: 105% !important;
         width: 100%;
-        transform: translateX(-9%);
+        transform: translateX(0%);
 	}
     .containerBottomLeft p {
         font-size: 30px;
@@ -1736,17 +2059,17 @@
 
 	.MDRTeamSymbol {
 		top: 15% !important;
-		transform: scale(2.3) translateX(-55%)!important;
+		transform: scale(2.3) translateX(-10%)!important;
 	}
 
 	.mobile_title {
 		font-size: 160px;
 		top: 60%;
-        transform: translateX(-15%);
+        transform: translateX(-25%);
 	}
 
 	.mobile_titleDATE {
-        transform: translateX(-25%);
+        transform: translateX(-17%);
 		top: 80%;
 		font-size: 60px;
         letter-spacing: 65px;
@@ -1827,6 +2150,10 @@
 		display: none;
 		opacity: 0;
 	}
+	.AboutUsItemSide {
+		transform: scale(2.5) translateX(5%) !important;
+	}
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1861,7 +2188,7 @@
         font-size: 25px;
     }
     .MDRTeamSymbol {
-        transform: scale(2) translateX(-45%) !important;
+        transform: scale(2) translateX(-20%) !important;
     }
     .bottomLogosHome {
         transform: scale(1.3) translateX(-20%) !important;
@@ -1870,6 +2197,12 @@
         left: 15% !important;
         transform: scale(2) !important;
     }
+	.AboutUsTextTitle {
+		font-size: 70px !important;
+	}
+	.AboutUsTextTitleOutline {
+		font-size: 70px !important;
+	}
 }
 
 @media only screen and (max-width: 400px) {
@@ -1900,7 +2233,7 @@
         top: 100% !important;
     }
     .MDRTeamSymbol {
-        transform: scale(2) translateX(-50%) !important;
+        transform: scale(2) translateX(-20%) !important;
     }
     .bottomLogosHome {
         transform: scale(1.3) translateX(-20%) !important;
@@ -1911,12 +2244,18 @@
     }
     .AboutUsTextTitle {
         top: 70% !important;
+		font-size: 60px !important;
+
     }
     .AboutUsTextTitleOutline {
         top: 80% !important;
+		font-size: 60px !important;
+		
     }
     .AboutUsTextDescForMobile {
         top: 95% !important;
+		font-size: 20px !important;
+
     }
     .SponsorTiersTextContent {
         transform: translateY(100%) scale(.9) translateX(20%) !important;
@@ -1925,7 +2264,7 @@
 
 @media only screen and (max-width: 380px) {
     .MDRTeamSymbol {
-        transform: scale(2) translateX(-50%) !important;
+        transform: scale(2) translateX(-20%) !important;
     }
 
     .mobile_titleDATE {
@@ -2000,26 +2339,26 @@
 	}
 
 	.AboutUsTextTitle {
-		font-size: 38px;
-		left: -20%;
+		font-size: 55px !important;
+		left: -28% !important;
 		top: 70%;
 	}
 
 	.AboutUsTextTitleOutline {
-		font-size: 38px;
-		left: -20%;
+		font-size: 55px !important;
+		left: -28% !important;
 		top: 75%;
 	}
 
 	.AboutUsTextDescForMobile {
-		left: -20%;
+		left: -26% !important;
 		width: 140%;
 	}
 
 	.AboutUsItemSide {
-		left: -3%;
+		left: -5% !important;
 		top: 1%;
-		transform: scale(1.) !important;
+		transform: scale(1.5) !important;
 	}
 
 	#page1 {
@@ -2055,7 +2394,7 @@
 	}
 
 	.mobile_title {
-        transform: translateX(-25%);
+        transform: translateX(-47%);
 		font-size: 100px;
 		top: 64%;
 	}
@@ -2079,7 +2418,7 @@
 
 	.MDRTeamSymbol {
 		top: 20% !important;
-		transform: scale(2.4) translateX(-40%) !important;
+		transform: scale(2.4) translateX(-15%) !important;
 	}
 
 	.LogoAndNameFooter {
