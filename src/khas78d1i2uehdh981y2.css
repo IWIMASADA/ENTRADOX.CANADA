@@ -131,15 +131,157 @@
 		transition: all .2s linear;
 	}
 	.SponsorTiersTextContent {
-		left: 10%;
-		top: 50%;
-		width: 100%;
+		left: 50%;
+		top: 80%;
+		width: 80%;
 		background-color: rgba(102, 51, 153, 0);
 		height: 80%;
 		opacity: 1 !important;
 	}
+	.SponsorTiersTextContent p {
+		font-size: 1em;
+		font-weight: lighter;
+	}
+
+	/* SOCIALS/CONTACTS MOBILE DEFAULT */
+	.mobileSocialsHeader {
+		position: absolute;
+		width: auto;
+		height: 10%;
+		top: 20%;
+		z-index: 2147483647;
+		display: flex;
+		flex-direction: row;
+	}
+	.mbOurEmail {
+		top: 50%;
+		left: 10%;
+		position: absolute;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		font-size: 1.2em;
+		font-weight: lighter;
+		color: rgb(232, 232, 232);
+		display: block;
+	}
+	.mobileSocialsHeaderLine {
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: .7px;
+		top: 25%;
+		background-color: rgb(255, 255, 255);
+	}
+
+	.mobileSocialsFooterLine {
+		position: absolute;
+		width: 100%;
+		height: .5px;
+		top: 80%;
+		z-index: 1;
+		background-color: rgba(211, 211, 211, 0);
+	}
+
+	.mobileSocialsHeaderText {
+		z-index: 2147483647;
+		font-size: 2em;
+		font-weight: lighter;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+		margin-left: 10%;
+		width: 100%;
+		height: 50%;
+		text-align: center;
+		letter-spacing: .05em;
+	}
+
+	.mobileSocialImage {
+		position: absolute;
+		z-index: 1;
+		width: 85%;
+		height:auto;
+		object-fit: contain;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		left: 50%;
+		top: 60%;
+		transform: translate(-50%,-50%);
+	}
+	#mobileSIMG-Email {
+		opacity: 0;
+	}
+
+	.tagOnImage-Mobile {
+		position: absolute;
+		width: 40%;
+		height: auto;
+		z-index: 2;
+		top: 90%;
+		transform: translateX(-50%);
+		left: 21%;
+		background-color: rgb(35, 165, 247);
+		color: rgb(0, 0, 0);
+		font-weight: normal;
+		font-size: 1em;
+		transition: all .2s linear;
+		-webkit-transition: all .2s linear;
+		-moz-transition: all .2s linear;
+		-o-transition: all .2s linear;
+		font-family: 'TW', Arial, Helvetica, sans-serif;
+	}
+
+	#mobileSocialsHeaderText-Instagram {
+		color: white;
+	}
+	#mobileSocialsHeaderText-Email {
+		color: rgb(165, 165, 165);
+	}
+
+	/*ROBOTS MOBILE DEFAULT */
+	.robot-model-container {
+		display: none !important;
+		opacity: 0;
+	}
+	#page6 {
+		opacity: 0;
+		display: none;
+	}
+	/*FOOTER MOBILE DEFAULT */
+	.footerTopHighlight, .footerTopHighlight2 {
+		height: .01em;
+	}
+	.footerEntradoxTitle, .footerMeadowridgeTitle {
+		font-size: 1.5em;
+		text-align: left;
+	}
+	.footerEntradoxTitle {
+		left: -200%;
+		top: -50%;
+	}
+	.footerMeadowridgeTitle {
+		left: -335%;
+		top: 50%;
+	}
+	.footerLogo, .footerLogoMDR, .thank {
+		opacity: 0;
+	}
+	.FooterContainer p {
+		text-align: left;
+		width: 80%;
+		font-size: .8em;
+		left: 43%;
+		top: 40%;
+	}
 }
 
+
+/* GALAXY FOLD */
+@media screen and (max-width: 300px) and (orientation: portrait) {
+	.SponsorTiersTextContent p {
+		font-size: .8em;
+		font-weight: lighter;
+	}
+}
 
 
 
