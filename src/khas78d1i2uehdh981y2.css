@@ -35,6 +35,8 @@
 	}
 	.containerBottomLeft {
 		left: 5%;
+		width: 100%;
+		top: 55%;
 	}
 	.containerBottomLeftText {
 		text-align: left;
@@ -287,569 +289,624 @@
 
 
 /*DESKTOP */
-/*DESKTOP HEIGHT */
-@media screen and (max-height: 800px) and (orientation: landscape) {
+/*DESKTOP WIDTH*/
+/*HOME DESKTOP WIDTH DEFAULT */
+@media screen and (max-width: 1600px) and (orientation: landscape) {
 	.mobile_title {
-		top: 20%;
+		left: 1.5%;
 	}
-
+	.containerBottomLeft {
+		width: 50%;
+		left: 2%;
+		top: 40%;
+	}
+	.containerBottomLeftText {
+		left: 0%;
+		top: -8%;
+	}
+	.mascotIcon {
+		top: -60%;
+		left: -7%;
+		object-fit: contain;
+	}
+	.bottomLogosHome {
+		left: 3%;
+	}
+	.MDRTeamSymbol {
+		left: 25%;
+	}
+	.movingWarningUnderline {
+		left: 45%;
+	}
+	.particle-frame {
+		background-color: rgba(102, 51, 153, 0);
+		width: 100%;
+		height: 100%;
+		left: -10%;
+	}
+}
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+	.mobile_title {
+		font-size: 6em;
+	}
+	.containerBottomLeftText {
+		font-size: 1em;
+	}
 	.mobile_titleDATE {
-		top: 15%;
+		font-size: 2em;
+		letter-spacing: .9em;
 	}
-
-	.AboutUsTextTitle {
-		top: 5%;
+	.particle-frame {
+		background-color: rgba(102, 51, 153, 0);
+		width: 100%;
+		height: 100%;
+		left: -20%;
 	}
+}
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+	.bottomLogosHome {
+		left: 3%;
+	}
+	.MDRTeamSymbol {
+		left: 30%;
+	}
+	.movingWarningUnderline {
+		left: 55%;
+	}
+	.particle-frame {
+		width: 100%;
+		height: 100%;
+		left: -30%;
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	.bottomLogosHome {
+		left: 3%;
+	}
+	.MDRTeamSymbol {
+		left: 40%;
+	}
+	.movingWarningUnderline {
+		opacity: 0;
+	}
+	.containerBottomLeft {
+		width: 130%;
+	}
+	.mobile_title {
+		font-size: 4em;
+	}
+	.containerBottomLeft {
+		font-size: .9em;
+		width: 50%;
+	}
+	.mobile_titleDATE {
+		font-size: 1.3em;
+		letter-spacing: .9em;
+	}
+	.bottomLogosHome {
+		width: 20%;
+		height: auto;
+		left: 1%;
+	}
+	.MDRTeamSymbol {
+		width: 20%;
+		height: auto;
+		left: 28%;
+	}
+	.particle-frame {
+		display: none;
+	}
+}
 
+/*ABOUT US DESKTOP WIDTH DEFAULT */
+@media screen and (max-width: 1600px) and (orientation: landscape) {
+	.AboutUsTextTitle, .AboutUsTextTitleOutline, .AboutUsTextDesc {
+		left: 2%;
+	}
+	.AboutUsTextTitle, .AboutUsTextTitleOutline {
+		font-size: 6em;
+	}
+	.AboutUsTextDesc {
+		width: 45%;
+		font-size: 1em;
+	}
 	.AboutUsBottomBarIcons {
-		top: -2%;
+		left: 20%;
+		width: auto;
+		height: 50%;
+		object-fit: contain;
 	}
+}
 
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+	.AboutUsTextTitle, .AboutUsTextTitleOutline, .AboutUsTextDesc {
+		left: 2%;
+	}
+	.AboutUsTextTitle, .AboutUsTextTitleOutline {
+		font-size: 6em;
+	}
+	.AboutUsTextDesc {
+		width: 48%;
+		font-size: 1em;
+	}
+	.AboutUsBottomBarIcons {
+		left: 25%;
+		width: auto;
+		height: 30%;
+		object-fit: contain;
+	}
 	.AboutUsItemSide {
+		width: 50%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1100px) and (orientation: landscape) {
+	.AboutUsTextTitle, .AboutUsTextTitleOutline, .AboutUsTextDesc {
+		left: 2%;
+	}
+	.AboutUsTextTitle, .AboutUsTextTitleOutline {
+		font-size: 4em;
+	}
+	.AboutUsTextDesc {
+		width: 48%;
+		font-size: .8em;
+	}
+	.AboutUsBottomBarIcons {
+		left: 25%;
+		width: auto;
+		height: 15%;
+		object-fit: contain;
+	}
+	.AboutUsItemSide {
+		width: 50%;
+		height: auto;
+	}
+}
+/*STAFF DESKTOP WIDTH DEFAULT */
+
+@media screen and (max-width: 1500px) and (orientation: landscape) {
+	.staffPanelContainer {
+		left: 10%;
+		width: 50%;
+	}
+}
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+	.staffPanelContainer {
+		left: 10%;
+		width: 50%;
+	}
+	.StaffRoleTextDisplay2 {
+		font-size: 1.5em;
+	}
+	.StaffRoleTextDisplay {
+		font-size: 1.5em;
+	}
+	.ContainerForStaffDescriptionTextContent, .ContainerForStaffDescriptionTextContent2 {
+		font-size: .9em;
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	.staffPanelContainer {
+		left: 10%;
+		width: 70%;
+	}
+	.StaffRoleTextDisplay2 {
+		font-size: 1em;
+	}
+	.StaffRoleTextDisplay {
+		font-size: 1em;
+	}
+	.ContainerForStaffDescriptionTextContent, .ContainerForStaffDescriptionTextContent2 {
+		font-size: .7em;
+	}
+	.StaffRoleTextDisplayText, .StaffRoleTextDisplayText2 {
+		font-size: .6em;
+	}
+}
+/*SPONSORSHIP DESKTOP WIDTH DEFAULT */
+@media screen and (max-width: 1550px) and (orientation: landscape) {
+	.SponsorTiersTextContent p {
+		font-size: .95em;
+	}
+	.yourImpactText {
+		width: 90%;
+		font-size: .8em;
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	.SponsorTiersTextContent p {
+		font-size: .8em;
+	}
+	.yourImpactText {
+		font-size: .6em;
+	}
+}
+/*CONTACTS/SOCIAL DESKTOP WIDTH DEFAULT */
+
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+	.contactsTextDisplayer {
+		font-size: 1em;
+
+	}
+}
+@media screen and (max-width: 1100px) and (orientation: landscape) {
+	.contactsTextDisplayer {
+		font-size: .7em;
+
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	.contactsTextDisplayer {
+		font-size: .5em;
+
+	}
+}
+
+/*ROBOT DESKTOP WIDTH DEFAULT*/
+@media screen and (max-width: 1600px) and (orientation: landscape) {
+	.robot-name, .robot-name-outline, .robot-name-outline2 {
+		font-size:4.5em;
 		left: 50%;
 	}
-
-	.robot-model-container {
-		top: -15%;
-	}
-
-	.robot-name {
-		top: 14%;
-	}
-
-	.robot-name-outline2 {
-		top: 2%;
-	}
-
-	.robot-name-outline {
-		top: 25%;
-	}
-
 	.robot-description {
-		font-size: 25px;
+		font-size: 1.5em;
+		left: 50%;
+		width: 50%;
 	}
-
-	.SponsorTiersTextContent p {
-		font-size: 20px;
+	.robot-model-container {
+		transform: scale(.8);
+		left: -35% !important;
 	}
 }
-
-@media screen and (max-height: 700px) and (orientation: landscape) {
-
-	.mobile_title {
-		top: 20%;
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+	.robot-name, .robot-name-outline, .robot-name-outline2 {
+		font-size:4em;
+		left: 50%;
 	}
-
-	.mobile_titleDATE {
-		top: 15%;
+	.robot-description {
+		font-size: 1em;
+		left: 50%;
+		width: 50%;
 	}
-
-	.mascotIcon {
-		top: -87%;
+	.robot-model-container {
+		transform: scale(.7);
+		left: -35% !important;
 	}
-
+}
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+	.robot-name, .robot-name-outline, .robot-name-outline2 {
+		font-size:3.3em;
+		left: 50%;
+	}
+	.robot-description {
+		font-size: 1.2em;
+		left: 50%;
+		width: 45%;
+	}
+	.robot-model-container {
+		transform: scale(.5);
+		left: -40% !important;
+	}
+}
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+	.robot-name, .robot-name-outline, .robot-name-outline2 {
+		font-size:2em;
+		left: 50%;
+		letter-spacing: .5em;
+	}
+	.robot-description {
+		font-size: .7em;
+		left: 50%;
+		width: 40%;
+	}
+	.robot-model-container {
+		transform: scale(.4);
+		left: -40% !important;
+	}
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+	.robot-name, .robot-name-outline, .robot-name-outline2 {
+		font-size:2em;
+		left: 50%;
+		letter-spacing: .5em;
+	}
+	.robot-description {
+		font-size: .7em;
+		left: 50%;
+		width: 40%;
+	}
+	.robot-model-container {
+		transform: scale(.3);
+		left: -45% !important;
+	}
+}
+/*DESKTOP HEIGHT */
+	/*HOME HEIGHT*/
+@media screen and (max-height: 800px) and (orientation: landscape) {
 	.containerBottomLeft {
+		top: 40%;
+	}
+	.bottomLogosHome, .MDRTeamSymbol {
 		top: 60%;
 	}
-
-	.MDRTeamSymbol {
-		top: 60%;
-	}
-
-	#page2 {
-		transform: scale(.9) !important;
-	}
-
-	.AboutUsTextTitle {
+	.containerBottomLeftText {
 		top: 0%;
 	}
-
-	.AboutUsTextTitleOutline {
-		top: 15%;
-	}
-
-	.AboutUsBottomBarIcons {
-		top: 5%;
-	}
-
-	.SponsorTiersTextContent p {
-		font-size: 18px;
+	.particle-frame {
+		top: -20%;
 	}
 }
-
-@media screen and (max-height: 650px) and (orientation: landscape) {
-	.SponsorTiersTextContent p {
-		font-size: 15px;
-	}
-}
-
-@media screen and (max-height: 600px) and (orientation: landscape) {
-	#page1 {
-		transform: scale(.9) !important;
-	}
-
+@media screen and (max-height: 700px) and (orientation: landscape) {
 	.mobile_title {
-		top: 20%;
+		top: 25%;
 	}
-
 	.mobile_titleDATE {
 		top: 15%;
 	}
-
+	.bottomLogosHome, .MDRTeamSymbol {
+		top: 55%;
+	}
 	.mascotIcon {
-		top: -83%;
+		top: -50%;
 	}
-
-	.containerBottomLeft {
-		top: 65%;
+	.containerBottomLeftText {
+		top: -5%;
 	}
-
-	.MDRTeamSymbol {
+	.particle-frame {
+		top: -25%;
+		transform: scale(.8);
+	}
+}
+@media screen and (max-height: 550px) and (orientation: landscape) {
+	.mobile_title {
+		top: 23%;
+	}
+	.mobile_titleDATE {
+		top: 9%;
+	}
+	.bottomLogosHome, .MDRTeamSymbol {
 		top: 60%;
 	}
-
-
-	#page2 {
-		transform: scale(.8) !important;
+	.icon-scroll {
+		opacity: 0;
 	}
-
-	.AboutUsTextTitle {
-		top: -10%;
-	}
-
-	.AboutUsTextTitleOutline {
-		top: 6%;
-	}
-
-	.AboutUsBottomBarIcons {
-		top: 5%;
-	}
-
-	.AboutUsTextDesc {
-		top: 25%;
-	}
-
-	#page4 {
-		transform: scale(.8) !important;
-	}
-
-	.mailContainer {
-		top: 5%;
-	}
-
-	.ContainerForStaffDescriptionTextContent2 {
-		top: 70%;
-	}
-
-	.robot-model-container {
-		top: -20%;
+	.particle-frame {
+		top: -30%;
 		transform: scale(.6);
 	}
-
-	.robot-name {
-		top: 14%;
-		font-size: 70px;
-	}
-
-	.robot-name-outline2 {
-		font-size: 70px;
-		top: 2%;
-	}
-
-	.robot-name-outline {
-		font-size: 70px;
-		top: 26%;
-	}
-
-	.robot-description {
-		font-size: 20px;
-	}
-	.particle-frame {
-		top: -30% !important;
-	}
 }
-
-@media screen and (max-height: 500px) and (orientation: landscape) {
-	.SponsorTiersTextContent p {
-		font-size: 12px;
-	}
-
-	.StaffMemberHeadlineContainer-Name {
-		top: 110%;
-	}
-
-	#page2 {
-		transform: scale(.75) !important;
-	}
-
-	.AboutUsTextTitle {
-		top: -15%;
-		font-size: 90px;
-	}
-
-	.AboutUsTextTitleOutline {
-		top: 3%;
-		font-size: 90px;
-	}
-
-	.AboutUsBottomBarIcons {
-		opacity: 0;
-	}
-
-	.AboutUsTextDesc {
-		top: 28%;
-	}
-
-	.icon-scroll2,
-	.icon-scroll2:before {
-		opacity: 0;
-	}
-
-	.AboutUsItemSide {
-		transform: scale(1.2) !important;
-	}
-
-	#page1 {
-		transform: scale(.9) !important;
-	}
-
-	.mobile_title {
-		top: 15%;
-	}
-
-	.mobile_titleDATE {
-		top: 10%;
-	}
-
-	.mascotIcon {
-		top: -83%;
-		opacity: 0;
-	}
-
-	.containerBottomLeft {
-		top: 65%;
-	}
-
-
-}
-
 @media screen and (max-height: 400px) and (orientation: landscape) {
-	.SponsorTiersTextContent p {
-		font-size: 9px;
-	}
-
-	#page1 {
-		transform: scale(.8) !important;
-	}
-
 	.mobile_title {
-		top: 5%;
+		top: 13%;
 	}
-
 	.mobile_titleDATE {
-		top: 0%;
+		top: 9%;
 	}
-
-	.mascotIcon {
-		top: -83%;
+	.bottomLogosHome, .MDRTeamSymbol {
+		top: 60%;
+	}
+	.icon-scroll {
 		opacity: 0;
-	}
-
-	.containerBottomLeft {
-		top: 70%;
-	}
-
-	.MDRTeamSymbol {
-		opacity: 0;
-	}
-
-
-	#page2 {
-		transform: scale(.5) !important;
-	}
-
-	.AboutUsTextTitle {
-		top: -50%;
-		font-size: 50px;
-	}
-
-	.AboutUsTextTitleOutline {
-		font-size: 50px;
-		top: -30%;
-	}
-
-	.AboutUsTextDesc {
-		top: -5%;
-		font-size: 15px;
-	}
-
-	#page5 {
-		transform: scale(.6) !important;
-	}
-
-	.staffPanelContainer {
-		top: -10%;
-		height: 130%;
-	}
-
-	#page4 {
-		transform: scale(.5) !important;
-	}
-
-	.mailContainer {
-		top: -20%;
-	}
-
-	.rankingContainer {
-		top: -18%;
-	}
-
-	.tutorialContainer {
-		top: -10%;
-	}
-
-	.robot-model-container {
-		top: -25%;
-		transform: scale(.4);
-	}
-
-	.robot-name {
-		top: 14%;
-		font-size: 50px;
-	}
-
-	.robot-name-outline2 {
-		font-size: 50px;
-		top: 2%;
-	}
-
-	.robot-name-outline {
-		font-size: 50px;
-		top: 26%;
-	}
-
-	.robot-description {
-		font-size: 15px;
 	}
 	.particle-frame {
-		top: -50% !important;
+		top: -30%;
 		transform: scale(.5);
 	}
 }
 
-@media screen and (max-height: 450px) and (orientation: landscape) {
-	#page1 {
-		transform: scale(.8) !important;
+
+/*ABOUT US HEIGHT*/
+@media screen and (max-height: 800px) and (orientation: landscape) {
+	.AboutUsTextTitle {
+		top: 5%;
+	}
+	.AboutUsTextTitleOutline {
+		top: 20%;
+	}
+	.AboutUsBottomBarIcons {
+		top: 0%;
+		width: auto;
+		height: 20%;
+	}
+}
+@media screen and (max-height: 700px) and (orientation: landscape) {
+	.AboutUsTextTitle {
+		top: 5%;
+		font-size: 6em;
+	}
+	.AboutUsTextTitleOutline {
+		top: 20%;
+		font-size: 6em;
+	}
+	.AboutUsBottomBarIcons {
+		top: 0%;
+	}
+	.AboutUsTextDesc {
+		font-size: .8em;
 	}
 
-	.mobile_title {
+}
+@media screen and (max-height: 550px) and (orientation: landscape) {
+	.AboutUsTextTitle {
+		top: 5%;
+		font-size: 5em;
+	}
+	.AboutUsTextTitleOutline {
+		top: 20%;
+		font-size: 5em;
+	}
+	.AboutUsItemSide {
+		width: auto;
+		height:80%;
+	}
+	.AboutUsTextDesc {
+		font-size: .7em;
+	}
+	.AboutUsTextTitle {
 		top: 8%;
+		font-size: 4em;
 	}
-
-	.mobile_titleDATE {
-		top: 1%;
-	}
-
-	.mascotIcon {
-		top: -83%;
-		opacity: 0;
-	}
-
-	.containerBottomLeft {
-		top: 65%;
-	}
-
-	.MDRTeamSymbol {
-		opacity: 0;
-	}
-
-
-	#page2 {
-		transform: scale(.7) !important;
-	}
-
-	.AboutUsItemSide {
-		transform: scale(1.5) !important;
-	}
-
-	.AboutUsTextTitle {
-		top: -30%;
-		font-size: 90px;
-	}
-
 	.AboutUsTextTitleOutline {
-		top: -10%;
-		font-size: 90px;
+		top: 20%;
+		font-size: 4em;
 	}
 
-	.SponsorTiersTextContent p {
-		font-size: 10px;
+	.icon-scroll2 {
+		display: none;
 	}
 
-	#page5 {
-		transform: scale(.8) !important;
+}
+@media screen and (max-height: 400px) and (orientation: landscape) {
+	.AboutUsTextDesc {
+		font-size: .5em;
+		top: 40%;
 	}
-
-	.staffPanelContainer {
-		top: -6%;
-		height: 110%;
+	.AboutUsTextTitle {
+		top: 8%;
+		font-size: 3em;
 	}
-
-	.StaffMemberHeadlineContainer-Name {
-		top: 100%;
+	.AboutUsTextTitleOutline {
+		top: 20%;
+		font-size: 3em;
 	}
-
-	.ContainerForStaffDescriptionTextContent {
-		top: 50%;
-	}
-
+}
+/*STAFF HEIGHT*/
+@media screen and (max-height: 700px) and (orientation: landscape) {
 	.ContainerForStaffDescriptionTextContent2 {
-		top: 90%;
-	}
-
-	.StaffRoleTextDisplay {
-		top: 25%;
-	}
-
-	.StaffRoleTextDisplay2 {
-		top: 25%;
+		top: 60%;
 	}
 }
 
-
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.ContainerForStaffDescriptionTextContent2, .ContainerForStaffDescriptionTextContent {
+		font-size: .8em;
+	}
+	.displayNamesIconsLeft {
+		display: none;
+	}
+	.displayNames {
+		font-size: 2em;
+	}
+}
+@media screen and (max-height: 400px) and (orientation: landscape) {
+	.ContainerForStaffDescriptionTextContent2, .ContainerForStaffDescriptionTextContent {
+		font-size: .7em !important;
+	}
+	.StaffRoleTextDisplay, .StaffRoleTextDisplay2 {
+		font-size: .8em;
+		top: 10%;
+	}
+	.StaffRoleTextDisplayText, .StaffRoleTextDisplayText2 {
+		top: 0%;
+		font-size: .6em;
+	}
+	.StaffMemberHeadlineContainer-Name {
+		font-size: 1.2em;
+		top: 90%;
+	}
+	.ContainerForStaffDescriptionTextContent2 {
+		top: 75%;
+	}
+	.displayNames {
+		font-size: 1em;
+	}
+	.staffPanelRole {
+		font-size: 2em;
+	}
+}
 @media screen and (max-height: 300px) and (orientation: landscape) {
-	#page5 {
-		transform: scale(.5) !important;
-	}
-
-	.staffPanelContainer {
-		top: -30%;
-		height: 150%;
-	}
-
-	.SponsorTiersTextContent p {
-		font-size: 8px;
-	}
-
-	#page1 {
-		transform: scale(.6) !important;
-	}
-
-	.mobile_title {
-		top: -10%;
-	}
-
-	.mobile_titleDATE {
-		top: -20%;
-	}
-
-	.containerBottomLeft {
-		top: 50%;
-	}
-
-	.bottomLogosHome {
-		top: 90%;
-	}
-
-	.icon-scroll,
-	.icon-scroll:before {
-		opacity: 0;
-	}
-
-	#page1 {
-		transform: scale(.3) !important;
-	}
-
-	.mobile_title {
-		top: -50%;
-	}
-
-	.mobile_titleDATE {
-		top: -70%;
-	}
-
-	.AboutUsTextTitle {
-		top: -100%;
-		font-size: 50px;
-	}
-
-	.AboutUsTextTitleOutline {
-		font-size: 50px;
-		top: -60%;
-	}
-
-	#page2 {
-		transform: scale(.3) !important;
-	}
-
-	.AboutUsItemSide {
-		opacity: 0;
-	}
-
-	#page2 {
-		transform: scale(.2) !important;
-	}
-
-	.AboutUsTextTitle {
-		top: -150%;
-		font-size: 50px;
-	}
-
-	.AboutUsTextTitleOutline {
-		font-size: 50px;
-		top: -100%;
+	.ContainerForStaffDescriptionTextContent2, .ContainerForStaffDescriptionTextContent {
+		font-size: .5em !important;
 	}
 }
-
-
-@media screen and (max-height: 200px) and (orientation: landscape) {
-	#page4 {
-		opacity: 0;
+/* ROBOT HEIGHT DEFUALT */
+@media screen and (max-height: 700px) and (orientation: landscape) {
+	.robot-model-container {
+		top: -25%;
+		transform: scale(.6) !important;
+		left: -45% !important;
 	}
-
-	#page5 {
+}
+@media screen and (max-height: 600px) and (orientation: landscape) {
+	.robot-model-container {
+		top: -40%;
 		transform: scale(.4) !important;
 	}
+}
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.robot-model-container {
+		top: -25%;
+		transform: scale(.3) !important;
+	}
+}
 
-	.staffPanelContainer {
+/* DESKTOP FOOTER */
+@media screen and (max-width: 1700px) and (orientation: landscape) {
+	.footerTopHighlight, .footerTopHighlight2 {
+		height: .01em;
+	}
+	.footerEntradoxTitle, .footerMeadowridgeTitle {
+		font-size: 2.6em;
+		text-align: left;
+	}
+	.footerEntradoxTitle {
+		left: -196%;
 		top: -50%;
-		height: 200%;
 	}
-
-	#page6 {
+	.footerMeadowridgeTitle {
+		left: -330%;
+		top: 50%;
+	}
+	.footerLogo, .footerLogoMDR, .thank {
 		opacity: 0;
 	}
-	.particle-frame {
-		opacity: 0;
-		display: none !important;
+	.FooterContainer p {
+		text-align: left;
+		width: 80%;
+		font-size: 1.3em;
+		left: 43%;
+		top: 50%;
+	}
+	.thank {
+		opacity: 1;
+		left: 70%;
+		top: 15%;
+		transform: scale(1.2);
 	}
 }
 
-@media screen and (max-height: 100px) and (orientation: landscape) {
-	#page5 {
-		transform: scale(.5) !important;
-		opacity: 0;
+@media screen and (max-height: 740px) and (orientation: landscape) {
+	.footerEntradoxTitle, .footerMeadowridgeTitle {
+		font-size: 2em;
 	}
-
-	#page2 {
-		opacity: 0;
+	.footerMeadowridgeTitle {
+		top: 70%;
 	}
-
-	#page1 {
-		transform: scale(.2) !important;
-	}
-
-	.mobile_title {
-		top: -130%;
-	}
-
-	.mobile_titleDATE {
-		top: -150%;
-	}
-
-	.containerBottomLeft {
-		top: 130%;
+	.FooterContainer p {
+		font-size: 1em;
 	}
 }
+@media screen and (max-height: 530px) and (orientation: landscape) {
+	.footerEntradoxTitle, .footerMeadowridgeTitle {
+		font-size: 1.5em;
+	}
+	.footerMeadowridgeTitle {
+		top: 70%;
+	}
+	.FooterContainer p {
+		font-size: .7em;
 
-/* DESKTOP WIDTH */
+	}
+}
+@media screen and (max-height: 430px) and (orientation: landscape) {
+	.footerEntradoxTitle, .footerMeadowridgeTitle {
+		font-size: 1em;
+	}
+	.footerMeadowridgeTitle {
+		top: 70%;
+	}
+	.FooterContainer p {
+		font-size: .5em;
+	}
+}
